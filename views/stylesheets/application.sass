@@ -1,34 +1,8 @@
-@import blueprint/reset
-@import compass/utilities
+@import base.sass
 
-// Base font
-=base-font
-  color: #0d0d0d
-  font: 13px Arial, Helvetica, sans-serif
-  
-// Links
-a
-  color: #3366CC
-  &:hover
-    color: #3366CC
-    text-decoration: none
-  &:focus,
-  &:active
-    outline: none
-  &:visited
-  
-// Base
-html,
-body
-  height: 100%
-  margin: 0 0 1px 0
-  padding: 0
-body
-  +base-font
-  background: #fff
-  padding: 20px
-  padding-top: 50px
-  text-align: center
-  h1
-    font-size: 40px
-    font-weight: bold
++blueprint-typography
++blueprint-utilities
++blueprint-grid
++blueprint-debug(unquote("/images/grid.png"))
++blueprint-interaction
++blueprint-form

@@ -1,3 +1,5 @@
+# Quickstart
+
 Clone, and fire up `ruby app.rb` and you should be good to go!
 
 Don't forget to run `compass -w` if you make changes to your
@@ -8,7 +10,7 @@ its own. You have to force it / poll it with the above compass flag.
 Daniel Fischer
 
 
-This borrows a lot of code from the two main Compass/Sinatra examples.
+## This borrows a lot of code from the two main Compass/Sinatra examples.
 
-http://github.com/chriseppstein/compass-sinatra
-http://github.com/adamstac/sinatra-bootstrap
+* http://github.com/chriseppstein/compass-sinatra
+* http://github.com/adamstac/sinatra-bootstrap

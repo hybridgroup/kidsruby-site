@@ -8,9 +8,3 @@ its own. You have to force it / poll it with the above compass flag.
 
 # Contributors
 Daniel Fischer
-
-
-## This borrows a lot of code from the two main Compass/Sinatra examples.
-
-* http://github.com/chriseppstein/compass-sinatra
-* http://github.com/adamstac/sinatra-bootstrap

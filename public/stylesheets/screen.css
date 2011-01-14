@@ -1182,6 +1182,7 @@ header h1 span {
 }
 header h2 {
   text-shadow: 0 1px 0 #F8FEFF;
+  font-size: 1.7em;
 }
 
 #ruby-logo {

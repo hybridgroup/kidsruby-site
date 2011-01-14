@@ -1,1 +1,36 @@
-%h1 Hello Sinatra!
+%header
+  %div#tout
+    %hgroup
+      %h1 
+        -#%img{:src => '/images/ruby.png', :alt => 'ruby logo', :id => 'ruby-logo'}
+        Ruby 
+        %span Kids
+      %h2 Download tailored linux environment for learning how to hack. 
+    %button Download Now
+    or
+    %a{:href => '#more'} read more.
+    %div#addthis
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+      <a class="addthis_button_tweet"></a>
+      <a class="addthis_counter addthis_pill_style"></a>
+      </div>
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d3044bd33b50dde"></script>
+      <!-- AddThis Button END -->
+  %div#thumb
+    %img{:src => "/images/usb-256x256_ruby.png", :id => "thumb-drive"}
+%section
+  %article
+    %h1 Sign up! Free training on February 4th
+    %p 
+      We have set aside 3 hours to teach kids Ruby using Rubykids in Los Angeles on the 4th.
+      %a{:href => ""} Click here to register.
+  %article
+    %h1 A little more detail? 
+    %p We tailored a linux distrubtion that is optimal for teaching kids how to program in Ruby.
+    %p Rubykids Distro takes heavy advantage of hacketyhack.
+%aside
+  #twitter-feed
+%footer
+  Designed by Daniel Fischer from the <a href="http://hybridgroup.com">hybridgroup.com</a>

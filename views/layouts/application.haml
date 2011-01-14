@@ -8,8 +8,10 @@
       %link{:href=>'stylesheets/ie.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
 
     %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.juitter.js"}
+    %script{:type => "text/javascript", :src => "javascripts/system.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
   %body
-    .container.showgrid
+    .container
       = yield
       = partial :_analytics

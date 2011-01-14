@@ -63,7 +63,6 @@ button::-moz-focus-inner {
 
 footer {
   @include column(24, true);
-  display: none;
   margin-top: 15px;
 }
 

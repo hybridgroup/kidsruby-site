@@ -2,7 +2,11 @@
 %html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
   %head
     %title= @title || "Daniel Fischer - Los Angeles Geek"
-    %link{:href=>'stylesheets/application.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
+    %link{:href=>'stylesheets/print.css', :rel => 'stylesheet', :media => "print", :type => "text/css"}
+    %link{:href=>'stylesheets/screen.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
+    /[if IE]
+      %link{:href=>'stylesheets/ie.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
+
     %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
   %body

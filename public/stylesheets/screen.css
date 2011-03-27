@@ -1287,6 +1287,15 @@ section article p:last-child {
 * html #tout {
   overflow-x: hidden;
 }
+#tout h1 a {
+  color: #000;
+}
+#tout h1 a:hover {
+  color: #ff0000;
+}
+#tout h1 a:hover span {
+  color: #ff0000;
+}
 
 #twitter-feed ul {
   margin: 0px;

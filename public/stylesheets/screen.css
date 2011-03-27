@@ -899,7 +899,7 @@ input.span-24, textarea.span-24, select.span-24 {
 }
 
 .showgrid {
-  background: url('../images/grid.png?1294998085');
+  background: url('../images/grid.png?1296000258');
 }
 
 .error {
@@ -1086,7 +1086,10 @@ a:hover {
 }
 
 #addthis {
-  margin-top: 34px;
+  margin-top: 3px;
+}
+#addthis .addthis_default_style .at300b {
+  padding: 0px;
 }
 
 aside {
@@ -1132,6 +1135,47 @@ header {
   *zoom: 1;
   margin-bottom: 10px;
   margin-top: 50px;
+  overflow: visible;
+}
+header a.button {
+  background: #4162a8;
+  border: 1px solid #19253f;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  color: #fff;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8);
+  width: 190px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+header a.button:hover {
+  -moz-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  cursor: pointer;
+}
+header a.button:active {
+  background: #395591;
+  -moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111;
+  box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111;
+  margin-top: 4px;
+}
+header a.button:active {
+  margin-top: 3px;
 }
 header button {
   background: #4162a8;
@@ -1237,7 +1281,7 @@ section article p:last-child {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 700px;
+  width: 710px;
   height: 300px;
 }
 * html #tout {

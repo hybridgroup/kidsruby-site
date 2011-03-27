@@ -35,3 +35,7 @@ end
 get '/' do
   haml :index, :layout => :'layouts/application'
 end
+
+get '/download' do
+  haml :download, :layout => :'layouts/application'
+end

@@ -39,3 +39,7 @@ end
 get '/download' do
   haml :download, :layout => :'layouts/application'
 end
+
+get '/contact' do
+  haml :contact, :layout => :'layouts/application'
+end

@@ -42,6 +42,7 @@ button::-moz-focus-inner {
 body {
   background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
   background-color: #286ba5;
+  font-family: helvetica;
 }
 
 nav {
@@ -78,10 +79,16 @@ nav {
 //home
 header.sectionTitle{
   @include clearfix;
-  @include float;
   @include column(24, true);
-  margin-bottom: 10px;
-  margin-top: 50px;
+  @include border-top-radius(8px);
+
+  background-color: #e8edf3;
+  margin-top: 145px;
+  padding: 25px 0 20px 90px;
+  font-size: 24px;
+  a {
+    color: #ff1941;
+  }
 }
 
 img#thumb-drive {
@@ -98,7 +105,10 @@ img#thumb-drive {
 }
 
 aside {
-  @include column(8, true)
+  @include column(8, true);
+  padding-right: 10px;
+  background-color: #dce4ed;
+  height: 1244px;
 }
 
 footer {
@@ -109,16 +119,31 @@ footer {
 section {
   @include clearfix;
   @include column(16, true);
-  @include border-radius(8px);
-  // @include showgrid;
+  @include border-bottom-left-radius(8px);
+
+  background-color: #f3f2f5;
   article {
-    @include column(16, true);
+  @include clearfix;
+    @include column(13, true);
+
+    margin-left: 60px;
+    text-align: justify;
+
+    h1 {
+      color: red;
+      padding: 10px 0;
+    }
+
+    p {
+      padding: 10px 0;
+    }
   }
 }
 
 .container {
   @include container;
 }
+
 #twitter-feed {
   ul {
     margin: 0px;

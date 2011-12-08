@@ -13,5 +13,33 @@
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
   %body
     .container
+      %header
+        %nav
+          %ul
+            %li
+              %a.first{:href => '/'} Home
+            %li
+              %a{:href => '/download'} Download
+            %li
+              %a{:href => '/contact'} Contact
+
+        %div#thumb
+          %img{:src => "/images/weblogo.png", :id => "thumb-drive"}
+
       = yield
+
+      %aside
+        %div#addthis
+          <!-- AddThis Button BEGIN -->
+          <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+          <a class="addthis_button_tweet"></a>
+          <a class="addthis_counter addthis_pill_style"></a>
+          </div>
+          <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d3044bd33b50dde"></script>
+          <!-- AddThis Button END -->
+        #twitter-feed
+      %footer
+        Handmade by <a href="http://hybridgroup.com">The Hybrid Group</a>
+
       = partial :_analytics

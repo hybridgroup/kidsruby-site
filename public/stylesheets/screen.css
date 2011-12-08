@@ -77,6 +77,7 @@ button::-moz-focus-inner {
 body {
   background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
   background-color: #286ba5;
+  font-family: helvetica;
 }
 
 nav {
@@ -112,15 +113,30 @@ header.sectionTitle {
   *zoom: 1;
   display: inline;
   float: left;
-  display: inline;
-  float: left;
   margin-right: 0;
   width: 950px;
-  margin-bottom: 10px;
-  margin-top: 50px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -o-border-top-left-radius: 8px;
+  -ms-border-top-left-radius: 8px;
+  -khtml-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -o-border-top-right-radius: 8px;
+  -ms-border-top-right-radius: 8px;
+  -khtml-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #e8edf3;
+  margin-top: 145px;
+  padding: 25px 0 20px 90px;
+  font-size: 24px;
 }
 * html header.sectionTitle {
   overflow-x: hidden;
+}
+header.sectionTitle a {
+  color: #ff1941;
 }
 
 img#thumb-drive {
@@ -140,6 +156,9 @@ aside {
   float: left;
   margin-right: 0;
   width: 310px;
+  padding-right: 10px;
+  background-color: #dce4ed;
+  height: 1244px;
 }
 * html aside {
   overflow-x: hidden;
@@ -163,24 +182,36 @@ section {
   float: left;
   margin-right: 0;
   width: 630px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -o-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -khtml-border-radius: 8px;
-  border-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -o-border-bottom-left-radius: 8px;
+  -ms-border-bottom-left-radius: 8px;
+  -khtml-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: #f3f2f5;
 }
 * html section {
   overflow-x: hidden;
 }
 section article {
+  overflow: hidden;
+  *zoom: 1;
   display: inline;
   float: left;
   margin-right: 0;
-  width: 630px;
+  width: 510px;
+  margin-left: 60px;
+  text-align: justify;
 }
 * html section article {
   overflow-x: hidden;
+}
+section article h1 {
+  color: red;
+  padding: 10px 0;
+}
+section article p {
+  padding: 10px 0;
 }
 
 .container {

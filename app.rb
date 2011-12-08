@@ -33,7 +33,7 @@ get '/about' do
 end
 
 get '/' do
-  haml :index, :layout => :'layouts/application'
+  haml :home, :layout => :'layouts/application'
 end
 
 get '/download' do

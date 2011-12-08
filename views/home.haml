@@ -1,16 +1,16 @@
 %header
-  %div#tout
-    %hgroup
-      %h1
-        %a{:href => '/'}
-          Kids
-          %span Ruby
-    %a.button{:href => "/download"} Download Now
-    or
-    %a{:href => 'https://github.com/hybridgroup/kidsruby'} check out the code on Github.
+  %nav
+    %ul
+      %li
+        %a.first{:href => '/'} Home
+      %li
+        %a{:href => '/download'} Download
+      %li
+        %a{:href => '/download'} Contact
+
   %div#thumb
     %img{:src => "/images/weblogo.png", :id => "thumb-drive"}
-%header
+%header.sectionTitle
   %h2 Have fun and make games, or hack your homework using Ruby! <br />Just tell your parents or teachers you're learning Ruby programming... ;) <br />Free and works on any computer. <a href="/about">Click here to see what it looks like</a>.
 %section
   %article
@@ -35,12 +35,12 @@
 
   %article
     %h1 Thanks Baltimore, for An Awesome KidsRuby
-    %p 
+    %p
       On Monday, May 16, KidsRuby came to Baltimore, Maryland to hold another awesome kids programming class, in cooperation with <a href="http://bohconf.com">BohConf 2011</a> and <a href="http://www.railsconf.com">RailsConf 2011</a>. This was one of our best events yet, with an amazing group of young people who came in from Digital Harbor HS each equipped with their own school-issued MacBooks, no less. Go, Baltimore! Local civic leader and Rubyist <a href="http://davetroy.com/">Dave Troy</a> was also in attendance, with his kids in tow. Thank you so very much to everyone who helped out with the class, especially the teachers from Digital Harbor, your efforts are appreciated!<br />
 
   %article
     %h1 The Kids Programming Class at BarcampLA Was Excellent
-    %p 
+    %p
       Last Sunday, May 1, we held another KidsRuby class in Los Angeles, California, in cooperation with <a href="http://barcampla.org">BarCampLA</a>. It was another great turnout, with even a few "big kids" from Barcamp joining in as both teachers and students. Thank you to everyone who helped make it happen, kids programming is awesome!<br />
 
   %article
@@ -56,16 +56,11 @@
     %h1 What do you exactly mean by "hack your homework"?
     %p When we say "hack your homework" we mean "learn how to write a computer program to help you with your homework". For example, writing code to solve a particular math problem. By showing kids that programming can apply to the real world, like any subject, it becomes a lot more interesting to learn about.
     %p The term "hack" in the computer world, means to be able to do something with hardware or software that the original designers did not realize could be done, usually in a good way. This term is often confused with the term "crack" which means to bypass security of some kind, usually considered something bad that you do not wish to do.
-      
+
   %article
     %h1 A little more detail? 
     %p KidsRuby provides a way that kids can use the awesome programming language Ruby to learn how to write their own software. While using a simple interface, it still lets them explore the full capabilities of the Ruby language.
     %p In addition to providing a full Ruby programming environment for kids, we are also have a complete KidsRuby operating system based on Ubuntu Linux that makes it easy for kids to learn how to program in Ruby on any computer. And it will let them do it anywhere they go, just bring their own USB drive, plug in, and reboot.
-  
-  -# %article
-  -#   %h1 Our Next Free Kids Programming Class Will Be In New Orleans On October 2 after RubyConf
-  -#   %p
-  -#     Get ready, because our next free programming class using KidsRuby will be in New Orleans, LA on Sunday, October 2, in cooperation with the <a href="http://rubyconf.org">International Ruby Conference (RubyConf)</a>. Thanks to <a href="http://launchpadnola.com/">Launchpad NOLA</a> for sharing their office space with the kids of New Orleans. Come on down and let's have fun, and learn to code with Ruby! <a href="http://kidsruby-rubyconf2011.eventbrite.com/">Signup here for the class</a><br />
 
 %aside
   %div#addthis

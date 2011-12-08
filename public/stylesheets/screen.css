@@ -93,19 +93,28 @@ nav ul {
   margin-top: 51px;
 }
 nav ul a {
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
   color: white;
   float: left;
   font-size: 16px;
   padding: 5px 0;
+  opacity: 0.9;
   text-align: center;
   width: 100px;
 }
 nav ul a.first {
   margin: 0 7px 0 20px;
 }
+nav ul a.last {
+  width: 85px;
+  margin-left: 5px;
+}
 nav ul a:hover {
   color: white;
-  text-shadow: -1px -1px 1px black;
+  opacity: 1;
 }
 
 header.sectionTitle {
@@ -140,15 +149,24 @@ header.sectionTitle a {
 }
 
 img#thumb-drive {
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
   height: 135px;
   float: left;
   position: relative;
   left: 42px;
   top: 43px;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 img#thumb-drive:hover {
   opacity: 1;
+  -moz-transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
+  transform: rotate(-360deg);
 }
 
 aside {
@@ -207,11 +225,19 @@ section article {
   overflow-x: hidden;
 }
 section article h1 {
-  color: red;
+  color: #FF1941;
   padding: 10px 0;
+  font-size: 30px;
 }
 section article p {
   padding: 10px 0;
+}
+section article ul li {
+  color: #1f5380;
+  margin-left: 20px;
+}
+section article ul li a {
+  color: #ff1941;
 }
 
 .container {

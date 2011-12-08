@@ -2,7 +2,15 @@
   %h2 Contact us here, for any questions, feedback or praise you want to send.
   For the latest news follow us @kidsruby.
 %section
-  %form
-    %input name
-    %input email
-    %input message
+  %form#sign-up
+    %fieldset
+      %label Name
+      %input{:name => "name", :type => "text", :placeholder""}
+    %fieldset
+      %label Email
+      %input{:name => "email", :type => "Email", :placeholder""}
+    %fieldset
+      %label Message
+      %input{:name => "message", :type => "text", :placeholder""}
+    %fieldset
+      %input{:type => "submit", :value => "Submit", :placeholder""}

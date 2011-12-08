@@ -58,21 +58,29 @@ nav {
     margin-top: 51px;
 
     a {
+      @include transition-duration(1s);
       color: white;
       float: left;
       font-size: 16px;
       padding: 5px 0;
+      opacity: 0.9;
       text-align: center;
       width: 100px;
 
       &.first {
         margin: 0 7px 0 20px;
       }
+
+      &.last {
+        width: 85px;
+        margin-left: 5px;
+      }
     }
 
     a:hover {
       color: white;
-      text-shadow: -1px -1px 1px black;
+      // text-shadow: -1px -1px 1px black;
+      opacity: 1;
     }
   }
 }
@@ -92,15 +100,17 @@ header.sectionTitle{
 }
 
 img#thumb-drive {
+  @include transition-duration(1s);
   height: 135px;
   float: left;
   position: relative;
   left: 42px;
   top: 43px;
-  opacity: 0.9;
+  opacity: 0.8;
 
   &:hover {
     opacity: 1;
+    @include rotate(-360deg);
   }
 }
 
@@ -130,12 +140,20 @@ section {
     text-align: justify;
 
     h1 {
-      color: red;
+      color: #FF1941;
       padding: 10px 0;
+      font-size: 30px;
     }
 
     p {
       padding: 10px 0;
+    }
+    ul li {
+      color: #1f5380;
+      margin-left: 20px;
+      a {
+        color: #ff1941;
+      }
     }
   }
 }

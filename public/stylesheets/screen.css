@@ -294,15 +294,21 @@ section form#sign-up fieldset {
 }
 section form#sign-up fieldset.top {
   margin-right: 35px;
+  display: inline;
+  float: left;
 }
 section form#sign-up fieldset.top input {
   width: 200px;
+}
+section form#sign-up fieldset#marginfix {
+  margin-right: -40px;
 }
 section form#sign-up fieldset.bottom {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 430px;
+  margin-top: 10px;
 }
 * html section form#sign-up fieldset.bottom {
   overflow-x: hidden;
@@ -317,13 +323,14 @@ section form#sign-up fieldset.submit {
 }
 section label {
   color: #3b678d;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  display: block;
 }
-section input[type="text"], section input[type="email"] {
-  -moz-box-shadow: inset 1px 1px 2px #cccccc;
-  -webkit-box-shadow: inset 1px 1px 2px #cccccc;
-  -o-box-shadow: inset 1px 1px 2px #cccccc;
-  box-shadow: inset 1px 1px 2px #cccccc;
+section input[type="text"], section input[type="email"], section textarea {
+  -moz-box-shadow: inset 1px 1px 1px #b4c6d2;
+  -webkit-box-shadow: inset 1px 1px 1px #b4c6d2;
+  -o-box-shadow: inset 1px 1px 1px #b4c6d2;
+  box-shadow: inset 1px 1px 1px #b4c6d2;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   -o-border-radius: 7px;
@@ -332,10 +339,12 @@ section input[type="text"], section input[type="email"] {
   border-radius: 7px;
   background: #d8e6ef;
   border: 1px solid #e5e5dd;
-  color: #89897e;
+  color: #2c61c9;
   font-size: 12px;
   padding: 8px 8px;
-  width: auto;
+  max-width: 455px;
+  overflow: auto;
+  text-shadow: 1px 1px 1px white;
 }
 section input[type="submit"] {
   -moz-border-radius: 7px;
@@ -347,17 +356,16 @@ section input[type="submit"] {
   float: right;
   margin-bottom: 10px;
   margin-right: 10px;
-  padding: 8px 15px;
-  font: bold 12px "DroidSansBold", Verdana, sans-serif;
-  text-transform: uppercase;
+  padding: 8px 7px;
+  font: bold 13px helvetica;
   line-height: 1;
-  color: #fff;
-  border: none;
-  background-color: #e2e2d9;
+  color: #DCE4ED;
+  border: 1px solid #4c97c2;
+  background-color: #2e70a8;
   cursor: pointer;
   text-shadow: 1px 1px 2px #643016;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff9c69), to(#dc692e));
-  background-image: -moz-linear-gradient(19% 75% 90deg, #ff9c69, #dc692e);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3287bf), to(#2e70a8));
+  background-image: -moz-linear-gradient(19% 75% 90deg, #3287bf, #2e70a8);
 }
 section input[type="submit"]:hover {
   -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);

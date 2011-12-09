@@ -6,11 +6,11 @@
     %fieldset.top
       %label Name
       %input{:name => "name", :type => "text", :placeholder => "Name", :required=> ""}
-    %fieldset.top
+    %fieldset.top#marginfix
       %label Email
       %input{:name => "email", :type => "email", :placeholder => "Email", :required => ""}
     %fieldset.bottom
       %label Message
-      %input{:name => "message", :type => "text", :placeholder => "Tell us something!", :required => ""}
+      %textarea{:name => "message", :type => "text", :placeholder => "Tell us something!", :ROWS=>"9", :COLS=>"59", :required => ""}
     %fieldset.submit
       %input{:type => "submit", :value => "Submit"}

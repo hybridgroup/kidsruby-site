@@ -5,12 +5,12 @@
   %form#sign-up
     %fieldset
       %label Name
-      %input{:name => "name", :type => "text", :placeholder => "Name"}
+      %input{:name => "name", :type => "text", :placeholder => "Name", :required=> ""}
     %fieldset
       %label Email
-      %input{:name => "email", :type => "Email", :placeholder => "Email"}
+      %input{:name => "email", :type => "email", :placeholder => "Email", :required => ""}
     %fieldset
       %label Message
-      %input{:name => "message", :type => "text", :placeholder => "Tell us something!"}
+      %input{:name => "message", :type => "text", :placeholder => "Tell us something!", :required => ""}
     %fieldset
       %input{:type => "submit", :value => "Submit"}

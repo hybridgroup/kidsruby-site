@@ -84,21 +84,8 @@ nav {
     }
   }
 }
-//home
-header.sectionTitle{
-  @include clearfix;
-  @include column(24, true);
-  @include border-top-radius(8px);
 
-  background-color: #e8edf3;
-  margin-top: 145px;
-  padding: 25px 0 20px 90px;
-  font-size: 24px;
-  a {
-    color: #ff1941;
-  }
-}
-
+//header
 img#thumb-drive {
   @include transition-duration(1s);
   height: 135px;
@@ -114,18 +101,84 @@ img#thumb-drive {
   }
 }
 
+//home
+header.sectionTitle{
+  @include clearfix;
+  @include column(24, true);
+  @include border-top-radius(8px);
+
+  background-color: #e8edf3;
+  margin-top: 145px;
+  padding: 25px 0 20px 90px;
+  font-size: 24px;
+  a {
+    color: #ff1941;
+  }
+}
+
 aside {
   @include column(8, true);
+
   padding-right: 10px;
   background-color: #dce4ed;
-  height: 1244px;
+
+  div.social {
+    padding-left: 20px;
+    padding-right: 10px;
+
+    #twitter-feed {
+      ul {
+        margin: 0px;
+        padding: 0px;
+        li {
+          clear: both;
+          font-size: 11px;
+          list-style: none;
+          margin: 0px 0px 8px 0px;
+          min-height: 55px;
+          padding: 3px;
+          text-align: justify;
+          a {
+            img {
+              background: none;
+              float: left;
+              height: 40px;
+              margin: 0 10px 22px 0;
+              width: 40px;
+            }
+          }
+          a.JRM {
+            display: inline;
+            font-size: 10px;
+          }
+          span.time {
+            color: #999;
+            display: inline-block;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
   @include column(24, true);
+
   margin-top: 15px;
+
+  span, a {
+    color: #1f5380;
+  }
+
+  img {
+    position: absolute;
+  }
 }
 
+section.secondPage {
+  display: none;
+}
 section {
   @include clearfix;
   @include column(16, true);
@@ -136,17 +189,22 @@ section {
   @include clearfix;
     @include column(13, true);
 
+    border-bottom: 2px solid #E8EDF3;
     margin-left: 60px;
     text-align: justify;
 
     h1 {
       color: #FF1941;
-      padding: 10px 0;
-      font-size: 30px;
+      font-size: 18px;
+      padding: 40px 0 10px 0;
     }
 
     p {
-      padding: 10px 0;
+      color: #1F5380;
+      padding: 10px 0 25px 0;
+      a {
+        color: #ff1941;
+      }
     }
     ul li {
       color: #1f5380;
@@ -156,46 +214,44 @@ section {
       }
     }
   }
+
+  input[type="text"], input[type="email"] {
+    @include box-shadow(inset 1px 1px 2px #ccc);
+    @include border-radius(7px);
+
+    background: #f4f4ed;
+    border: 1px solid #e5e5dd;
+    color: #89897e;
+    font-size: 12px;
+    padding: 8px 8px;
+    width: 250px;
+  }
+
+  input[type="submit"] {
+    @include border-radius(7px);
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 8px 15px;
+    font: bold 12px "DroidSansBold", Verdana, sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    border: none;
+    background-color: #e2e2d9;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(100, 48, 22, 1);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF9C69), to(#dc692e));
+    background-image: -moz-linear-gradient(19% 75% 90deg,#FF9C69, #dc692e);
+  }
+
+  input[type="submit"]:hover {
+    @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+  }
+
 }
 
 .container {
   @include container;
 }
 
-#twitter-feed {
-  ul {
-    margin: 0px;
-    padding: 0px;
-    li {
-      @include border-radius(3px);
-      @include box-shadow(rgba(0,0,0,0.30), 0px, 0px, 2px, 0px);
-      background: #FFFDEA;
-      clear: both;
-      font-size: 11px;
-      list-style: none;
-      margin: 0px 0px 8px 0px;
-      min-height: 55px;
-      padding: 3px;
-      a {
-        img {
-          background: none;
-          border: 1px solid #FEDDC8;
-          float: left;
-          height: 40px;
-          margin-right: 5px;
-          padding: 2px;
-          width: 40px;
-        }
-      }
-      a.JRM {
-        display: inline;
-        font-size: 10px;
-      }
-      span.time {
-        color: #999;
-        display: inline-block;
-        font-size: 10px;
-      }
-    }
-  }  
-}

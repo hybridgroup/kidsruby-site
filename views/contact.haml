@@ -1,16 +1,16 @@
 %header.sectionTitle
   %h2 Contact us here, for any questions, feedback or praise you want to send.
-  For the latest news follow us @kidsruby.
+  For the latest news follow us <a href='http://twitter.com/kidsruby'>@kidsruby.</a>
 %section
   %form#sign-up
-    %fieldset
+    %fieldset.top
       %label Name
       %input{:name => "name", :type => "text", :placeholder => "Name", :required=> ""}
-    %fieldset
+    %fieldset.top
       %label Email
       %input{:name => "email", :type => "email", :placeholder => "Email", :required => ""}
-    %fieldset
+    %fieldset.bottom
       %label Message
       %input{:name => "message", :type => "text", :placeholder => "Tell us something!", :required => ""}
-    %fieldset
+    %fieldset.submit
       %input{:type => "submit", :value => "Submit"}

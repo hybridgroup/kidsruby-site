@@ -39,17 +39,20 @@
             </div>
             <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d3044bd33b50dde"></script>
             <!-- AddThis Button END -->
+
           %header
             KIDSRUBY on Twitter
           #twitter-feed
+
       %footer
-        %span
-          %a{:href => "http://hybridgroup.com"} The HybridGroup
-          %a{:href => '/'} Terms of Service
-          %a{:href => '/contact'} Contact
-        %br
-        %span All Rights Reseved 2011 <a href="http://hybridgroup.com">The Hybrid Group</a>
-        %img{:src => "/images/rocksBottomLeft.png"}
-        %img{:src => "/images/rubyBottomRight.png"}
+        %img.left{:src => "/images/rocksBottomLeft.png"}
+        %div
+          %span
+            %a{:href => "http://hybridgroup.com"} The HybridGroup
+            %a{:href => '/'} Terms of Service
+            %a{:href => '/contact'} Contact
+          %br
+          %span.rights All Rights Reseved 2011 <a href="http://hybridgroup.com">The Hybrid Group</a>
+        %img.right{:src => "/images/rubyBottomRight.png"}
 
       = partial :_analytics

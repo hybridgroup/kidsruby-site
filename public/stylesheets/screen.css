@@ -144,7 +144,7 @@ header.sectionTitle {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 950px;
+  width: 870px;
   -moz-border-radius-topleft: 8px;
   -webkit-border-top-left-radius: 8px;
   -o-border-top-left-radius: 8px;
@@ -159,7 +159,7 @@ header.sectionTitle {
   border-top-right-radius: 8px;
   background-color: #e8edf3;
   margin-top: 145px;
-  padding: 25px 0 20px 90px;
+  padding: 25px 20px 20px 60px;
   font-size: 24px;
 }
 * html header.sectionTitle {
@@ -174,8 +174,9 @@ aside {
   float: left;
   margin-right: 0;
   width: 310px;
-  padding-right: 10px;
   background-color: #dce4ed;
+  min-height: 1116px;
+  padding-right: 10px;
 }
 * html aside {
   overflow-x: hidden;
@@ -214,23 +215,6 @@ aside div.social #twitter-feed ul li span.time {
   font-size: 10px;
 }
 
-footer {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 950px;
-  margin-top: 15px;
-}
-* html footer {
-  overflow-x: hidden;
-}
-footer span, footer a {
-  color: #1f5380;
-}
-footer img {
-  position: absolute;
-}
-
 section.secondPage {
   display: none;
 }
@@ -248,6 +232,7 @@ section {
   -ms-border-bottom-left-radius: 8px;
   -khtml-border-bottom-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  min-height: 1116px;
   background-color: #f3f2f5;
 }
 * html section {
@@ -276,8 +261,16 @@ section article p {
   color: #1F5380;
   padding: 10px 0 25px 0;
 }
+section article p.next {
+  float: right;
+  margin-top: 30px;
+  padding-right: 40px;
+}
 section article p a {
   color: #ff1941;
+}
+section article ul {
+  margin-bottom: 30px;
 }
 section article ul li {
   color: #1f5380;
@@ -285,6 +278,46 @@ section article ul li {
 }
 section article ul li a {
   color: #ff1941;
+}
+section form#sign-up {
+  margin: 5px 90px 0px;
+}
+section form#sign-up fieldset {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+  margin-top: 30px;
+}
+* html section form#sign-up fieldset {
+  overflow-x: hidden;
+}
+section form#sign-up fieldset.top {
+  margin-right: 35px;
+}
+section form#sign-up fieldset.top input {
+  width: 200px;
+}
+section form#sign-up fieldset.bottom {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 430px;
+}
+* html section form#sign-up fieldset.bottom {
+  overflow-x: hidden;
+}
+section form#sign-up fieldset.bottom input {
+  width: 425px;
+  height: 140px;
+}
+section form#sign-up fieldset.submit {
+  float: right;
+  margin-right: 0;
+}
+section label {
+  color: #3b678d;
+  margin-bottom: 20px;
 }
 section input[type="text"], section input[type="email"] {
   -moz-box-shadow: inset 1px 1px 2px #cccccc;
@@ -297,12 +330,12 @@ section input[type="text"], section input[type="email"] {
   -ms-border-radius: 7px;
   -khtml-border-radius: 7px;
   border-radius: 7px;
-  background: #f4f4ed;
+  background: #d8e6ef;
   border: 1px solid #e5e5dd;
   color: #89897e;
   font-size: 12px;
   padding: 8px 8px;
-  width: 250px;
+  width: auto;
 }
 section input[type="submit"] {
   -moz-border-radius: 7px;
@@ -338,4 +371,37 @@ section input[type="submit"]:hover {
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
+}
+
+footer {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+  margin-top: 155px;
+}
+* html footer {
+  overflow-x: hidden;
+}
+footer div {
+  position: absolute;
+  margin-top: -85px;
+  margin-left: 175px;
+}
+footer span, footer a {
+  color: #1f5380;
+}
+footer span.rights {
+  font-size: 12px;
+}
+footer img {
+  position: absolute;
+}
+footer img.left {
+  left: 0;
+  margin-top: -256px;
+}
+footer img.right {
+  right: 0;
+  margin-top: -273px;
 }

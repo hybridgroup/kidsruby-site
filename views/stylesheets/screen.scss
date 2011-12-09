@@ -104,12 +104,12 @@ img#thumb-drive {
 //home
 header.sectionTitle{
   @include clearfix;
-  @include column(24, true);
+  @include column(22, true);
   @include border-top-radius(8px);
 
   background-color: #e8edf3;
   margin-top: 145px;
-  padding: 25px 0 20px 90px;
+  padding: 25px 20px 20px 60px;
   font-size: 24px;
   a {
     color: #ff1941;
@@ -119,8 +119,9 @@ header.sectionTitle{
 aside {
   @include column(8, true);
 
-  padding-right: 10px;
   background-color: #dce4ed;
+  min-height: 1116px;
+  padding-right: 10px;
 
   div.social {
     padding-left: 20px;
@@ -162,20 +163,6 @@ aside {
   }
 }
 
-footer {
-  @include column(24, true);
-
-  margin-top: 15px;
-
-  span, a {
-    color: #1f5380;
-  }
-
-  img {
-    position: absolute;
-  }
-}
-
 section.secondPage {
   display: none;
 }
@@ -183,6 +170,7 @@ section {
   @include clearfix;
   @include column(16, true);
   @include border-bottom-left-radius(8px);
+  min-height: 1116px;
 
   background-color: #f3f2f5;
   article {
@@ -202,33 +190,80 @@ section {
     p {
       color: #1F5380;
       padding: 10px 0 25px 0;
+      &.next {
+        float: right;
+        margin-top: 30px;
+        padding-right: 40px;
+      }
       a {
         color: #ff1941;
       }
     }
-    ul li {
-      color: #1f5380;
-      margin-left: 20px;
-      a {
-        color: #ff1941;
+    ul {
+      margin-bottom: 30px;
+
+      li {
+        color: #1f5380;
+        margin-left: 20px;
+        a {
+          color: #ff1941;
+        }
       }
     }
+  }
+
+  form#sign-up {
+    margin: 5px 90px 0px;
+
+    fieldset {
+      @include column(5);
+      margin-top: 30px;
+
+      &.top {
+        margin-right: 35px;
+
+        input{
+          width: 200px;
+        }
+      }
+
+      &.bottom {
+        @include column(11);
+
+        input{
+          width: 425px;
+          height: 140px;
+        }
+      }
+
+    }
+
+    fieldset.submit {
+      float: right;
+      margin-right: 0;
+    }
+  }
+
+  label {
+    color: #3b678d;
+    margin-bottom: 20px;
   }
 
   input[type="text"], input[type="email"] {
     @include box-shadow(inset 1px 1px 2px #ccc);
     @include border-radius(7px);
 
-    background: #f4f4ed;
+    background: #d8e6ef;
     border: 1px solid #e5e5dd;
     color: #89897e;
     font-size: 12px;
     padding: 8px 8px;
-    width: 250px;
+    width: auto;
   }
 
   input[type="submit"] {
     @include border-radius(7px);
+
     float: right;
     margin-bottom: 10px;
     margin-right: 10px;
@@ -255,3 +290,34 @@ section {
   @include container;
 }
 
+footer {
+  @include column(24, true);
+
+  margin-top: 155px;
+
+  div{
+    position: absolute;
+    margin-top: -85px;
+    margin-left: 175px;
+  }
+
+  span, a {
+    color: #1f5380;
+  }
+
+  span.rights{
+    font-size: 12px;
+  };
+
+  img {
+    position: absolute;
+    &.left {
+      left: 0;
+      margin-top: -256px;
+    }
+    &.right{
+      right: 0;
+      margin-top: -273px;
+    }
+  }
+}

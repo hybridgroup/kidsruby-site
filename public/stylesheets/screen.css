@@ -53,6 +53,38 @@ a img {
   border: none;
 }
 
+.icon-sprite, .icon-fb, .icon-kidsMail1, .icon-kidsMail2, .icon-kidsMail3, .icon-kidsMail4, .icon-rss, .icon-twitter {
+  background: url('../images/icon-s3685fafdaf.png') no-repeat;
+}
+
+.icon-fb {
+  background-position: 0 0;
+}
+
+.icon-kidsMail1 {
+  background-position: 0 -44px;
+}
+
+.icon-kidsMail2 {
+  background-position: 0 -111px;
+}
+
+.icon-kidsMail3 {
+  background-position: 0 -229px;
+}
+
+.icon-kidsMail4 {
+  background-position: 0 -352px;
+}
+
+.icon-rss {
+  background-position: 0 -446px;
+}
+
+.icon-twitter {
+  background-position: 0 -487px;
+}
+
 :focus, :active {
   outline: 0 none;
 }
@@ -372,6 +404,67 @@ section input[type="submit"]:hover {
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
   -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+section .kidsInLine {
+  display: block;
+  float: left;
+  margin-left: 40px;
+}
+section .kidsInLine span {
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  float: left;
+  opacity: 0.9;
+}
+section .kidsInLine span.icon-kidsMail1 {
+  height: 67px;
+  width: 100px;
+  margin-top: 65px;
+}
+section .kidsInLine span.icon-kidsMail1:hover {
+  -moz-transform: translate(10px, 0);
+  -webkit-transform: translate(10px, 0);
+  -o-transform: translate(10px, 0);
+  -ms-transform: translate(10px, 0);
+  transform: translate(10px, 0);
+}
+section .kidsInLine span.icon-kidsMail2 {
+  height: 118px;
+  width: 100px;
+  margin-top: 10px;
+}
+section .kidsInLine span.icon-kidsMail2:hover {
+  -moz-transform: translate(10px, 0);
+  -webkit-transform: translate(10px, 0);
+  -o-transform: translate(10px, 0);
+  -ms-transform: translate(10px, 0);
+  transform: translate(10px, 0);
+}
+section .kidsInLine span.icon-kidsMail3 {
+  height: 123px;
+  width: 100px;
+}
+section .kidsInLine span.icon-kidsMail3:hover {
+  -moz-transform: translate(10px, 0);
+  -webkit-transform: translate(10px, 0);
+  -o-transform: translate(10px, 0);
+  -ms-transform: translate(10px, 0);
+  transform: translate(10px, 0);
+}
+section .kidsInLine span.icon-kidsMail4 {
+  height: 94px;
+  width: 70px;
+  margin-top: 27px;
+  margin-left: 5px;
+}
+section .kidsInLine span.icon-kidsMail4:hover {
+  -webkit-transform: rotateY(-20deg);
+  transform: rotateY(-20deg);
+}
+section .kidsInLine span:hover {
+  opacity: 1;
 }
 
 .container {

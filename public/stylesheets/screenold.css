@@ -49,6 +49,38 @@ a img {
   border: none;
 }
 
+.icon-sprite, .icon-fb, .icon-kidsMail1, .icon-kidsMail2, .icon-kidsMail3, .icon-kidsMail4, .icon-rss, .icon-twitter {
+  background: url('../images/icon-s3685fafdaf.png') no-repeat;
+}
+
+.icon-fb {
+  background-position: 0 0;
+}
+
+.icon-kidsMail1 {
+  background-position: 0 -44px;
+}
+
+.icon-kidsMail2 {
+  background-position: 0 -111px;
+}
+
+.icon-kidsMail3 {
+  background-position: 0 -229px;
+}
+
+.icon-kidsMail4 {
+  background-position: 0 -352px;
+}
+
+.icon-rss {
+  background-position: 0 -446px;
+}
+
+.icon-twitter {
+  background-position: 0 -487px;
+}
+
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;

@@ -7,7 +7,7 @@
     /[if IE]
       %link{:href=>'stylesheets/ie.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
 
-    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.juitter.js"}
     %script{:type => "text/javascript", :src => "javascripts/system.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
@@ -31,8 +31,13 @@
       %aside
         %div.social
           %div#addthis
+            %div.socialButtons.icon-rss
+            %a.socialButtons.icon-twitter{:href => "http://www.twitter.com/kidsruby"}
+            %div.socialButtons.icon-fb
+
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style ">
+
             <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
             <a class="addthis_button_tweet"></a>
             <a class="addthis_counter addthis_pill_style"></a>
@@ -40,8 +45,22 @@
             <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d3044bd33b50dde"></script>
             <!-- AddThis Button END -->
 
+          %form
+            %fieldset.newsletter
+              %label Subscribe to our newsletter to receive the latest news about <a href="http://www.kidsruby.com">KIDSRUBY</a>
+            %fieldset.subscribe
+              %input{:name => "email", :type => "email", :placeholder => "Email", :required => ""}
+              %input{:type => "submit", :value => "Submit"}
+
           %header
-            KIDSRUBY on Twitter
+            <a href="http://www.twitter.com/kidsruby">KIDSRUBY</a> on Twitter
+          %a.icon-twitterbutton{:href => "http://www.twitter.com/kidsruby"}
+          %span.twitterinfo
+            %header
+              Kids Ruby <br/>
+              @kidsruby Planet Earth!
+            Let's teach kids how to program using Ruby! Programming is fun, and good for you too.
+            http://kidsruby.com
           #twitter-feed
 
       %footer

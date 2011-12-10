@@ -27,6 +27,10 @@ a, a:active, a:visited {
   text-decoration: none;
 }
 
+a {
+  color: #ff1941;
+}
+
 a:hover {
   color: red;
 }
@@ -45,6 +49,53 @@ body {
   font-family: helvetica;
 }
 
+label {
+  color: #3b678d;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"], input[type="email"], textarea {
+  @include box-shadow(inset 1px 1px 1px #b4c6d2);
+  @include border-radius(7px);
+
+  background: #d8e6ef;
+  border: 1px solid #e5e5dd;
+  color: #2c61c9;
+  font-size: 12px;
+  padding: 8px 8px;
+  max-width: 455px;
+  overflow: auto;
+  text-shadow: 1px 1px 1px white;
+}
+
+input[type="submit"] {
+  @include border-radius(7px);
+
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 8px 7px;
+  font: bold 13px helvetica;
+  line-height: 1;
+  color: #DCE4ED;
+  border: 1px solid #4c97c2;
+  background-color: #2e70a8;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgba(100, 48, 22, 1);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3287BF), to(#2E70A8));
+  background-image: -moz-linear-gradient(19% 75% 90deg,#3287BF, #2E70A8);
+}
+
+input[type="submit"]:hover {
+  @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+@font-face {
+  font-family: "signpainter";
+  src: url('/font/SignPainter_HouseBrush.ttf');
+}
+
 nav {
   background: url('/images/signBoard.png') no-repeat center;
   float: right;
@@ -58,16 +109,20 @@ nav {
     margin-top: 51px;
 
     a {
-      @include transition-duration(1s);
+      @include transition-duration(0.5s);
+
+      font-family: 'signpainter', helvetica;
       color: white;
       float: left;
-      font-size: 16px;
+      font-size: 20px;
       padding: 5px 0;
       opacity: 0.9;
       text-align: center;
       width: 100px;
 
       &.first {
+        font-size: 25px;
+        line-height: 17px;
         margin: 0 7px 0 20px;
       }
 
@@ -75,14 +130,16 @@ nav {
         width: 85px;
         margin-left: 5px;
       }
-    }
-
-    a:hover {
-      color: white;
-      // text-shadow: -1px -1px 1px black;
-      opacity: 1;
+      &:hover {
+        color: white;
+        opacity: 1;
+      }
     }
   }
+}
+
+.container {
+  @include container;
 }
 
 //header
@@ -111,14 +168,31 @@ header.sectionTitle{
   margin-top: 145px;
   padding: 25px 20px 20px 60px;
   font-size: 24px;
-  a {
-    color: #ff1941;
-  }
+}
+
+.hide{
+  display: none;
+}
+
+section.secondPage {
+  display: none;
+}//home ends<<<<<<<<<<<<
+
+//aside for Social Media section >>>>>>>>>>>
+@mixin backgroundBox {
+  @include border-radius(8px);
+  @include background-image(linear-gradient(top left, #F1F8FC, #e2edf4));
+  @include box-shadow(1px 1px 1px #a1b2c0);
+}
+
+@mixin shadow {
+  @include text-shadow(1px 1px 1px rgba(77, 77, 77, 0.5));
 }
 
 aside {
   @include column(8, true);
 
+  color: #4380b4;
   background-color: #dce4ed;
   min-height: 1116px;
   padding-right: 10px;
@@ -127,45 +201,124 @@ aside {
     padding-left: 20px;
     padding-right: 10px;
 
-    #twitter-feed {
-      ul {
-        margin: 0px;
-        padding: 0px;
-        li {
-          clear: both;
-          font-size: 11px;
-          list-style: none;
-          margin: 0px 0px 8px 0px;
-          min-height: 55px;
-          padding: 3px;
-          text-align: justify;
-          a {
-            img {
-              background: none;
-              float: left;
-              height: 40px;
-              margin: 0 10px 22px 0;
-              width: 40px;
-            }
-          }
-          a.JRM {
-            display: inline;
-            font-size: 10px;
-          }
-          span.time {
-            color: #999;
-            display: inline-block;
-            font-size: 10px;
-          }
+    div#addthis {
+      @include backgroundBox;
+
+      height: 121px;
+      margin-top: 24px;
+
+      .socialButtons {
+        @include transition-duration(1s);
+
+        margin: 16px 0 30px 40px;
+        float: left;
+        height: 42px;
+        width: 42px;
+
+        &:hover {
+          @include scale(1.3);
+        }
+      }
+
+      //Hiding the addthis social buttons for now.
+      .addthis_toolbox {
+        display: none;
+      }
+    }
+
+    header {
+      @include shadow;
+      color: #1f5380;
+      margin-bottom: 20px;
+    }
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+
+    &.newsletter {
+      @include shadow;
+      margin-top: 30px;
+    }
+
+    &.subscribe {
+      @include backgroundBox;
+
+      border-bottom: 2px solid #e3e9f1;
+      height: 50px;
+
+      input[type='email']{
+        padding: 0 30px 0 8px;
+        height: 30px;
+        margin: 10px 0 0 10px;
+        width: 182px;
+      }
+
+      input[type='submit']{
+        margin: 10px 10px 0 -23px;
+        position: absolute;
+
+        &:hover {
+          @include box-shadow(-1px 0px 2px rgba(0, 0, 0, 0.7));
         }
       }
     }
   }
-}
 
-section.secondPage {
-  display: none;
-}
+  .icon-twitterbutton {
+    float: left;
+    height: 82px;
+    width: 82px;
+    margin: 0 10px 10px 0;
+    &:hover {
+      @include rotate(3deg);
+    }
+  }
+
+  span.twitterinfo {
+    font-size: 11px;
+
+    header {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+
+  #twitter-feed {
+    ul {
+      margin: 0px;
+      padding: 0px;
+      li {
+        clear: both;
+        font-size: 11px;
+        list-style: none;
+        margin: 0px 0px 8px 0px;
+        min-height: 55px;
+        padding: 3px;
+        text-align: justify;
+        a {
+          img {
+            background: none;
+            float: left;
+            height: 40px;
+            margin: 0 10px 22px 0;
+            width: 40px;
+          }
+        }
+        a.JRM {
+          display: inline;
+          font-size: 10px;
+        }
+        span.time {
+          display: inline-block;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}//aside for social media ends<<<<<
+
+//this section styles home, download, and contact
 section {
   @include clearfix;
   @include column(16, true);
@@ -212,6 +365,7 @@ section {
     }
   }
 
+  //contact
   form#sign-up {
     margin: 5px 90px 0px;
 
@@ -251,48 +405,7 @@ section {
     }
   }
 
-  label {
-    color: #3b678d;
-    margin-bottom: 10px;
-    display: block;
-  }
-
-  input[type="text"], input[type="email"], textarea {
-    @include box-shadow(inset 1px 1px 1px #b4c6d2);
-    @include border-radius(7px);
-
-    background: #d8e6ef;
-    border: 1px solid #e5e5dd;
-    color: #2c61c9;
-    font-size: 12px;
-    padding: 8px 8px;
-    max-width: 455px;
-    overflow: auto;
-    text-shadow: 1px 1px 1px white;
-  }
-
-  input[type="submit"] {
-    @include border-radius(7px);
-
-    float: right;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    padding: 8px 7px;
-    font: bold 13px helvetica;
-    line-height: 1;
-    color: #DCE4ED;
-    border: 1px solid #4c97c2;
-    background-color: #2e70a8;
-    cursor: pointer;
-    text-shadow: 1px 1px 2px rgba(100, 48, 22, 1);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3287BF), to(#2E70A8));
-    background-image: -moz-linear-gradient(19% 75% 90deg,#3287BF, #2E70A8);
-  }
-
-  input[type="submit"]:hover {
-    @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
-  }
-
+  //kids mailing letters in contact
   .kidsInLine {
     display: block;
     float: left;
@@ -342,11 +455,7 @@ section {
       }
     }
   }
-}
-
-.container {
-  @include container;
-}
+}//section ends<<<<<<<<<<
 
 footer {
   @include column(24, true);
@@ -365,7 +474,7 @@ footer {
 
   span.rights{
     font-size: 12px;
-  };
+  }
 
   img {
     position: absolute;
@@ -373,6 +482,7 @@ footer {
       left: 0;
       margin-top: -256px;
     }
+
     &.right{
       right: 0;
       margin-top: -273px;

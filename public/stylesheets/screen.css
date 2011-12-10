@@ -53,8 +53,8 @@ a img {
   border: none;
 }
 
-.icon-sprite, .icon-fb, .icon-kidsMail1, .icon-kidsMail2, .icon-kidsMail3, .icon-kidsMail4, .icon-rss, .icon-twitter {
-  background: url('../images/icon-s3685fafdaf.png') no-repeat;
+.icon-sprite, .icon-fb, .icon-kidsMail1, .icon-kidsMail2, .icon-kidsMail3, .icon-kidsMail4, .icon-rss, .icon-twitter, .icon-twitterbutton {
+  background: url('../images/icon-sfee8d060da.png') no-repeat;
 }
 
 .icon-fb {
@@ -85,12 +85,20 @@ a img {
   background-position: 0 -487px;
 }
 
+.icon-twitterbutton {
+  background-position: 0 -531px;
+}
+
 :focus, :active {
   outline: 0 none;
 }
 
 a, a:active, a:visited {
   text-decoration: none;
+}
+
+a {
+  color: #ff1941;
 }
 
 a:hover {
@@ -112,6 +120,67 @@ body {
   font-family: helvetica;
 }
 
+label {
+  color: #3b678d;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"], input[type="email"], textarea {
+  -moz-box-shadow: inset 1px 1px 1px #b4c6d2;
+  -webkit-box-shadow: inset 1px 1px 1px #b4c6d2;
+  -o-box-shadow: inset 1px 1px 1px #b4c6d2;
+  box-shadow: inset 1px 1px 1px #b4c6d2;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+  background: #d8e6ef;
+  border: 1px solid #e5e5dd;
+  color: #2c61c9;
+  font-size: 12px;
+  padding: 8px 8px;
+  max-width: 455px;
+  overflow: auto;
+  text-shadow: 1px 1px 1px white;
+}
+
+input[type="submit"] {
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 8px 7px;
+  font: bold 13px helvetica;
+  line-height: 1;
+  color: #DCE4ED;
+  border: 1px solid #4c97c2;
+  background-color: #2e70a8;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px #643016;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3287bf), to(#2e70a8));
+  background-image: -moz-linear-gradient(19% 75% 90deg, #3287bf, #2e70a8);
+}
+
+input[type="submit"]:hover {
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+@font-face {
+  font-family: "signpainter";
+  src: url("/font/SignPainter_HouseBrush.ttf");
+}
+
 nav {
   background: url("/images/signBoard.png") no-repeat center;
   float: right;
@@ -125,19 +194,22 @@ nav ul {
   margin-top: 51px;
 }
 nav ul a {
-  -moz-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  font-family: 'signpainter', helvetica;
   color: white;
   float: left;
-  font-size: 16px;
+  font-size: 20px;
   padding: 5px 0;
   opacity: 0.9;
   text-align: center;
   width: 100px;
 }
 nav ul a.first {
+  font-size: 25px;
+  line-height: 17px;
   margin: 0 7px 0 20px;
 }
 nav ul a.last {
@@ -147,6 +219,13 @@ nav ul a.last {
 nav ul a:hover {
   color: white;
   opacity: 1;
+}
+
+.container {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
 }
 
 img#thumb-drive {
@@ -197,8 +276,13 @@ header.sectionTitle {
 * html header.sectionTitle {
   overflow-x: hidden;
 }
-header.sectionTitle a {
-  color: #ff1941;
+
+.hide {
+  display: none;
+}
+
+section.secondPage {
+  display: none;
 }
 
 aside {
@@ -206,6 +290,7 @@ aside {
   float: left;
   margin-right: 0;
   width: 310px;
+  color: #4380b4;
   background-color: #dce4ed;
   min-height: 1116px;
   padding-right: 10px;
@@ -217,11 +302,119 @@ aside div.social {
   padding-left: 20px;
   padding-right: 10px;
 }
-aside div.social #twitter-feed ul {
+aside div.social div#addthis {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f1f8fc), color-stop(100%, #e2edf4));
+  background-image: -webkit-linear-gradient(top left, #f1f8fc, #e2edf4);
+  background-image: -moz-linear-gradient(top left, #f1f8fc, #e2edf4);
+  background-image: -o-linear-gradient(top left, #f1f8fc, #e2edf4);
+  background-image: -ms-linear-gradient(top left, #f1f8fc, #e2edf4);
+  background-image: linear-gradient(top left, #f1f8fc, #e2edf4);
+  -moz-box-shadow: 1px 1px 1px #a1b2c0;
+  -webkit-box-shadow: 1px 1px 1px #a1b2c0;
+  -o-box-shadow: 1px 1px 1px #a1b2c0;
+  box-shadow: 1px 1px 1px #a1b2c0;
+  height: 121px;
+  margin-top: 24px;
+}
+aside div.social div#addthis .socialButtons {
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  margin: 16px 0 30px 40px;
+  float: left;
+  height: 42px;
+  width: 42px;
+}
+aside div.social div#addthis .socialButtons:hover {
+  -moz-transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+  -o-transform: scale(1.3, 1.3);
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+aside div.social div#addthis .addthis_toolbox {
+  display: none;
+}
+aside div.social header {
+  text-shadow: 1px 1px 1px rgba(77, 77, 77, 0.5);
+  color: #1f5380;
+  margin-bottom: 20px;
+}
+aside fieldset {
+  margin-bottom: 30px;
+}
+aside fieldset.newsletter {
+  text-shadow: 1px 1px 1px rgba(77, 77, 77, 0.5);
+  margin-top: 30px;
+}
+aside fieldset.subscribe {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f1f8fc), color-stop(100%, #e2edf4));
+  background-image: -webkit-linear-gradient(top left, #f1f8fc, #e2edf4);
+  background-image: -moz-linear-gradient(top left, #f1f8fc, #e2edf4);
+  background-image: -o-linear-gradient(top left, #f1f8fc, #e2edf4);
+  background-image: -ms-linear-gradient(top left, #f1f8fc, #e2edf4);
+  background-image: linear-gradient(top left, #f1f8fc, #e2edf4);
+  -moz-box-shadow: 1px 1px 1px #a1b2c0;
+  -webkit-box-shadow: 1px 1px 1px #a1b2c0;
+  -o-box-shadow: 1px 1px 1px #a1b2c0;
+  box-shadow: 1px 1px 1px #a1b2c0;
+  border-bottom: 2px solid #e3e9f1;
+  height: 50px;
+}
+aside fieldset.subscribe input[type='email'] {
+  padding: 0 30px 0 8px;
+  height: 30px;
+  margin: 10px 0 0 10px;
+  width: 182px;
+}
+aside fieldset.subscribe input[type='submit'] {
+  margin: 10px 10px 0 -23px;
+  position: absolute;
+}
+aside fieldset.subscribe input[type='submit']:hover {
+  -moz-box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.7);
+}
+aside .icon-twitterbutton {
+  float: left;
+  height: 82px;
+  width: 82px;
+  margin: 0 10px 10px 0;
+}
+aside .icon-twitterbutton:hover {
+  -moz-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+aside span.twitterinfo {
+  font-size: 11px;
+}
+aside span.twitterinfo header {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+aside #twitter-feed ul {
   margin: 0px;
   padding: 0px;
 }
-aside div.social #twitter-feed ul li {
+aside #twitter-feed ul li {
   clear: both;
   font-size: 11px;
   list-style: none;
@@ -230,25 +423,20 @@ aside div.social #twitter-feed ul li {
   padding: 3px;
   text-align: justify;
 }
-aside div.social #twitter-feed ul li a img {
+aside #twitter-feed ul li a img {
   background: none;
   float: left;
   height: 40px;
   margin: 0 10px 22px 0;
   width: 40px;
 }
-aside div.social #twitter-feed ul li a.JRM {
+aside #twitter-feed ul li a.JRM {
   display: inline;
   font-size: 10px;
 }
-aside div.social #twitter-feed ul li span.time {
-  color: #999;
+aside #twitter-feed ul li span.time {
   display: inline-block;
   font-size: 10px;
-}
-
-section.secondPage {
-  display: none;
 }
 
 section {
@@ -353,58 +541,6 @@ section form#sign-up fieldset.submit {
   float: right;
   margin-right: 0;
 }
-section label {
-  color: #3b678d;
-  margin-bottom: 10px;
-  display: block;
-}
-section input[type="text"], section input[type="email"], section textarea {
-  -moz-box-shadow: inset 1px 1px 1px #b4c6d2;
-  -webkit-box-shadow: inset 1px 1px 1px #b4c6d2;
-  -o-box-shadow: inset 1px 1px 1px #b4c6d2;
-  box-shadow: inset 1px 1px 1px #b4c6d2;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -o-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -khtml-border-radius: 7px;
-  border-radius: 7px;
-  background: #d8e6ef;
-  border: 1px solid #e5e5dd;
-  color: #2c61c9;
-  font-size: 12px;
-  padding: 8px 8px;
-  max-width: 455px;
-  overflow: auto;
-  text-shadow: 1px 1px 1px white;
-}
-section input[type="submit"] {
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -o-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -khtml-border-radius: 7px;
-  border-radius: 7px;
-  float: right;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  padding: 8px 7px;
-  font: bold 13px helvetica;
-  line-height: 1;
-  color: #DCE4ED;
-  border: 1px solid #4c97c2;
-  background-color: #2e70a8;
-  cursor: pointer;
-  text-shadow: 1px 1px 2px #643016;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3287bf), to(#2e70a8));
-  background-image: -moz-linear-gradient(19% 75% 90deg, #3287bf, #2e70a8);
-}
-section input[type="submit"]:hover {
-  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-  -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-}
 section .kidsInLine {
   display: block;
   float: left;
@@ -465,13 +601,6 @@ section .kidsInLine span.icon-kidsMail4:hover {
 }
 section .kidsInLine span:hover {
   opacity: 1;
-}
-
-.container {
-  width: 950px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
 }
 
 footer {

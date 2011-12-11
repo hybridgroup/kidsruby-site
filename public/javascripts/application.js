@@ -8,11 +8,17 @@ $(document).ready(function() {
     .attr('target', '_blank');
 
   $('a#nextpage').click(function(event) {
-    event.preventDefault;
-    $('section.firstPage').slideUp('slow', function(){
-      $('section.secondPage').show();
+    event.preventDefault();
+    $('section.firstPage').fadeOut('slow', function(){
+      $('section.secondPage').fadeIn();
     });
   });
 
+  $('a#previouspage').click(function(event) {
+    event.preventDefault();
+    $('section.secondPage').fadeOut('slow', function(){
+      $('section.firstPage').fadeIn();
+    });
+  });
 });
 

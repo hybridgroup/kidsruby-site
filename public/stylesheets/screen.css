@@ -385,10 +385,10 @@ aside fieldset.subscribe input[type='submit'] {
   position: absolute;
 }
 aside fieldset.subscribe input[type='submit']:hover {
-  -moz-box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.7);
-  box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 aside .icon-twitterbutton {
   float: left;
@@ -410,6 +410,10 @@ aside span.twitterinfo header {
   margin-bottom: 0;
   font-size: 12px;
 }
+aside #twitter-feed {
+  float: left;
+  margin-top: 10px;
+}
 aside #twitter-feed ul {
   margin: 0px;
   padding: 0px;
@@ -418,25 +422,25 @@ aside #twitter-feed ul li {
   clear: both;
   font-size: 11px;
   list-style: none;
-  margin: 0px 0px 8px 0px;
+  margin: 0px 0px 30px 0px;
   min-height: 55px;
-  padding: 3px;
-  text-align: justify;
 }
 aside #twitter-feed ul li a img {
   background: none;
   float: left;
   height: 40px;
-  margin: 0 10px 22px 0;
+  margin: 0 10px 45px 0;
   width: 40px;
 }
 aside #twitter-feed ul li a.JRM {
   display: inline;
+  float: left;
   font-size: 10px;
 }
 aside #twitter-feed ul li span.time {
   display: inline-block;
   font-size: 10px;
+  margin-top: 10px;
 }
 
 section {

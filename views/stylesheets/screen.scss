@@ -259,7 +259,7 @@ aside {
         position: absolute;
 
         &:hover {
-          @include box-shadow(-1px 0px 2px rgba(0, 0, 0, 0.7));
+          @include box-shadow(-1px 1px 2px rgba(0, 0, 0, 0.7));
         }
       }
     }
@@ -285,6 +285,8 @@ aside {
   }
 
   #twitter-feed {
+    float: left;
+    margin-top: 10px;
     ul {
       margin: 0px;
       padding: 0px;
@@ -292,26 +294,26 @@ aside {
         clear: both;
         font-size: 11px;
         list-style: none;
-        margin: 0px 0px 8px 0px;
+        margin: 0px 0px 30px 0px;
         min-height: 55px;
-        padding: 3px;
-        text-align: justify;
         a {
           img {
             background: none;
             float: left;
             height: 40px;
-            margin: 0 10px 22px 0;
+            margin: 0 10px 45px 0;
             width: 40px;
           }
         }
         a.JRM {
           display: inline;
+          float: left;
           font-size: 10px;
         }
         span.time {
           display: inline-block;
           font-size: 10px;
+          margin-top: 10px;
         }
       }
     }

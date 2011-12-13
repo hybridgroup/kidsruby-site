@@ -209,11 +209,12 @@ aside {
 
       .socialButtons {
         @include transition-duration(1s);
+        @include box-shadow(1px 1px 2px #ccc);
 
         margin: 16px 0 30px 40px;
         float: left;
-        height: 42px;
-        width: 42px;
+        height: 41px;
+        width: 41px;
 
         &:hover {
           @include scale(0.9);

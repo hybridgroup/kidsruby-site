@@ -38,7 +38,7 @@
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style ">
 
-            <a class="addthis_counter addthis_pill_style"></a>
+            <a class="addthis_counter addthis_pill_style icon-rss"></a>
             <a class="addthis_button_tweet"></a>
             <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
             </div>
@@ -46,6 +46,8 @@
             <!-- AddThis Button END -->
 
             %span.socialNumbers
+              %span
+                http://api.ak.facebook.com/restserver.php?v=1.0&method=links.getStats&urls=%%URL%%&format=json
               Subscribers
             %span.socialNumbers
               Followers

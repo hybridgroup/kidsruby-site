@@ -292,7 +292,7 @@ aside {
   width: 310px;
   color: #4380b4;
   background-color: #dce4ed;
-  min-height: 1116px;
+  min-height: 1130px;
   padding-right: 10px;
 }
 * html aside {
@@ -333,14 +333,18 @@ aside div.social div#addthis .socialButtons {
   width: 42px;
 }
 aside div.social div#addthis .socialButtons:hover {
-  -moz-transform: scale(1.3, 1.3);
-  -webkit-transform: scale(1.3, 1.3);
-  -o-transform: scale(1.3, 1.3);
-  -ms-transform: scale(1.3, 1.3);
-  transform: scale(1.3, 1.3);
+  -moz-transform: scale(0.9, 0.9);
+  -webkit-transform: scale(0.9, 0.9);
+  -o-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
 }
-aside div.social div#addthis .addthis_toolbox {
-  display: none;
+aside div.social div#addthis a.connect_widget_like_button.clearfix.like_button_no_like {
+  padding: 10px 2px;
+}
+aside div.social div#addthis .socialNumbers {
+  margin-left: 30px;
+  font-size: 12px;
 }
 aside div.social header {
   text-shadow: 1px 1px 1px rgba(77, 77, 77, 0.5);
@@ -456,7 +460,7 @@ section {
   -ms-border-bottom-left-radius: 8px;
   -khtml-border-bottom-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  min-height: 1116px;
+  min-height: 1130px;
   background-color: #f3f2f5;
 }
 * html section {
@@ -476,6 +480,9 @@ section article {
 * html section article {
   overflow-x: hidden;
 }
+section article.last {
+  border-bottom: none;
+}
 section article h1 {
   color: #FF1941;
   font-size: 18px;
@@ -483,6 +490,7 @@ section article h1 {
 }
 section article p {
   color: #1F5380;
+  font-size: 14px;
   padding: 10px 0 25px 0;
 }
 section article p.next {
@@ -507,17 +515,10 @@ section form#sign-up {
   margin: 5px 90px 0px;
 }
 section form#sign-up fieldset {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 190px;
   margin-top: 30px;
 }
-* html section form#sign-up fieldset {
-  overflow-x: hidden;
-}
 section form#sign-up fieldset.top {
-  margin-right: 35px;
+  margin-right: 8px;
   display: inline;
   float: left;
 }

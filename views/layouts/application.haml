@@ -32,18 +32,25 @@
         %div.social
           %div#addthis
             %div.socialButtons.icon-rss
-            %a.socialButtons.icon-twitter{:href => "http://www.twitter.com/kidsruby"}
-            %div.socialButtons.icon-fb
+            %a.socialButtons.icon-twitter{:href => "http://twitter.com/home?status=KidsRuby+www.kidsruby.com"}
+            %a.socialButtons.icon-fb{:href => "http://www.facebook.com/share.php?u=www.kidsruby.com&title=[KidsRuby]"}
 
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style ">
 
-            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-            <a class="addthis_button_tweet"></a>
             <a class="addthis_counter addthis_pill_style"></a>
+            <a class="addthis_button_tweet"></a>
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
             </div>
             <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d3044bd33b50dde"></script>
             <!-- AddThis Button END -->
+
+            %span.socialNumbers
+              Subscribers
+            %span.socialNumbers
+              Followers
+            %span.socialNumbers
+              Fans
 
           %form
             %fieldset.newsletter

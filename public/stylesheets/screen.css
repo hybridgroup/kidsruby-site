@@ -278,6 +278,7 @@ header.sectionTitle {
 }
 header.sectionTitle h1 {
   font-weight: 700;
+  margin-bottom: 5px;
   text-align: center;
 }
 
@@ -296,7 +297,7 @@ aside {
   width: 310px;
   color: #4380b4;
   background-color: #dce4ed;
-  min-height: 1130px;
+  min-height: 1178px;
   padding-right: 10px;
 }
 * html aside {
@@ -331,29 +332,25 @@ aside div.social div#addthis .socialButtons {
   -webkit-transition-duration: 1s;
   -o-transition-duration: 1s;
   transition-duration: 1s;
-  -moz-box-shadow: 1px 1px 2px #cccccc;
-  -webkit-box-shadow: 1px 1px 2px #cccccc;
-  -o-box-shadow: 1px 1px 2px #cccccc;
-  box-shadow: 1px 1px 2px #cccccc;
-  margin: 16px 0 10px 40px;
+  margin: 16px 0 10px 68px;
   float: left;
-  height: 41px;
-  width: 41px;
+  height: 44px;
+  width: 45px;
 }
 aside div.social div#addthis .socialButtons:hover {
-  -moz-transform: scale(0.9, 0.9);
-  -webkit-transform: scale(0.9, 0.9);
-  -o-transform: scale(0.9, 0.9);
-  -ms-transform: scale(0.9, 0.9);
-  transform: scale(0.9, 0.9);
+  -moz-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
 }
 aside div.social div#addthis span.socialNumbers {
   color: #666;
   font-size: 12px;
   float: left;
-  margin-left: 41px;
+  margin-left: 66px;
   text-align: center;
-  width: 45px;
+  width: 47px;
 }
 aside div.social div#addthis span.socialNumbers.first {
   margin-left: 30px;
@@ -412,8 +409,8 @@ aside fieldset.subscribe input[type='submit']:hover {
 aside .icon-twitterbutton {
   float: left;
   height: 82px;
-  width: 82px;
   margin: 0 10px 10px 0;
+  width: 82px;
 }
 aside .icon-twitterbutton:hover {
   -moz-transform: rotate(3deg);
@@ -475,7 +472,7 @@ section {
   -ms-border-bottom-left-radius: 8px;
   -khtml-border-bottom-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  min-height: 1130px;
+  min-height: 1178px;
   background-color: #f3f2f5;
 }
 * html section {
@@ -526,6 +523,9 @@ section article ul li {
 section article ul li a {
   color: #ff1941;
 }
+section time {
+  color: #1F5380;
+}
 section form#sign-up {
   margin: 5px 90px 0px;
 }
@@ -533,9 +533,9 @@ section form#sign-up fieldset {
   margin-top: 30px;
 }
 section form#sign-up fieldset.top {
-  margin-right: 8px;
   display: inline;
   float: left;
+  margin-right: 8px;
 }
 section form#sign-up fieldset.top input {
   width: 200px;
@@ -554,8 +554,8 @@ section form#sign-up fieldset.bottom {
   overflow-x: hidden;
 }
 section form#sign-up fieldset.bottom input {
-  width: 425px;
   height: 140px;
+  width: 425px;
 }
 section form#sign-up fieldset.submit {
   float: right;
@@ -576,8 +576,8 @@ section .kidsInLine span {
 }
 section .kidsInLine span.icon-kidsMail1 {
   height: 67px;
-  width: 100px;
   margin-top: 65px;
+  width: 100px;
 }
 section .kidsInLine span.icon-kidsMail1:hover {
   -moz-transform: translate(10px, 0);
@@ -588,8 +588,8 @@ section .kidsInLine span.icon-kidsMail1:hover {
 }
 section .kidsInLine span.icon-kidsMail2 {
   height: 118px;
-  width: 100px;
   margin-top: 10px;
+  width: 100px;
 }
 section .kidsInLine span.icon-kidsMail2:hover {
   -moz-transform: translate(10px, 0);
@@ -611,9 +611,9 @@ section .kidsInLine span.icon-kidsMail3:hover {
 }
 section .kidsInLine span.icon-kidsMail4 {
   height: 94px;
-  width: 70px;
-  margin-top: 27px;
   margin-left: 5px;
+  margin-top: 27px;
+  width: 70px;
 }
 section .kidsInLine span.icon-kidsMail4:hover {
   -webkit-transform: rotateY(-20deg);

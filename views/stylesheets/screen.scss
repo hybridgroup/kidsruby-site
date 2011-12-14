@@ -171,6 +171,7 @@ header.sectionTitle{
 
   h1 {
     font-weight: 700;
+    margin-bottom: 5px;
     text-align: center;
   }
 }
@@ -199,7 +200,7 @@ aside {
 
   color: #4380b4;
   background-color: #dce4ed;
-  min-height: 1130px;
+  min-height: 1178px;
   padding-right: 10px;
 
   div.social {
@@ -214,15 +215,15 @@ aside {
 
       .socialButtons {
         @include transition-duration(1s);
-        @include box-shadow(1px 1px 2px #ccc);
+        // @include box-shadow(1px 1px 2px #ccc);
 
-        margin: 16px 0 10px 40px;
+        margin: 16px 0 10px 68px;
         float: left;
-        height: 41px;
-        width: 41px;
+        height: 44px;
+        width: 45px;
 
         &:hover {
-          @include scale(0.9);
+          @include scale(1.2);
         }
       }
 
@@ -230,9 +231,9 @@ aside {
         color: #666;
         font-size: 12px;
         float: left;
-        margin-left: 41px;
+        margin-left: 66px;
         text-align: center;
-        width: 45px;
+        width: 47px;
 
         &.first {
           margin-left: 30px;
@@ -286,8 +287,8 @@ aside {
   .icon-twitterbutton {
     float: left;
     height: 82px;
-    width: 82px;
     margin: 0 10px 10px 0;
+    width: 82px;
     &:hover {
       @include rotate(3deg);
     }
@@ -343,7 +344,7 @@ section {
   @include clearfix;
   @include column(16, true);
   @include border-bottom-left-radius(8px);
-  min-height: 1130px;
+  min-height: 1178px;
 
   background-color: #f3f2f5;
   article {
@@ -390,6 +391,10 @@ section {
     }
   }
 
+  time {
+    color: #1F5380;
+  }
+
   //contact
   form#sign-up {
     margin: 5px 90px 0px;
@@ -399,9 +404,9 @@ section {
       margin-top: 30px;
 
       &.top {
-        margin-right: 8px;
         display: inline;
         float: left;
+        margin-right: 8px;
 
         input{
           width: 200px;
@@ -417,8 +422,8 @@ section {
         margin-top: 10px;
 
         input{
-          width: 425px;
           height: 140px;
+          width: 425px;
         }
       }
 
@@ -442,8 +447,8 @@ section {
 
       &.icon-kidsMail1 {
         height: 67px;
-        width: 100px;
         margin-top: 65px;
+        width: 100px;
 
         &:hover {
           @include translate(10px, 0);
@@ -451,8 +456,8 @@ section {
       }
       &.icon-kidsMail2 {
         height: 118px;
-        width: 100px;
         margin-top: 10px;
+        width: 100px;
 
         &:hover {
           @include translate(10px, 0);
@@ -467,9 +472,9 @@ section {
       }
       &.icon-kidsMail4 {
         height: 94px;
-        width: 70px;
-        margin-top: 27px;
         margin-left: 5px;
+        margin-top: 27px;
+        width: 70px;
 
         &:hover {
           @include rotateY(-20deg);

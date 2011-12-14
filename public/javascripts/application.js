@@ -23,25 +23,20 @@ $(document).ready(function() {
     });
   });
 
+  // Facebook counter using json
   fblink = 'http://api.ak.facebook.com/restserver.php?v=1.0&method=links.getStats&urls=www.kidsruby.com&format=json';
 
-  fbObject = $.getJSON(fblink);
-
   $.getJSON(fblink, function(data) {
-      var items = [];
+    $("span.fbcount").html(data[0].like_count);
+  });
 
-      $.each(data, function(key, val) {
-        items.push('<li id="' + key + '">' + val + '</li>');
-      });
+  // Twitter count using json
+  twitterlink = 'http://urls.api.twitter.com/1/urls/count.json?url=www.kidsruby.com&callback=twttr.receiveCount';
 
-      $('<ul/>', {
-        'class': 'my-new-list',
-        html: items.join('')
-      }).appendTo('section.firstPage');
-    });
+  $.getJSON(twitterlink, function(data) {
+    $("span.twittercount").html(data.count);
+  });
 
-  twitterlink = 'http://urls.api.twitter.com/1/urls/count.json?url=www.kidsruby.com&callback=twttr.receiveCount'
-  twitterObject = $.getJSON(fblink);
 });
 
 

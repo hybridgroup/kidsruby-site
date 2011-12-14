@@ -168,6 +168,11 @@ header.sectionTitle{
   margin-top: 145px;
   padding: 25px 20px 20px 60px;
   font-size: 24px;
+
+  h1 {
+    font-weight: 700;
+    text-align: center;
+  }
 }
 
 .hide{
@@ -211,7 +216,7 @@ aside {
         @include transition-duration(1s);
         @include box-shadow(1px 1px 2px #ccc);
 
-        margin: 16px 0 30px 40px;
+        margin: 16px 0 10px 40px;
         float: left;
         height: 41px;
         width: 41px;
@@ -221,28 +226,21 @@ aside {
         }
       }
 
-      a.addthis_button_facebook_like.at300b {
-        // opacity: 0.1;
-        // position: absolute;
-        // float: right;
-        // right: 216px;
-        // width: 39px;
-        // bottom: -30px;
-        // height: 37px;
-      }
-
-      a.connect_widget_like_button.clearfix.like_button_no_like{
-        padding: 10px 2px;
-      }
-
-      //Hiding the addthis social buttons for now.
-      .addthis_toolbox {
-        // display: none;
-      }
-
-      .socialNumbers {
-        margin-left: 30px;
+      span.socialNumbers {
+        color: #666;
         font-size: 12px;
+        float: left;
+        margin-left: 41px;
+        text-align: center;
+        width: 45px;
+
+        &.first {
+          margin-left: 30px;
+        }
+
+        .counts {
+          font-size: 24px;
+        }
       }
     }
 

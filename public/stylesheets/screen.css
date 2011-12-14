@@ -276,6 +276,10 @@ header.sectionTitle {
 * html header.sectionTitle {
   overflow-x: hidden;
 }
+header.sectionTitle h1 {
+  font-weight: 700;
+  text-align: center;
+}
 
 .hide {
   display: none;
@@ -331,7 +335,7 @@ aside div.social div#addthis .socialButtons {
   -webkit-box-shadow: 1px 1px 2px #cccccc;
   -o-box-shadow: 1px 1px 2px #cccccc;
   box-shadow: 1px 1px 2px #cccccc;
-  margin: 16px 0 30px 40px;
+  margin: 16px 0 10px 40px;
   float: left;
   height: 41px;
   width: 41px;
@@ -343,12 +347,19 @@ aside div.social div#addthis .socialButtons:hover {
   -ms-transform: scale(0.9, 0.9);
   transform: scale(0.9, 0.9);
 }
-aside div.social div#addthis a.connect_widget_like_button.clearfix.like_button_no_like {
-  padding: 10px 2px;
-}
-aside div.social div#addthis .socialNumbers {
-  margin-left: 30px;
+aside div.social div#addthis span.socialNumbers {
+  color: #666;
   font-size: 12px;
+  float: left;
+  margin-left: 41px;
+  text-align: center;
+  width: 45px;
+}
+aside div.social div#addthis span.socialNumbers.first {
+  margin-left: 30px;
+}
+aside div.social div#addthis span.socialNumbers .counts {
+  font-size: 24px;
 }
 aside div.social header {
   text-shadow: 1px 1px 1px rgba(77, 77, 77, 0.5);

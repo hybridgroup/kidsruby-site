@@ -44,21 +44,21 @@ button::-moz-focus-inner {
 }
 
 //adjusts the width of the browser using media property of css.
-@media (max-width: 1020px) {
+// @media (max-width: 1020px) {
   body {
     background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
     background-color: #286ba5;
     font-family: helvetica;
   }
-}
-@media (min-width: 1020px) {
-  body {
-    background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
-    background-size: 100% 18.8%;
-    background-color: #286ba5;
-    font-family: helvetica;
-  }
-}
+// }
+// @media (min-width: 1020px) {
+//   body {
+//     background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
+//     background-size: 100% 18.8%;
+//     background-color: #286ba5;
+//     font-family: helvetica;
+//   }
+// }
 
 label {
   color: #3b678d;
@@ -154,24 +154,24 @@ nav {
 }
 
 //header
-@media (min-width: 1020px) {
-  img#thumb-drive {
-    @include transition-duration(1s);
-    height: 135px;
-    float: left;
-    position: absolute;
-    left: 9%;
-    top: 43px;
-    opacity: 0.8;
+// @media (min-width: 1020px) {
+//   img#thumb-drive {
+//     @include transition-duration(1s);
+//     height: 135px;
+//     float: left;
+//     position: absolute;
+//     left: 9%;
+//     top: 43px;
+//     opacity: 0.8;
 
-    &:hover {
-      opacity: 1;
-      @include rotate(-360deg);
-    }
-  }
-}
+//     &:hover {
+//       opacity: 1;
+//       @include rotate(-360deg);
+//     }
+//   }
+// }
 
-@media (max-width: 1020px) {
+// @media (max-width: 1020px) {
   img#thumb-drive {
     @include transition-duration(1s);
     height: 135px;
@@ -186,7 +186,7 @@ nav {
       @include rotate(-360deg);
     }
   }
-}
+// }
 
 //home
 header.sectionTitle{
@@ -205,11 +205,12 @@ header.sectionTitle{
     text-align: center;
   }
 }
-header.sectionTitle {
-  @media (min-width: 1020px) {
-    margin-top: 230px;
-  }
-}
+
+// @media (min-width: 1020px) {
+//   header.sectionTitle {
+//     margin-top: 230px;
+//   }
+// }
 
 .hide{
   display: none;
@@ -235,7 +236,7 @@ aside {
 
   color: #4380b4;
   background-color: #dce4ed;
-  min-height: 1178px;
+  min-height: 1190px;
   padding-right: 10px;
 
   div.social {
@@ -379,7 +380,7 @@ section {
   @include clearfix;
   @include column(16, true);
   @include border-bottom-left-radius(8px);
-  min-height: 1178px;
+  min-height: 1190px;
 
   background-color: #f3f2f5;
   article {

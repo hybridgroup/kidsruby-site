@@ -43,10 +43,21 @@ button::-moz-focus-inner {
   border:0;
 }
 
-body {
-  background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
-  background-color: #286ba5;
-  font-family: helvetica;
+//adjusts the width of the browser using media property of css.
+@media (max-width: 1020px) {
+  body {
+    background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
+    background-color: #286ba5;
+    font-family: helvetica;
+  }
+}
+@media (min-width: 1020px) {
+  body {
+    background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
+    background-size: 100% 18.8%;
+    background-color: #286ba5;
+    font-family: helvetica;
+  }
 }
 
 label {
@@ -143,18 +154,37 @@ nav {
 }
 
 //header
-img#thumb-drive {
-  @include transition-duration(1s);
-  height: 135px;
-  float: left;
-  position: relative;
-  left: 42px;
-  top: 43px;
-  opacity: 0.8;
+@media (min-width: 1020px) {
+  img#thumb-drive {
+    @include transition-duration(1s);
+    height: 135px;
+    float: left;
+    position: absolute;
+    left: 9%;
+    top: 43px;
+    opacity: 0.8;
 
-  &:hover {
-    opacity: 1;
-    @include rotate(-360deg);
+    &:hover {
+      opacity: 1;
+      @include rotate(-360deg);
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  img#thumb-drive {
+    @include transition-duration(1s);
+    height: 135px;
+    float: left;
+    position: relative;
+    left: 42px;
+    top: 43px;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+      @include rotate(-360deg);
+    }
   }
 }
 
@@ -165,7 +195,7 @@ header.sectionTitle{
   @include border-top-radius(8px);
 
   background-color: #e8edf3;
-  margin-top: 145px;
+  margin-top: 176px;
   padding: 25px 20px 20px 60px;
   font-size: 24px;
 
@@ -173,6 +203,11 @@ header.sectionTitle{
     font-weight: 700;
     margin-bottom: 5px;
     text-align: center;
+  }
+}
+header.sectionTitle {
+  @media (min-width: 1020px) {
+    margin-top: 230px;
   }
 }
 

@@ -11,6 +11,7 @@
     %script{:type => "text/javascript", :src => "javascripts/jquery.juitter.js"}
     %script{:type => "text/javascript", :src => "javascripts/system.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
+    %script{:type => "text/javascript", :src => "javascripts/bgstretcher.js"}
   %body
     .container
       %header
@@ -46,7 +47,7 @@
               %span.fbcount.counts
               Fans
 
-          %form
+          %form{:method => 'post', :action => '/newsletter'}
             %fieldset.newsletter
               %label Subscribe to our newsletter to receive the latest news about <a href="http://www.kidsruby.com">KIDSRUBY</a>
             %fieldset.subscribe

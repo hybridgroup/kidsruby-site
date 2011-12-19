@@ -236,7 +236,7 @@ aside {
 
   color: #4380b4;
   background-color: #dce4ed;
-  min-height: 1190px;
+  min-height: 1271px;
   padding-right: 10px;
 
   div.social {
@@ -380,7 +380,7 @@ section {
   @include clearfix;
   @include column(16, true);
   @include border-bottom-left-radius(8px);
-  min-height: 1190px;
+  min-height: 1271px;
 
   background-color: #f3f2f5;
   article {
@@ -393,6 +393,7 @@ section {
 
     &.last {
       border-bottom: none;
+      margin-bottom: 93px;
     }
 
     h1 {

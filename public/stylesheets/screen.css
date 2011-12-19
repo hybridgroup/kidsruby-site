@@ -297,7 +297,7 @@ aside {
   width: 310px;
   color: #4380b4;
   background-color: #dce4ed;
-  min-height: 1190px;
+  min-height: 1271px;
   padding-right: 10px;
 }
 * html aside {
@@ -472,7 +472,7 @@ section {
   -ms-border-bottom-left-radius: 8px;
   -khtml-border-bottom-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  min-height: 1190px;
+  min-height: 1271px;
   background-color: #f3f2f5;
 }
 * html section {
@@ -494,6 +494,7 @@ section article {
 }
 section article.last {
   border-bottom: none;
+  margin-bottom: 93px;
 }
 section article h1 {
   color: #FF1941;

@@ -238,10 +238,8 @@ img#thumb-drive {
   position: relative;
   left: 42px;
   top: 43px;
-  opacity: 0.8;
 }
 img#thumb-drive:hover {
-  opacity: 1;
   -moz-transform: rotate(-360deg);
   -webkit-transform: rotate(-360deg);
   -o-transform: rotate(-360deg);
@@ -269,9 +267,12 @@ header.sectionTitle {
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
   background-color: #e8edf3;
-  margin-top: 176px;
-  padding: 25px 20px 20px 60px;
+  color: #369;
   font-size: 24px;
+  line-height: 25px;
+  margin-top: 170px;
+  padding: 25px 20px 28px 60px;
+  text-shadow: 1px 1px 1px #CCC;
 }
 * html header.sectionTitle {
   overflow-x: hidden;
@@ -325,7 +326,7 @@ aside div.social div#addthis {
   -o-box-shadow: 1px 1px 1px #a1b2c0;
   box-shadow: 1px 1px 1px #a1b2c0;
   height: 121px;
-  margin-top: 24px;
+  margin-top: 21px;
 }
 aside div.social div#addthis .socialButtons {
   -moz-transition-duration: 1s;
@@ -362,13 +363,15 @@ aside div.social header {
   text-shadow: 1px 1px 1px rgba(77, 77, 77, 0.5);
   color: #1f5380;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
-aside fieldset {
-  margin-bottom: 30px;
+aside form {
+  border-bottom: 2px solid #E3E9F1;
 }
 aside fieldset.newsletter {
   text-shadow: 1px 1px 1px rgba(77, 77, 77, 0.5);
   margin-top: 30px;
+  margin-bottom: 28px;
 }
 aside fieldset.subscribe {
   -moz-border-radius: 8px;
@@ -389,15 +392,18 @@ aside fieldset.subscribe {
   box-shadow: 1px 1px 1px #a1b2c0;
   border-bottom: 2px solid #e3e9f1;
   height: 50px;
+  margin-bottom: 30px;
 }
 aside fieldset.subscribe input[type='email'] {
   padding: 0 30px 0 8px;
   height: 30px;
+  font-weight: 700;
   margin: 10px 0 0 10px;
   width: 182px;
 }
 aside fieldset.subscribe input[type='submit'] {
   margin: 10px 10px 0 -23px;
+  padding: 9px 10px;
   position: absolute;
 }
 aside fieldset.subscribe input[type='submit']:hover {
@@ -425,6 +431,8 @@ aside span.twitterinfo {
 aside span.twitterinfo header {
   margin-bottom: 0;
   font-size: 12px;
+  text-shadow: none;
+  color: #4380B4;
 }
 aside #twitter-feed {
   float: left;
@@ -499,12 +507,16 @@ section article.last {
 section article h1 {
   color: #FF1941;
   font-size: 18px;
+  font-weight: 600;
   padding: 40px 0 10px 0;
+  text-align: left;
 }
 section article p {
-  color: #1F5380;
+  color: #369;
   font-size: 14px;
+  font-weight: 300;
   padding: 10px 0 25px 0;
+  line-height: 20px;
 }
 section article p.next {
   float: right;
@@ -513,6 +525,19 @@ section article p.next {
 }
 section article p a {
   color: #ff1941;
+}
+section article.about {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+  margin-left: 20px;
+}
+* html section article.about {
+  overflow-x: hidden;
+}
+section article img {
+  width: 590px;
 }
 section article ul {
   margin-bottom: 30px;
@@ -525,7 +550,7 @@ section article ul li a {
   color: #ff1941;
 }
 section time {
-  color: #1F5380;
+  color: #369;
 }
 section form#sign-up {
   margin: 5px 90px 0px;

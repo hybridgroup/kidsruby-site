@@ -43,22 +43,11 @@ button::-moz-focus-inner {
   border:0;
 }
 
-//adjusts the width of the browser using media property of css.
-// @media (max-width: 1020px) {
-  body {
-    background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
-    background-color: #286ba5;
-    font-family: helvetica;
-  }
-// }
-// @media (min-width: 1020px) {
-//   body {
-//     background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
-//     background-size: 100% 18.8%;
-//     background-color: #286ba5;
-//     font-family: helvetica;
-//   }
-// }
+body {
+  background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
+  background-color: #286ba5;
+  font-family: helvetica;
+}
 
 label {
   color: #3b678d;
@@ -153,40 +142,18 @@ nav {
   @include container;
 }
 
-//header
-// @media (min-width: 1020px) {
-//   img#thumb-drive {
-//     @include transition-duration(1s);
-//     height: 135px;
-//     float: left;
-//     position: absolute;
-//     left: 9%;
-//     top: 43px;
-//     opacity: 0.8;
+img#thumb-drive {
+  @include transition-duration(1s);
+  height: 135px;
+  float: left;
+  position: relative;
+  left: 42px;
+  top: 43px;
 
-//     &:hover {
-//       opacity: 1;
-//       @include rotate(-360deg);
-//     }
-//   }
-// }
-
-// @media (max-width: 1020px) {
-  img#thumb-drive {
-    @include transition-duration(1s);
-    height: 135px;
-    float: left;
-    position: relative;
-    left: 42px;
-    top: 43px;
-    opacity: 0.8;
-
-    &:hover {
-      opacity: 1;
-      @include rotate(-360deg);
-    }
+  &:hover {
+    @include rotate(-360deg);
   }
-// }
+}
 
 //home
 header.sectionTitle{
@@ -195,9 +162,12 @@ header.sectionTitle{
   @include border-top-radius(8px);
 
   background-color: #e8edf3;
-  margin-top: 176px;
-  padding: 25px 20px 20px 60px;
+  color: #369;
   font-size: 24px;
+  line-height: 25px;
+  margin-top: 170px;
+  padding: 25px 20px 28px 60px;
+  text-shadow: 1px 1px 1px #CCC;
 
   h1 {
     font-weight: 700;
@@ -205,12 +175,6 @@ header.sectionTitle{
     text-align: center;
   }
 }
-
-// @media (min-width: 1020px) {
-//   header.sectionTitle {
-//     margin-top: 230px;
-//   }
-// }
 
 .hide{
   display: none;
@@ -247,7 +211,7 @@ aside {
       @include backgroundBox;
 
       height: 121px;
-      margin-top: 24px;
+      margin-top: 21px;
 
       .socialButtons {
         @include transition-duration(1s);
@@ -285,15 +249,21 @@ aside {
       @include shadow;
       color: #1f5380;
       margin-bottom: 20px;
+      margin-top: 30px;
     }
   }
 
+  form {
+    border-bottom: 2px solid #E3E9F1;
+  }
+
   fieldset {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
 
     &.newsletter {
       @include shadow;
       margin-top: 30px;
+      margin-bottom: 28px;
     }
 
     &.subscribe {
@@ -301,16 +271,20 @@ aside {
 
       border-bottom: 2px solid #e3e9f1;
       height: 50px;
+      margin-bottom: 30px;
+
 
       input[type='email']{
         padding: 0 30px 0 8px;
         height: 30px;
+        font-weight: 700;
         margin: 10px 0 0 10px;
         width: 182px;
       }
 
       input[type='submit']{
         margin: 10px 10px 0 -23px;
+        padding: 9px 10px;
         position: absolute;
 
         &:hover {
@@ -336,6 +310,8 @@ aside {
     header {
       margin-bottom: 0;
       font-size: 12px;
+      text-shadow: none;
+      color: #4380B4;
     }
   }
 
@@ -384,7 +360,7 @@ section {
 
   background-color: #f3f2f5;
   article {
-  @include clearfix;
+    @include clearfix;
     @include column(13, true);
 
     border-bottom: 2px solid #E8EDF3;
@@ -399,22 +375,40 @@ section {
     h1 {
       color: #FF1941;
       font-size: 18px;
+      font-weight: 600;
       padding: 40px 0 10px 0;
+      text-align: left;
     }
 
     p {
-      color: #1F5380;
+      color: #369;
       font-size: 14px;
+      font-weight: 300;
       padding: 10px 0 25px 0;
+      line-height: 20px;
+
       &.next {
         float: right;
         margin-top: 30px;
         padding-right: 40px;
       }
+
       a {
         color: #ff1941;
       }
     }
+
+    // about page
+    &.about{
+      @include column(15);
+      margin-left: 20px;
+    }
+
+    //width of the images in about page
+    img {
+      width: 590px;
+    }
+
     ul {
       margin-bottom: 30px;
 
@@ -429,7 +423,7 @@ section {
   }
 
   time {
-    color: #1F5380;
+    color: #369;
   }
 
   //contact

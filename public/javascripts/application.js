@@ -7,11 +7,17 @@ $(document).ready(function() {
     .addClass('link external')
     .attr('target', '_blank');
 
+  // variable to grab the section height
+  var sectionheightone = $('section.firstPage').css('height');
+  var sectionheighttwo = $('section.secondPage').css('height');
+  var sectionheight = $('section').css('height');
+  $('aside').css('height', sectionheight);
   // scrolling to the top
   $('a#nextpage').click(function(event) {
     event.preventDefault();
     $('section.firstPage').fadeOut('slow', function(){
       $('section.secondPage').fadeIn();
+      $('aside').css('height', sectionheighttwo);
       $(window).scrollTop(1);
     });
   });
@@ -20,6 +26,7 @@ $(document).ready(function() {
     event.preventDefault();
     $('section.secondPage').fadeOut('slow', function(){
       $('section.firstPage').fadeIn();
+      $('aside').css('height', sectionheightone);
       $(window).scrollTop(1);
     });
   });

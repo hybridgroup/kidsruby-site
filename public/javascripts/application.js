@@ -53,14 +53,17 @@ $(document).ready(function() {
     // serialize the form data here
     var form = $('form#sign-up').serialize();
 
-    $.ajax('/newsletter', {
+    $.ajax('/contact', {
       type: 'POST',
       data: form,
       dataType: 'script'
     });
   }
 
-  // don't need to update this:
   $('form#sign-up').submit(emailUs);
+
+  $('form#sign-up').ajaxForm(function() {
+    alert('hey');
+  });
 
 });

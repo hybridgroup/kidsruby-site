@@ -410,13 +410,17 @@ section {
     }
 
     ul {
+      line-height: 20px;
       margin-bottom: 30px;
 
       li {
         color: #1f5380;
         margin-left: 20px;
+        padding-left: 20px;
+        font-size: 8px;
         a {
           color: #ff1941;
+          font-size: 14px;
         }
       }
     }

@@ -7,11 +7,11 @@ $(document).ready(function() {
     .addClass('link external')
     .attr('target', '_blank');
 
-  // variable to grab the section height
+  // variables to grab the section height
   var sectionheightone = $('section.firstPage').css('height');
   var sectionheighttwo = $('section.secondPage').css('height');
   var sectionheight = $('section').css('height');
-  $('aside').css('height', sectionheight);
+
   // scrolling to the top
   $('a#nextpage').click(function(event) {
     event.preventDefault();
@@ -31,6 +31,9 @@ $(document).ready(function() {
     });
   });
 
+  // all asides to be the same height as the sections
+  $('aside').css('height', sectionheight);
+
   // Facebook counter using json
   fblink = 'http://api.ak.facebook.com/restserver.php?v=1.0&method=links.getStats&urls=www.kidsruby.com&format=json';
   $.getJSON(fblink, function(data) {
@@ -42,5 +45,22 @@ $(document).ready(function() {
   $.getJSON(twitterlink, function(data) {
     $("span.twittercount").html(data.count);
   });
+
+  //Contact page
+  function emailUs(event) {
+    event.preventDefault();
+
+    // serialize the form data here
+    var form = $('form#sign-up').serialize();
+
+    $.ajax('/newsletter', {
+      type: 'POST',
+      data: form,
+      dataType: 'script'
+    });
+  }
+
+  // don't need to update this:
+  $('form#sign-up').submit(emailUs);
 
 });

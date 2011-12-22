@@ -12,8 +12,13 @@ body {
   padding: 0 1em;
   position: relative;
   background-color: #286ba5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/kidsRubyBottom.png', sizingMethod='crop')";
+  // -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/kidsRubyBottom.png', sizingMethod='crop')";
 }
 
-footer {
+#addthis {
+  background-color: #F1F8FC;
+}
+
+fieldset.subscribe {
+  background-color: #F1F8FC;
 }

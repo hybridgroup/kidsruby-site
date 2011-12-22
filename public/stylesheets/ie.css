@@ -3,3 +3,13 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+body {
+  background: url("/images/kidsRubyTop.png") no-repeat top;
+  background-position: top;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  padding: 0 1em;
+  position: relative;
+  background-color: #286ba5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/kidsRubyBottom.png', sizingMethod='crop')";
+}

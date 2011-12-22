@@ -186,6 +186,7 @@ section.secondPage {
 
 //aside for Social Media section >>>>>>>>>>>
 @mixin backgroundBox {
+  $experimental-support-for-svg: true;
   @include border-radius(8px);
   @include background-image(linear-gradient(top left, #F1F8FC, #e2edf4));
   @include box-shadow(1px 1px 1px #a1b2c0);

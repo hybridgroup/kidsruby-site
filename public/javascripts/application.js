@@ -46,6 +46,32 @@ $(document).ready(function() {
     $("span.twittercount").html(data.count);
   });
 
+  //placeholders to work in IE
+  if(!Modernizr.input.placeholder){
+
+    $('[placeholder]').focus(function() {
+      var input = $(this);
+      if (input.val() == input.attr('placeholder')) {
+      input.val('');
+      input.removeClass('placeholder');
+      }
+    }).blur(function() {
+      var input = $(this);
+      if (input.val() == '' || input.val() == input.attr('placeholder')) {
+      input.addClass('placeholder');
+      input.val(input.attr('placeholder'));
+      }
+    }).blur();
+    $('[placeholder]').parents('form').submit(function() {
+      $(this).find('[placeholder]').each(function() {
+      var input = $(this);
+      if (input.val() == input.attr('placeholder')) {
+        input.val('');
+      }
+      })
+    });
+  }
+
   //Contact page
   function emailUs(event) {
     event.preventDefault();
@@ -61,9 +87,5 @@ $(document).ready(function() {
   }
 
   $('form#sign-up').submit(emailUs);
-
-  $('form#sign-up').ajaxForm(function() {
-    alert('hey');
-  });
 
 });

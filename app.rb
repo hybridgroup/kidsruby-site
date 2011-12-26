@@ -61,6 +61,7 @@ post '/newsletter' do
           :authentication       => 'plain', 
           :domain               => ENV['SENDGRID_DOMAIN']
         }) if settings.environment == :production
+  haml :contact, :layout => :'layouts/application'
 end
 
 post "/contact" do

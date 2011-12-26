@@ -178,7 +178,7 @@ input[type="submit"]:hover {
 
 @font-face {
   font-family: "signpainter";
-  src: url("/font/signpainter_housebrush.ttf");
+  src: url("/font/SignPainter_HouseBrush.ttf");
 }
 
 nav {
@@ -655,6 +655,11 @@ section .kidsInLine span.icon-kidsMail4:hover {
 }
 section .kidsInLine span:hover {
   opacity: 1;
+}
+section fieldset#thankyou {
+  display: none;
+  float: left;
+  margin-left: 130px;
 }
 
 footer {

@@ -41,10 +41,22 @@ $(document).ready(function() {
   });
 
   // Twitter count using json
-  twitterlink = 'https://urls.api.twitter.com/1/urls/count.json?url=www.kidsruby.com&callback=twttr.receiveCount';
+  twitterlink = 'https://urls.api.twitter.com/1/urls/count.json?url=www.kidsruby.com&callback=?';
   $.getJSON(twitterlink, function(data) {
     $("span.twittercount").html(data.count);
   });
+  
+
+function deleteItem(itemId, updateUI) {
+  var client = new XMLHttpRequest()
+  client.open("DELETE", "http://calendar.example/app")
+  client.onload = updateUI
+  client.onerror = updateUI
+  client.onabort = updateUI
+  client.send("id=" + itemId)
+}
+
+
 
   //placeholders to work in IE
   if(!Modernizr.input.placeholder){

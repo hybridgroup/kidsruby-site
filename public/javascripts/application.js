@@ -41,10 +41,47 @@ $(document).ready(function() {
   });
 
   // Twitter count using json
-  twitterlink = 'http://urls.api.twitter.com/1/urls/count.json?url=www.kidsruby.com&callback=twttr.receiveCount';
-  $.getJSON(twitterlink, function(data) {
-    $("span.twittercount").html(data.count);
-  });
+  // twitterlink = 'http://urls.api.twitter.com/1/urls/count.json?url=www.kidsruby.com&callback=&format=json';
+  // twitterlink = 'http://api.twitter.com/1/followers/ids.json?screen_name=kidsruby';
+  // $.getJSON(twitterlink, function(data) {
+  // });
+
+  // var req = $.ajax({
+  //   url : 'http://urls.api.twitter.com/1/urls/count.json?url=www.kidsruby.com',
+  //   dataType : "json",
+  //   timeout : 10000
+  // });
+
+  // req.success(function() {
+  //     console.log('Yes! Success!');
+  // });
+
+  // req.error(function() {
+  //     console.log('Oh noes!');
+  // });
+
+  // var url = 'http://urls.api.twitter.com/1/urls/count.json?url=www.kidsruby.com'
+  // if(XMLHttpRequest)
+  // {
+  //   var request = new XMLHttpRequest();
+  //   if("withCredentials" in request)
+  //   {
+  //    // Firefox 3.5 and Safari 4
+  //   request.open('GET', url, true);
+  //   }
+
+  //   else if (XDomainRequest)
+  //   {
+  //    // IE8
+  //   var xdr = new XDomainRequest();
+  //   xdr.open("get", url);
+  //   xdr.send();
+
+  //   // handle XDR responses -- not shown here :-)
+  //   }
+  //    // This version of XHR does not support CORS  
+  //    // Handle accordingly
+  // }
 
   //placeholders to work in IE
   if(!Modernizr.input.placeholder){
@@ -87,5 +124,33 @@ $(document).ready(function() {
   }
 
   $('form#sign-up').submit(emailUs);
+
+  // thank you note
+   $('#sign-up').ajaxForm(function() {
+     $.preventDefault();
+     alert('kdkdk');
+    $("#thankyou").slideDown("fast");
+  });
+
+  // $.ajax({
+  //  beforeSend: function(){
+  //    alert('before');
+  //  },
+  //  complete: function(){
+  //    alert('after');
+  //  }
+  //  // ......
+  // });
+
+  //animate the kids after submit
+  $('form#sign-up fieldset.submit').live('click', function() {
+    $('span.icon-kidsMail1').animate({
+      opacity: 1,
+      marginLeft: '+=50',
+      // height: 'toggle'
+    }, 5000, function() {
+      // Animation complete.
+    });
+  });
 
 });

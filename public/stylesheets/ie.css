@@ -15,8 +15,10 @@ body {
 
 #addthis {
   background-color: #F1F8FC;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f1f8fc', EndColorStr='#e2edf4')";
 }
 
 fieldset.subscribe {
   background-color: #F1F8FC;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f1f8fc', EndColorStr='#e2edf4')";
 }

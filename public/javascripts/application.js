@@ -76,11 +76,11 @@ $(document).ready(function() {
 
   //Contact page
   $('#sign-up').ajaxForm(function() {
-    $('form#sign-up fieldset.top').slideUp('slow');
-    $('form#sign-up fieldset.bottom').slideUp('slow');
+    $('form#sign-up fieldset.top').fadeOut('slow');
+    $('form#sign-up fieldset.bottom').fadeOut('slow');
     $('form#sign-up fieldset.submit').slideUp('slow');
     // thank you note
-    $("#thankyou").slideDown("slow");
+    $("#thankyou").fadeIn("slow");
 
   });
 

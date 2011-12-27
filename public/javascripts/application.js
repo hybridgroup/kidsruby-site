@@ -36,8 +36,13 @@ $(document).ready(function() {
 
   // Facebook counter using json
   fblink = 'http://api.ak.facebook.com/restserver.php?v=1.0&method=links.getStats&urls=www.kidsruby.com&format=json';
-  $.getJSON(fblink, function(data) {
-    $("span.fbcount").html(data[0].like_count);
+  $.getJSON(fblink, function(data) { $("span.fbcount").html(data[0].like_count);
+  });
+
+  $.ajax({
+    url: fblink,
+    dataType: 'jsonp',
+    success: function(data) { $("span.fbcount").html(data[0].like_count)}
   });
 
   // Twitter count using jsonp

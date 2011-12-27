@@ -35,19 +35,15 @@ $(document).ready(function() {
   $('aside').css('height', sectionheight);
 
   // Facebook counter using json
-  fblink = 'http://api.ak.facebook.com/restserver.php?v=1.0&method=links.getStats&urls=www.kidsruby.com&format=json';
-  $.getJSON(fblink, function(data) { $("span.fbcount").html(data[0].like_count);
-  });
-
   $.ajax({
-    url: fblink,
+    url: 'http://api.ak.facebook.com/restserver.php?v=1.0&method=links.getStats&urls=www.kidsruby.com&format=json',
     dataType: 'jsonp',
     success: function(data) { $("span.fbcount").html(data[0].like_count)}
   });
 
   // Twitter count using jsonp
   $.ajax({
-    url: 'https://urls.api.twitter.com/1/urls/count.json?url=kidsruby.com',
+    url: 'http://urls.api.twitter.com/1/urls/count.json?url=kidsruby.com',
     dataType: 'jsonp',
     success: function(data) {$("span.twittercount").html(data.count)}
   });

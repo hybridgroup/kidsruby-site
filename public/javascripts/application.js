@@ -40,10 +40,11 @@ $(document).ready(function() {
     $("span.fbcount").html(data[0].like_count);
   });
 
-  // Twitter count using json
-  twitterlink = 'https://urls.api.twitter.com/1/urls/count.json?url=www.kidsruby.com&callback=?';
-  $.getJSON(twitterlink, function(data) {
-    $("span.twittercount").html(data.count);
+  // Twitter count using jsonp
+  $.ajax({
+    url: 'https://urls.api.twitter.com/1/urls/count.json?url=kidsruby.com',
+    dataType: 'jsonp',
+    success: function(data) {$("span.twittercount").html(data.count)}
   });
 
   //placeholders to work in IE

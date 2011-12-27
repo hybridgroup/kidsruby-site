@@ -73,24 +73,8 @@ $(document).ready(function() {
   }
 
   //Contact page
-  function emailUs(event) {
-    event.preventDefault();
-
-    // serialize the form data here
-    var form = $('form#sign-up').serialize();
-
-    $.ajax('/contact', {
-      type: 'POST',
-      data: form,
-      dataType: 'script'
-    });
-  }
-
-  $('form#sign-up').submit(emailUs);
-
   // thank you note
    $('#sign-up').ajaxForm(function() {
-     $.preventDefault();
     $("#thankyou").slideDown("fast");
   });
 
@@ -105,10 +89,11 @@ $(document).ready(function() {
     });
   });
 
-  //newsletter
+  //newsletter email sign-up
   $('fieldset.subscribe input:first').ajaxForm(function(){
      $.preventDefault();
     alert('hey');
+    $("#thankyou").slideDown("fast");
   });
 
 });

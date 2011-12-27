@@ -52,8 +52,10 @@
             %fieldset.newsletter
               %label Subscribe to our newsletter to receive the latest news about <a href="http://www.kidsruby.com">KIDSRUBY</a>
             %fieldset.subscribe
-              %input{:name => "email", :type => "email", :placeholder => "Place your email here", :required => ""}
+              %input#emailnewsletter{:name => "email", :type => "email", :placeholder => "Place your email here", :required => ""}
               %input{:type => "submit", :value => "Send"}
+            %fieldset#thankyou
+              %label Thank you signing up for the newsletter!
 
           %header
             <a href="http://www.twitter.com/kidsruby">KIDSRUBY</a> on Twitter

@@ -292,6 +292,13 @@ aside {
           @include box-shadow(-1px 1px 2px rgba(0, 0, 0, 0.7));
         }
       }
+
+      #thanks4email {
+        display: none;
+        padding: 18px 4px;
+        text-align: center;
+      }
+
     }
   }
 
@@ -351,9 +358,6 @@ aside {
     }
   }
 
-  #thanks4email {
-    display: none;
-  }
 }//aside for social media ends<<<<<
 
 //this section styles home, download, and contact
@@ -468,6 +472,12 @@ section {
       }
 
     }
+    fieldset#thankyou {
+      display: none;
+      float: left;
+      margin: 208px 0 130px 90px;
+      font-size: 24px;
+    }
 
     fieldset.submit {
       float: right;
@@ -526,11 +536,6 @@ section {
     }
   }
 
-  fieldset#thankyou {
-    display: none;
-    float: left;
-    margin-left: 130px;
-  }
 }//section ends<<<<<<<<<<
 
 footer {

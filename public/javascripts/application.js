@@ -76,16 +76,19 @@ $(document).ready(function() {
 
   //Contact page
   $('#sign-up').ajaxForm(function() {
-
+    $('form#sign-up fieldset.top').slideUp('slow');
+    $('form#sign-up fieldset.bottom').slideUp('slow');
+    $('form#sign-up fieldset.submit').slideUp('slow');
     // thank you note
-    $("#thankyou").slideDown("fast");
+    $("#thankyou").slideDown("slow");
 
   });
 
 
   //newsletter email sign-up
   $('fieldset.subscribe').parent().ajaxForm(function(){
-    $("#thanks4email").slideDown("fast");
+    $("fieldset.subscribe input").slideUp("fast");
+    $("#thanks4email").slideDown("slow");
   });
 
 });

@@ -49,7 +49,7 @@ post '/newsletter' do
   Pony.mail(
         :from => params[:email],
         :to => 'jonathan@hybridgroup.com, ron@hybridgroup.com',
-        :subject => 'THG Site Contact Request',
+        :subject => 'Request for the Kidsruby newsletter',
         :body => "#{params[:email]} wants to subscribe to the newsletter for kidsruby",
         :port => '587',
         :via => :smtp,
@@ -61,7 +61,6 @@ post '/newsletter' do
           :authentication       => 'plain', 
           :domain               => ENV['SENDGRID_DOMAIN']
         }) if settings.environment == :production
-  haml :contact, :layout => :'layouts/application'
 end
 
 post "/contact" do

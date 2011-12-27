@@ -45,18 +45,6 @@ $(document).ready(function() {
   $.getJSON(twitterlink, function(data) {
     $("span.twittercount").html(data.count);
   });
-  
-
-function deleteItem(itemId, updateUI) {
-  var client = new XMLHttpRequest()
-  client.open("DELETE", "http://calendar.example/app")
-  client.onload = updateUI
-  client.onerror = updateUI
-  client.onabort = updateUI
-  client.send("id=" + itemId)
-}
-
-
 
   //placeholders to work in IE
   if(!Modernizr.input.placeholder){
@@ -103,29 +91,24 @@ function deleteItem(itemId, updateUI) {
   // thank you note
    $('#sign-up').ajaxForm(function() {
      $.preventDefault();
-     alert('kdkdk');
     $("#thankyou").slideDown("fast");
   });
-
-  // $.ajax({
-  //  beforeSend: function(){
-  //    alert('before');
-  //  },
-  //  complete: function(){
-  //    alert('after');
-  //  }
-  //  // ......
-  // });
 
   //animate the kids after submit
   $('form#sign-up fieldset.submit').live('click', function() {
     $('span.icon-kidsMail1').animate({
       opacity: 1,
-      marginLeft: '+=50',
+      marginLeft: '+=10',
       // height: 'toggle'
-    }, 5000, function() {
+    }, 500, function() {
       // Animation complete.
     });
+  });
+
+  //newsletter
+  $('fieldset.subscribe input:first').ajaxForm(function(){
+     $.preventDefault();
+    alert('hey');
   });
 
 });

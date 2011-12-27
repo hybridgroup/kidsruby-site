@@ -470,6 +470,9 @@ aside #twitter-feed ul li span.time {
   font-size: 10px;
   margin-top: 10px;
 }
+aside #thanks4email {
+  display: none;
+}
 
 section {
   overflow: hidden;

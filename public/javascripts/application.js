@@ -73,27 +73,17 @@ $(document).ready(function() {
   }
 
   //Contact page
-  // thank you note
-   $('#sign-up').ajaxForm(function() {
+  $('#sign-up').ajaxForm(function() {
+
+    // thank you note
     $("#thankyou").slideDown("fast");
+
   });
 
-  //animate the kids after submit
-  $('form#sign-up fieldset.submit').live('click', function() {
-    $('span.icon-kidsMail1').animate({
-      opacity: 1,
-      marginLeft: '+=10',
-      // height: 'toggle'
-    }, 500, function() {
-      // Animation complete.
-    });
-  });
 
   //newsletter email sign-up
-  $('fieldset.subscribe input:first').ajaxForm(function(){
-     $.preventDefault();
-    alert('hey');
-    $("#thankyou").slideDown("fast");
+  $('fieldset.subscribe').parent().ajaxForm(function(){
+    $("#thanks4email").slideDown("fast");
   });
 
 });

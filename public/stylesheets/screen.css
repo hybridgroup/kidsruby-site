@@ -178,7 +178,7 @@ input[type="submit"]:hover {
 
 @font-face {
   font-family: "signpainter";
-  src: url("/font/SignPainter_HouseBrush.ttf");
+  src: url("/font/signpainter_housebrush.ttf");
 }
 
 nav {

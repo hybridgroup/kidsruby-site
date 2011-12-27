@@ -65,7 +65,7 @@ end
 
 post "/contact" do
   Pony.mail(
-        :from => params[:name],
+        :from => params[:email],
         :to => 'jonathan@hybridgroup.com, ron@hybridgroup.com',
         :subject => 'THG Site Contact Request',
         :body => "#{params[:name]} <#{params[:email]}> sent a message: #{params[:message]}",

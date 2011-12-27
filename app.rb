@@ -49,7 +49,7 @@ post '/newsletter' do
   Pony.mail(
         :from => params[:email],
         :to => 'jonathan@hybridgroup.com, ron@hybridgroup.com',
-        :subject => 'Request for the Kidsruby newsletter',
+        :subject => 'KidsRuby Newsletter Signup',
         :body => "#{params[:email]} wants to subscribe to the newsletter for kidsruby",
         :port => '587',
         :via => :smtp,
@@ -67,7 +67,7 @@ post "/contact" do
   Pony.mail(
         :from => params[:email],
         :to => 'jonathan@hybridgroup.com, ron@hybridgroup.com',
-        :subject => 'THG Site Contact Request',
+        :subject => 'KidsRuby Site Contact Request',
         :body => "#{params[:name]} <#{params[:email]}> sent a message: #{params[:message]}",
         :port => '587',
         :via => :smtp,

@@ -5,7 +5,7 @@ require 'pony'
 
 # Load Sinatra
 require 'sinatra'
-require 'lib/render_partial'
+require './lib/render_partial'
 
 # Load after Sinatra
 require 'haml' # must be loaded after sinatra

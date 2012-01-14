@@ -26,7 +26,7 @@
               %a.last{:href => '/contact'} Contact
 
         %div#thumb
-          %img{:src => "/images/weblogo.png", :id => "thumb-drive"}
+          %img{:src => "/images/weblogo.png", :id => "thumb-drive", :alt => 'kidrubylogo'}
 
       = yield
 
@@ -60,7 +60,7 @@
             <a href="http://www.twitter.com/kidsruby">KIDSRUBY</a> on Twitter
           %a.icon-twitterbutton{:href => "http://www.twitter.com/kidsruby"}
           %span.twitterinfo
-            %header
+            .title
               <b>Kids Ruby</b><br/>
               <a>@kidsruby</a> Planet Earth!
             Let's teach kids how to program using Ruby! Programming is fun, and good for you too.
@@ -68,9 +68,9 @@
           #twitter-feed
 
       %footer
-        %img.left{:src => "/images/rocksBottomLeft.png"}
+        %img.left{:src => "/images/rocksBottomLeft.png", :alt => 'bottom-left-rocks'}
         %div
           %span.rights &copy; 2011 <a href="http://hybridgroup.com">The Hybrid Group</a>
-        %img.right{:src => "/images/rubyBottomRight.png"}
+        %img.right{:src => "/images/rubyBottomRight.png", :alt => 'bottom-right-rubies'}
 
       = partial :_analytics

@@ -12,21 +12,23 @@
     %script{:type => "text/javascript", :src => "javascripts/system.js"}
     %script{:type => "text/javascript", :src => "javascripts/modernizr.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.form.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.lettering.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
   %body
     .container
       %header
+        %div#thumb
+          %img{:src => "/images/weblogo.png", :id => "thumb-drive", :alt => 'kidrubylogo'}
+        %nav.home
+          %a{:href => '/'} Home
         %nav
           %ul
             %li
-              %a.first{:href => '/'} Home
+              %a.first{:href => '/about'} About
             %li
               %a{:href => '/download'} Download
             %li
               %a.last{:href => '/contact'} Contact
-
-        %div#thumb
-          %img{:src => "/images/weblogo.png", :id => "thumb-drive", :alt => 'kidrubylogo'}
 
       = yield
 

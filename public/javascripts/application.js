@@ -67,10 +67,11 @@
       $('form#sign-up fieldset.submit').slideUp('slow');
       return $("#thankyou").fadeIn("slow");
     });
-    return $('fieldset.subscribe').parent().ajaxForm(function() {
+    $('fieldset.subscribe').parent().ajaxForm(function() {
       $("fieldset.subscribe input").slideUp("fast");
       return $("#thanks4email").slideDown("slow");
     });
+    return $('.lettering').lettering();
   });
 
 }).call(this);

@@ -179,12 +179,47 @@ input[type="submit"]:hover {
   src: url("/font/signpainter_housebrush.ttf");
 }
 
+.home {
+  float: left;
+  background: url("/images/homeboard.png") no-repeat center;
+  height: 93px;
+  position: relative;
+  left: 60px;
+  width: 126px;
+}
+.home a {
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  font-family: 'signpainter', helvetica;
+  color: white;
+  float: left;
+  font-size: 20px;
+  padding: 5px 0;
+  margin: 53px 0 0 17px;
+  opacity: 0.9;
+  text-align: center;
+  font-size: 22px;
+  padding: 0px 4px 2px 2px;
+  width: 91px;
+}
+.home a:hover {
+  color: white;
+  opacity: 1;
+}
+
 nav {
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
   background: url("/images/signBoard.png") no-repeat center;
   float: right;
   height: 93px;
   position: relative;
   right: 93px;
+  top: -10px;
   width: 329px;
 }
 nav ul {
@@ -192,22 +227,20 @@ nav ul {
   margin-top: 51px;
 }
 nav ul a {
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
   font-family: 'signpainter', helvetica;
   color: white;
   float: left;
   font-size: 20px;
-  padding: 5px 0;
+  padding: 4px 0;
   opacity: 0.9;
   text-align: center;
   width: 100px;
 }
 nav ul a.first {
-  font-size: 25px;
-  line-height: 17px;
   margin: 0 7px 0 20px;
 }
 nav ul a.last {
@@ -217,6 +250,9 @@ nav ul a.last {
 nav ul a:hover {
   color: white;
   opacity: 1;
+}
+nav:hover {
+  top: -5px;
 }
 
 .container {
@@ -692,4 +728,17 @@ footer img.left {
 footer img.right {
   right: 0;
   margin-top: -273px;
+}
+
+.lettering {
+  font-weight: 700;
+}
+.lettering span {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.lettering span:hover {
+  opacity: 0.5;
 }

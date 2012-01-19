@@ -96,12 +96,43 @@ input[type="submit"]:hover {
   src: url('/font/signpainter_housebrush.ttf');
 }
 
+.home {
+  float: left;
+  background: url('/images/homeboard.png') no-repeat center;
+  height: 93px;
+  position: relative;
+  left: 60px;
+  width: 126px;
+  a {
+    @include transition-duration(0.4s);
+
+    font-family: 'signpainter', helvetica;
+    color: white;
+    float: left;
+    font-size: 20px;
+    padding: 5px 0;
+    margin: 53px 0 0 17px;
+    opacity: 0.9;
+    text-align: center;
+    font-size: 22px;
+    padding: 0px 4px 2px 2px;
+    width: 91px;
+    &:hover {
+      color: white;
+      opacity: 1;
+    }
+  }
+}
+
 nav {
+  @include transition-duration(0.4s);
+
   background: url('/images/signBoard.png') no-repeat center;
   float: right;
   height: 93px;
   position: relative;
   right: 93px;
+  top: -10px;
   width: 329px;
 
   ul {
@@ -109,20 +140,18 @@ nav {
     margin-top: 51px;
 
     a {
-      @include transition-duration(0.5s);
+      @include transition-duration(0.4s);
 
       font-family: 'signpainter', helvetica;
       color: white;
       float: left;
       font-size: 20px;
-      padding: 5px 0;
+      padding: 4px 0;
       opacity: 0.9;
       text-align: center;
       width: 100px;
 
       &.first {
-        font-size: 25px;
-        line-height: 17px;
         margin: 0 7px 0 20px;
       }
 
@@ -135,6 +164,9 @@ nav {
         opacity: 1;
       }
     }
+  }
+  &:hover {
+    top: -5px;
   }
 }
 
@@ -567,6 +599,16 @@ footer {
     &.right{
       right: 0;
       margin-top: -273px;
+    }
+  }
+}
+
+.lettering {
+  font-weight: 700;
+  span {
+  @include transition-duration(0.5s);
+    &:hover {
+      opacity: 0.5;
     }
   }
 }

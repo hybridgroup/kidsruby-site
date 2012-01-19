@@ -75,3 +75,5 @@ $(document).ready ->
   $('fieldset.subscribe').parent().ajaxForm ->
     $("fieldset.subscribe input").slideUp "fast"
     $("#thanks4email").slideDown "slow"
+
+  $('.lettering').lettering()

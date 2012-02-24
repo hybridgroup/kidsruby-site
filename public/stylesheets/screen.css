@@ -285,9 +285,6 @@ img#thumb-drive:hover {
 header.sectionTitle {
   overflow: hidden;
   *zoom: 1;
-  display: inline;
-  float: left;
-  width: 860px;
   -moz-border-radius-topleft: 8px;
   -webkit-border-top-left-radius: 8px;
   -o-border-top-left-radius: 8px;
@@ -300,6 +297,9 @@ header.sectionTitle {
   -ms-border-top-right-radius: 8px;
   -khtml-border-top-right-radius: 8px;
   border-top-right-radius: 8px;
+  display: inline;
+  float: left;
+  width: 860px;
   background-color: #e8edf3;
   color: #369;
   font-size: 24px;

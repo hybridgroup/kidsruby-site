@@ -258,10 +258,9 @@ nav:hover {
 }
 
 .container {
-  width: 950px;
   margin: 0 auto;
   overflow: hidden;
-  *zoom: 1;
+  width: 940px;
 }
 
 img#thumb-drive {
@@ -288,8 +287,7 @@ header.sectionTitle {
   *zoom: 1;
   display: inline;
   float: left;
-  margin-right: 0;
-  width: 870px;
+  width: 860px;
   -moz-border-radius-topleft: 8px;
   -webkit-border-top-left-radius: 8px;
   -o-border-top-left-radius: 8px;
@@ -310,12 +308,9 @@ header.sectionTitle {
   padding: 25px 20px 28px 60px;
   text-shadow: 1px 1px 1px #CCC;
 }
-* html header.sectionTitle {
-  overflow-x: hidden;
-}
 header.sectionTitle h1 {
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -512,24 +507,58 @@ aside #twitter-feed ul li span.time {
   margin-top: 10px;
 }
 
+.dlwindows {
+  float: left;
+  margin-top: 5px;
+}
+.dlwindows a p {
+  color: #12436D;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 26px;
+  text-shadow: 0px 1px 1px #CCC;
+}
+.dlwindows p {
+  font-size: 14px;
+  color: #FF1941;
+  margin-left: 28px;
+}
+
+.dlmac {
+  float: right;
+  margin-top: 5px;
+  margin-right: 40px;
+}
+.dlmac a p {
+  color: #b51f38;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 26px;
+  text-shadow: 0px 1px 1px #CCC;
+}
+.dlmac p {
+  font-size: 14px;
+  color: #FF1941;
+  margin-left: 28px;
+}
+
 section {
   overflow: hidden;
   *zoom: 1;
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 630px;
   -moz-border-radius-bottomleft: 8px;
   -webkit-border-bottom-left-radius: 8px;
   -o-border-bottom-left-radius: 8px;
   -ms-border-bottom-left-radius: 8px;
   -khtml-border-bottom-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 620px;
   min-height: 1271px;
   background-color: #f3f2f5;
-}
-* html section {
-  overflow-x: hidden;
 }
 section article {
   overflow: hidden;
@@ -738,7 +767,8 @@ footer img.right {
 }
 
 .lettering {
-  font-weight: 700;
+  font-size: 30px;
+  width: 820px;
 }
 .lettering span {
   -moz-transition-duration: 0.5s;

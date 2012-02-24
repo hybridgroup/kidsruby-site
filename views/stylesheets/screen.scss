@@ -171,7 +171,9 @@ nav {
 }
 
 .container {
-  @include container;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 940px;
 }
 
 img#thumb-drive {
@@ -190,7 +192,10 @@ img#thumb-drive {
 //home
 header.sectionTitle{
   @include clearfix;
-  @include column(22, true);
+  // @include column(22, true);
+  display: inline;
+  float: left;
+  width: 860px;
   @include border-top-radius(8px);
 
   background-color: #e8edf3;
@@ -203,7 +208,7 @@ header.sectionTitle{
 
   h1 {
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     text-align: center;
   }
 }
@@ -393,13 +398,61 @@ aside {
 }//aside for social media ends<<<<<
 
 //this section styles home, download, and contact
+.dlwindows {
+
+  float: left;
+  margin-top: 5px;
+
+  a p {
+    color: #12436D;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 26px;
+    text-shadow: 0px 1px 1px #CCC;
+  }
+
+  p {
+    font-size: 14px;
+    color: #FF1941;
+    margin-left: 28px;
+  }
+}
+
+.dlmac {
+
+  float: right;
+  margin-top: 5px;
+  margin-right: 40px;
+
+  a p {
+    color: #b51f38;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 26px;
+    text-shadow: 0px 1px 1px #CCC;
+  }
+
+  p {
+    font-size: 14px;
+    color: #FF1941;
+    margin-left: 28px;
+  }
+}
+
 section {
   @include clearfix;
-  @include column(16, true);
   @include border-bottom-left-radius(8px);
-  min-height: 1271px;
 
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 620px;
+
+  min-height: 1271px;
   background-color: #f3f2f5;
+
   article {
     @include clearfix;
     @include column(13, true);
@@ -604,9 +657,12 @@ footer {
 }
 
 .lettering {
-  font-weight: 700;
+  font-size: 30px;
+  width: 820px;
+
   span {
-  @include transition-duration(0.5s);
+    @include transition-duration(0.5s);
+
     &:hover {
       opacity: 0.5;
     }

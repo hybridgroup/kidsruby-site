@@ -2,6 +2,7 @@
 require 'rubygems'
 require 'compass' # must be loaded before sinatra
 require 'pony'
+require 'hominid'
 
 # Load Sinatra
 require 'sinatra'
@@ -46,6 +47,7 @@ get '/contact' do
 end
 
 post '/newsletter' do
+=begin
   Pony.mail(
         :from => params[:email],
         :to => 'ron+kidsrubynews@hybridgroup.com',
@@ -61,6 +63,12 @@ post '/newsletter' do
           :authentication       => 'plain', 
           :domain               => ENV['SENDGRID_DOMAIN']
         }) if settings.environment == :production
+=end
+
+  if ENV['MAILCHIMP_API_KEY'] and ENV['MAILCHIMP_LIST']
+    @mailchimp ||= Hominid::API.new(ENV['MAILCHIMP_API_KEY'])
+    @mailchimp.list_subscribe(ENV['MAILCHIMP_LIST'], params[:email], '', 'html', true, true, true, false)
+  end
 end
 
 post "/contact" do
@@ -79,5 +87,15 @@ post "/contact" do
           :authentication       => 'plain', 
           :domain               => ENV['SENDGRID_DOMAIN']
         }) if settings.environment == :production
+
+  if params[:newsletter] == '1'
+    if ENV['MAILCHIMP_API_KEY'] and ENV['MAILCHIMP_LIST']
+      @mailchimp ||= Hominid::API.new(ENV['MAILCHIMP_API_KEY'])
+      n = params[:name].split(' ')
+      first = n.shift.to_s
+      last = n.join(' ')
+      @mailchimp.list_subscribe(ENV['MAILCHIMP_LIST'], params[:email], {'FNAME' => first, 'LNAME' => last}, 'html', true, true, true, false)
+    end
+  end
 end
 

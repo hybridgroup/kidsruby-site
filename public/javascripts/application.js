@@ -64,6 +64,7 @@
     $('#sign-up').ajaxForm(function() {
       $('form#sign-up fieldset.top').fadeOut('slow');
       $('form#sign-up fieldset.bottom').fadeOut('slow');
+      $('form#sign-up fieldset').fadeOut('slow');
       $('form#sign-up fieldset.submit').slideUp('slow');
       return $("#thankyou").fadeIn("slow");
     });

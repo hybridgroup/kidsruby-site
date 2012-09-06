@@ -39,10 +39,10 @@ $(document).ready ->
 
   # // Twitter count using jsonp
   $.ajax
-    url: 'http://urls.api.twitter.com/1/urls/count.json?url=kidsruby.com'
+    url: 'https://api.twitter.com/1/users/show.json?screen_name=kidsruby'
     dataType: 'jsonp'
     success: (data) ->
-      $("span.twittercount").html(data.count)
+      $("span.twittercount").html(data.followers_count)
 
   # //placeholders to work in IE
   unless Modernizr.input.placeholder

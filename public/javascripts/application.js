@@ -32,10 +32,10 @@
       }
     });
     $.ajax({
-      url: 'http://urls.api.twitter.com/1/urls/count.json?url=kidsruby.com',
+      url: 'https://api.twitter.com/1/users/show.json?screen_name=kidsruby',
       dataType: 'jsonp',
       success: function(data) {
-        return $("span.twittercount").html(data.count);
+        return $("span.twittercount").html(data.followers_count);
       }
     });
     if (!Modernizr.input.placeholder) {
@@ -64,7 +64,6 @@
     $('#sign-up').ajaxForm(function() {
       $('form#sign-up fieldset.top').fadeOut('slow');
       $('form#sign-up fieldset.bottom').fadeOut('slow');
-      $('form#sign-up fieldset').fadeOut('slow');
       $('form#sign-up fieldset.submit').slideUp('slow');
       return $("#thankyou").fadeIn("slow");
     });

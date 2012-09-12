@@ -1,17 +1,20 @@
 %header.sectionTitle
   %h1.lettering Download
-  .dlwindows
+  .dlwrap
     %a{:href => "https://s3.amazonaws.com/kidsruby/windows/kidsrubyinstaller-1.2.3.exe"}
-      %img{:src => '/images/dlwindows.png'}
-      -# windows version
-      %p KidsRuby 1.2 Installer
-    %p KidsRuby for Windows Installer
-  .dlmac
-    %a{:href => "https://s3.amazonaws.com/kidsruby/osx/kidsrubyinstaller-1.2.4.dmg"}
-      %img{:src => '/images/dlmac.png'}
-      -# osx version
-      %p KidsRuby 1.2 Installer
-    %p KidsRuby for OSX Installer
+      %p.dlfor Download for Windows
+      .buddy
+    %p.version KidsRuby 1.2 Windows Installer
+  .dlwrap
+    %a.mac_osx{:href => "https://s3.amazonaws.com/kidsruby/osx/kidsrubyinstaller-1.2.4.dmg"}
+      %p.dlfor Download for Mac OSX
+      .mac_buddy
+    %p.version KidsRuby 1.2 OSX Installer
+  .dlwrap
+    %a.linux{}
+      %p.dlfor Download for Linux
+      .buddy
+    %p.version Coming soon...
 %section
   %article
     %h1 KidsRuby OS

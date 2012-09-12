@@ -213,7 +213,7 @@ header.sectionTitle{
 
   h1 {
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: center;
   }
 }
@@ -412,46 +412,72 @@ aside {
 //this section styles home, download, and contact
 
 //download buttons
-.dlwindows {
+.dlwrap {
 
   float: left;
   margin-top: 5px;
+  margin-right: 42px;
+
+
+  a {
+    @include box-shadow(inset 0px 1px 0px #CCC);
+    @include border-radius(8px);
+    @include background-image(linear-gradient(#3f7db2, #2b6ea7));
+
+    border: 1px solid #2b6ea7;
+    display: block;
+    float: right;
+    height: 88px;
+    position: relative;
+    padding: 10px;
+    width: 202px;
+    .buddy {
+      @extend .icon-dl_windows;
+
+      height: 61px;
+      display: block;
+      position: relative;
+      clear: both;
+      margin: 0 auto;
+      width: 74px;
+    }
+    &.mac_osx {
+      @include background-image(linear-gradient(#ff7383, #ff274b));
+
+      border: 1px solid #ff7383;
+      .mac_buddy {
+        @extend .icon-dl-mac-osx;
+
+        height: 67px;
+        display: block;
+        position: relative;
+        clear: both;
+        margin: 0 auto;
+        width: 79px;
+      }
+    }
+    &.linux {
+      @include background-image(linear-gradient(#5E3DC5, #27029C));
+
+      border: 1px solid #27029C;
+    }
+    &:active {
+      top: 1px;
+      opacity: 0.8;
+    }
+  }
 
   a p {
-    color: #12436D;
+    color: white;
     font-size: 18px;
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 26px;
-    text-shadow: 0px 1px 1px #CCC;
+    text-shadow: 0px -1px 1px black;
   }
 
-  p {
+  .version {
     font-size: 14px;
     color: #FF1941;
-    margin-left: 28px;
-  }
-}
-
-.dlmac {
-
-  float: right;
-  margin-top: 5px;
-  margin-right: 40px;
-
-  a p {
-    color: #b51f38;
-    font-size: 18px;
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 26px;
-    text-shadow: 0px 1px 1px #CCC;
-  }
-
-  p {
-    font-size: 14px;
-    color: #FF1941;
-    margin-left: 28px;
+    padding-left: 10px;
+    text-align: center;
   }
 }
 
@@ -679,11 +705,12 @@ footer {
 }
 
 .lettering {
-  font-size: 30px;
+  cursor: default;
+  font-size: 40px;
   width: 820px;
 
   span {
-    @include transition-duration(0.5s);
+    @include transition-duration(0.2s);
 
     &:hover {
       opacity: 0.5;

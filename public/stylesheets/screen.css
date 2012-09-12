@@ -592,6 +592,7 @@ aside #twitter-feed ul li span.time {
 .dlwrap a p {
   color: white;
   font-size: 18px;
+  text-align: center;
   text-shadow: 0px -1px 1px black;
 }
 .dlwrap .version {

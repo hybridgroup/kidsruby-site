@@ -9,5 +9,5 @@ $blueprint-grid-margin: 10px;
 // you can make a new grid background image from the command line like this:
 // compass grid-img 30+10x16
 
-@import "icon/*.png"; ////*****////
+@import "icon/*.png"; ///****/
 @include all-icon-sprites;

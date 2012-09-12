@@ -517,8 +517,7 @@ aside #twitter-feed ul li span.time {
 
 .dlwrap {
   float: left;
-  margin-top: 5px;
-  margin-right: 42px;
+  margin: 5px 25px 0;
 }
 .dlwrap a {
   -moz-box-shadow: inset 0px 1px 0px #cccccc;
@@ -539,6 +538,10 @@ aside #twitter-feed ul li span.time {
   background-image: -o-linear-gradient(#3f7db2, #2b6ea7);
   background-image: -ms-linear-gradient(#3f7db2, #2b6ea7);
   background-image: linear-gradient(#3f7db2, #2b6ea7);
+  -moz-box-shadow: -1px 1px 1px 1px #cccccc;
+  -webkit-box-shadow: -1px 1px 1px 1px #cccccc;
+  -o-box-shadow: -1px 1px 1px 1px #cccccc;
+  box-shadow: -1px 1px 1px 1px #cccccc;
   border: 1px solid #2b6ea7;
   display: block;
   float: right;

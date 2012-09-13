@@ -53,48 +53,52 @@ a img {
   border: none;
 }
 
-.icon-sprite, .icon-dl-mac-osx, .dlwrap a.mac_osx .mac_buddy, .icon-dl_windows, .dlwrap a .buddy, .icon-fb, .icon-kidsMail1, .icon-kidsMail2, .icon-kidsMail3, .icon-kidsMail4, .icon-rss, .icon-twitter, .icon-twitterbutton {
-  background: url('../images/icon-s55a247f543.png') no-repeat;
+.icon-sprite, .icon-dl-linux, .dlwrap a.linux .buddy, .icon-dl-mac-osx, .dlwrap a.mac_osx .mac_buddy, .icon-dl_windows, .dlwrap a .buddy, .icon-fb, .icon-kidsMail1, .icon-kidsMail2, .icon-kidsMail3, .icon-kidsMail4, .icon-rss, .icon-twitter, .icon-twitterbutton {
+  background: url('../images/icon-sea6224a296.png') no-repeat;
 }
 
-.icon-dl-mac-osx, .dlwrap a.mac_osx .mac_buddy {
+.icon-dl-linux, .dlwrap a.linux .buddy {
   background-position: 0 0;
 }
 
-.icon-dl_windows, .dlwrap a .buddy {
-  background-position: 0 -66px;
+.icon-dl-mac-osx, .dlwrap a.mac_osx .mac_buddy {
+  background-position: 0 -61px;
 }
 
-.icon-fb {
+.icon-dl_windows, .dlwrap a .buddy {
   background-position: 0 -127px;
 }
 
+.icon-fb {
+  background-position: 0 -188px;
+}
+
 .icon-kidsMail1 {
-  background-position: 0 -171px;
+  background-position: 0 -232px;
 }
 
 .icon-kidsMail2 {
-  background-position: 0 -238px;
+  background-position: 0 -299px;
 }
 
 .icon-kidsMail3 {
-  background-position: 0 -356px;
+  background-position: 0 -417px;
 }
 
 .icon-kidsMail4 {
-  background-position: 0 -479px;
+  background-position: 0 -540px;
 }
 
 .icon-rss {
-  background-position: 0 -573px;
+  background-position: 0 -634px;
 }
 
 .icon-twitter {
-  background-position: 0 -614px;
+  background-position: 0 -675px;
 }
 
 .icon-twitterbutton {
-  background-position: 0 -658px;
+  background-position: 0 -719px;
 }
 
 :focus, :active {

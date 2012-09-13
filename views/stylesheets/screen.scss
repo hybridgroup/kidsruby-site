@@ -459,6 +459,11 @@ aside {
       @include background-image(linear-gradient(#5E3DC5, #27029C));
 
       border: 1px solid #27029C;
+
+      .buddy {
+        @extend .icon-dl-linux;
+        
+      }
     }
     &:active {
       top: 1px;

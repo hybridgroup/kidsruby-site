@@ -74,7 +74,7 @@ end
 post "/contact" do
   Pony.mail(
         :from => params[:email],
-        :to => 'ron+kidsruby@hybridgroup.com',
+        :to => 'vinson@hybridgroup.com, raf@hybridgroup.com',
         :subject => 'KidsRuby Site Contact Request',
         :body => "#{params[:name]} <#{params[:email]}> sent a message: #{params[:message]}",
         :port => '587',

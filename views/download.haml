@@ -1,27 +1,26 @@
 %header.sectionTitle
   %h1.lettering Download
   .dlwrap
-    %a{:href => "https://s3.amazonaws.com/kidsruby/windows/kidsrubyinstaller-1.2.3.exe"}
+    %a{:href => "https://s3.amazonaws.com/kidsruby/windows/kidsrubyinstaller-1.3.2.exe"}
       %p.dlfor Download for Windows
       .buddy
-    %p.version KidsRuby 1.2 Windows Installer
+    %p.version KidsRuby 1.3 Windows Installer
   .dlwrap
-    %a.mac_osx{:href => "https://s3.amazonaws.com/kidsruby/osx/kidsrubyinstaller-1.2.4.dmg"}
+    %a.mac_osx{:href => "https://s3.amazonaws.com/kidsruby/osx/kidsrubyinstaller-1.3.2.dmg"}
       %p.dlfor Download for Mac OSX
       .mac_buddy
-    %p.version KidsRuby 1.2 OSX Installer
+    %p.version KidsRuby 1.3 OSX Installer
   .dlwrap
-    %a.linux{}
-      %p.dlfor Download for Linux
+    %a.linux{:href => "#"}
+      %p.dlfor Download - Raspberry Pi
       .buddy
-    %p.version Coming soon...
+    %p.version Building...
+  .dlwrap
+    %a.linux{:href => "https://s3.amazonaws.com/kidsruby/linux+i686/kidsruby-1.3.2-i686.deb"}
+      %p.dlfor Download - Debian Linux
+      .buddy
+    %p.version KidsRuby 1.3 Debian Installer
 %section
-  %article
-    %h1 KidsRuby OS
-    %p We have a complete KidsRuby OS based on Ubuntu. You can download the ISO file and boot right into KidsRuby!
-    %ul
-      %li
-        %a{:href => "https://s3.amazonaws.com/kidsruby/iso/KidsRuby-OS-0.6.1.iso"} Kids Ruby OS 0.6.1 ISO
   %article
     %h1 KidsRuby Lessons and Examples
     %p
@@ -43,6 +42,8 @@
       %li
         %a{:href => "https://github.com/hybridgroup/kidsrubyinstaller-osx"} KidsRuby Installer For OSX
       %li
-        %a{:href => "https://github.com/hybridgroup/kidsruby-cookbook"} KidsRuby OS Cookbook <em>Server scripts to build KidsRuby OS using chef</em>
+        %a{:href => "https://github.com/hybridgroup/kidsrubyinstaller-debian"} KidsRuby Installer For Debian
       %li
-        %a{:href => "https://github.com/hybridgroup/kidsruby-os"} KidsRuby OS
+        %a{:href => "https://github.com/hybridgroup/kidsruby-cookbook"} DEPRECATED - KidsRuby OS Cookbook <em>Server scripts to build KidsRuby OS using chef</em>
+      %li
+        %a{:href => "https://github.com/hybridgroup/kidsruby-os"} DEPRECATED - KidsRuby OS

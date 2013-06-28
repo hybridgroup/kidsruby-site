@@ -318,7 +318,6 @@ header.sectionTitle {
   line-height: 25px;
   margin-top: 170px;
   padding: 25px 20px 28px 60px;
-  text-shadow: 1px 1px 1px #CCC;
 }
 header.sectionTitle h1 {
   font-weight: 700;
@@ -405,7 +404,6 @@ aside div.social div#addthis span.socialNumbers .counts {
   font-size: 24px;
 }
 aside div.social header {
-  text-shadow: 1px 1px 1px rgba(77, 77, 77, 0.5);
   color: #1f5380;
   margin-bottom: 20px;
   margin-top: 30px;
@@ -414,7 +412,6 @@ aside form {
   border-bottom: 2px solid #E3E9F1;
 }
 aside fieldset.newsletter {
-  text-shadow: 1px 1px 1px rgba(77, 77, 77, 0.5);
   margin-top: 30px;
   margin-bottom: 28px;
 }
@@ -483,40 +480,7 @@ aside span.twitterinfo {
 aside span.twitterinfo .title {
   margin-bottom: 0;
   font-size: 12px;
-  text-shadow: none;
   color: #4380B4;
-}
-aside #twitter-feed {
-  float: left;
-  margin-top: 10px;
-}
-aside #twitter-feed ul {
-  margin: 0px;
-  padding: 0px;
-}
-aside #twitter-feed ul li {
-  clear: both;
-  font-size: 11px;
-  list-style: none;
-  margin: 0px 0px 30px 0px;
-  min-height: 55px;
-}
-aside #twitter-feed ul li a img {
-  background: none;
-  float: left;
-  height: 40px;
-  margin: 0 10px 45px 0;
-  width: 40px;
-}
-aside #twitter-feed ul li a.JRM {
-  display: inline;
-  float: left;
-  font-size: 10px;
-}
-aside #twitter-feed ul li span.time {
-  display: inline-block;
-  font-size: 10px;
-  margin-top: 10px;
 }
 
 .dlwrap {
@@ -600,7 +564,6 @@ aside #twitter-feed ul li span.time {
   color: white;
   font-size: 18px;
   text-align: center;
-  text-shadow: 0px -1px 1px black;
 }
 .dlwrap .version {
   font-size: 14px;

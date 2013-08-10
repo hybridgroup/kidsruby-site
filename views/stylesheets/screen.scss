@@ -3,722 +3,266 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "compass";
-
+ 
 // This import applies a global reset to any page that imports this stylesheet.
 @import "blueprint/reset";
-
+ 
 // To configure blueprint, edit the partials/_base.sass file.
 @import "partials/base";
 @import "partials/buttons";
-
+ 
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
-
+ 
 // Import the non-default scaffolding module.
 @import "blueprint/scaffolding";
 @import "compass/reset/utilities";
 @import "compass/css3";
 
-:focus, :active {
-  outline: 0 none;
-}
-
-a, a:active, a:visited {
-  text-decoration: none;
-}
-
-a {
-  color: #ff1941;
-}
-
-a:hover {
-  color: red;
-}
-
-button:hover {
-  cursor: pointer;
-  text-rendering: optimizeLegibility;
-}
-button::-moz-focus-inner {
-  border:0;
-}
-
+ 
 body {
-  background: url("/images/kidsRubyTop.png") no-repeat top, url("/images/kidsRubyBottom.png") no-repeat bottom;
-  background-color: #286ba5;
+  background: url("/images/kidsRubyTop.png") no-repeat top;
+  background-color: rgb(129,194,234);
   font-family: helvetica;
+  position: relative;
+  z-index:1;
 }
-
+ 
 label {
   color: #3b678d;
   margin-bottom: 10px;
   display: block;
 }
-
-input[type="text"], input[type="email"], textarea {
-  @include box-shadow(inset 1px 1px 1px #b4c6d2);
-  @include border-radius(7px);
-
-  background: #d8e6ef;
-  border: 1px solid #e5e5dd;
-  color: #2c61c9;
-  font-size: 12px;
-  padding: 8px 8px;
-  max-width: 455px;
-  overflow: auto;
-  text-shadow: 1px 1px 1px white;
-}
-
-input[type="submit"] {
-  @include border-radius(7px);
-
-  float: right;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  padding: 8px 7px;
-  font: bold 13px helvetica;
-  line-height: 1;
-  color: #DCE4ED;
-  border: 1px solid #4c97c2;
-  background-color: #2e70a8;
-  cursor: pointer;
-  text-shadow: 1px 1px 2px rgba(100, 48, 22, 1);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3287BF), to(#2E70A8));
-  background-image: -moz-linear-gradient(19% 75% 90deg,#3287BF, #2E70A8);
-}
-
-input[type="submit"]:hover {
-  @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
-}
-
+ 
+ 
 @font-face {
-  font-family: "signpainter";
-  src: url('/font/signpainter_housebrush.ttf');
+  font-family: "OpenSans";
+  src: url('/font/OpenSans-Semibold.ttf');
 }
 
-.home {
-  float: left;
-  background: url('/images/home_board.png') no-repeat center;
-  height: 93px;
-  position: relative;
-  left: 60px;
-  width: 126px;
-
-  a {
-    @include transition-duration(0.4s);
-
-    font-family: 'signpainter', helvetica;
-    color: white;
-    float: left;
-    font-size: 20px;
-    padding: 5px 0;
-    margin: 53px 0 0 17px;
-    opacity: 0.9;
-    text-align: center;
-    font-size: 22px;
-    padding: 0px 4px 2px 2px;
-    width: 91px;
-
-    &:hover {
-      color: white;
-      opacity: 1;
-    }
-  }
+@font-face {  
+  font-family: "bender";
+  src: url('/font/Bender-Solid.otf');
 }
-
+ 
+ 
 nav {
-  @include transition-duration(0.4s);
-
-  background: url('/images/signBoard.png') no-repeat center;
-  float: right;
-  height: 93px;
-  position: relative;
+  float: left;
+  height: 90px;
   right: 93px;
-  top: -10px;
-  width: 329px;
-
+  top: 70px;
+  width: 1000px;
+ 
   ul {
     list-style: none;
-    margin-top: 51px;
-
+    margin: 226px 10px 10px 10px;
+   
+ 
     a {
-      @include transition-duration(0.4s);
-
-      font-family: 'signpainter', helvetica;
-      color: white;
+      font-family: 'bender', helvetica;
+      color: rgb(220,237,248);
       float: left;
-      font-size: 20px;
+      display: block;
+      font-size: 17px;
       padding: 4px 0;
-      opacity: 0.9;
       text-align: center;
-      width: 100px;
-
+      width: 50px;
+      text-decoration: none;
+      
+     
+ 
       &.first {
-        margin: 0 7px 0 20px;
+        margin: 0 48px 0 210px;
       }
-
+      
+      &.second {
+        margin:0 40px 1px 5px;
+      }
+ 
       &.last {
-        width: 85px;
-        margin-left: 5px;
-      }
-
-      &:hover {
-        color: white;
-        opacity: 1;
+       margin: 0 0 0 56px;
       }
     }
   }
-
-  &:hover {
-    top: -5px;
-  }
 }
-
+ 
 .container {
   margin: 0 auto;
-  overflow: hidden;
-  width: 940px;
+  overflow: visible;
+  width: 800px;
 }
-
-img#thumb-drive {
-  @include transition-duration(1s);
-
-  height: 135px;
-  float: left;
-  position: relative;
-  left: 42px;
-  top: 43px;
-
-  &:hover {
-    @include rotate(-360deg);
-  }
-}
-
+ 
+ 
 //home
 header.sectionTitle{
   @include clearfix;
-  @include border-top-radius(8px);
-
+  @include border-top-radius(15px);
+ 
   display: inline;
-  float: left;
-  width: 860px;
-
-  background-color: #e8edf3;
-  color: #369;
-  font-size: 24px;
+  float: right;
+  width: 580px;
+  background-color: white;
+  color: rgb(190,30,45);
+  font-size: 19px;
   line-height: 25px;
-  margin-top: 170px;
-  padding: 25px 20px 28px 60px;
-  text-shadow: 1px 1px 1px #CCC;
-
+  margin: 180px 50px 0;
+  padding: 10px 50px 28px;
+  position: relative;
+  z-index: 1;
+ 
   h1 {
-    font-weight: 700;
     margin-bottom: 25px;
     text-align: center;
   }
+  
+  h2 {
+    font-family: 'OpenSans', sans-serif;
+    line-height: 35px;
+  }
 }
-
+  section{
+    @include border-bottom-radius(15px);
+    display: inline;
+    float: right;
+    width: 580px;
+    background-color: white;
+    margin: 0 50px 0;
+    padding: 0 50px 100px;
+    position: relative;
+    z-index: 0;
+    
+    .text{
+      display: block;
+      width: 285px;
+      float: left;
+      position: relative;
+      z-index: 1;
+      
+      p{
+        font-family: helvetica, arial;
+        font-size: 17px;
+        color: rgb(34,144,198);
+        font-weight: bold;
+        padding-top: 24px;
+      }
+      a{
+        text-decoration:none;
+        margin-top: 10px;
+        
+        &.redbutton{
+          display: block;
+          height: 46px;
+          width: 295px;
+          background: rgb(190,30,45);
+          overflow: visible;
+          font-family: helvetica, arial;
+          color: white;
+          text-align: center;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 45px;
+          box-shadow: 4px 4px 0 rgb(186,214,226);
+      }
+    }   
+      p:last-child{
+      font-family: helvetica, arial;
+        font-size: 13px;
+        color: rgb(66,128,152);
+        font-weight: regular;
+        padding-top: 10px;  
+        
+      }
+    }    
+    aside{
+      display: block;
+      width: 280px;
+      float: left;
+      position: relative;
+      z-index: 0;
+      background: white;
+      margin-left: 10px;
+      
+      .socialbuttons{
+         @include border-radius(7px);
+        margin: 48px 0 0 60px;
+        float: left;
+        display: block;
+        width: 220px;
+        height:110px;
+        background: rgb(220,237,248);
+        box-shadow: 3px 3px 0px rgb(166,199,208);
+       
+            a.socialButtons{
+             display: block;
+             float: left;
+             height: 48px;
+             width: 73px;
+             margin: 10px 15px 5px 20px;
+          }
+      .socialNumbers{
+        float: left;
+        display: block;
+        width: 60px;
+        font-size: 13px;
+        margin: 0 20px 0 27px;
+        text-align: center;
+      }
+        .counts{
+          font-size: 21px;
+          font-weight: bold;
+        }
+     }
+  }
+  .subscribe {
+    @include border-radius(10px);
+    height: 50px;
+    margin: 175px 0 0 65px;
+    background-color: rgb(220,237,248);
+    box-shadow: 3px 3px 0px rgb(166,199,208);
+      
+      input[type='email']{
+        @include border-radius(15px);
+        background-color: rgb(166,199,208);
+        padding:0;
+        height: 30px;
+        font-weight: 700;
+        margin: 0 -75px 0 0;
+        width: 132px;
+        border: 10px solid rgb(220,237,248);
+        //box-shadow: 3px 3px 0px rgb(166,199,208);
+        
+      }
+      input[type='submit']{
+        @include border-radius(7px);
+        background-color: rgb(81,115,169);
+        border: none;
+        font-size: 19px;
+        line-height: 29px;
+        color: white;
+        margin: 0 0 0 55px;
+        padding: 0 10px;
+        position: relative;
+      }
+   }
+}
+ 
 .hide{
   display: none;
+} 
+ 
+img#bottomImage {
+  margin: 0;
+  float: left;
+  position: relative;
+  z-index: .9;
+  right: 98px;
+  bottom: 250px;
 }
-
-section.secondPage {
-  display: none;
-}//home ends<<<<<<<<<<<<
-
-//aside for Social Media section >>>>>>>>>>>
+//mixins
 @mixin backgroundBox {
   $experimental-support-for-svg: true;
   @include border-radius(8px);
-  @include background-image(linear-gradient(top left, #F1F8FC, #e2edf4));
   @include box-shadow(1px 1px 1px #a1b2c0);
 }
-
-@mixin shadow {
-  @include text-shadow(1px 1px 1px rgba(77, 77, 77, 0.5));
-}
-
-aside {
-  @include column(8, true);
-
-  color: #4380b4;
-  background-color: #dce4ed;
-  min-height: 1271px;
-  padding-right: 10px;
-
-  div.social {
-    padding-left: 20px;
-    padding-right: 10px;
-
-    div#addthis {
-      @include backgroundBox;
-
-      height: 121px;
-      margin-top: 21px;
-
-      .socialButtons {
-        @include transition-duration(1s);
-
-        margin: 16px 0 10px 68px;
-        float: left;
-        height: 44px;
-        width: 45px;
-
-        &:hover {
-          @include scale(1.2);
-        }
-      }
-
-      span.socialNumbers {
-        color: #666;
-        font-size: 12px;
-        float: left;
-        margin-left: 66px;
-        text-align: center;
-        width: 47px;
-
-        &.first {
-          margin-left: 30px;
-        }
-
-        .counts {
-          font-size: 24px;
-        }
-      }
-    }
-
-    header {
-      @include shadow;
-
-      color: #1f5380;
-      margin-bottom: 20px;
-      margin-top: 30px;
-    }
-  }
-
-  form {
-    border-bottom: 2px solid #E3E9F1;
-  }
-
-  fieldset {
-    // margin-bottom: 30px;
-
-    &.newsletter {
-      @include shadow;
-
-      margin-top: 30px;
-      margin-bottom: 28px;
-    }
-
-    &.subscribe {
-      @include backgroundBox;
-
-      border-bottom: 2px solid #e3e9f1;
-      height: 50px;
-      margin-bottom: 30px;
-
-
-      input[type='email']{
-        padding: 0 30px 0 8px;
-        height: 30px;
-        font-weight: 700;
-        margin: 10px 0 0 10px;
-        width: 182px;
-      }
-
-      input[type='submit']{
-        margin: -32px 13px 0 -2px;
-        padding: 9px 10px;
-        position: relative;
-
-        &:hover {
-          @include box-shadow(-1px 1px 2px rgba(0, 0, 0, 0.7));
-        }
-      }
-
-      #thanks4email {
-        display: none;
-        padding: 18px 4px;
-        text-align: center;
-      }
-    }
-  }
-
-  .icon-twitterbutton {
-    float: left;
-    height: 82px;
-    margin: 0 10px 10px 0;
-    width: 82px;
-
-    &:hover {
-      @include rotate(3deg);
-    }
-  }
-
-  span.twitterinfo {
-    font-size: 11px;
-
-    .title {
-      margin-bottom: 0;
-      font-size: 12px;
-      text-shadow: none;
-      color: #4380B4;
-    }
-  }
-
-  #twitter-feed {
-    float: left;
-    margin-top: 10px;
-
-    ul {
-      margin: 0px;
-      padding: 0px;
-
-      li {
-        clear: both;
-        font-size: 11px;
-        list-style: none;
-        margin: 0px 0px 30px 0px;
-        min-height: 55px;
-
-        a {
-          img {
-            background: none;
-            float: left;
-            height: 40px;
-            margin: 0 10px 45px 0;
-            width: 40px;
-          }
-        }
-        a.JRM {
-
-          display: inline;
-          float: left;
-          font-size: 10px;
-        }
-
-        span.time {
-
-          display: inline-block;
-          font-size: 10px;
-          margin-top: 10px;
-        }
-      }
-    }
-  }
-
-}//aside for social media ends<<<<<
-
-//this section styles home, download, and contact
-
-//download buttons
-.dlwrap {
-
-  float: left;
-  margin: 5px 25px 0;
-
-  a {
-    @include box-shadow(inset 0px 1px 0px #CCC);
-    @include border-radius(8px);
-    @include background-image(linear-gradient(#3f7db2, #2b6ea7));
-    @include box-shadow(-1px 1px 1px 1px #CCC);
-
-    border: 1px solid #2b6ea7;
-    display: block;
-    float: right;
-    height: 88px;
-    position: relative;
-    padding: 10px;
-    width: 202px;
-    .buddy {
-      @extend .icon-dl_windows;
-
-      height: 61px;
-      display: block;
-      position: relative;
-      clear: both;
-      margin: 0 auto;
-      width: 74px;
-    }
-    &.mac_osx {
-      @include background-image(linear-gradient(#ff7383, #ff274b));
-
-      border: 1px solid #ff7383;
-      .mac_buddy {
-        @extend .icon-dl-mac-osx;
-
-        height: 67px;
-        display: block;
-        position: relative;
-        clear: both;
-        margin: 0 auto;
-        width: 79px;
-      }
-    }
-    &.linux {
-      @include background-image(linear-gradient(#5E3DC5, #27029C));
-
-      border: 1px solid #27029C;
-
-      .buddy {
-        @extend .icon-dl-linux;
-        
-      }
-    }
-    &:active {
-      top: 1px;
-      opacity: 0.8;
-    }
-  }
-
-  a p {
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    text-shadow: 0px -1px 1px black;
-  }
-
-  .version {
-    font-size: 14px;
-    color: #FF1941;
-    padding-left: 10px;
-    text-align: center;
-  }
-}
-
-section {
-  @include clearfix;
-  @include border-bottom-left-radius(8px);
-
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 620px;
-
-  min-height: 1271px;
-  background-color: #f3f2f5;
-
-  article {
-    @include clearfix;
-    @include column(13, true);
-
-    border-bottom: 2px solid #E8EDF3;
-    margin-left: 60px;
-    text-align: justify;
-
-    &.last {
-      border-bottom: none;
-      margin-bottom: 93px;
-    }
-
-    h1 {
-      color: #FF1941;
-      font-size: 18px;
-      font-weight: 600;
-      padding: 40px 0 10px 0;
-      text-align: left;
-    }
-
-    p {
-      color: #369;
-      font-size: 14px;
-      font-weight: 300;
-      padding: 10px 0 25px 0;
-      line-height: 20px;
-
-      &.next {
-        float: right;
-        margin-top: 30px;
-        padding-right: 40px;
-      }
-
-      a {
-        color: #ff1941;
-      }
-    }
-
-    // about page
-    &.about{
-      @include column(15);
-
-      margin-left: 20px;
-    }
-
-    //width of the images in about page
-    img {
-      width: 590px;
-    }
-
-    ul {
-      line-height: 20px;
-      margin-bottom: 30px;
-
-      li {
-        color: #1f5380;
-        margin-left: 20px;
-        padding-left: 20px;
-        font-size: 8px;
-
-        a {
-          color: #ff1941;
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-  time {
-    color: #369;
-  }
-
-  //contact
-  form#sign-up {
-    margin: 5px 90px 0px;
-
-    fieldset {
-      margin-top: 30px;
-
-      &.top {
-        display: inline;
-        float: left;
-        margin-right: 8px;
-
-        input{
-          width: 200px;
-        }
-      }
-
-      &#marginfix {
-        margin-right: -40px;
-      }
-
-      &.bottom {
-        @include column(11);
-
-        margin-top: 10px;
-
-        input{
-          height: 140px;
-          width: 425px;
-        }
-      }
-    }
-
-    fieldset#thankyou {
-      display: none;
-      float: left;
-      margin: 208px 0 130px 90px;
-      font-size: 24px;
-    }
-
-    fieldset.submit {
-      float: right;
-      margin-right: 0;
-    }
-  }
-
-  //kids mailing letters in contact
-  .kidsInLine {
-    display: block;
-    float: left;
-    margin-left: 40px;
-
-    span {
-      @include transition-duration(1s);
-
-      float: left;
-      opacity: 0.9;
-
-      &.icon-kidsMail1 {
-        height: 67px;
-        margin-top: 65px;
-        width: 100px;
-
-        &:hover {
-          @include translate(10px, 0);
-        }
-      }
-
-      &.icon-kidsMail2 {
-        height: 118px;
-        margin-top: 10px;
-        width: 100px;
-
-        &:hover {
-          @include translate(10px, 0);
-        }
-      }
-
-      &.icon-kidsMail3 {
-        height: 123px;
-        width: 100px;
-        &:hover {
-          @include translate(10px, 0);
-        }
-      }
-
-      &.icon-kidsMail4 {
-        height: 94px;
-        margin-left: 5px;
-        margin-top: 27px;
-        width: 70px;
-
-        &:hover {
-          @include rotateY(-20deg);
-        }
-      }
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-
-}//section ends<<<<<<<<<<
-
-footer {
-  @include column(24, true);
-
-  margin-top: 155px;
-
-  div{
-    position: absolute;
-    margin-top: -85px;
-    margin-left: 175px;
-  }
-
-  span, a {
-    color: #1f5380;
-  }
-
-  span.rights{
-    font-size: 12px;
-  }
-
-  img {
-    position: absolute;
-    &.left {
-      left: 0;
-      margin-top: -256px;
-    }
-
-    &.right{
-      right: 0;
-      margin-top: -273px;
-    }
-  }
-}
-
-.lettering {
-  cursor: default;
-  font-size: 40px;
-  width: 820px;
-
-  span {
-    @include transition-duration(0.2s);
-
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-}
+//section ends<<<<<<<<<<
+ 

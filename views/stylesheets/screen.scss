@@ -98,13 +98,14 @@ header.sectionTitle{
   font-size: 19px;
   line-height: 25px;
   margin: 127px 50px 0;
-  padding: 30px 50px 30px;
+  padding: 40px 50px 30px;
   position: relative;
   z-index: 1;
  
   h2 {
     font-family: 'OpenSans', sans-serif;
     line-height: 30px;
+    margin: 0 15px 0;
   }
 }
   
@@ -122,10 +123,11 @@ section{
     
     .text{
       display: block;
-      width: 290px;
+      width: 275px;
       float: left;
       position: relative;
       z-index: 1;
+      margin: 0  20px 0 15px;
       
       p{
         font-family: helvetica, arial;
@@ -173,17 +175,17 @@ section{
     }    
   aside{
     display: block;
-    width: 280px;
+    width: 240px;
     height: 100px;
     float: left;
     position: relative;
     z-index: 1;
     background: $white;
-    margin: 0 0 0 10px;
+    margin: 0 20px 0 10px ;
       
     .socialbuttons{
       @include border-radius(7px);
-      margin: 48px 0 0 60px;
+      margin: 48px 0 0 35px;
       float: left;
       display: block;
       width: 220px;
@@ -221,7 +223,7 @@ section{
     height: 41px;
     width: 220px;
     float: right;
-    margin: 20px 0 0 65px;
+    margin: 20px -15px 0 65px;
     background-color: $gb;
     box-shadow: 3px 3px 0px $BoxShadow;
       

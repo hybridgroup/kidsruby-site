@@ -17,14 +17,15 @@
   %body
     .container
       %header
-        %nav
+        %div#SignPost
+        %nav.navigation
           %ul
             %li
-              %a.first{:href => '/'} Home
+              %a.first.active{:href => '/'} Home
             %li
               %a.second{:href => '/about'} About
             %li
-              %a{:href => '/download'} Download
+              %a.third{:href => '/download'} Download
             %li
               %a.last{:href => '/contact'} Contact
 

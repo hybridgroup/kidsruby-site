@@ -1,0 +1,131 @@
+@media only screen
+and (max-width : 768px) 
+and (min-width : 641px){
+  
+body{
+  background: url("/images/768res.png") no-repeat top;
+  background-color: $background;
+  font-family: helvetica;
+}
+
+nav.navigation {
+  float: left;
+  display: block;
+  margin: 336px 0 0 0;
+  width: 614px;
+  
+  ul{
+    list-style: none;
+    
+    a{
+      @include text-shadow (-3px 3px 0 darken(#895024, 5%));
+      @include background-image(linear-gradient(#c47d4b, #895024));
+      border: 2px solid lighten(#663300, 5%);
+      width: 233px;
+      height: 60px;
+      padding-left: 70px;
+      float: left;
+      display: block;
+      font-family: 'bender';
+      color: $gb;
+      text-decoration: none;
+      font-size: 38px;
+      line-height: 60px;
+    }	
+    
+	 a.active{
+    @include text-shadow (-3px 3px 0 darken(#895024, 5%));
+    @include background-image(radial-gradient($red 50%, #9e1c36 100%));
+    border: 2px solid lighten(#663300, 5%);
+    width: 233px;
+    height: 60px;
+    padding-left: 70px;
+    float: left;
+    display: block;
+    font-family: 'bender';
+    color: $gb;
+    text-decoration: none;
+    font-size: 38px;
+    line-height: 60px;
+	  }
+  }
+}
+.container {
+  margin: 0 auto;
+  width: 614px;
+} 
+
+header.sectionTitle{
+  display: inline;
+  float: right;
+  background-color: $gb;
+  
+  h2 {
+    font-size: 30px;
+    color: $red;
+    font-family: 'OpenSans', sans-serif;
+    line-height: 40px;
+    margin: 40px 45px 40px;
+  }
+}
+ 
+section{
+  @include border-bottom-radius(15px);
+  display: inline;
+  float: right;
+  width: 614px;
+  height: 220px;
+  background-color: $gb;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  
+    .text{  
+      display: block;
+      float: left;
+      position: relative;
+      
+      p{
+        font-family: helvetica, arial;
+        font-size: 30px;
+        color: darken($DarkText,15%);
+        font-weight: bold;
+        margin: 0 45px 15px 55px;
+      }
+      
+      a{
+        text-decoration:none;
+        
+        &.redbutton{
+          display: block;
+          height: 135px;
+          width: 524px;
+          background: $red;
+          overflow: visible;
+          font-family: helvetica, arial;
+          color: $white;
+          text-align: center;
+          font-size: 28px;
+          font-weight: bold;
+          line-height: 130px;
+          box-shadow: 5px 10px 0 $ButtonShadow; 
+          margin: 0 0 0 45px;
+        }
+     }       
+   }
+  p:nth-child(3){
+    display: none;
+   }
+  p:last-child{
+    display:none;
+  }
+}
+aside{
+  display: none;
+}
+#bottom{
+  display:none;
+}
+#mobile{
+  display: none;
+}
+}

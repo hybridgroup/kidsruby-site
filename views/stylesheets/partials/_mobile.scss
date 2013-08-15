@@ -1,0 +1,188 @@
+@media only screen
+and (max-width : 641px) 
+and (min-width : 1px){
+  
+body {
+  background: url("/images/640res.png") no-repeat top;
+  background-size: 100% auto;
+  background-position: center top;
+  background-color: $background;
+  font-family: helvetica;
+  font-size: 100%;
+}
+nav.navigation {
+  float: left;
+  display: block;
+  margin: 63% 0 0 0;
+  width: 100%;
+  
+   ul{
+     list-style: none;
+  
+     a{
+       display:block;
+       background: $gray;
+       height: 2em;
+       text-decoration: none;
+       color: $red;
+       font-size: 2.65em;
+       font-family: 'bender';
+       line-height: 1.9em;
+       padding-left: 1.3em;
+       margin: 0;
+    
+       &.first{
+         border-bottom: .18em solid $BorderGray;
+       }
+       
+       &.second{
+         border-bottom: .18em  solid $BorderGray;
+       }
+       &.third{
+         border-bottom: .18em  solid $BorderGray;
+       }
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+header.sectionTitle{
+  display: inline;
+  float: right;
+  background-color: $gb;
+  
+  h2 {
+    font-size: 2em;
+    color: $red;
+    font-family: helvetica, arial;
+    line-height: 1.3em;
+    margin: 1em 1em 1.5em;
+  }
+}
+
+section{
+  @include border-bottom-radius(15px);
+  display: inline;
+  float: right;
+  width: 100%;
+  height: 100%;
+  background-color: $gb;
+  position: relative;
+  z-index: 0;
+  margin: 0 0 8em 0;
+     
+  .text{  
+    display: block;
+    float: left;
+    position: relative;
+      
+      p{
+        font-family: helvetica, arial;
+        font-size: 2em;
+        color: darken($DarkText, 15%);
+        font-weight: bold;
+        margin: 1em 1.3em .5em;
+      }
+      a{
+        text-decoration:none;
+        
+        &.redbutton{
+          display: block;
+          width: 90%;
+          height: 15%;
+          background: $red;
+          overflow: visible;
+          font-family: helvetica, arial;
+          color: $white;
+          text-align: center;
+          font-size: 1.813em;
+          font-weight: bold;
+          line-height: 5.25em;
+          box-shadow: 0.3em 0.5em 0 $ButtonShadow;
+          margin: 0 1em 0;
+        }
+     }  
+  }
+  p:nth-child(3){
+      margin: 1.9em 1em 2.5em;
+      font-weight: normal; 
+      color: transparentize($red, .15);
+  }
+  p:last-child{
+    display:none;
+  }
+}
+aside{
+   
+  .socialbuttons{
+    @include border-radius(15px);
+    margin: 1em 4em 25em;
+    float: left;
+    display: block;
+    width: 29em;
+    height: 15em;
+    background: $white;
+    box-shadow: .35em .35em 0px $BoxShadow;
+        
+    a.socialButtons{
+      display: block;
+      float: left;
+      height: 48px;
+      width: 73px;
+      margin: 1em 4em 0 5em;
+       }
+    .socialNumbers{
+      float: left;
+      display: block;
+      width: 3.7em;
+      font-size: 2em;
+      margin: 1em 1.45em 0 1.8em;
+      text-align: center;
+      color: $SocialText;
+    }
+    .counts{
+      font-size: 1.6em;
+      font-weight: bold;
+      color: $SocialText;
+    }
+  }
+}
+ 
+.subscribe {
+  display: none;
+      
+  input[type='email']{
+    display: none;
+  }
+      
+  input[type='submit']{
+    display: none;
+  }
+}
+
+
+#bottom{
+  display: none;
+}
+
+#mobile{
+  position: relative;
+  top: 145em;
+  z-index: .9;
+  
+  img#mobileImage {
+    width:100%;
+    float: left;
+    right:.05em;
+    position: absolute;
+    z-index: .9;
+    bottom: 0;
+    display:block;
+  }
+}
+ 
+}

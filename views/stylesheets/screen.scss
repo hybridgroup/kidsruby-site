@@ -9,7 +9,10 @@
  
 // To configure blueprint, edit the partials/_base.sass file.
 @import "partials/base";
-@import "partials/buttons";
+@import "partials/variables";
+@import "partials/fonts";
+@import "partials/tablet";
+@import "partials/mobile";
  
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
@@ -19,35 +22,26 @@
 @import "compass/reset/utilities";
 @import "compass/css3";
 
+@media only screen and (min-width: 769px) {
  
 body {
   background: url("/images/kidsRubyTop.png") no-repeat top;
-  background-color: rgb(129,194,234);
+  background-color: $background;
   font-family: helvetica;
-  position: relative;
-  z-index:1;
-}
- 
-label {
-  color: #3b678d;
-  margin-bottom: 10px;
-  display: block;
-}
- 
- 
-@font-face {
-  font-family: "OpenSans";
-  src: url('/font/OpenSans-Semibold.ttf');
 }
 
-@font-face {  
-  font-family: "bender";
-  src: url('/font/Bender-Solid.otf');
+#SignPost{
+  background: url("/images/sign-post.png") no-repeat top;
+  height: 53px;
+  display: block;
+  position: relative;
+  top: 220px;
+  z-index: -1;
 }
- 
- 
+
 nav {
   float: left;
+  margin: 0 auto;
   height: 90px;
   right: 93px;
   top: 70px;
@@ -55,12 +49,11 @@ nav {
  
   ul {
     list-style: none;
-    margin: 226px 10px 10px 10px;
-   
- 
+    margin: 173px 10px 10px 10px;
+    
     a {
       font-family: 'bender', helvetica;
-      color: rgb(220,237,248);
+      color: $gb;
       float: left;
       display: block;
       font-size: 17px;
@@ -69,18 +62,20 @@ nav {
       width: 50px;
       text-decoration: none;
       
-     
- 
       &.first {
-        margin: 0 48px 0 210px;
+        margin: -2px 48px 0 218px;
       }
       
       &.second {
-        margin:0 40px 1px 5px;
+        margin:-2px 40px 1px 5px;
       }
- 
+      
+      &.third{
+        margin-top: -2px;
+      }
+      
       &.last {
-       margin: 0 0 0 56px;
+       margin: -2px 0 0 56px;
       }
     }
   }
@@ -91,49 +86,43 @@ nav {
   overflow: visible;
   width: 800px;
 }
- 
- 
 //home
 header.sectionTitle{
-  @include clearfix;
   @include border-top-radius(15px);
  
   display: inline;
   float: right;
   width: 580px;
-  background-color: white;
-  color: rgb(190,30,45);
+  background-color: $white;
+  color: $red;
   font-size: 19px;
   line-height: 25px;
-  margin: 180px 50px 0;
-  padding: 10px 50px 28px;
+  margin: 127px 50px 0;
+  padding: 30px 50px 30px;
   position: relative;
   z-index: 1;
  
-  h1 {
-    margin-bottom: 25px;
-    text-align: center;
-  }
-  
   h2 {
     font-family: 'OpenSans', sans-serif;
-    line-height: 35px;
+    line-height: 30px;
   }
 }
-  section{
-    @include border-bottom-radius(15px);
-    display: inline;
-    float: right;
-    width: 580px;
-    background-color: white;
-    margin: 0 50px 0;
-    padding: 0 50px 100px;
-    position: relative;
-    z-index: 0;
+  
+section{
+  @include border-bottom-radius(15px);
+  display: inline;
+  float: right;
+  width: 580px;
+  height: 370px;
+  background-color: $white; 
+  margin: 0 50px 0;
+  padding: 0 50px 100px;
+  position: relative;
+  z-index: 0;
     
     .text{
       display: block;
-      width: 285px;
+      width: 290px;
       float: left;
       position: relative;
       z-index: 1;
@@ -141,10 +130,11 @@ header.sectionTitle{
       p{
         font-family: helvetica, arial;
         font-size: 17px;
-        color: rgb(34,144,198);
+        color: $paragraph;
         font-weight: bold;
         padding-top: 24px;
       }
+      
       a{
         text-decoration:none;
         margin-top: 10px;
@@ -153,116 +143,141 @@ header.sectionTitle{
           display: block;
           height: 46px;
           width: 295px;
-          background: rgb(190,30,45);
+          background: $red;
           overflow: visible;
           font-family: helvetica, arial;
-          color: white;
+          color: $white;
           text-align: center;
           font-size: 16px;
           font-weight: bold;
           line-height: 45px;
-          box-shadow: 4px 4px 0 rgb(186,214,226);
+          box-shadow: 4px 4px 0 $ButtonShadow;
       }
     }   
+       p:nth-child(3){
+         font-weight: normal;
+         font-size: 17px;
+         line-height: 22px;
+       }
+      
       p:last-child{
       font-family: helvetica, arial;
-        font-size: 13px;
-        color: rgb(66,128,152);
-        font-weight: regular;
-        padding-top: 10px;  
-        
+      font-size: 13px;
+      line-height: 18px;
+      color: $DarkText;
+      font-weight: normal;
+      padding-top: 10px;  
+      z-index: 1;
+      text-align: justify;
       }
     }    
-    aside{
-      display: block;
-      width: 280px;
-      float: left;
-      position: relative;
-      z-index: 0;
-      background: white;
-      margin-left: 10px;
+  aside{
+    display: block;
+    width: 280px;
+    height: 100px;
+    float: left;
+    position: relative;
+    z-index: 1;
+    background: $white;
+    margin: 0 0 0 10px;
       
-      .socialbuttons{
-         @include border-radius(7px);
-        margin: 48px 0 0 60px;
-        float: left;
+    .socialbuttons{
+      @include border-radius(7px);
+      margin: 48px 0 0 60px;
+      float: left;
+      display: block;
+      width: 220px;
+      height:110px;
+      background: $gb;
+      box-shadow: 3px 3px 0px $BoxShadow;
+      color: $SocialText;
+          
+      a.socialButtons{
         display: block;
-        width: 220px;
-        height:110px;
-        background: rgb(220,237,248);
-        box-shadow: 3px 3px 0px rgb(166,199,208);
-       
-            a.socialButtons{
-             display: block;
-             float: left;
-             height: 48px;
-             width: 73px;
-             margin: 10px 15px 5px 20px;
-          }
+        float: left;
+        height: 48px;
+        width: 73px;
+        margin: 10px 15px 5px 20px;
+      }
+          
       .socialNumbers{
         float: left;
         display: block;
         width: 60px;
-        font-size: 13px;
+        font-size: 12px;
         margin: 0 20px 0 27px;
         text-align: center;
+        font-weight: bold;
       }
-        .counts{
-          font-size: 21px;
-          font-weight: bold;
-        }
-     }
+      .counts{
+        font-size: 21px;
+        font-weight: bold;
+      }
+    }
   }
+ 
   .subscribe {
     @include border-radius(10px);
-    height: 50px;
-    margin: 175px 0 0 65px;
-    background-color: rgb(220,237,248);
-    box-shadow: 3px 3px 0px rgb(166,199,208);
+    height: 41px;
+    width: 220px;
+    float: right;
+    margin: 20px 0 0 65px;
+    background-color: $gb;
+    box-shadow: 3px 3px 0px $BoxShadow;
       
-      input[type='email']{
-        @include border-radius(15px);
-        background-color: rgb(166,199,208);
-        padding:0;
-        height: 30px;
-        font-weight: 700;
-        margin: 0 -75px 0 0;
-        width: 132px;
-        border: 10px solid rgb(220,237,248);
-        //box-shadow: 3px 3px 0px rgb(166,199,208);
-        
+    input[type='email']{
+      @include border-radius(11px);
+      background-color: $input;
+      padding:0;
+      height: 25px;
+      font-weight: 700;
+      margin: 3px -75px 0 2px;
+      width: 148px;
+      border: 5px solid $gb;
+      float: left;
+      box-shadow: inset 1px 1px 0px $InputShadow;
       }
+      
       input[type='submit']{
         @include border-radius(7px);
-        background-color: rgb(81,115,169);
+        background-color: $DarkBlue;
         border: none;
-        font-size: 19px;
-        line-height: 29px;
-        color: white;
-        margin: 0 0 0 55px;
-        padding: 0 10px;
+        font-size: 17px;
+        line-height: 25px;
+        color: $white;
+        margin: 0 0 0 62px;
+        padding: 0 14px;
+        top: 8px;
+        right: 1px;
         position: relative;
       }
    }
 }
- 
-.hide{
-  display: none;
-} 
- 
-img#bottomImage {
-  margin: 0;
-  float: left;
+
+#bottom{
   position: relative;
+  bottom: -1000px;
+  left: 200px;
   z-index: .9;
-  right: 98px;
-  bottom: 250px;
+  
+  img#bottomImage {
+    float: left;
+    position: absolute;
+    z-index: .9;
+    bottom: 0;
+    right: 98px;  
+    display:block;
+  }
 }
+
+#mobile{
+  display: none;
+}  
+}
+
+
+
 //mixins
-@mixin backgroundBox {
-  $experimental-support-for-svg: true;
-  @include border-radius(8px);
-  @include box-shadow(1px 1px 1px #a1b2c0);
-}
+
 //section ends<<<<<<<<<<
  

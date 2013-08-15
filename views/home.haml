@@ -1,8 +1,9 @@
-%script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
+
 %header.sectionTitle
   %h1.lettering 
   %h2 Have fun and make games, or hack your homework using Ruby!  Just tell your parents or teachers you're learning Ruby programming... ;)
 
+%body#Home
 %section
   %div.text
     %p 
@@ -19,7 +20,7 @@
       %a.socialButtons.icon-twitter{:href => "http://twitter.com/home?status=KidsRuby+www.kidsruby.com"}
         %a.socialButtons.icon-FB{:href => "http://www.facebook.com/share.php?u=www.kidsruby.com&title=[KidsRuby]"}
         
-        %span.socialNumbers
+        %span.socialNumbers 
           %span.twittercount.counts
           Followers
         %span.socialNumbers
@@ -29,7 +30,10 @@
     %fieldset.subscribe
       %input#emailnewsletter{:name => "email", :type => "email", :placeholder => "", :required => ""}
       %input{:type => "submit", :value => "Send"}
-          
+  
+
 %div#bottom
   %img{:src => "/images/kidsRubyBottom.png", :id => "bottomImage"}
+%div#mobile
+  %img{:src => "/images/640bottom.png", :id => "mobileImage"}
   

@@ -8,15 +8,31 @@ body{
   font-family: helvetica;
 }
 
-nav.navigation {
+a.kidsruby{ 
+  @include transition-duration(1s);
+  background: url("/images/weblogo.png") no-repeat top;
+  height: 122px;
+  width: 118px;
+  float: left;
+  display:block;
+  position: relative;
+  z-index: -9999;
+  right: 40px;
+  top: 20px;
+  //margin: 0 0 214px 0;
+  
+  &:hover {
+    @include rotate(-360deg);
+  }
+}
+
+%navTablet {
   float: left;
   display: block;
-  margin: 336px 0 0 0;
-  width: 614px;
+  width: 307px;
+  position: relative;
+  z-index: 9999;
   
-  ul{
-    list-style: none;
-    
     a{
       @include text-shadow (-3px 3px 0 darken(#895024, 5%));
       @include background-image(linear-gradient(#c47d4b, #895024));
@@ -31,9 +47,9 @@ nav.navigation {
       text-decoration: none;
       font-size: 38px;
       line-height: 60px;
-    }	
+    } 
     
-	 a.active{
+   a.active{ 
     @include text-shadow (-3px 3px 0 darken(#895024, 5%));
     @include background-image(radial-gradient($red 50%, #9e1c36 100%));
     border: 2px solid lighten(#663300, 5%);
@@ -47,9 +63,34 @@ nav.navigation {
     text-decoration: none;
     font-size: 38px;
     line-height: 60px;
-	  }
+    }
   }
+
+nav.Home {
+  @extend %navTablet;
+  margin: 336px 0 0 0;
+  right: 118px;
+    a{
+      
+    }
 }
+
+nav.About {
+  @extend %navTablet;
+  margin: 0 0 0 0;
+}
+
+nav.Download{
+  @extend %navTablet;
+  margin: -64px 0 0 0;
+}
+
+nav.Contact  {
+  @extend %navTablet;
+  float:right;
+}
+
+
 .container {
   margin: 0 auto;
   width: 614px;
@@ -59,6 +100,7 @@ header.sectionTitle{
   display: inline;
   float: right;
   background-color: $gb;
+  width: 614px;
   
   h2 {
     font-size: 30px;
@@ -120,6 +162,9 @@ section{
   }
 }
 aside{
+  display: none;
+}
+form{
   display: none;
 }
 #bottom{

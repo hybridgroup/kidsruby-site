@@ -10,14 +10,10 @@ body {
   font-family: helvetica;
   font-size: 100%;
 }
-nav.navigation {
+%navMobile {
   float: left;
   display: block;
-  margin: 60% 0 0 0;
   width: 100%;
-  
-   ul{
-     list-style: none;
   
      a{
        display:block;
@@ -29,20 +25,30 @@ nav.navigation {
        font-family: 'bender';
        line-height: 75px;
        padding-left: 55px;
-       margin: 0;
-    
-       &.first{
-         border-bottom: 6px solid $BorderGray;
-       }
-       
-       &.second{
-         border-bottom: 6px solid $BorderGray;
-       }
-       &.third{
-         border-bottom: 6px  solid $BorderGray;
-       }
+       margin: 0; 
+       border-bottom: 6px solid $BorderGray;
+     }
+}
+
+nav.Home {
+  @extend %navMobile;
+  margin: 60% 0 0 0;
+    a{
+      
     }
-  }
+}
+
+nav.About {
+  @extend %navMobile;
+}
+
+nav.Download{
+  @extend %navMobile;
+}
+
+nav.Contact  {
+  @extend %navMobile;
+  
 }
 
 .container {
@@ -51,6 +57,7 @@ nav.navigation {
 }
 
 header.sectionTitle{
+  width: 100%;
   display: inline;
   float: right;
   background-color: $gb;

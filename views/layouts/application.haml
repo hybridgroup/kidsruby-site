@@ -17,23 +17,17 @@
   %body
     .container
       %header
-        %div#SignPost
-        %nav.navigation
-          %ul
-            %li
-              %a.first.active{:href => '/'} Home
-            %li
-              %a.second{:href => '/about'} About
-            %li
-              %a.third{:href => '/download'} Download
-            %li
-              %a.last{:href => '/contact'} Contact
+        %div#Logo
+          %a.kidsruby{:href => '/'}
+        %nav.Home
+          %a{class: ('active' if (@current_page == 'home')), :href => '/'} Home
+        %nav.About
+          %a{class: ('active' if (@current_page == 'about')), :href => '/about'} About
+        %nav.Download
+          %a{class: ('active' if (@current_page == 'download')), :href => '/download'} Download
+        %nav.Contact
+          %a{class: ('active' if (@current_page == 'contact')), :href => '/contact'} Contact
 
       = yield
-
-          
-
-          
-      %footer
 
       = partial :_analytics

@@ -26,7 +26,7 @@
         %span.socialNumbers
           %span.fbcount.counts
           Likes
-          
+  %form{:method => 'post', :action => '/newsletter'}        
     %fieldset.subscribe
       %input#emailnewsletter{:name => "email", :type => "email", :placeholder => "", :required => ""}
       %input{:type => "submit", :value => "Send"}

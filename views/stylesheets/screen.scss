@@ -8,11 +8,12 @@
 @import "blueprint/reset";
  
 // To configure blueprint, edit the partials/_base.sass file.
-@import "partials/base";
 @import "partials/variables";
+@import "partials/base";
 @import "partials/fonts";
 @import "partials/tablet";
 @import "partials/mobile";
+
  
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
@@ -22,64 +23,151 @@
 @import "compass/reset/utilities";
 @import "compass/css3";
 
+:focus, :active {
+  outline: 0 none;
+}
+
+a, a:active, a:visited {
+  text-decoration: none;
+}
+
+a {
+  color: #ff1941;
+}
+
+a:hover {
+  color: red;
+}
+
+button:hover {
+  cursor: pointer;
+  text-rendering: optimizeLegibility;
+}
+
 @media only screen and (min-width: 769px) {
  
 body {
   background: url("/images/kidsRubyTop.png") no-repeat top;
+  position: relative;
+  z-index:0;
   background-color: $background;
   font-family: helvetica;
 }
 
-#SignPost{
-  background: url("/images/sign-post.png") no-repeat top;
-  height: 53px;
-  display: block;
+
+
+div#Logo{ 
+  height: 159px;
+  width: 160px;
+  float: left;
   position: relative;
-  top: 220px;
-  z-index: -1;
+  z-index: -9;
+   left: 80px;
+   top:-10px;
+  
+  &:hover {
+    background: url("/images/glow.png") no-repeat top;
+  height: 159px;
+  width: 160px;
+  float: left;
+  display:block;
+  z-index: 0;
+  position: relative;
+  
+  }
+}
+ 
+
+a.kidsruby{ 
+  @include transition-duration(1s);
+  background: url("/images/weblogo.png") no-repeat top;
+  height: 122px;
+  width: 118px;
+  float: left;
+  display:block;
+  position: relative;
+  z-index: 1;
+  left: 22px;
+  top: 20px;
+  
+  &:hover {
+    @include rotate(-360deg);
+  }
 }
 
-nav {
+
+
+//#SignPost{
+//  background: url("/images/sign-post.png") no-repeat top;
+//  height: 53px;
+//  display: block;
+//  position: relative;
+//  top: 220px;
+//  z-index: -1;
+//}
+%nav {
+  @include transition-duration(0.4s);
+  background: url("/images/Signpost-Home.png") no-repeat center;
   float: left;
-  margin: 0 auto;
-  height: 90px;
-  right: 93px;
-  top: 70px;
-  width: 1000px;
+  width: 108px;
+  position: relative;
+  height: 56px;
+  top: 223px;
+  left: 27px;
  
-  ul {
-    list-style: none;
-    margin: 173px 10px 10px 10px;
-    
     a {
       font-family: 'bender', helvetica;
       color: $gb;
       float: left;
       display: block;
       font-size: 17px;
-      padding: 4px 0;
+      padding: 5px 19px 5px 30px;
       text-align: center;
       width: 50px;
       text-decoration: none;
-      
-      &.first {
-        margin: -2px 48px 0 218px;
+      margin: 5px 106px 0 5px;
       }
-      
-      &.second {
-        margin:-2px 40px 1px 5px;
-      }
-      
-      &.third{
-        margin-top: -2px;
-      }
-      
-      &.last {
-       margin: -2px 0 0 56px;
-      }
-    }
+       
+  &:hover{
+    top: 218px;
   }
 }
+
+nav.Home {
+  @extend %nav;
+}
+ 
+nav.About{
+  @extend %nav;
+  background: url("/images/signpost.png") no-repeat center;
+  width: 105px;
+  
+  a{
+    padding: 5px 19px 5px 30px;
+    margin: 5px 106px 0 0;
+  }
+} 
+ 
+nav.Download{
+  @extend %nav;
+  background: url("/images/signpost.png") no-repeat center;
+  width: 100px;
+  
+  a{
+    padding: 5px 35px 5px 10px;
+    margin: 5px 110px 0 1px;
+  }
+} 
+nav.Contact{
+  @extend %nav;
+  background: url("/images/signpost.png") no-repeat center;
+  width: 100px;
+  
+  a{
+    padding: 5px 27px 5px 15px;
+    margin: 5px 106px 0 3px;
+  }
+} 
  
 .container {
   margin: 0 auto;
@@ -97,7 +185,7 @@ header.sectionTitle{
   color: $red;
   font-size: 19px;
   line-height: 25px;
-  margin: 127px 50px 0;
+  margin: 111px 50px 0;
   padding: 40px 50px 30px;
   position: relative;
   z-index: 1;
@@ -110,7 +198,7 @@ header.sectionTitle{
 }
   
 section{
-  @include border-bottom-radius(15px);
+  @include border-bottom-radius(15px); 
   display: inline;
   float: right;
   width: 580px;
@@ -173,6 +261,7 @@ section{
       text-align: justify;
       }
     }    
+  }
   aside{
     display: block;
     width: 240px;
@@ -222,8 +311,12 @@ section{
     @include border-radius(10px);
     height: 41px;
     width: 220px;
+    top: -215px;
     float: right;
-    margin: 20px -15px 0 65px;
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin: 20px 4px 0 50px;
     background-color: $gb;
     box-shadow: 3px 3px 0px $BoxShadow;
       
@@ -252,13 +345,18 @@ section{
         top: 8px;
         right: 1px;
         position: relative;
+        
+        &:hover{
+           cursor: pointer;
+          box-shadow: 0 0 5px $InputShadow
+        }
       }
    }
-}
+
 
 #bottom{
   position: relative;
-  bottom: -1000px;
+  bottom: -1075px;
   left: 200px;
   z-index: .9;
   
@@ -275,11 +373,66 @@ section{
 #mobile{
   display: none;
 }  
+
+//contact
+.lettering{
+  font-size: 40px;
+  font-family: 'OpenSans', sans-serif;
+  line-height: 30px;
+  margin: 0 15px 20px;
+  color: transparentize($red, .15);
+  text-align: center;
+}
+h3{
+  color: lighten($red, 15%);
+  margin: 0 15px 20px;
 }
 
+  form#sign-up {
+    color: $paragraph;
+    margin: 5px 15px 0px;
 
+    fieldset {
+      margin-top: 30px;
 
-//mixins
+      &.top {
+        display: inline;
+        float: left;
+        margin-right: 8px;
+
+        input{
+          width: 200px;
+        }
+      }
+
+      &#marginfix {
+        margin-right: -40px;
+      }
+
+      &.bottom {
+        margin-top: 10px;
+
+        input{
+          height: 140px;
+          width: 425px;
+        }
+      }
+    }
+
+    fieldset#thankyou {
+      display: none;
+      float: left;
+      margin: 208px 0 130px 90px;
+      font-size: 24px;
+    }
+
+    fieldset.submit {
+      float: right;
+      margin-right: 0;
+    }
+  }
+}
+
 
 //section ends<<<<<<<<<<
  

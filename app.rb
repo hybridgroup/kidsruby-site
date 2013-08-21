@@ -30,19 +30,27 @@ get '/stylesheets/:name.css' do
   scss(:"stylesheets/#{params[:name]}", Compass.sass_engine_options)
 end
 
+
 get '/about' do
+  @current_page = "about"
   haml :about, :layout => :'layouts/application'
 end
 
+
 get '/' do
+  @current_page = "home"
   haml :home, :layout => :'layouts/application'
 end
 
+
 get '/download' do
+  @current_page = "download"
   haml :download, :layout => :'layouts/application'
 end
 
+
 get '/contact' do
+  @current_page = "contact"
   haml :contact, :layout => :'layouts/application'
 end
 

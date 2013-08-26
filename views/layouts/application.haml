@@ -13,21 +13,52 @@
     %script{:type => "text/javascript", :src => "javascripts/jquery.form.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.lettering.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
-    
+
+  
   %body
     .container
       %header
         %div#Logo
           %a.kidsruby{:href => '/'}
         %nav.Home
-          %a{class: ('active' if (@current_page == 'home')), :href => '/'} Home
+          %a{:class => "#{'active' if @current_page == 'home'}", :href => '/'} Home
         %nav.About
-          %a{class: ('active' if (@current_page == 'about')), :href => '/about'} About
+          %a{:class => "#{'active' if @current_page == 'about'}", :href => '/about'} About
         %nav.Download
-          %a{class: ('active' if (@current_page == 'download')), :href => '/download'} Download
+          %a{:class => "#{'active' if @current_page == 'download'}", :href => '/download'} Download
         %nav.Contact
-          %a{class: ('active' if (@current_page == 'contact')), :href => '/contact'} Contact
+          %a{:class => "#{'active' if @current_page == 'contact'}", :href => '/contact'} Contact
 
       = yield
+    
+      %aside
+        %div.socialbuttons
+          %a.socialButtons.icon-FB{:href => "http://www.facebook.com/share.php?u=www.kidsruby.com&title=[KidsRuby]"}
+            %a.socialButtons.icon-twitter{:href => "http://twitter.com/home?status=KidsRuby+www.kidsruby.com"}
+            %span.socialNumbers 
+              %span.twittercount.counts
+            %span.socialNumbers
+              %span.fbcount.counts
+        %form#subscribe{:method => 'post', :action => '/newsletter'}        
+          %fieldset.newsletter
+            %label
+              Subscribe to our newsletter to receive the latest news 
+              %span about KIDSRUBY
+          %fieldset.subscribe
+            %input#emailnewsletter{:name => "email", :type => "email", :placeholder => "", :required => ""}
+            %input{:type => "submit", :value => "►"}
+        %header
+          <a href="http://www.twitter.com/kidsruby">KIDSRUBY</a> on Twitter
+        %span.twitterinfo
+          .title
+            %a.icon-twitterbutton{:href => "http://www.twitter.com/kidsruby"}
+            %h3 Kids Ruby
+            <a class="twitter" href="http://www.twitter.com/kidsruby">@kidsruby</a> Planet Earth!Let's teach kids how to program using Ruby! Programming is fun, and good for you too. <a href="http://kidsruby.com">http://kidsruby.com</a>
 
-      = partial :_analytics
+
+      %div#bottom
+        %img{:src => "/images/kidsRubyBottom.png", :id => "bottomImage"}
+      %div#mobile
+        %img{:src => "/images/640bottom.png", :id => "mobileImage"}          
+      
+= partial :_analytics

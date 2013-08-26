@@ -31,6 +31,7 @@ get '/stylesheets/:name.css' do
 end
 
 
+
 get '/about' do
   @current_page = "about"
   haml :about, :layout => :'layouts/application'
@@ -106,4 +107,9 @@ post "/contact" do
     end
   end
 end
+
+
+
+
+
 

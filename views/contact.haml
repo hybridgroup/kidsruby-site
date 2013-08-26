@@ -1,24 +1,29 @@
-%header.sectionTitle
-  %h1.lettering Contact
-  %h3 Contact us here, for any questions, feedback or praise you want to send. <br> For the latest news follow us <a href='http://twitter.com/kidsruby'>@kidsruby.</a>
-%section
-  %form#sign-up{:action => "/contact", :method => :post}
-    %fieldset.top
-      %label Name
-      %input{:name => "name", :type => "text", :placeholder => "Name", :required=> ""}
-    %fieldset.top#marginfix
-      %label Email
-      %input{:name => "email", :type => "email", :placeholder => "Email", :required => ""}
-    %fieldset.bottom
-      %label Message
-      %textarea{:name => "message", :type => "text", :placeholder => "Tell us something!", :ROWS=>"9", :COLS=>"59", :required => ""}
-    %fieldset
-      %label
-        %input{:type => :checkbox, :name => 'newsletter', :value => 1}
-        Send me a monthly email newsletter
-    %fieldset#thankyou
-      %label Thank you for contacting us.
-    %fieldset.submit
-      %input{:type => "submit", :value => "Submit"}
-    %div.kidsInLine
+%header.sectionTitle.main
+%section.main
+  %article.title
+    %h1
+      Contact
+    %h2 Contact us here, for any questions, feedback or praise you want to send. 
+    %h4 For the latest news follow us: <a href='http://twitter.com/kidsruby'>@kidsruby.</a>
+
+    %form#sign-up{:action => "/contact", :method => :post}
+      %fieldset.top
+        %label Name
+        %input{:name => "name", :type => "text", :placeholder => "", :required=> ""}
+      %fieldset.top#marginfix
+        %label Email
+        %input{:name => "email", :type => "email", :placeholder => "", :required => ""}
+      %fieldset.bottom
+        %label Message
+        %textarea{:name => "message", :type => "text", :placeholder => "",  :required => ""}
+      %fieldset#send
+        %input#demo_box_1.css-checkbox{:type => "checkbox", :name => 'newsletter', :value => 1} 
+        %label.css-label{:for => "demo_box_1", :name => "demo_lbl_1"}
+          Send me a monthly email newsletter  
+      %fieldset#thankyou
+        %label Thank you for contacting us.
+      %fieldset.submit
+        %input{:type => "submit", :value => "Submit"}
+    
+   
     

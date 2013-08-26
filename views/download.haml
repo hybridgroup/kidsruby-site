@@ -1,39 +1,28 @@
-%header.sectionTitle
-  %h1.lettering Download
-  .dlwrap
-    %a{:href => "https://s3.amazonaws.com/kidsruby/windows/kidsrubyinstaller-1.3.5.exe"}
-      %p.dlfor Download for Windows
-      .buddy
-    %p.version KidsRuby 1.3 Windows Installer
-  .dlwrap
-    %a.mac_osx{:href => "https://s3.amazonaws.com/kidsruby/osx/kidsrubyinstaller-1.3.5.dmg"}
-      %p.dlfor Download for Mac OSX
-      .mac_buddy
-    %p.version KidsRuby 1.3 OSX Installer
-  .dlwrap
-    %a.linux{:href => "https://s3.amazonaws.com/kidsruby/raspbian/kidsruby-1.3.2-armv6l.deb"}
-      %p.dlfor Download - Raspberry Pi
-      .buddy
-    %p.version KidsRuby 1.3 Raspberry Pi Installer
-  .dlwrap
-    %a.linux{:href => "https://s3.amazonaws.com/kidsruby/linux+i686/kidsruby-1.3.2-i686.deb"}
-      %p.dlfor Download - Debian Linux
-      .buddy
-    %p.version KidsRuby 1.3 Debian Installer
-%section
-  %article
-    %h1 KidsRuby Lessons and Examples
-    %p
+%header.sectionTitle.main
+%section.main
+  %article.title
+    %h1
+      Download
+    %a.dl.icon-windows{:href => "https://s3.amazonaws.com/kidsruby/windows/kidsrubyinstaller-1.3.5.exe"}
+      
+    %a.dl.icon-mac_osx{:href => "https://s3.amazonaws.com/kidsruby/osx/kidsrubyinstaller-1.3.5.dmg"}
+     
+    %a.dl.icon-linux_pi{:href => "https://s3.amazonaws.com/kidsruby/raspbian/kidsruby-1.3.2-armv6l.deb"}
+      
+    %a.dl.icon-linux_de{:href => "https://s3.amazonaws.com/kidsruby/linux+i686/kidsruby-1.3.2-i686.deb"}
+     
+
+  %article.page
+    %h2 KidsRuby Lessons and Examples
+    %p.dl
       We are just getting started creating class materials to help put on your own KidsRuby classes. Also, here are a few simple examples of code.
     %ul
       %li
         %a{:href => "https://github.com/hybridgroup/kidsruby-class-1"} KidsRuby Class 1
       %li
         %a{:href => "https://github.com/hybridgroup/kidsruby-examples"} KidsRuby Examples
-  %article
-    %h1 KidsRuby Source Code
-    %p
-      Installing from the source code is a great solution for when you are comfortable enough with your platform and perhaps need specific settings for your environment. It’s also a good solution in the event that there are no other premade packages for your platform.
+  %article.page
+    %h2 KidsRuby Source Code
     %ul
       %li
         %a{:href => "https://github.com/hybridgroup/kidsruby"} KidsRuby Editor

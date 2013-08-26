@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -53,16 +54,36 @@ a img {
   border: none;
 }
 
-.icon-sprite, .icon-FB, .icon-twitter {
-  background: url('../images/icon-sd48df8d0aa.png') no-repeat;
+.icon-sprite, .icon-FB, .icon-linux_de, .icon-linux_pi, .icon-mac_osx, .icon-twitter, .icon-twitterbutton, .icon-windows {
+  background: url('../images/icon-s11c9255f5f.png') no-repeat;
 }
 
 .icon-FB {
-  background-position: 0 0;
+  background-position: 0 -759px;
+}
+
+.icon-linux_de {
+  background-position: 0 -525px;
+}
+
+.icon-linux_pi {
+  background-position: 0 -175px;
+}
+
+.icon-mac_osx {
+  background-position: 0 -350px;
 }
 
 .icon-twitter {
-  background-position: 0 -48px;
+  background-position: 0 -818px;
+}
+
+.icon-twitterbutton {
+  background-position: 0 -700px;
+}
+
+.icon-windows {
+  background-position: 0 0;
 }
 
 @font-face {
@@ -79,7 +100,7 @@ a img {
   body {
     background: url("/images/768res.png") no-repeat top;
     background-color: #81c2ea;
-    font-family: helvetica;
+    font-family: helvetica, arial, sans-serif;
   }
 
   a.kidsruby {
@@ -87,7 +108,7 @@ a img {
     -moz-transition-duration: 1s;
     -o-transition-duration: 1s;
     transition-duration: 1s;
-    background: url("/images/weblogo.png") no-repeat top;
+    background: url("/images/weblogoTablet.png") no-repeat top;
     height: 122px;
     width: 118px;
     float: left;
@@ -197,9 +218,9 @@ a img {
     display: inline;
     float: right;
     width: 614px;
-    height: 220px;
+    height: 100%;
     background-color: #e2f4f7;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     margin-bottom: 50px;
   }
   section .text {
@@ -232,10 +253,10 @@ a img {
     box-shadow: 5px 10px 0 #bad6e2;
     margin: 0 0 0 45px;
   }
-  section p:nth-child(3) {
-    display: none;
+  section .text a.redbutton:hover {
+    box-shadow: 5px 10px 2px #72abc4;
   }
-  section p:last-child {
+  section article.hide {
     display: none;
   }
 
@@ -243,7 +264,211 @@ a img {
     display: none;
   }
 
-  form {
+  form#subscribe {
+    display: none;
+  }
+
+  .lettering {
+    font-size: 40px;
+    font-family: 'OpenSans', sans-serif;
+    line-height: 30px;
+    margin: 20px 15px 20px;
+    color: rgba(208, 33, 49, 0.95);
+    text-align: center;
+  }
+
+  h3 {
+    color: #e55865;
+    margin: 0 15px 20px;
+  }
+
+  article.title {
+    width: 470px;
+    padding: 0 40px  0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+  }
+  article.title h1 {
+    font-size: 40px;
+    line-height: 30px;
+    padding: 20px 0 30px 0;
+    color: #ba1d2c;
+  }
+  article.title h2 {
+    font-size: 28px;
+    line-height: 42px;
+    color: #2290c6;
+    padding: 0 0 10px 0;
+  }
+  article.title h3 {
+    font-size: 18px;
+    color: #5173a9;
+    margin-left: -2px;
+  }
+  article.title h4 {
+    font-size: 18px;
+    color: #2290c6;
+  }
+  article.title a {
+    text-decoration: underline;
+    color: #d02131;
+  }
+  article.title a.dl {
+    display: block;
+    float: left;
+    width: 183px;
+    height: 175px;
+    margin: 0 40px 20px 0;
+  }
+  article.title a.dl:last-child {
+    margin-bottom: 37px;
+  }
+
+  article.page {
+    width: 470px;
+    padding: 30px 40px 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  article.page h1 {
+    font-size: 24px;
+    color: #2290c6;
+  }
+  article.page h2 {
+    font-size: 18px;
+    color: #2290c6;
+    margin: 0 0 20px 0;
+  }
+  article.page p {
+    color: #737373;
+  }
+  article.page p.dl {
+    color: #6e7d86;
+    margin: -15px 0 15px 0;
+  }
+  article.page ul {
+    list-style: none;
+  }
+  article.page ul a {
+    line-height: 30px;
+    text-decoration: underline;
+    color: #ba1d2c;
+  }
+
+  form#sign-up {
+    font-family: 'Open Sans', sans-serif;
+    margin: 5px 15px 0px;
+  }
+  form#sign-up fieldset {
+    margin-top: 30px;
+  }
+  form#sign-up fieldset.top {
+    height: 41px;
+    width: 220px;
+    float: left;
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  form#sign-up fieldset.top input {
+    background-color: white;
+    width: 425px;
+    height: 35px;
+    border: 1px solid #737373;
+    margin: 0 0 0 0;
+  }
+  form#sign-up fieldset.top input:hover {
+    box-shadow: 0 0 2px black;
+  }
+  form#sign-up fieldset#marginfix {
+    float: left;
+  }
+  form#sign-up fieldset.bottom {
+    display: block;
+    float: left;
+    margin-top: 29px;
+  }
+  form#sign-up fieldset.bottom label {
+    padding: 0 300px  0 0;
+  }
+  form#sign-up fieldset.bottom textarea {
+    background-color: white;
+    width: 425px;
+    height: 35px;
+    border: 1px solid #737373;
+  }
+  form#sign-up fieldset.bottom textarea:hover {
+    box-shadow: 0 0 2px black;
+  }
+  form#sign-up fieldset#send {
+    color: #2290c6;
+    display: block;
+    float: right;
+    margin: 5px 0 0 0;
+  }
+  form#sign-up fieldset#send input[type=checkbox].css-checkbox {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  form#sign-up fieldset#send input[type=checkbox].css-checkbox + label.css-label {
+    padding-left: 20px;
+    height: 12px;
+    display: inline-block;
+    line-height: 14px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  form#sign-up fieldset#send input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -12px;
+  }
+  form#sign-up fieldset#send .css-label {
+    background-image: url("/images/checkbox.png");
+  }
+  form#sign-up fieldset#thankyou {
+    display: none;
+    float: left;
+    font-size: 24px;
+  }
+  form#sign-up fieldset.submit {
+    padding: 32px 0 0 65px;
+    display: block;
+    float: left;
+  }
+  form#sign-up fieldset.submit input {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    height: 43px;
+    width: 265px;
+    background: #ba1d2c;
+    overflow: visible;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25px;
+    border: none;
+  }
+  form#sign-up fieldset.submit input:hover {
+    box-shadow: 2px 2px 2px #72abc4;
+    cursor: pointer;
+  }
+  form#sign-up fieldset.submit input:active {
+    box-shadow: 2px 2px 4px #2e5b6f;
+  }
+
+  div#twitter {
     display: none;
   }
 
@@ -320,13 +545,14 @@ a img {
     height: 100%;
     background-color: #e2f4f7;
     position: relative;
-    z-index: 0;
+    z-index: -2;
     margin: 0 0 128px 0;
   }
   section .text {
     display: block;
     float: left;
     position: relative;
+    padding: 0 0 500px;
   }
   section .text p {
     font-family: helvetica, arial;
@@ -358,17 +584,21 @@ a img {
     font-weight: normal;
     color: rgba(208, 33, 49, 0.85);
   }
-  section p:last-child {
+  section article.hide {
     display: none;
   }
 
+  aside {
+    position: relative;
+    z-index: -1;
+  }
   aside .socialbuttons {
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     border-radius: 15px;
-    margin: 16px 64px 360px;
+    margin: -506px 64px 360px;
     float: left;
     display: block;
     width: 480px;
@@ -379,16 +609,15 @@ a img {
   aside .socialbuttons a.socialButtons {
     display: block;
     float: left;
-    height: 48px;
-    width: 73px;
-    margin: 16px 64px 0 80px;
+    height: 59px;
+    width: 91px;
+    margin: 10px 100px 10px 0;
   }
   aside .socialbuttons .socialNumbers {
     float: left;
     display: block;
     width: 118px;
     font-size: 32px;
-    margin: 32px 45px 0 58px;
     text-align: center;
     color: #193b4c;
   }
@@ -396,6 +625,15 @@ a img {
     font-size: 51px;
     font-weight: bold;
     color: #193b4c;
+  }
+  aside form#subscribe {
+    display: none;
+  }
+  aside span.twitterinfo {
+    display: none;
+  }
+  aside header {
+    display: none;
   }
 
   .subscribe {
@@ -408,13 +646,17 @@ a img {
     display: none;
   }
 
+  div#twitter {
+    display: none;
+  }
+
   #bottom {
     display: none;
   }
 
   #mobile {
     position: relative;
-    top: 2300px;
+    top: 1400px;
     z-index: .9;
   }
   #mobile img#mobileImage {
@@ -450,26 +692,26 @@ button:hover {
 
 @media only screen and (min-width: 769px) {
   body {
-    background: url("/images/kidsRubyTop.png") no-repeat top;
+    background: url("/images/kidsRubyTop.png") no-repeat center top;
     position: relative;
     z-index: 0;
     background-color: #81c2ea;
-    font-family: helvetica;
+    font-family: helvetica, arial, sans-serif;
   }
 
   div#Logo {
-    height: 159px;
-    width: 160px;
+    height: 238px;
+    width: 239px;
     float: left;
     position: relative;
     z-index: -9;
-    left: 80px;
-    top: -10px;
+    right: 10px;
+    top: -20px;
   }
   div#Logo:hover {
     background: url("/images/glow.png") no-repeat top;
-    height: 159px;
-    width: 160px;
+    height: 238px;
+    width: 239px;
     float: left;
     display: block;
     z-index: 0;
@@ -482,14 +724,14 @@ button:hover {
     -o-transition-duration: 1s;
     transition-duration: 1s;
     background: url("/images/weblogo.png") no-repeat top;
-    height: 122px;
-    width: 118px;
+    height: 165px;
+    width: 172px;
     float: left;
     display: block;
     position: relative;
     z-index: 1;
-    left: 22px;
-    top: 20px;
+    left: 34px;
+    top: 40px;
   }
   a.kidsruby:hover {
     -webkit-transform: rotate(-360deg);
@@ -504,61 +746,64 @@ button:hover {
     -moz-transition-duration: 0.4s;
     -o-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    background: url("/images/Signpost-Home.png") no-repeat center;
+    background: url("/images/signpost.png") no-repeat center;
     float: left;
-    width: 108px;
+    width: 137px;
     position: relative;
-    height: 56px;
-    top: 223px;
-    left: 27px;
+    height: 76px;
+    top: 365px;
+    right: 114px;
+    margin: 0 15px 0 0;
   }
   nav.Home a, nav.About a, nav.Download a, nav.Contact a {
     font-family: 'bender', helvetica;
     color: #e2f4f7;
     float: left;
     display: block;
-    font-size: 17px;
-    padding: 5px 19px 5px 30px;
+    font-size: 22px;
+    line-height: 18px;
     text-align: center;
     width: 50px;
     text-decoration: none;
-    margin: 5px 106px 0 5px;
+    padding: 15px 45px 18px 55px;
+    margin: 0 106px 0 0;
   }
   nav.Home:hover, nav.About:hover, nav.Download:hover, nav.Contact:hover {
-    top: 218px;
+    top: 358px;
   }
 
-  nav.About {
-    background: url("/images/signpost.png") no-repeat center;
-    width: 105px;
+  nav.Home {
+    background: url("/images/Signpost-Home.png") no-repeat center;
+    top: 367px;
+    width: 153px;
   }
+  nav.Home a {
+    line-height: 15px;
+  }
+
   nav.About a {
-    padding: 5px 19px 5px 30px;
-    margin: 5px 106px 0 0;
+    padding: 15px 43px 18px 43px;
+    margin: 0 106px 0 -1px;
   }
 
-  nav.Download {
-    background: url("/images/signpost.png") no-repeat center;
-    width: 100px;
-  }
   nav.Download a {
-    padding: 5px 35px 5px 10px;
-    margin: 5px 110px 0 1px;
+    padding: 15px 63px 18px 24px;
+    margin: 0 106px 0 -1px;
   }
 
   nav.Contact {
-    background: url("/images/signpost.png") no-repeat center;
-    width: 100px;
+    width: 137px;
   }
   nav.Contact a {
-    padding: 5px 27px 5px 15px;
-    margin: 5px 106px 0 3px;
+    padding: 15px 56px 18px 30px;
+    margin: 0 0 0 -1px;
   }
 
   .container {
     margin: 0 auto;
     overflow: visible;
-    width: 800px;
+    width: 940px;
+    position: relative;
   }
 
   header.sectionTitle {
@@ -568,84 +813,99 @@ button:hover {
     -moz-border-radius-topright: 15px;
     -webkit-border-top-right-radius: 15px;
     border-top-right-radius: 15px;
-    display: inline;
-    float: right;
-    width: 580px;
+    display: block;
+    float: left;
+    width: 740px;
     background-color: white;
-    color: #d02131;
-    font-size: 19px;
-    line-height: 25px;
-    margin: 111px 50px 0;
-    padding: 40px 50px 30px;
+    color: #2290c6;
+    font-size: 28px;
+    margin: 193px 0 0;
+    padding: 35px 100px 30px;
     position: relative;
     z-index: 1;
   }
   header.sectionTitle h2 {
-    font-family: 'OpenSans', sans-serif;
-    line-height: 30px;
-    margin: 0 15px 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 40px;
   }
 
-  section {
+  section.main {
     -moz-border-radius-bottomleft: 15px;
     -webkit-border-bottom-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    -moz-border-radius-bottomright: 15px;
-    -webkit-border-bottom-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    display: inline;
-    float: right;
-    width: 580px;
-    height: 370px;
+    display: block;
+    float: left;
     background-color: white;
-    margin: 0 50px 0;
-    padding: 0 50px 100px;
+    min-height: 1200px;
+    margin: 0 auto;
+    padding: 0 0 0 100px;
     position: relative;
     z-index: 0;
   }
-  section .text {
+  section.main .text {
     display: block;
-    width: 275px;
     float: left;
+    width: 470px;
     position: relative;
     z-index: 1;
-    margin: 0  20px 0 15px;
+    margin: 0 40px 0 0;
   }
-  section .text p {
+  section.main .text .button {
+    height: 165px;
+    background-color: #a7ddfe;
+  }
+  section.main .text .button p {
     font-family: helvetica, arial;
-    font-size: 17px;
-    color: #30a3db;
+    font-size: 24px;
+    color: #1b709a;
     font-weight: bold;
-    padding-top: 24px;
+    padding: 24px 40px 25px;
   }
-  section .text a {
+  section.main .text .button a {
     text-decoration: none;
-    margin-top: 10px;
+    margin: 0 auto;
   }
-  section .text a.redbutton {
+  section.main .text .button a.redbutton {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
     display: block;
-    height: 46px;
-    width: 295px;
-    background: #d02131;
+    height: 50px;
+    width: 375px;
+    background: #ba1d2c;
     overflow: visible;
-    font-family: helvetica, arial;
+    font-family: 'Open Sans', sans-serif;
     color: white;
     text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 45px;
-    box-shadow: 4px 4px 0 #bad6e2;
-  }
-  section .text p:nth-child(3) {
+    font-size: 18px;
     font-weight: normal;
-    font-size: 17px;
-    line-height: 22px;
+    line-height: 50px;
   }
-  section .text p:last-child {
+  section.main .text .button a.redbutton:hover {
+    box-shadow: 4px 4px 2px #72abc4;
+  }
+  section.main .text .button a.redbutton:active {
+    box-shadow: 4px 4px 8px #2e5b6f;
+  }
+  section.main .text h1 {
+    color: #2290c6;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 28px;
+    padding-top: 40px;
+  }
+  section.main .text time {
+    font: 14px/28px bold 'Open Sans', sans-serif;
+    color: #d02131;
+  }
+  section.main .text p {
     font-family: helvetica, arial;
-    font-size: 13px;
-    line-height: 18px;
-    color: #45869f;
+    font-size: 17px;
+    line-height: 28px;
+    color: #737373;
     font-weight: normal;
     padding-top: 10px;
     z-index: 1;
@@ -653,118 +913,188 @@ button:hover {
   }
 
   aside {
+    -moz-border-radius-bottomright: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     display: block;
-    width: 240px;
-    height: 100px;
+    width: 270px;
+    min-height: 1200px;
     float: left;
     position: relative;
-    z-index: 1;
+    padding: 0 45px 0 15px;
+    z-index: 0;
     background: white;
-    margin: 0 20px 0 10px;
+    margin: 0;
   }
   aside .socialbuttons {
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
-    border-radius: 7px;
-    margin: 48px 0 0 35px;
+    margin: 0;
     float: left;
     display: block;
-    width: 220px;
+    width: 269px;
     height: 110px;
-    background: #e2f4f7;
-    box-shadow: 3px 3px 0px #a6c7d0;
     color: #193b4c;
   }
   aside .socialbuttons a.socialButtons {
     display: block;
     float: left;
-    height: 48px;
-    width: 73px;
-    margin: 10px 15px 5px 20px;
-  }
-  aside .socialbuttons .socialNumbers {
-    float: left;
-    display: block;
-    width: 60px;
-    font-size: 12px;
-    margin: 0 20px 0 27px;
-    text-align: center;
-    font-weight: bold;
+    height: 59px;
+    width: 91px;
+    margin: 0 30px 10px 0;
   }
   aside .socialbuttons .counts {
+    margin: 0 0 0 13px;
     font-size: 21px;
     font-weight: bold;
   }
-
-  .subscribe {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
-    height: 41px;
-    width: 220px;
-    top: -215px;
-    float: right;
+  aside form#subscribe fieldset.newsletter {
+    display: block;
+    float: left;
+    font-size: 16px;
+    line-height: 23px;
+    font-family: 'Open Sans', sans-serif;
+    color: #2290c6;
+    margin: 0 0 10px 0;
+  }
+  aside form#subscribe fieldset.newsletter span {
+    font-size: 20px;
+    color: #d02131;
+  }
+  aside form#subscribe fieldset.subscribe {
+    height: 25px;
+    width: 250px;
+    top: 5px;
+    float: left;
     display: block;
     position: relative;
     z-index: 2;
-    margin: 20px 4px 0 50px;
-    background-color: #e2f4f7;
-    box-shadow: 3px 3px 0px #a6c7d0;
+    margin: 0 0 20px -3px;
+    border: solid 6px #a7ddfe;
   }
-  .subscribe input[type='email'] {
-    -webkit-border-radius: 11px;
-    -moz-border-radius: 11px;
-    -ms-border-radius: 11px;
-    -o-border-radius: 11px;
-    border-radius: 11px;
-    background-color: #b9d5e0;
+  aside form#subscribe fieldset.subscribe input[type='email'] {
+    background-color: white;
     padding: 0;
     height: 25px;
     font-weight: 700;
-    margin: 3px -75px 0 2px;
+    margin: 0 -75px 0 2px;
     width: 148px;
-    border: 5px solid #e2f4f7;
-    float: left;
-    box-shadow: inset 1px 1px 0px #6da2b2;
-  }
-  .subscribe input[type='submit'] {
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
-    border-radius: 7px;
-    background-color: #5173a9;
     border: none;
-    font-size: 17px;
-    line-height: 25px;
+    float: left;
+  }
+  aside form#subscribe fieldset.subscribe input[type='submit'] {
+    display: block;
+    background-color: #ba1d2c;
+    border: none;
+    font-size: 16px;
     color: white;
+    line-height: 21px;
     margin: 0 0 0 62px;
-    padding: 0 14px;
-    top: 8px;
-    right: 1px;
+    padding: 2px 8px;
+    top: 0;
+    right: -143px;
     position: relative;
   }
-  .subscribe input[type='submit']:hover {
+  aside form#subscribe fieldset.subscribe input[type='submit']:hover {
     cursor: pointer;
     box-shadow: 0 0 5px #6da2b2;
+  }
+  aside form#subscribe fieldset.subscribe input[type='submit']:active {
+    cursor: pointer;
+    background-color: #4e6ea2;
+    box-shadow: 0 0 10px #8eb7c4;
+  }
+  aside header {
+    font-weight: bold;
+    color: #1b709a;
+  }
+  aside header a {
+    color: #d02131;
+  }
+  aside .icon-twitterbutton {
+    -webkit-transition-duration: 10s;
+    -moz-transition-duration: 10s;
+    -o-transition-duration: 10s;
+    transition-duration: 10s;
+    float: left;
+    height: 59px;
+    margin: 6px 10px 75px 0;
+    width: 62px;
+  }
+  aside .icon-twitterbutton:hover {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+  aside span.twitterinfo {
+    font-size: 11px;
+  }
+  aside span.twitterinfo .title {
+    margin: 20px 0 0 0;
+    font: 13px/20px bold 'Open Sans', sans-serif;
+    color: #737373;
+  }
+  aside span.twitterinfo .title a.twitter {
+    color: #2290c6;
+  }
+  aside span.twitterinfo h3 {
+    font: 14px/28px bold 'Open Sans', sans-serif;
+    color: #d02131;
+    margin: 0;
+  }
+  aside #twitter-feed {
+    margin-top: 10px;
+  }
+  aside #twitter-feed ul {
+    margin: 0px;
+    padding: 0px;
+  }
+  aside #twitter-feed ul li {
+    clear: both;
+    font-size: 11px;
+    list-style: none;
+    margin: 0px 0px 30px 0px;
+    min-height: 55px;
+  }
+  aside #twitter-feed ul a img {
+    background: none;
+    float: left;
+    height: 40px;
+    margin: 0 10px 45px 0;
+    width: 40px;
+  }
+  aside #twitter-feed ul a.JRM {
+    display: inline;
+    float: left;
+    font-size: 10px;
+  }
+  aside #twitter-feed ul span.time {
+    display: inline-block;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  div#twitter {
+    display: block;
+    position: absolute;
+    width: 278px;
+    top: 1050px;
+    left: 620px;
+    z-index: 99;
   }
 
   #bottom {
     position: relative;
-    bottom: -1075px;
+    bottom: -2020px;
     left: 200px;
-    z-index: .9;
+    z-index: 9;
   }
   #bottom img#bottomImage {
     float: left;
     position: absolute;
-    z-index: .9;
+    z-index: 9;
     bottom: 0;
-    right: 98px;
+    right: 126px;
     display: block;
   }
 
@@ -772,53 +1102,186 @@ button:hover {
     display: none;
   }
 
-  .lettering {
+  article.title {
+    width: 470px;
+    padding: 0 40px 0 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+  }
+  article.title h1 {
     font-size: 40px;
-    font-family: 'OpenSans', sans-serif;
     line-height: 30px;
-    margin: 0 15px 20px;
-    color: rgba(208, 33, 49, 0.85);
-    text-align: center;
+    padding: 0 0 30px 0;
+    color: #ba1d2c;
+  }
+  article.title h2 {
+    font-size: 28px;
+    line-height: 42px;
+    color: #2290c6;
+    padding: 0 0 10px 0;
+  }
+  article.title h3 {
+    font-size: 18px;
+    color: #5173a9;
+    margin-left: -2px;
+  }
+  article.title h4 {
+    font-size: 18px;
+    color: #2290c6;
+  }
+  article.title a {
+    text-decoration: underline;
+    color: #d02131;
+  }
+  article.title a.dl {
+    display: block;
+    float: left;
+    width: 183px;
+    height: 175px;
+    margin: 0 40px 20px 0;
+  }
+  article.title a.dl:last-child {
+    margin-bottom: 37px;
   }
 
-  h3 {
-    color: #e55865;
-    margin: 0 15px 20px;
+  article.page {
+    width: 470px;
+    padding: 30px 40px 0 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  article.page h1 {
+    font-size: 24px;
+    color: #2290c6;
+  }
+  article.page h2 {
+    font-size: 18px;
+    color: #2290c6;
+    margin: 0 0 20px 0;
+  }
+  article.page p {
+    color: #737373;
+  }
+  article.page p.dl {
+    color: #6e7d86;
+    margin: -15px 0 15px 0;
+  }
+  article.page ul {
+    list-style: none;
+  }
+  article.page ul a {
+    line-height: 30px;
+    text-decoration: underline;
+    color: #ba1d2c;
   }
 
   form#sign-up {
-    color: #30a3db;
+    font-family: 'Open Sans', sans-serif;
     margin: 5px 15px 0px;
   }
   form#sign-up fieldset {
     margin-top: 30px;
   }
   form#sign-up fieldset.top {
-    display: inline;
+    height: 41px;
+    width: 220px;
     float: left;
-    margin-right: 8px;
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
   }
   form#sign-up fieldset.top input {
-    width: 200px;
+    background-color: white;
+    width: 425px;
+    height: 35px;
+    border: 1px solid #737373;
+    margin: 0 0 0 0;
+  }
+  form#sign-up fieldset.top input:hover {
+    box-shadow: 0 0 2px black;
   }
   form#sign-up fieldset#marginfix {
-    margin-right: -40px;
+    float: left;
   }
   form#sign-up fieldset.bottom {
-    margin-top: 10px;
+    display: block;
+    float: left;
+    margin-top: 29px;
   }
-  form#sign-up fieldset.bottom input {
-    height: 140px;
+  form#sign-up fieldset.bottom textarea {
+    background-color: white;
     width: 425px;
+    height: 35px;
+    border: 1px solid #737373;
+  }
+  form#sign-up fieldset.bottom textarea:hover {
+    box-shadow: 0 0 2px black;
+  }
+  form#sign-up fieldset#send {
+    color: #2290c6;
+    display: block;
+    float: right;
+    margin: 5px 0 0 0;
+  }
+  form#sign-up fieldset#send input[type=checkbox].css-checkbox {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  form#sign-up fieldset#send input[type=checkbox].css-checkbox + label.css-label {
+    padding-left: 20px;
+    height: 12px;
+    display: inline-block;
+    line-height: 14px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  form#sign-up fieldset#send input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -12px;
+  }
+  form#sign-up fieldset#send .css-label {
+    background-image: url("/images/checkbox.png");
   }
   form#sign-up fieldset#thankyou {
     display: none;
     float: left;
-    margin: 208px 0 130px 90px;
     font-size: 24px;
   }
   form#sign-up fieldset.submit {
-    float: right;
-    margin-right: 0;
+    padding: 32px 0 0 65px;
+    display: block;
+    float: left;
+  }
+  form#sign-up fieldset.submit input {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    height: 43px;
+    width: 265px;
+    background: #ba1d2c;
+    overflow: visible;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25px;
+    border: none;
+  }
+  form#sign-up fieldset.submit input:hover {
+    box-shadow: 2px 2px 2px #72abc4;
+    cursor: pointer;
+  }
+  form#sign-up fieldset.submit input:active {
+    box-shadow: 2px 2px 4px #2e5b6f;
   }
 }

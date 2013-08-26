@@ -2,37 +2,36 @@
 and (max-width : 768px) 
 and (min-width : 641px){
   
-body{
-  background: url("/images/768res.png") no-repeat top;
-  background-color: $background;
-  font-family: helvetica;
-}
-
-a.kidsruby{ 
-  @include transition-duration(1s);
-  background: url("/images/weblogo.png") no-repeat top;
-  height: 122px;
-  width: 118px;
-  float: left;
-  display:block;
-  position: relative;
-  z-index: -9999;
-  right: 40px;
-  top: 20px;
-  //margin: 0 0 214px 0;
-  
-  &:hover {
-    @include rotate(-360deg);
+  body{
+    background: url("/images/768res.png") no-repeat top;
+    background-color: $background;
+    font-family: helvetica, arial, sans-serif;
   }
-}
-
-%navTablet {
-  float: left;
-  display: block;
-  width: 307px;
-  position: relative;
-  z-index: 9999;
   
+  a.kidsruby{ 
+    @include transition-duration(1s);
+    background: url("/images/weblogoTablet.png") no-repeat top;
+    height: 122px;
+    width: 118px;
+    float: left;
+    display:block;
+    position: relative;
+    z-index: -9999;
+    right: 40px;
+    top: 20px;
+    
+    &:hover {
+      @include rotate(-360deg);
+    }
+  }
+  
+  %navTablet {
+    float: left;
+    display: block;
+    width: 307px;
+    position: relative;
+    z-index: 9999;
+    
     a{
       @include text-shadow (-3px 3px 0 darken(#895024, 5%));
       @include background-image(linear-gradient(#c47d4b, #895024));
@@ -48,129 +47,353 @@ a.kidsruby{
       font-size: 38px;
       line-height: 60px;
     } 
-    
-   a.active{ 
-    @include text-shadow (-3px 3px 0 darken(#895024, 5%));
-    @include background-image(radial-gradient($red 50%, #9e1c36 100%));
-    border: 2px solid lighten(#663300, 5%);
-    width: 233px;
-    height: 60px;
-    padding-left: 70px;
-    float: left;
-    display: block;
-    font-family: 'bender';
-    color: $gb;
-    text-decoration: none;
-    font-size: 38px;
-    line-height: 60px;
-    }
-  }
-
-nav.Home {
-  @extend %navTablet;
-  margin: 336px 0 0 0;
-  right: 118px;
-    a{
       
-    }
-}
-
-nav.About {
-  @extend %navTablet;
-  margin: 0 0 0 0;
-}
-
-nav.Download{
-  @extend %navTablet;
-  margin: -64px 0 0 0;
-}
-
-nav.Contact  {
-  @extend %navTablet;
-  float:right;
-}
-
-
-.container {
-  margin: 0 auto;
-  width: 614px;
-} 
-
-header.sectionTitle{
-  display: inline;
-  float: right;
-  background-color: $gb;
-  width: 614px;
-  
-  h2 {
-    font-size: 30px;
-    color: $red;
-    font-family: 'OpenSans', sans-serif;
-    line-height: 40px;
-    margin: 40px 45px 40px;
-  }
-}
- 
-section{
-  @include border-bottom-radius(15px);
-  display: inline;
-  float: right;
-  width: 614px;
-  height: 220px;
-  background-color: $gb;
-  padding-bottom: 20px;
-  margin-bottom: 50px;
-  
-    .text{  
-      display: block;
-      float: left;
-      position: relative;
-      
-      p{
-        font-family: helvetica, arial;
-        font-size: 30px;
-        color: darken($DarkText,15%);
-        font-weight: bold;
-        margin: 0 45px 15px 55px;
+      a.active{ 
+        @include text-shadow (-3px 3px 0 darken(#895024, 5%));
+        @include background-image(radial-gradient($red 50%, #9e1c36 100%));
+        border: 2px solid lighten(#663300, 5%);
+        width: 233px;
+        height: 60px;
+        padding-left: 70px;
+        float: left;
+        display: block;
+        font-family: 'bender';
+        color: $gb;
+        text-decoration: none;
+        font-size: 38px;
+        line-height: 60px;
       }
-      
-      a{
-        text-decoration:none;
+  }
+  
+  nav.Home {
+    @extend %navTablet;
+    margin: 336px 0 0 0;
+    right: 118px;   
+  }
+  
+  nav.About {
+    @extend %navTablet;
+    margin: 0 0 0 0;
+  }
+  
+  nav.Download{
+    @extend %navTablet;
+    margin: -64px 0 0 0;
+  }
+  
+  nav.Contact  {
+    @extend %navTablet;
+    float:right;
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 614px;
+  } 
+  
+  header.sectionTitle{
+    display: inline;
+    float: right;
+    background-color: $gb;
+    width: 614px;
+    
+    h2 {
+      font-size: 30px;
+      color: $red;
+      font-family: 'OpenSans', sans-serif;
+      line-height: 40px;
+      margin: 40px 45px 40px;
+    }
+  }
+   
+  section{
+    @include border-bottom-radius(15px);
+    display: inline;
+    float: right;
+    width: 614px;
+    height: 100%;
+    background-color: $gb;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    
+      .text{  
+        display: block;
+        float: left;
+        position: relative;
         
-        &.redbutton{
-          display: block;
-          height: 135px;
-          width: 524px;
-          background: $red;
-          overflow: visible;
+        p{
           font-family: helvetica, arial;
-          color: $white;
-          text-align: center;
-          font-size: 28px;
+          font-size: 30px;
+          color: darken($DarkText,15%);
           font-weight: bold;
-          line-height: 130px;
-          box-shadow: 5px 10px 0 $ButtonShadow; 
-          margin: 0 0 0 45px;
+          margin: 0 45px 15px 55px;
         }
-     }       
-   }
-  p:nth-child(3){
+        
+        a{
+          text-decoration:none;
+          
+          &.redbutton{
+            display: block;
+            height: 135px;
+            width: 524px;
+            background: $red;
+            overflow: visible;
+            font-family: helvetica, arial;
+            color: $white;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 130px;
+            box-shadow: 5px 10px 0 $ButtonShadow; 
+            margin: 0 0 0 45px;
+            
+            &:hover{
+              box-shadow: 5px 10px 2px darken($ButtonShadow, 20%);
+            }
+          }
+       }       
+     }
+    
+    article.hide{
+        display: none;
+    }
+  }
+  aside{
     display: none;
-   }
-  p:last-child{
+  }
+  form#subscribe{
+    display: none;
+  }
+  .lettering{
+    font-size: 40px;
+    font-family: 'OpenSans', sans-serif;
+    line-height: 30px;
+    margin: 20px 15px 20px;
+    color: transparentize($red, .05);
+    text-align: center;
+  }
+  h3{
+    color: lighten($red, 15%);
+    margin: 0 15px 20px;
+  }
+  
+  //for about, download and contact pages
+  article.title{
+    width: 470px;
+    padding: 0 40px  0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    
+    h1{
+      font-size: 40px;
+      line-height: 30px;
+      padding: 20px 0 30px 0;
+      color: $Button;
+    }
+    
+    h2{
+      font-size: 28px;
+      line-height: 42px;
+      color: $paragraph;
+      padding: 0 0 10px 0;
+    }
+        
+    h3{
+      font-size: 18px;
+      color: $DarkBlue;
+      margin-left: -2px;
+    } 
+    
+    h4{
+      font-size: 18px;
+      color: $paragraph;
+    }
+     a{
+       text-decoration: underline;
+       color: $red;
+     }
+       //For Download Sprites
+      a.dl{
+        display: block;
+        float: left;
+        width: 183px;
+        height: 175px;
+        margin: 0 40px 20px 0;
+     }
+     a.dl:last-child{
+       margin-bottom: 37px;
+     }
+  }
+  
+  article.page{
+    width: 470px;
+    padding: 30px 40px 0;
+    font-family: 'Open Sans', sans-serif;
+    
+    h1{
+      font-size: 24px;
+      color: $paragraph;
+    }
+    
+    h2{
+      font-size: 18px;
+      color: $paragraph;
+      margin: 0 0 20px 0;
+    }
+    
+    p{
+      color:$GrayText; 
+    }
+    p.dl{
+      color: #6e7d86;
+      margin: -15px 0 15px 0;
+    }
+  
+    ul{
+      list-style: none;
+      a{
+        line-height: 30px;
+        text-decoration: underline;
+        color: $Button;
+      }
+    }
+  }
+
+//contact
+form#sign-up {
+  font-family: 'Open Sans', sans-serif;
+  margin: 5px 15px 0px;
+  
+  fieldset {
+    margin-top: 30px;
+    
+    &.top {
+      height: 41px;
+      width: 220px;
+      float: left;
+      display: block;
+      position: relative;
+      margin-bottom: 5px;
+      
+      input{
+        background-color: white;
+        width: 425px;
+        height: 35px;
+        border: 1px solid $GrayText;
+        margin: 0 0 0 0 ;
+        &:hover{
+        box-shadow: 0 0 2px black;
+      }
+    }
+  }
+
+    &#marginfix {
+      float: left;
+    }
+
+    &.bottom {
+      display:block;
+      float: left;
+      margin-top: 29px;
+      
+      label{
+        padding: 0 300px  0 0;
+      }
+        
+      textarea{
+        background-color: white;
+        width: 425px;
+        height: 35px;
+        border: 1px solid $GrayText;
+        &:hover{
+        box-shadow: 0 0 2px black;
+        }
+      }
+    }
+  }
+  
+  fieldset#send{
+    color: $paragraph;
+    display:block;
+    float: right;
+    margin: 5px 0 0 0;
+    
+    input[type=checkbox].css-checkbox {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      
+    +label.css-label {
+      padding-left: 20px;
+      height: 12px;
+      display: inline-block;
+      line-height: 14px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      font-size: 14px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+      &:checked + label.css-label {
+        background-position: 0 -12px;
+      }
+  }
+    .css-label {
+      background-image: url("/images/checkbox.png");
+    }
+  }
+    
+  fieldset#thankyou{
+    display: none;
+    float: left;
+    font-size: 24px;
+  }
+
+  fieldset.submit{
+    padding: 32px 0 0 65px;
+    display: block;
+    float: left;
+    
+      input{
+        @include border-radius(10px); 
+        height: 43px;
+        width: 265px;
+        background: $Button;
+        overflow: visible;
+        font-family: 'Open Sans', sans-serif;
+        color: $white;
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 25px;
+        border: none;
+          
+        &:hover{
+          box-shadow: 2px 2px 2px darken($ButtonShadow, 20%);
+          cursor: pointer;
+        }
+        &:active{
+          box-shadow: 2px 2px 4px darken($ButtonShadow, 50%);
+        }
+      }
+    }
+  }
+
+  //twitter feed
+  div#twitter{
+    display: none;
+  }
+  //footer image desktop
+  #bottom{
     display:none;
   }
-}
-aside{
-  display: none;
-}
-form{
-  display: none;
-}
-#bottom{
-  display:none;
-}
-#mobile{
-  display: none;
-}
+  //footer image mobile
+  #mobile{
+    display: none;
+  }
 }

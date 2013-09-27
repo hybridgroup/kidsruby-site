@@ -96,11 +96,12 @@ a img {
   src: url("/font/Bender-Solid.otf");
 }
 
-@media only screen and (max-width: 768px) and (min-width: 641px) {
+@media only screen and (max-width: 768px) and (min-width: 642px) {
   body {
     background: url("/images/768res.png") no-repeat top;
     background-color: #81c2ea;
     font-family: helvetica, arial, sans-serif;
+    height: 100%;
   }
 
   a.kidsruby {
@@ -114,7 +115,7 @@ a img {
     float: left;
     display: block;
     position: relative;
-    z-index: -9999;
+    z-index: 1;
     right: 40px;
     top: 20px;
   }
@@ -192,15 +193,17 @@ a img {
   .container {
     margin: 0 auto;
     width: 614px;
+    min-height: 100%;
   }
 
-  header.sectionTitle {
+  header.section-title {
     display: inline;
     float: right;
     background-color: #e2f4f7;
     width: 614px;
   }
-  header.sectionTitle h2 {
+
+  h2.title {
     font-size: 30px;
     color: #d02131;
     font-family: 'OpenSans', sans-serif;
@@ -208,7 +211,7 @@ a img {
     margin: 40px 45px 40px;
   }
 
-  section {
+  section.main {
     -moz-border-radius-bottomleft: 15px;
     -webkit-border-bottom-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -222,23 +225,18 @@ a img {
     background-color: #e2f4f7;
     padding-bottom: 50px;
     margin-bottom: 50px;
+    overflow: auto;
   }
-  section .text {
-    display: block;
-    float: left;
-    position: relative;
-  }
-  section .text p {
+
+  p.button-top {
     font-family: helvetica, arial;
     font-size: 30px;
     color: #2e596a;
     font-weight: bold;
     margin: 0 45px 15px 55px;
   }
-  section .text a {
-    text-decoration: none;
-  }
-  section .text a.redbutton {
+
+  a.red-button {
     display: block;
     height: 135px;
     width: 524px;
@@ -253,18 +251,15 @@ a img {
     box-shadow: 5px 10px 0 #bad6e2;
     margin: 0 0 0 45px;
   }
-  section .text a.redbutton:hover {
+  a.red-button:hover {
     box-shadow: 5px 10px 2px #72abc4;
   }
-  section article.hide {
+
+  article.hide {
     display: none;
   }
 
   aside {
-    display: none;
-  }
-
-  form#subscribe {
     display: none;
   }
 
@@ -282,45 +277,61 @@ a img {
     margin: 0 15px 20px;
   }
 
+  footer {
+    position: relative;
+    margin-top: -50px;
+    height: 50px;
+    clear: both;
+    text-align: center;
+  }
+
   article.title {
     width: 470px;
     padding: 0 40px  0;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
   }
-  article.title h1 {
+
+  h1.heading {
     font-size: 40px;
     line-height: 30px;
     padding: 20px 0 30px 0;
     color: #ba1d2c;
   }
-  article.title h2 {
+
+  h2 {
     font-size: 28px;
     line-height: 42px;
     color: #2290c6;
     padding: 0 0 10px 0;
   }
-  article.title h3 {
+
+  h3 {
+    font-size: 18px;
+    color: #2290c6;
+    margin-left: -2px;
+  }
+
+  h5 {
     font-size: 18px;
     color: #5173a9;
     margin-left: -2px;
   }
-  article.title h4 {
-    font-size: 18px;
-    color: #2290c6;
-  }
-  article.title a {
+
+  a {
     text-decoration: underline;
     color: #d02131;
   }
-  article.title a.dl {
+
+  a.dl {
     display: block;
     float: left;
     width: 183px;
     height: 175px;
     margin: 0 40px 20px 0;
   }
-  article.title a.dl:last-child {
+
+  a.dl:last-child {
     margin-bottom: 37px;
   }
 
@@ -329,85 +340,88 @@ a img {
     padding: 30px 40px 0;
     font-family: 'Open Sans', sans-serif;
   }
-  article.page h1 {
+
+  h4 {
     font-size: 24px;
     color: #2290c6;
   }
-  article.page h2 {
+
+  h6 {
     font-size: 18px;
     color: #2290c6;
     margin: 0 0 20px 0;
   }
-  article.page p {
+
+  p {
     color: #737373;
   }
-  article.page p.dl {
+
+  p.dl {
     color: #6e7d86;
     margin: -15px 0 15px 0;
   }
-  article.page ul {
+
+  ul.download {
     list-style: none;
   }
-  article.page ul a {
+
+  a.download {
     line-height: 30px;
     text-decoration: underline;
     color: #ba1d2c;
   }
 
-  form#sign-up {
+  form.sign-up {
     font-family: 'Open Sans', sans-serif;
-    margin: 5px 15px 0px;
+    margin: 5px  40px 0px;
   }
-  form#sign-up fieldset {
-    margin-top: 30px;
-  }
-  form#sign-up fieldset.top {
+
+  fieldset.top {
     height: 41px;
     width: 220px;
     float: left;
     display: block;
     position: relative;
-    margin-bottom: 5px;
+    margin: 30px 0 5px 0;
   }
-  form#sign-up fieldset.top input {
+
+  input.contact {
     background-color: white;
     width: 425px;
     height: 35px;
     border: 1px solid #737373;
     margin: 0 0 0 0;
   }
-  form#sign-up fieldset.top input:hover {
+  input.contact:hover {
     box-shadow: 0 0 2px black;
   }
-  form#sign-up fieldset#marginfix {
-    float: left;
-  }
-  form#sign-up fieldset.bottom {
+
+  fieldset.bottom {
     display: block;
     float: left;
-    margin-top: 29px;
+    margin: 29px 300px 0 0;
   }
-  form#sign-up fieldset.bottom label {
-    padding: 0 300px  0 0;
-  }
-  form#sign-up fieldset.bottom textarea {
+
+  textarea {
     background-color: white;
     width: 425px;
-    height: 35px;
+    height: 100px;
     border: 1px solid #737373;
   }
-  form#sign-up fieldset.bottom textarea:hover {
+  textarea:hover {
     box-shadow: 0 0 2px black;
   }
-  form#sign-up fieldset#send {
+
+  fieldset.send {
     color: #2290c6;
+    position: relative;
     display: block;
-    float: right;
-    margin: 5px 0 0 0;
+    float: left;
   }
-  form#sign-up fieldset#send input[type=checkbox].css-checkbox {
+
+  input[type=checkbox].css-checkbox {
     position: absolute;
-    overflow: hidden;
+    overflow: show;
     clip: rect(0 0 0 0);
     height: 1px;
     width: 1px;
@@ -415,9 +429,12 @@ a img {
     padding: 0;
     border: 0;
   }
-  form#sign-up fieldset#send input[type=checkbox].css-checkbox + label.css-label {
-    padding-left: 20px;
+
+  label.css-label {
+    background-image: url("/images/checkbox.png");
+    float: left;
     height: 12px;
+    width: 15px;
     display: inline-block;
     line-height: 14px;
     background-repeat: no-repeat;
@@ -425,24 +442,26 @@ a img {
     font-size: 14px;
     vertical-align: middle;
     cursor: pointer;
+    margin: 4px 10px 0 0;
   }
-  form#sign-up fieldset#send input[type=checkbox].css-checkbox:checked + label.css-label {
+
+  input[type=checkbox].css-checkbox:checked + label.css-label {
     background-position: 0 -12px;
   }
-  form#sign-up fieldset#send .css-label {
-    background-image: url("/images/checkbox.png");
-  }
-  form#sign-up fieldset#thankyou {
+
+  fieldset.thankyou {
     display: none;
     float: left;
     font-size: 24px;
   }
-  form#sign-up fieldset.submit {
+
+  fieldset.submit {
     padding: 32px 0 0 65px;
     display: block;
     float: left;
   }
-  form#sign-up fieldset.submit input {
+
+  input.submit {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -460,34 +479,47 @@ a img {
     line-height: 25px;
     border: none;
   }
-  form#sign-up fieldset.submit input:hover {
+  input.submit:hover {
     box-shadow: 2px 2px 2px #72abc4;
     cursor: pointer;
   }
-  form#sign-up fieldset.submit input:active {
+  input.submit:active {
     box-shadow: 2px 2px 4px #2e5b6f;
   }
 
-  div#twitter {
+  div.twitter {
     display: none;
   }
 
-  #bottom {
+  .bottom {
     display: none;
   }
 
-  #mobile {
+  .mobile {
     display: none;
   }
 }
 @media only screen and (max-width: 641px) and (min-width: 1px) {
   body {
-    background: url("/images/640res.png") no-repeat top;
+    background: url("/images/640res.png") no-repeat center top;
     background-size: 100% auto;
-    background-position: center top;
     background-color: #81c2ea;
     font-family: helvetica;
     font-size: 100%;
+    height: 100%;
+  }
+
+  a.kidsruby {
+    background: url("/images/weblogomobile.png") no-repeat top;
+    background-size: 28%;
+    height: 100%;
+    width: 100%;
+    float: left;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    right: 34%;
+    top: 10px;
   }
 
   nav.Home, nav.About, nav.Download, nav.Contact {
@@ -496,6 +528,8 @@ a img {
     width: 100%;
   }
   nav.Home a, nav.About a, nav.Download a, nav.Contact a {
+    z-index: 1;
+    position: relative;
     display: block;
     background: #e6e6e6;
     height: 84px;
@@ -516,15 +550,19 @@ a img {
   .container {
     margin: 0 auto;
     width: 100%;
+    min-height: 100%;
   }
 
-  header.sectionTitle {
+  header.section-title {
     width: 100%;
-    display: inline;
+    position: relative;
+    display: block;
     float: right;
+    z-index: 1;
     background-color: #e2f4f7;
   }
-  header.sectionTitle h2 {
+
+  h2.title {
     font-size: 32px;
     color: #d02131;
     font-family: helvetica, arial;
@@ -532,7 +570,7 @@ a img {
     margin: 32px;
   }
 
-  section {
+  section.main {
     -moz-border-radius-bottomleft: 15px;
     -webkit-border-bottom-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -545,26 +583,20 @@ a img {
     height: 100%;
     background-color: #e2f4f7;
     position: relative;
-    z-index: -2;
-    margin: 0 0 128px 0;
+    margin: 0 0 569px 0;
+    padding: 0 0 100px;
   }
-  section .text {
-    display: block;
-    float: left;
-    position: relative;
-    padding: 0 0 500px;
-  }
-  section .text p {
+
+  p.button-top {
     font-family: helvetica, arial;
     font-size: 32px;
     color: #2e596a;
     font-weight: bold;
     margin: 32px 41px 16px;
   }
-  section .text a {
+
+  a.red-button {
     text-decoration: none;
-  }
-  section .text a.redbutton {
     display: block;
     width: 90%;
     height: 15%;
@@ -579,87 +611,241 @@ a img {
     box-shadow: 8px 14px 0 #bad6e2;
     margin: 0 29px 15px;
   }
-  section p:nth-child(3) {
-    margin: 60px 30px 80px;
-    font-weight: normal;
-    color: rgba(208, 33, 49, 0.85);
+  a.red-button:hover {
+    color: white;
+    box-shadow: 8px 14px 2px #72abc4;
   }
-  section article.hide {
+
+  article.hide {
     display: none;
   }
 
   aside {
-    position: relative;
-    z-index: -1;
-  }
-  aside .socialbuttons {
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    border-radius: 15px;
-    margin: -506px 64px 360px;
-    float: left;
-    display: block;
-    width: 480px;
-    height: 240px;
-    background: white;
-    box-shadow: 6px 6px 0px #a6c7d0;
-  }
-  aside .socialbuttons a.socialButtons {
-    display: block;
-    float: left;
-    height: 59px;
-    width: 91px;
-    margin: 10px 100px 10px 0;
-  }
-  aside .socialbuttons .socialNumbers {
-    float: left;
-    display: block;
-    width: 118px;
-    font-size: 32px;
-    text-align: center;
-    color: #193b4c;
-  }
-  aside .socialbuttons .counts {
-    font-size: 51px;
-    font-weight: bold;
-    color: #193b4c;
-  }
-  aside form#subscribe {
-    display: none;
-  }
-  aside span.twitterinfo {
-    display: none;
-  }
-  aside header {
     display: none;
   }
 
   .subscribe {
     display: none;
   }
-  .subscribe input[type='email'] {
-    display: none;
-  }
-  .subscribe input[type='submit'] {
+
+  div.twitter {
     display: none;
   }
 
-  div#twitter {
-    display: none;
+  article.title {
+    width: 470px;
+    padding: 0 40px  0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
   }
 
-  #bottom {
-    display: none;
+  h1.heading {
+    font-size: 40px;
+    line-height: 30px;
+    padding: 20px 0 30px 0;
+    color: #ba1d2c;
   }
 
-  #mobile {
+  h2 {
+    font-size: 28px;
+    line-height: 42px;
+    color: #2290c6;
+    padding: 0 0 10px 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: #2290c6;
+    margin-left: -2px;
+  }
+
+  h5 {
+    font-size: 18px;
+    color: #5173a9;
+    margin-left: -2px;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #d02131;
+  }
+
+  a.dl {
+    display: block;
+    float: left;
+    width: 183px;
+    height: 175px;
+    margin: 0 40px 20px 0;
+  }
+
+  a.dl:last-child {
+    margin-bottom: 37px;
+  }
+
+  article.page {
+    width: 470px;
+    padding: 30px 40px 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h4 {
+    font-size: 24px;
+    color: #2290c6;
+  }
+
+  h6 {
+    font-size: 18px;
+    color: #2290c6;
+    margin: 0 0 20px 0;
+  }
+
+  p {
+    color: #737373;
+  }
+
+  p.dl {
+    color: #6e7d86;
+    margin: -15px 0 15px 0;
+  }
+
+  ul.download {
+    list-style: none;
+  }
+
+  a.download {
+    line-height: 30px;
+    text-decoration: underline;
+    color: #ba1d2c;
+  }
+
+  form.sign-up {
+    font-family: 'Open Sans', sans-serif;
+    margin: 5px  40px 0px;
+  }
+
+  fieldset.top {
+    height: 41px;
+    width: 220px;
+    float: left;
+    display: block;
     position: relative;
-    top: 1400px;
+    margin: 30px 0 5px 0;
+  }
+
+  input.contact {
+    background-color: white;
+    width: 425px;
+    height: 35px;
+    border: 1px solid #737373;
+    margin: 0 0 0 0;
+  }
+  input.contact:hover {
+    box-shadow: 0 0 2px black;
+  }
+
+  fieldset.bottom {
+    display: block;
+    float: left;
+    margin: 29px 300px 0 0;
+  }
+
+  textarea {
+    background-color: white;
+    width: 425px;
+    height: 100px;
+    border: 1px solid #737373;
+  }
+  textarea:hover {
+    box-shadow: 0 0 2px black;
+  }
+
+  fieldset.send {
+    color: #2290c6;
+    position: relative;
+    display: block;
+    float: left;
+  }
+
+  input[type=checkbox].css-checkbox {
+    position: absolute;
+    overflow: show;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+
+  label.css-label {
+    background-image: url("/images/checkbox.png");
+    float: left;
+    height: 12px;
+    width: 15px;
+    display: inline-block;
+    line-height: 14px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 4px 10px 0 0;
+  }
+
+  input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -12px;
+  }
+
+  fieldset.thankyou {
+    display: none;
+    float: left;
+    font-size: 24px;
+  }
+
+  fieldset.submit {
+    padding: 32px 0 0 65px;
+    display: block;
+    float: left;
+  }
+
+  input.submit {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    height: 43px;
+    width: 265px;
+    background: #ba1d2c;
+    overflow: visible;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25px;
+    border: none;
+  }
+  input.submit:hover {
+    box-shadow: 2px 2px 2px #72abc4;
+    cursor: pointer;
+  }
+  input.submit:active {
+    box-shadow: 2px 2px 4px #2e5b6f;
+  }
+
+  .bottom {
+    display: none;
+  }
+
+  .mobile {
+    position: relative;
+    padding-top: -569px;
+    clear: both;
     z-index: .9;
   }
-  #mobile img#mobileImage {
+
+  img.mobile-image {
     width: 100%;
     float: left;
     right: 1px;
@@ -668,11 +854,15 @@ a img {
     bottom: 0;
     display: block;
   }
-}
-:focus, :active {
-  outline: 0 none;
-}
 
+  footer {
+    position: relative;
+    margin-top: -108px;
+    height: 50px;
+    clear: both;
+    text-align: center;
+  }
+}
 a, a:active, a:visited {
   text-decoration: none;
 }
@@ -683,39 +873,43 @@ a {
 
 a:hover {
   color: red;
+  text-decoration: underline;
 }
 
 button:hover {
   cursor: pointer;
-  text-rendering: optimizeLegibility;
 }
 
 @media only screen and (min-width: 769px) {
   body {
     background: url("/images/kidsRubyTop.png") no-repeat center top;
-    position: relative;
-    z-index: 0;
+    height: 0;
     background-color: #81c2ea;
-    font-family: helvetica, arial, sans-serif;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
   }
 
-  div#Logo {
-    height: 238px;
-    width: 239px;
-    float: left;
-    position: relative;
-    z-index: -9;
-    right: 10px;
-    top: -20px;
+  header.top {
+    height: 0;
   }
-  div#Logo:hover {
-    background: url("/images/glow.png") no-repeat top;
+
+  .ruby {
+    background: url("/images/rubyglow.png") no-repeat;
+    position: relative;
+    width: 129px;
+    height: 153px;
+    left: 111px;
+    top: 52px;
+    margin: 0 auto;
+    z-index: 999;
+  }
+
+  .logo {
     height: 238px;
     width: 239px;
     float: left;
-    display: block;
-    z-index: 0;
     position: relative;
+    right: 10px;
+    top: -173px;
   }
 
   a.kidsruby {
@@ -728,8 +922,8 @@ button:hover {
     width: 172px;
     float: left;
     display: block;
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    z-index: 10;
     left: 34px;
     top: 40px;
   }
@@ -741,43 +935,73 @@ button:hover {
     transform: rotate(-360deg);
   }
 
+  .glow {
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    background: url("/images/glow2.png") no-repeat top;
+    position: relative;
+    height: 238px;
+    width: 239px;
+    top: -42px;
+    right: 35px;
+    opacity: 0;
+    z-index: -9;
+  }
+  .glow:hover {
+    opacity: 1;
+  }
+
   nav.Home, nav.About, nav.Download, nav.Contact {
+    float: left;
+    width: 137px;
+    position: relative;
+    height: 83px;
+    top: 212px;
+    right: 114px;
+    margin: 0 15px 0 0;
+  }
+  nav.Home a, nav.About a, nav.Download a, nav.Contact a {
+    -webkit-transition-property: top;
+    -moz-transition-property: top;
+    -o-transition-property: top;
+    transition-property: top;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
     -o-transition-duration: 0.4s;
     transition-duration: 0.4s;
     background: url("/images/signpost.png") no-repeat center;
-    float: left;
-    width: 137px;
-    position: relative;
-    height: 76px;
-    top: 365px;
-    right: 114px;
-    margin: 0 15px 0 0;
-  }
-  nav.Home a, nav.About a, nav.Download a, nav.Contact a {
+    height: 45px;
     font-family: 'bender', helvetica;
+    font-weight: bold;
     color: #e2f4f7;
     float: left;
+    position: relative;
     display: block;
     font-size: 22px;
     line-height: 18px;
     text-align: center;
-    width: 50px;
+    width: 51px;
     text-decoration: none;
     padding: 15px 45px 18px 55px;
     margin: 0 106px 0 0;
+    top: 0;
   }
-  nav.Home:hover, nav.About:hover, nav.Download:hover, nav.Contact:hover {
-    top: 358px;
+  nav.Home a.active, nav.About a.active, nav.Download a.active, nav.Contact a.active {
+    top: -7px;
+  }
+  nav.Home a:hover, nav.About a:hover, nav.Download a:hover, nav.Contact a:hover {
+    top: -7px;
   }
 
   nav.Home {
-    background: url("/images/Signpost-Home.png") no-repeat center;
-    top: 367px;
+    top: 214px;
     width: 153px;
   }
   nav.Home a {
+    background: url("/images/Signpost-Home.png") no-repeat center;
+    width: 54px;
     line-height: 15px;
   }
 
@@ -801,12 +1025,11 @@ button:hover {
 
   .container {
     margin: 0 auto;
-    overflow: visible;
     width: 940px;
     position: relative;
   }
 
-  header.sectionTitle {
+  header.section-title {
     -moz-border-radius-topleft: 15px;
     -webkit-border-top-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -819,14 +1042,10 @@ button:hover {
     background-color: white;
     color: #2290c6;
     font-size: 28px;
-    margin: 193px 0 0;
+    margin: 40px 0 0;
     padding: 35px 100px 30px;
     position: relative;
     z-index: 1;
-  }
-  header.sectionTitle h2 {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 40px;
   }
 
   section.main {
@@ -837,40 +1056,33 @@ button:hover {
     float: left;
     background-color: white;
     min-height: 1200px;
-    margin: 0 auto;
-    padding: 0 0 0 100px;
-    position: relative;
-    z-index: 0;
-  }
-  section.main .text {
-    display: block;
-    float: left;
-    width: 470px;
+    padding: 0 40px 0 100px;
     position: relative;
     z-index: 1;
-    margin: 0 40px 0 0;
+    width: 470px;
   }
-  section.main .text .button {
+
+  .button {
     height: 165px;
     background-color: #a7ddfe;
   }
-  section.main .text .button p {
-    font-family: helvetica, arial;
+
+  p.button-top {
+    font-family: helvetica, arial, sans-serif;
     font-size: 24px;
     color: #1b709a;
     font-weight: bold;
     padding: 24px 40px 25px;
   }
-  section.main .text .button a {
-    text-decoration: none;
-    margin: 0 auto;
-  }
-  section.main .text .button a.redbutton {
+
+  a.red-button {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     border-radius: 10px;
+    text-decoration: none;
+    margin: 0 auto;
     display: block;
     height: 50px;
     width: 375px;
@@ -883,25 +1095,28 @@ button:hover {
     font-weight: normal;
     line-height: 50px;
   }
-  section.main .text .button a.redbutton:hover {
+  a.red-button:hover {
     box-shadow: 4px 4px 2px #72abc4;
   }
-  section.main .text .button a.redbutton:active {
+  a.red-button:active {
     box-shadow: 4px 4px 8px #2e5b6f;
   }
-  section.main .text h1 {
+
+  h1.article-head {
     color: #2290c6;
-    font-family: sans-serif;
+    font-family: helvetica, arial, sans-serif;
     font-weight: bold;
     font-size: 17px;
     line-height: 28px;
     padding-top: 40px;
   }
-  section.main .text time {
+
+  time {
     font: 14px/28px bold 'Open Sans', sans-serif;
     color: #d02131;
   }
-  section.main .text p {
+
+  p.article {
     font-family: helvetica, arial;
     font-size: 17px;
     line-height: 28px;
@@ -922,65 +1137,73 @@ button:hover {
     float: left;
     position: relative;
     padding: 0 45px 0 15px;
-    z-index: 0;
     background: white;
-    margin: 0;
   }
-  aside .socialbuttons {
-    margin: 0;
-    float: left;
-    display: block;
+
+  .social-buttons {
     width: 269px;
     height: 110px;
-    color: #193b4c;
   }
-  aside .socialbuttons a.socialButtons {
+
+  .facebook-button {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+
+  .twitter-button {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+
+  a.icon {
     display: block;
     float: left;
     height: 59px;
     width: 91px;
     margin: 0 30px 10px 0;
   }
-  aside .socialbuttons .counts {
-    margin: 0 0 0 13px;
+
+  .counts {
+    margin: 0 0 0 28px;
     font-size: 21px;
     font-weight: bold;
   }
-  aside form#subscribe fieldset.newsletter {
-    display: block;
-    float: left;
+
+  fieldset.newsletter {
     font-size: 16px;
     line-height: 23px;
-    font-family: 'Open Sans', sans-serif;
     color: #2290c6;
     margin: 0 0 10px 0;
   }
-  aside form#subscribe fieldset.newsletter span {
+
+  span.newsletter {
     font-size: 20px;
     color: #d02131;
   }
-  aside form#subscribe fieldset.subscribe {
+
+  fieldset.fields {
     height: 25px;
     width: 250px;
     top: 5px;
-    float: left;
-    display: block;
     position: relative;
     z-index: 2;
     margin: 0 0 20px -3px;
     border: solid 6px #a7ddfe;
   }
-  aside form#subscribe fieldset.subscribe input[type='email'] {
-    background-color: white;
+
+  input.email {
     padding: 0;
     height: 25px;
-    font-weight: 700;
     margin: 0 -75px 0 2px;
-    width: 148px;
+    width: 213px;
     border: none;
     float: left;
   }
-  aside form#subscribe fieldset.subscribe input[type='submit'] {
+
+  input.fields {
+    position: absolute;
     display: block;
     background-color: #ba1d2c;
     border: none;
@@ -988,108 +1211,89 @@ button:hover {
     color: white;
     line-height: 21px;
     margin: 0 0 0 62px;
-    padding: 2px 8px;
+    height: 25px;
+    width: 34px;
     top: 0;
-    right: -143px;
-    position: relative;
+    right: 0;
   }
-  aside form#subscribe fieldset.subscribe input[type='submit']:hover {
+  input.fields:hover {
     cursor: pointer;
     box-shadow: 0 0 5px #6da2b2;
   }
-  aside form#subscribe fieldset.subscribe input[type='submit']:active {
-    cursor: pointer;
+  input.fields:active {
     background-color: #4e6ea2;
     box-shadow: 0 0 10px #8eb7c4;
   }
-  aside header {
+
+  header.aside {
     font-weight: bold;
     color: #1b709a;
   }
-  aside header a {
-    color: #d02131;
-  }
-  aside .icon-twitterbutton {
-    -webkit-transition-duration: 10s;
-    -moz-transition-duration: 10s;
-    -o-transition-duration: 10s;
-    transition-duration: 10s;
+
+  .icon-twitterbutton {
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
     float: left;
     height: 59px;
     margin: 6px 10px 75px 0;
     width: 62px;
   }
-  aside .icon-twitterbutton:hover {
-    -webkit-transform: rotate(-360deg);
-    -moz-transform: rotate(-360deg);
-    -ms-transform: rotate(-360deg);
-    -o-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-  aside span.twitterinfo {
-    font-size: 11px;
-  }
-  aside span.twitterinfo .title {
-    margin: 20px 0 0 0;
-    font: 13px/20px bold 'Open Sans', sans-serif;
-    color: #737373;
-  }
-  aside span.twitterinfo .title a.twitter {
-    color: #2290c6;
-  }
-  aside span.twitterinfo h3 {
-    font: 14px/28px bold 'Open Sans', sans-serif;
-    color: #d02131;
-    margin: 0;
-  }
-  aside #twitter-feed {
-    margin-top: 10px;
-  }
-  aside #twitter-feed ul {
-    margin: 0px;
-    padding: 0px;
-  }
-  aside #twitter-feed ul li {
-    clear: both;
-    font-size: 11px;
-    list-style: none;
-    margin: 0px 0px 30px 0px;
-    min-height: 55px;
-  }
-  aside #twitter-feed ul a img {
-    background: none;
-    float: left;
-    height: 40px;
-    margin: 0 10px 45px 0;
-    width: 40px;
-  }
-  aside #twitter-feed ul a.JRM {
-    display: inline;
-    float: left;
-    font-size: 10px;
-  }
-  aside #twitter-feed ul span.time {
-    display: inline-block;
-    font-size: 10px;
-    margin-top: 10px;
+  .icon-twitterbutton:hover {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
 
-  div#twitter {
+  .small-logo {
+    margin: 20px 0 0 0;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #737373;
+  }
+
+  a.twitter {
+    color: #2290c6;
+  }
+
+  h3.aside {
+    color: #d02131;
+    font-size: 14px;
+  }
+
+  div.twitter {
     display: block;
     position: absolute;
     width: 278px;
-    top: 1050px;
+    top: 910px;
     left: 620px;
     z-index: 99;
   }
 
-  #bottom {
+  footer {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    top: 2025px;
+    height: 32px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+  }
+
+  .bottom {
     position: relative;
-    bottom: -2020px;
+    bottom: -1900px;
     left: 200px;
     z-index: 9;
   }
-  #bottom img#bottomImage {
+
+  img.bottom-image {
     float: left;
     position: absolute;
     z-index: 9;
@@ -1098,131 +1302,143 @@ button:hover {
     display: block;
   }
 
-  #mobile {
+  .mobile {
     display: none;
   }
 
   article.title {
     width: 470px;
     padding: 0 40px 0 0;
-    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
   }
-  article.title h1 {
+
+  h1.heading {
     font-size: 40px;
     line-height: 30px;
-    padding: 0 0 30px 0;
+    padding: 0 0 20px 0;
     color: #ba1d2c;
   }
-  article.title h2 {
+
+  h2 {
     font-size: 28px;
     line-height: 42px;
     color: #2290c6;
-    padding: 0 0 10px 0;
+    padding: 0 0 5px 0;
   }
-  article.title h3 {
+
+  h3 {
+    font-size: 24px;
+    color: #2290c6;
+  }
+
+  h4 {
+    font-size: 18px;
+    color: #2290c6;
+  }
+
+  h5 {
     font-size: 18px;
     color: #5173a9;
     margin-left: -2px;
   }
-  article.title h4 {
+
+  h6 {
     font-size: 18px;
     color: #2290c6;
+    margin: 0 0 20px 0;
   }
-  article.title a {
-    text-decoration: underline;
-    color: #d02131;
-  }
-  article.title a.dl {
+
+  a.dl {
     display: block;
     float: left;
     width: 183px;
     height: 175px;
     margin: 0 40px 20px 0;
   }
-  article.title a.dl:last-child {
+
+  a.dl:last-child {
     margin-bottom: 37px;
   }
 
   article.page {
     width: 470px;
     padding: 30px 40px 0 0;
-    font-family: 'Open Sans', sans-serif;
   }
-  article.page h1 {
-    font-size: 24px;
-    color: #2290c6;
-  }
-  article.page h2 {
-    font-size: 18px;
-    color: #2290c6;
-    margin: 0 0 20px 0;
-  }
-  article.page p {
+
+  p {
     color: #737373;
   }
-  article.page p.dl {
+
+  p.dl {
     color: #6e7d86;
     margin: -15px 0 15px 0;
   }
-  article.page ul {
+
+  ul.download {
     list-style: none;
   }
-  article.page ul a {
+
+  a.download {
     line-height: 30px;
     text-decoration: underline;
     color: #ba1d2c;
   }
 
-  form#sign-up {
-    font-family: 'Open Sans', sans-serif;
+  form.sign-up {
     margin: 5px 15px 0px;
   }
-  form#sign-up fieldset {
-    margin-top: 30px;
-  }
-  form#sign-up fieldset.top {
+
+  fieldset.top {
     height: 41px;
-    width: 220px;
+    width: 425px;
     float: left;
     display: block;
     position: relative;
-    margin-bottom: 5px;
+    margin: 30px 0 5px 0;
   }
-  form#sign-up fieldset.top input {
+
+  input.contact {
     background-color: white;
     width: 425px;
     height: 35px;
     border: 1px solid #737373;
     margin: 0 0 0 0;
   }
-  form#sign-up fieldset.top input:hover {
+  input.contact:hover {
     box-shadow: 0 0 2px black;
   }
-  form#sign-up fieldset#marginfix {
-    float: left;
-  }
-  form#sign-up fieldset.bottom {
+
+  fieldset.bottom {
+    top: 0;
+    height: 41px;
+    width: 220px;
     display: block;
     float: left;
-    margin-top: 29px;
+    position: relative;
+    margin: 29px 0 0 -199px;
   }
-  form#sign-up fieldset.bottom textarea {
+
+  textarea {
+    position: relative;
     background-color: white;
     width: 425px;
-    height: 35px;
+    height: 100px;
     border: 1px solid #737373;
   }
-  form#sign-up fieldset.bottom textarea:hover {
+  textarea:hover {
     box-shadow: 0 0 2px black;
   }
-  form#sign-up fieldset#send {
+
+  fieldset.send {
     color: #2290c6;
+    top: 535px;
+    left: 116px;
+    position: absolute;
     display: block;
     float: right;
-    margin: 5px 0 0 0;
   }
-  form#sign-up fieldset#send input[type=checkbox].css-checkbox {
+
+  input[type=checkbox].css-checkbox {
     position: absolute;
     overflow: hidden;
     clip: rect(0 0 0 0);
@@ -1232,34 +1448,39 @@ button:hover {
     padding: 0;
     border: 0;
   }
-  form#sign-up fieldset#send input[type=checkbox].css-checkbox + label.css-label {
+
+  label.css-label {
+    background-image: url("/images/checkbox.png");
+    margin-top: -3px;
     padding-left: 20px;
     height: 12px;
     display: inline-block;
     line-height: 14px;
     background-repeat: no-repeat;
-    background-position: 0 0;
     font-size: 14px;
     vertical-align: middle;
     cursor: pointer;
   }
-  form#sign-up fieldset#send input[type=checkbox].css-checkbox:checked + label.css-label {
+
+  input[type=checkbox].css-checkbox:checked + label.css-label {
     background-position: 0 -12px;
   }
-  form#sign-up fieldset#send .css-label {
-    background-image: url("/images/checkbox.png");
-  }
-  form#sign-up fieldset#thankyou {
+
+  fieldset.thankyou {
     display: none;
     float: left;
     font-size: 24px;
   }
-  form#sign-up fieldset.submit {
-    padding: 32px 0 0 65px;
+
+  fieldset.submit {
+    top: 567px;
+    padding: 0 0 0 65px;
+    position: absolute;
     display: block;
     float: left;
   }
-  form#sign-up fieldset.submit input {
+
+  input.submit {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -1269,7 +1490,6 @@ button:hover {
     width: 265px;
     background: #ba1d2c;
     overflow: visible;
-    font-family: 'Open Sans', sans-serif;
     color: white;
     text-align: center;
     font-size: 18px;
@@ -1277,11 +1497,11 @@ button:hover {
     line-height: 25px;
     border: none;
   }
-  form#sign-up fieldset.submit input:hover {
+  input.submit:hover {
     box-shadow: 2px 2px 2px #72abc4;
     cursor: pointer;
   }
-  form#sign-up fieldset.submit input:active {
+  input.submit:active {
     box-shadow: 2px 2px 4px #2e5b6f;
   }
 }

@@ -3,19 +3,37 @@ and (max-width : 641px)
 and (min-width : 1px){
   
   body {
-    background: url("/images/640res.png") no-repeat top;
+    background: url("/images/640res.png") no-repeat center top;
     background-size: 100% auto;
-    background-position: center top;
     background-color: $background;
     font-family: helvetica;
     font-size: 100%;
+    height: 100%;
   }
-  %navMobile {
+  
+  
+  
+  a.kidsruby{ 
+    background: url("/images/weblogomobile.png") no-repeat top;
+    background-size: 28%;
+    height: 100%;
+    width: 100%;
+    float: left;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    right: 34%;
+    top: 10px;
+  }
+  
+  %nav-mobile {
     float: left;
     display: block;
     width: 100%;
     
      a{
+       z-index: 1;
+       position: relative;
        display:block;
        background: $gray;
        height: 84px;
@@ -31,43 +49,46 @@ and (min-width : 1px){
   }
   
   nav.Home {
-    @extend %navMobile;
+    @extend %nav-mobile;
     margin: 60% 0 0 0;   
   }
   
   nav.About {
-    @extend %navMobile;
+    @extend %nav-mobile;
   }
   
   nav.Download{
-    @extend %navMobile;
+    @extend %nav-mobile;
   }
   
   nav.Contact  {
-    @extend %navMobile; 
+    @extend %nav-mobile; 
   }
   
   .container {
     margin: 0 auto;
     width: 100%;
+    min-height: 100%;
   }
   
-  header.sectionTitle{
+  header.section-title{
     width: 100%;
-    display: inline;
+    position: relative;
+    display: block;
     float: right;
+    z-index: 1;
     background-color: $gb;
-    
-    h2 {
-      font-size: 32px;
-      color: $red;
-      font-family: helvetica, arial;
-      line-height: 41px;
-      margin: 32px ;
-    }
   }
   
-  section{
+  h2.title {
+    font-size: 32px;
+    color: $red;
+    font-family: helvetica, arial;
+    line-height: 41px;
+    margin: 32px ;
+  }
+
+  section.main{
     @include border-bottom-radius(15px);
     display: inline;
     float: right;
@@ -75,136 +96,288 @@ and (min-width : 1px){
     height: 100%;
     background-color: $gb;
     position: relative;
-    z-index: -2;
-    margin: 0 0 128px 0;
-       
-    .text{  
-      display: block;
-      float: left;
-      position: relative;
-      padding: 0 0 500px;
-        
-        p{
-          font-family: helvetica, arial;
-          font-size: 32px;
-          color: darken($DarkText, 15%);
-          font-weight: bold;
-          margin: 32px 41px 16px;
-        }
-        a{
-          text-decoration:none;
-          
-          &.redbutton{
-            display: block;
-            width: 90%;
-            height: 15%;
-            background: $red;
-            overflow: visible;
-            font-family: helvetica, arial;
-            color: $white;
-            text-align: center;
-            font-size: 29px;
-            font-weight: bold;
-            line-height: 140px;
-            box-shadow: 8px 14px 0 $ButtonShadow;
-            margin: 0 29px 15px;
-          }
-       }  
-    }
-    p:nth-child(3){
-        margin: 60px 30px 80px;
-        font-weight: normal; 
-        color: transparentize($red, .15);
-    }
+    margin: 0 0 569px 0;
+    padding: 0 0 100px;
+   }
     
-    article.hide{
-      display: none;
+  p.button-top{
+    font-family: helvetica, arial;
+    font-size: 32px;
+    color: darken($DarkText, 15%);
+    font-weight: bold;
+    margin: 32px 41px 16px;
+  }
+   
+  a.red-button{
+    text-decoration: none;
+    display: block;
+    width: 90%;
+    height: 15%;
+    background: $red;
+    overflow: visible;
+    font-family: helvetica, arial;
+    color: $white;
+    text-align: center;
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 140px;
+    box-shadow: 8px 14px 0 $ButtonShadow;
+    margin: 0 29px 15px;
+    
+    &:hover{
+      color: $white;
+      box-shadow: 8px 14px 2px darken($ButtonShadow, 20%);
     }
   }
+         
+  article.hide{
+    display: none;
+  }
+    
   aside{
-    position: relative;
-    z-index: -1;
-    
-    .socialbuttons{
-      @include border-radius(15px);
-      margin: -506px 64px 360px;
-      float: left;
-      display: block;
-      width: 480px;
-      height: 240px;
-      background: $white;
-      box-shadow: 6px 6px 0px $BoxShadow;
-      
-      a.socialButtons{
-        display: block;
-        float: left;
-        height: 59px;
-        width: 91px;
-        margin: 10px 100px 10px 0;
-         }
-      .socialNumbers{
-        float: left;
-        display: block;
-        width: 118px;
-        font-size: 32px;
-        text-align: center;
-        color: $SocialText;
-      }
-      .counts{
-        font-size: 51px;
-        font-weight: bold;
-        color: $SocialText;
-      }
-    }
-    
-   form#subscribe{
-     display: none;
-   }
-    
-   span.twitterinfo{
-     display: none;
-   }
-    header{
-      display:none;
-    }
-  
+    display: none;
   }
    
   .subscribe {
     display: none;
-        
-    input[type='email']{
-      display: none;
-    }
-        
-    input[type='submit']{
-      display: none;
-    }
   }
   
-  
-  div#twitter{
+  div.twitter{
     display: none;
   }
   
-  //footer image desktop 
-  #bottom{
-    display: none;
+//for about, download and contact pages
+  article.title{
+    width: 470px;
+    padding: 0 40px  0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
   }
-  //footer image mobile
-  #mobile{
-    position: relative;
-    top: 1400px;
-    z-index: .9;
+  
+  h1.heading{
+    font-size: 40px;
+    line-height: 30px;
+    padding: 20px 0 30px 0;
+    color: $Button;
+  }
     
-    img#mobileImage {
-      width:100%;
-      float: left;
-      right: 1px;
-      position: absolute;
-      z-index: .9;
-      bottom: 0;
-      display:block;
+  h2{
+    font-size: 28px;
+    line-height: 42px;
+    color: $paragraph;
+    padding: 0 0 10px 0;
+  }
+  
+  h3{
+    font-size: 18px;
+    color: $paragraph;
+    margin-left: -2px;
+  }
+      
+  h5{
+    font-size: 18px;
+    color: $DarkBlue;
+    margin-left: -2px;
+  } 
+  
+  a{
+    text-decoration: underline;
+    color: $red;
+  }
+  
+//For Download Sprites
+  a.dl{
+    display: block;
+    float: left;
+    width: 183px;
+    height: 175px;
+    margin: 0 40px 20px 0;
+  }
+  
+  a.dl:last-child{
+   margin-bottom: 37px;
+  }
+  
+  article.page{
+    width: 470px;
+    padding: 30px 40px 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h4{
+    font-size: 24px;
+    color: $paragraph;
+  }
+    
+  h6{
+    font-size: 18px;
+    color: $paragraph;
+    margin: 0 0 20px 0;
+  }
+    
+  p{
+    color:$GrayText; 
+  }
+    
+  p.dl{
+    color: #6e7d86;
+    margin: -15px 0 15px 0;
+  }
+  
+  ul.download{
+    list-style: none;
+  }
+  
+  a.download{
+    line-height: 30px;
+    text-decoration: underline;
+    color: $Button;
+  }
+    
+//contact
+  form.sign-up {
+    font-family: 'Open Sans', sans-serif;
+    margin: 5px  40px 0px;
+  }
+  
+  fieldset.top {
+    height: 41px;
+    width: 220px;
+    float: left;
+    display: block;
+    position: relative;
+    margin: 30px 0 5px 0;
+  }
+  
+  input.contact{
+    background-color: white;
+    width: 425px;
+    height: 35px;
+    border: 1px solid $GrayText;
+    margin: 0 0 0 0 ;
+    
+    &:hover{
+    box-shadow: 0 0 2px black;
     }
+  }
+  
+  fieldset.bottom {
+    display:block;
+    float: left;
+    margin: 29px 300px 0 0;
+  }
+    
+  textarea{
+    background-color: white;
+    width: 425px;
+    height: 100px;
+    border: 1px solid $GrayText;
+    
+    &:hover{
+    box-shadow: 0 0 2px black;
+    }
+  }
+  
+  fieldset.send{
+    color: $paragraph;
+    position: relative;
+    display:block;
+    float: left;
+  }
+   
+  input[type=checkbox].css-checkbox {
+    position: absolute;
+    overflow: show;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  
+  label.css-label {
+    background-image: url("/images/checkbox.png");
+    float: left;
+    height: 12px;
+    width: 15px;
+    display: inline-block;
+    line-height: 14px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 4px 10px 0 0;
+  }
+  
+  input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -12px;
+  }
+  
+  fieldset.thankyou{
+    display: none;
+    float: left;
+    font-size: 24px;
+  }
+
+  fieldset.submit{
+    padding: 32px 0 0 65px;
+    display: block;
+    float: left;
+  }
+  
+  input.submit{
+    @include border-radius(10px); 
+    height: 43px;
+    width: 265px;
+    background: $Button;
+    overflow: visible;
+    font-family: 'Open Sans', sans-serif;
+    color: $white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25px;
+    border: none;
+      
+    &:hover{
+      box-shadow: 2px 2px 2px darken($ButtonShadow, 20%);
+      cursor: pointer;
+    }
+    &:active{
+      box-shadow: 2px 2px 4px darken($ButtonShadow, 50%);
+    }
+  }
+  
+//footer image desktop 
+  .bottom{
+    display: none;
+  }
+  
+//footer image mobile
+  .mobile{
+    position: relative;
+    padding-top: -569px;
+    clear:both;
+    z-index: .9;
+  } 
+  
+  img.mobile-image {
+    width:100%;
+    float: left;
+    right: 1px;
+    position: absolute;
+    z-index: .9;
+    bottom: 0;
+    display:block;
+  }
+  
+  footer{
+    position: relative;
+    margin-top: -108px; 
+    height: 50px;
+    clear:both;
+    text-align: center;
   }
 }

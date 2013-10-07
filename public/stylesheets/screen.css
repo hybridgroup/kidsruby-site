@@ -86,6 +86,16 @@ a img {
   background-position: 0 0;
 }
 
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
+
 @font-face {
   font-family: "OpenSans";
   src: url("/font/OpenSans-Semibold.ttf");
@@ -111,12 +121,12 @@ a img {
     transition-duration: 1s;
     background: url("/images/weblogoTablet.png") no-repeat top;
     height: 122px;
-    width: 118px;
+    width: 120px;
     float: left;
     display: block;
     position: relative;
     z-index: 1;
-    right: 40px;
+    right: 5px;
     top: 20px;
   }
   a.kidsruby:hover {
@@ -160,22 +170,11 @@ a img {
     background-image: -moz-radial-gradient(#d02131 50%, #9e1c36 100%);
     background-image: -o-radial-gradient(#d02131 50%, #9e1c36 100%);
     background-image: radial-gradient(#d02131 50%, #9e1c36 100%);
-    border: 2px solid #804000;
-    width: 233px;
-    height: 60px;
-    padding-left: 70px;
-    float: left;
-    display: block;
-    font-family: 'bender';
-    color: #e2f4f7;
-    text-decoration: none;
-    font-size: 38px;
-    line-height: 60px;
   }
 
   nav.Home {
     margin: 336px 0 0 0;
-    right: 118px;
+    right: 120px;
   }
 
   nav.About {
@@ -194,9 +193,10 @@ a img {
     margin: 0 auto;
     width: 614px;
     min-height: 100%;
+    position: relative;
   }
 
-  header.section-title {
+  header.section-top {
     display: inline;
     float: right;
     background-color: #e2f4f7;
@@ -252,6 +252,7 @@ a img {
     margin: 0 0 0 45px;
   }
   a.red-button:hover {
+    color: white;
     box-shadow: 5px 10px 2px #72abc4;
   }
 
@@ -328,7 +329,7 @@ a img {
     float: left;
     width: 183px;
     height: 175px;
-    margin: 0 40px 20px 0;
+    margin: 0 40px 20px 40px;
   }
 
   a.dl:last-child {
@@ -373,7 +374,8 @@ a img {
 
   form.sign-up {
     font-family: 'Open Sans', sans-serif;
-    margin: 5px  40px 0px;
+    margin: 5px  92px 0px;
+    padding: none;
   }
 
   fieldset.top {
@@ -383,6 +385,7 @@ a img {
     display: block;
     position: relative;
     margin: 30px 0 5px 0;
+    clear: both;
   }
 
   input.contact {
@@ -390,16 +393,10 @@ a img {
     width: 425px;
     height: 35px;
     border: 1px solid #737373;
-    margin: 0 0 0 0;
+    margin: 0 auto;
   }
   input.contact:hover {
     box-shadow: 0 0 2px black;
-  }
-
-  fieldset.bottom {
-    display: block;
-    float: left;
-    margin: 29px 300px 0 0;
   }
 
   textarea {
@@ -414,9 +411,10 @@ a img {
 
   fieldset.send {
     color: #2290c6;
-    position: relative;
+    position: absolute;
     display: block;
     float: left;
+    margin-top: 320px;
   }
 
   input[type=checkbox].css-checkbox {
@@ -456,7 +454,7 @@ a img {
   }
 
   fieldset.submit {
-    padding: 32px 0 0 65px;
+    padding: 132px 0 0 65px;
     display: block;
     float: left;
   }
@@ -506,7 +504,6 @@ a img {
     background-color: #81c2ea;
     font-family: helvetica;
     font-size: 100%;
-    height: 100%;
   }
 
   a.kidsruby {
@@ -518,7 +515,7 @@ a img {
     display: block;
     position: absolute;
     z-index: 0;
-    right: 34%;
+    right: 30%;
     top: 10px;
   }
 
@@ -542,6 +539,13 @@ a img {
     margin: 0;
     border-bottom: 6px solid #d4d4d4;
   }
+  nav.Home a.active, nav.About a.active, nav.Download a.active, nav.Contact a.active {
+    background: #d4d4d4;
+    color: #d02131;
+    border-bottom: 6px solid #de2c3d;
+    border-top: 6px solid #bababa;
+    margin-top: -6px;
+  }
 
   nav.Home {
     margin: 60% 0 0 0;
@@ -550,10 +554,10 @@ a img {
   .container {
     margin: 0 auto;
     width: 100%;
-    min-height: 100%;
+    min-height: auto;
   }
 
-  header.section-title {
+  header.section-top {
     width: 100%;
     position: relative;
     display: block;
@@ -583,7 +587,7 @@ a img {
     height: 100%;
     background-color: #e2f4f7;
     position: relative;
-    margin: 0 0 569px 0;
+    margin: 0 0 80% 0;
     padding: 0 0 100px;
   }
 
@@ -598,7 +602,7 @@ a img {
   a.red-button {
     text-decoration: none;
     display: block;
-    width: 90%;
+    width: 80%;
     height: 15%;
     background: #d02131;
     overflow: visible;
@@ -607,9 +611,9 @@ a img {
     text-align: center;
     font-size: 29px;
     font-weight: bold;
-    line-height: 140px;
     box-shadow: 8px 14px 0 #bad6e2;
-    margin: 0 29px 15px;
+    margin: 0 auto;
+    padding: 70px 0;
   }
   a.red-button:hover {
     color: white;
@@ -633,7 +637,7 @@ a img {
   }
 
   article.title {
-    width: 470px;
+    min-width: 240px;
     padding: 0 40px  0;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -670,12 +674,22 @@ a img {
     color: #d02131;
   }
 
+  img.code {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .collapse {
+    width: 100%;
+    height: 100%;
+  }
+
   a.dl {
     display: block;
     float: left;
     width: 183px;
     height: 175px;
-    margin: 0 40px 20px 0;
+    margin: 0 0 20px 40px;
   }
 
   a.dl:last-child {
@@ -683,7 +697,7 @@ a img {
   }
 
   article.page {
-    width: 470px;
+    min-width: 240px;
     padding: 30px 40px 0;
     font-family: 'Open Sans', sans-serif;
   }
@@ -697,6 +711,7 @@ a img {
     font-size: 18px;
     color: #2290c6;
     margin: 0 0 20px 0;
+    clear: left;
   }
 
   p {
@@ -704,8 +719,12 @@ a img {
   }
 
   p.dl {
+    display: block;
+    float: left;
     color: #6e7d86;
-    margin: -15px 0 15px 0;
+    padding: 0;
+    margin: 0;
+    clear: left;
   }
 
   ul.download {
@@ -724,8 +743,8 @@ a img {
   }
 
   fieldset.top {
-    height: 41px;
-    width: 220px;
+    height: 5%;
+    min-width: 100%;
     float: left;
     display: block;
     position: relative;
@@ -733,25 +752,21 @@ a img {
   }
 
   input.contact {
+    margin: 0 10%;
     background-color: white;
-    width: 425px;
+    min-width: 100%;
     height: 35px;
     border: 1px solid #737373;
-    margin: 0 0 0 0;
+    margin: 0 auto;
+    clear: both;
   }
   input.contact:hover {
     box-shadow: 0 0 2px black;
   }
 
-  fieldset.bottom {
-    display: block;
-    float: left;
-    margin: 29px 300px 0 0;
-  }
-
   textarea {
     background-color: white;
-    width: 425px;
+    width: 100%;
     height: 100px;
     border: 1px solid #737373;
   }
@@ -764,6 +779,7 @@ a img {
     position: relative;
     display: block;
     float: left;
+    margin: 10px 0 0 0;
   }
 
   input[type=checkbox].css-checkbox {
@@ -803,9 +819,11 @@ a img {
   }
 
   fieldset.submit {
-    padding: 32px 0 0 65px;
+    position: relative;
+    padding: 32px 0 0 5px;
     display: block;
     float: left;
+    width: 100%;
   }
 
   input.submit {
@@ -815,7 +833,7 @@ a img {
     -o-border-radius: 10px;
     border-radius: 10px;
     height: 43px;
-    width: 265px;
+    width: 100%;
     background: #ba1d2c;
     overflow: visible;
     font-family: 'Open Sans', sans-serif;
@@ -840,7 +858,6 @@ a img {
 
   .mobile {
     position: relative;
-    padding-top: -569px;
     clear: both;
     z-index: .9;
   }
@@ -851,7 +868,7 @@ a img {
     right: 1px;
     position: absolute;
     z-index: .9;
-    bottom: 0;
+    bottom: 10px;
     display: block;
   }
 
@@ -883,13 +900,8 @@ button:hover {
 @media only screen and (min-width: 769px) {
   body {
     background: url("/images/kidsRubyTop.png") no-repeat center top;
-    height: 0;
     background-color: #81c2ea;
     font-family: 'Open Sans', helvetica, arial, sans-serif;
-  }
-
-  header.top {
-    height: 0;
   }
 
   .ruby {
@@ -1027,9 +1039,14 @@ button:hover {
     margin: 0 auto;
     width: 940px;
     position: relative;
+    min-height: 100%;
   }
 
-  header.section-title {
+  header.top {
+    height: 0;
+  }
+
+  header.section-top {
     -moz-border-radius-topleft: 15px;
     -webkit-border-top-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -1055,8 +1072,9 @@ button:hover {
     display: block;
     float: left;
     background-color: white;
-    min-height: 1200px;
-    padding: 0 40px 0 100px;
+    min-height: 100%;
+    padding: 0 40px 150px 100px;
+    margin-bottom: 280px;
     position: relative;
     z-index: 1;
     width: 470px;
@@ -1131,13 +1149,14 @@ button:hover {
     -moz-border-radius-bottomright: 15px;
     -webkit-border-bottom-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    display: block;
+    display: inline;
     width: 270px;
-    min-height: 1200px;
+    min-height: 100%;
     float: left;
     position: relative;
-    padding: 0 45px 0 15px;
+    padding: 0 45px 150px 15px;
     background: white;
+    margin-bottom: 280px;
   }
 
   .social-buttons {
@@ -1145,13 +1164,7 @@ button:hover {
     height: 110px;
   }
 
-  .facebook-button {
-    display: block;
-    float: left;
-    width: 50%;
-  }
-
-  .twitter-button {
+  .facebook-button, .twitter-button {
     display: block;
     float: left;
     width: 50%;
@@ -1269,37 +1282,40 @@ button:hover {
     display: block;
     position: absolute;
     width: 278px;
-    top: 910px;
+    top: 890px;
     left: 620px;
     z-index: 99;
   }
 
   footer {
-    position: absolute;
-    display: block;
-    z-index: 10;
-    top: 2025px;
-    height: 32px;
-    width: 100%;
+    position: relative;
+    margin-top: -50px;
+    height: 50px;
+    clear: both;
     text-align: center;
+    z-index: 10;
+    height: 37px;
+    width: 100%;
     color: black;
     font-size: 14px;
   }
 
   .bottom {
+    display: inline-block;
+    margin: 0 auto;
     position: relative;
-    bottom: -1900px;
-    left: 200px;
     z-index: 9;
+    min-width: 940px;
   }
 
   img.bottom-image {
-    float: left;
+    margin: 0 auto;
     position: absolute;
+    float: left;
     z-index: 9;
-    bottom: 0;
-    right: 126px;
-    display: block;
+    bottom: 18px;
+    left: -31px;
+    min-width: 940px;
   }
 
   .mobile {
@@ -1319,21 +1335,22 @@ button:hover {
     color: #ba1d2c;
   }
 
+  h2, h3, h4, h6 {
+    color: #2290c6;
+  }
+
   h2 {
     font-size: 28px;
     line-height: 42px;
-    color: #2290c6;
     padding: 0 0 5px 0;
   }
 
   h3 {
     font-size: 24px;
-    color: #2290c6;
   }
 
   h4 {
     font-size: 18px;
-    color: #2290c6;
   }
 
   h5 {
@@ -1344,7 +1361,6 @@ button:hover {
 
   h6 {
     font-size: 18px;
-    color: #2290c6;
     margin: 0 0 20px 0;
   }
 
@@ -1408,22 +1424,13 @@ button:hover {
     box-shadow: 0 0 2px black;
   }
 
-  fieldset.bottom {
-    top: 0;
-    height: 41px;
-    width: 220px;
-    display: block;
-    float: left;
-    position: relative;
-    margin: 29px 0 0 -199px;
-  }
-
   textarea {
     position: relative;
     background-color: white;
     width: 425px;
     height: 100px;
     border: 1px solid #737373;
+    clear: both;
   }
   textarea:hover {
     box-shadow: 0 0 2px black;
@@ -1473,11 +1480,13 @@ button:hover {
   }
 
   fieldset.submit {
-    top: 567px;
     padding: 0 0 0 65px;
-    position: absolute;
+    position: relative;
     display: block;
     float: left;
+    top: 130px;
+    z-index: 10;
+    margin-bottom: 100px;
   }
 
   input.submit {

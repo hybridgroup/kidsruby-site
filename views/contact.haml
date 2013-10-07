@@ -1,20 +1,21 @@
-%header.section-title.main
+%header.section-top.main
 %section.main
   %article.title
     %h1.heading
       Contact
-    %h2 Contact us here, for any questions, feedback or praise you want to send. 
-    %h4 For the latest news follow us: <a href='http://twitter.com/kidsruby'>@kidsruby.</a>
+    .collapse
+      %h2 Contact us here, for any questions, feedback or praise you want to send. 
+      %h4 For the latest news follow us: <a href='http://twitter.com/kidsruby'>@kidsruby.</a>
 
   %form.sign-up{:action => "/contact", :method => :post}
     %fieldset.top
-      %label Name
+      %label.contact-label Name
       %input.contact{:name => "name", :type => "text", :placeholder => "", :required=> ""}
     %fieldset.top
-      %label Email
+      %label.contact-label Email
       %input.contact{:name => "email", :type => "email", :placeholder => "", :required => ""}
-    %fieldset.bottom
-      %label Message
+    %fieldset.top
+      %label.contact-label Message
       %textarea{:name => "message", :type => "text", :placeholder => "",  :required => ""}
     %fieldset.send
       %input#newsletter.css-checkbox{:type => "checkbox", :name => 'newsletter', :value => 1} 
@@ -25,5 +26,5 @@
     %fieldset.submit
       %input.submit{:type => "submit", :value => "Submit"}
   
-   
-    
+
+      

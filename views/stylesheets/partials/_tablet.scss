@@ -13,12 +13,12 @@ and (min-width : 642px){
     @include transition-duration(1s);
     background: url("/images/weblogoTablet.png") no-repeat top;
     height: 122px;
-    width: 118px;
+    width: 120px;
     float: left;
     display:block;
     position: relative;
     z-index: 1;
-    right: 40px;
+    right: 5px;
     top: 20px;
     
     &:hover {
@@ -52,24 +52,13 @@ and (min-width : 642px){
     a.active{ 
       @include text-shadow (-3px 3px 0 darken(#895024, 5%));
       @include background-image(radial-gradient($red 50%, #9e1c36 100%));
-      border: 2px solid lighten(#663300, 5%);
-      width: 233px;
-      height: 60px;
-      padding-left: 70px;
-      float: left;
-      display: block;
-      font-family: 'bender';
-      color: $gb;
-      text-decoration: none;
-      font-size: 38px;
-      line-height: 60px;
     }
   }
   
   nav.Home {
     @extend %nav-tablet;
     margin: 336px 0 0 0;
-    right: 118px;   
+    right: 120px;   
   }
   
   nav.About {
@@ -91,9 +80,12 @@ and (min-width : 642px){
     margin: 0 auto;
     width: 614px;
     min-height: 100%;
+    position: relative;
   } 
   
-  header.section-title{
+  //home
+  
+  header.section-top{
     display: inline;
     float: right;
     background-color: $gb;
@@ -118,7 +110,7 @@ and (min-width : 642px){
     padding-bottom: 50px;
     margin-bottom: 50px;
     overflow:auto;
-    }
+   }
     
   p.button-top{
     font-family: helvetica, arial;
@@ -144,6 +136,7 @@ and (min-width : 642px){
     margin: 0 0 0 45px;
     
     &:hover{
+      color: $white;
       box-shadow: 5px 10px 2px darken($ButtonShadow, 20%);
     }
   }
@@ -223,7 +216,7 @@ and (min-width : 642px){
     float: left;
     width: 183px;
     height: 175px;
-    margin: 0 40px 20px 0;
+    margin: 0 40px 20px 40px;
  }
  
   a.dl:last-child{
@@ -269,7 +262,8 @@ and (min-width : 642px){
 //contact
   form.sign-up {
     font-family: 'Open Sans', sans-serif;
-    margin: 5px  40px 0px;
+    margin: 5px  92px 0px;
+    padding: none;
   }
   
   fieldset.top {
@@ -279,6 +273,7 @@ and (min-width : 642px){
     display: block;
     position: relative;
     margin: 30px 0 5px 0;
+    clear: both;
   }
   
   input.contact{
@@ -286,17 +281,11 @@ and (min-width : 642px){
     width: 425px;
     height: 35px;
     border: 1px solid $GrayText;
-    margin: 0 0 0 0 ;
+    margin: 0 auto;
     
     &:hover{
     box-shadow: 0 0 2px black;
     }
-  }
-  
-  fieldset.bottom {
-    display:block;
-    float: left;
-    margin: 29px 300px 0 0;
   }
     
   textarea{
@@ -312,9 +301,10 @@ and (min-width : 642px){
   
   fieldset.send{
     color: $paragraph;
-    position: relative;
+    position: absolute;
     display:block;
     float: left;
+    margin-top: 320px;
    }
    
   input[type=checkbox].css-checkbox {
@@ -354,9 +344,10 @@ and (min-width : 642px){
   }
 
   fieldset.submit{
-    padding: 32px 0 0 65px;
+    padding: 132px 0 0 65px;
     display: block;
     float: left;
+    
   }
   
   input.submit{

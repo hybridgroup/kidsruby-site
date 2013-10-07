@@ -2,11 +2,12 @@
 %html.no-js{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
   %head
     %title= @title || "Kidsruby.com"
+    %meta{content: "initial-scale=1", name: "viewport"}
     %link{:href=>'stylesheets/print.css', :rel => 'stylesheet', :media => "print", :type => "text/css"}
     %link{:href=>'stylesheets/screen.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
-    /[if IE 8]
+    <!--[if lt IE 9]>
     %link{:href=>'stylesheets/ie.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
-    
+    <![endif]-->
   
     %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
     %script{:type => "text/javascript", :src => "javascripts/system.js"}
@@ -59,16 +60,17 @@
           %a.icon-twitterbutton{:href => "http://www.twitter.com/kidsruby"}
           %h3.aside Kids Ruby
           <a class="twitter" href="http://www.twitter.com/kidsruby">@kidsruby</a> Planet Earth!Let's teach kids how to program using Ruby! Programming is fun, and good for you too. <a href="http://kidsruby.com">http://kidsruby.com</a>
+      
 
-
-      %div.bottom
-        %img{:src => "/images/kidsRubyBottom.png", :class => "bottom-image"}
-      %div.mobile
-        %img{:src => "/images/640bottom.png", :class => "mobile-image"} 
+      
         
   %footer
     © 2013 Hybrid Powered     
-     
+    .bottom-border
+    %div.bottom
+      %img{:src => "/images/kidsRubyBottom.png", :class => "bottom-image"}
+    %div.mobile
+      %img{:src => "/images/640bottom.png", :class => "mobile-image"} 
     :javascript
         function blink(){
             $('.ruby').delay(100).fadeTo(500,0.1).delay(100).fadeTo(500,1, blink);

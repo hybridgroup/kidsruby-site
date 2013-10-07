@@ -1,0 +1,20 @@
+section.main {
+  display: block;
+  float: left;
+  background-color: white;
+  min-height: 1200px;
+  padding: 0 40px 0 100px;
+  position: relative;
+  z-index: 1;
+  width: 470px;
+}
+
+aside {
+  display: block;
+  width: 270px;
+  min-height: 1200px;
+  float: left;
+  position: relative;
+  padding: 0 45px 0 15px;
+  background: white;
+}

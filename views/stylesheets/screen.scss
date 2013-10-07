@@ -24,6 +24,7 @@
 @import "compass/reset/utilities";
 @import "compass/css3";
 
+
 a, a:active, a:visited {
   text-decoration: none;
 }
@@ -41,13 +42,8 @@ button:hover {
  
   body {
     background: url("/images/kidsRubyTop.png") no-repeat center top;
-    height: 0;
     background-color: $background;
     font-family: 'Open Sans', helvetica, arial, sans-serif;
-  }
-  
-  header.top{
-    height: 0;
   }
   
   .ruby{
@@ -68,7 +64,6 @@ button:hover {
     position: relative;
     right: 10px;
     top:-173px;
-    
   }
    
   a.kidsruby{ 
@@ -87,7 +82,7 @@ button:hover {
       @include rotate(-360deg);
     }
   }
-  
+   
   .glow{
     @include transition-duration(1s);
     background: url("/images/glow2.png") no-repeat top;
@@ -181,10 +176,15 @@ button:hover {
     margin: 0 auto;
     width: 940px;
     position: relative;
+    min-height: 100%;
   }
   
+ header.top{
+   height: 0;
+ }
+ 
   //home
-  header.section-title{
+  header.section-top{
     @include border-top-radius(15px);
     display: block;
     float: left;
@@ -196,20 +196,21 @@ button:hover {
     padding: 35px 100px 30px;
     position: relative;
     z-index: 1;
-   }
+  }
   
   section.main{
     @include border-bottom-left-radius(15px); 
     display: block;
     float: left;
     background-color: $white; 
-    min-height: 1200px;
-    padding: 0 40px 0 100px;
+    min-height: 100%;
+    padding: 0 40px 150px 100px;
+    margin-bottom: 280px;
     position: relative;
     z-index: 1;
     width: 470px;
   }  
-      
+
   .button{
     height: 165px;
     background-color: $FormBlue;
@@ -274,13 +275,14 @@ button:hover {
     
   aside{
     @include border-bottom-right-radius(15px); 
-    display: block;
+    display: inline;
     width: 270px;
-    min-height: 1200px;
+    min-height: 100%;
     float: left;
     position: relative;
-    padding: 0 45px 0 15px;
+    padding: 0 45px 150px 15px;
     background: $white;
+    margin-bottom: 280px;
   }
   
   .social-buttons{
@@ -288,18 +290,12 @@ button:hover {
     height:110px;
   }  
     
-  .facebook-button{
+  .facebook-button, .twitter-button{
     display: block;
     float: left;
     width: 50%;
   }
     
-  .twitter-button{
-    display: block;
-    float: left;
-    width: 50%;
-  }
-  
   a.icon{
     display: block;
     float: left;
@@ -407,38 +403,41 @@ button:hover {
     display: block;
     position: absolute;
     width: 278px;
-    top: 910px;
+    top: 890px;
     left: 620px;
     z-index: 99;
   }
   
   footer{
-   position: absolute;
-   display:block;
+    position: relative;
+    margin-top: -50px; 
+    height: 50px;
+    clear:both;
+    text-align: center;
    z-index: 10;
-   top: 2025px;
-   height: 32px;
+   height: 37px;
    width: 100%;
-   text-align: center;
    color: black;
    font-size: 14px;
   }
   
   //footer image
   .bottom{
+    display: inline-block;
+    margin: 0 auto;
     position: relative;
-    bottom: -1900px;
-    left: 200px;
     z-index: 9;  
+    min-width: 940px;
    }
    
   img.bottom-image {
-    float: left;
+    margin: 0 auto;
     position: absolute;
+    float: left;
     z-index: 9;
-    bottom: 0;
-    right: 126px;  
-    display:block;
+    bottom: 18px;
+    left: -31px;  
+    min-width: 940px;
   }
   
   //footer image for mobile layout
@@ -460,21 +459,22 @@ button:hover {
     color: $Button;
   }
     
+  h2, h3, h4, h6{
+    color: $paragraph;
+  }  
+    
   h2{
     font-size: 28px;
     line-height: 42px;
-    color: $paragraph;
     padding: 0 0 5px 0;
   }
   
   h3{
     font-size: 24px;
-    color: $paragraph;
   }
   
   h4{
     font-size: 18px;
-    color: $paragraph;
   }
  
   h5{
@@ -485,7 +485,6 @@ button:hover {
  
   h6{
     font-size: 18px;
-    color: $paragraph;
     margin: 0 0 20px 0;
   }
      
@@ -508,7 +507,7 @@ button:hover {
   }
   
   p{
-    color:$GrayText; 
+    color: $GrayText;
   }
   
   p.dl{
@@ -525,7 +524,6 @@ button:hover {
     text-decoration: underline;
     color: $Button;
   }
-  
   
   //contact
   form.sign-up {
@@ -553,22 +551,13 @@ button:hover {
     }
   }
       
-  fieldset.bottom {
-    top: 0;
-    height: 41px;
-    width: 220px;
-    display:block;
-    float: left;
-    position: relative;
-    margin: 29px 0 0 -199px;
-  }   
-   
   textarea{
     position: relative;
     background-color: white;
     width: 425px;
     height: 100px;
     border: 1px solid $GrayText;
+    clear: both;
     
     &:hover{
     box-shadow: 0 0 2px black;
@@ -619,11 +608,13 @@ button:hover {
   }
   
   fieldset.submit{
-    top: 567px;
     padding: 0 0 0 65px;
-    position: absolute;
+    position: relative;
     display: block;
     float: left;
+    top: 130px;
+    z-index: 10;
+    margin-bottom: 100px;
   }
   
   input.submit{

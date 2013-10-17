@@ -8,3 +8,5 @@ its own. You have to force it / poll it with the above compass flag.
 
 # Contributors
 Daniel Fischer
+Ron Evans
+Theron Boerner

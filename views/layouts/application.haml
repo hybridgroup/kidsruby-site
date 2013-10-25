@@ -26,43 +26,53 @@
         %div.logo
           %a.kidsruby{:href => '/'}
             %div.glow
-        %nav.Home
-          %a{:class => "#{'active' if @current_page == 'home'}", :href => '/'} Home
-        %nav.About
-          %a{:class => "#{'active' if @current_page == 'about'}", :href => '/about'} About
-        %nav.Download
-          %a{:class => "#{'active' if @current_page == 'download'}", :href => '/download'} Download
-        %nav.Contact
-          %a{:class => "#{'active' if @current_page == 'contact'}", :href => '/contact'} Contact
-
-      = yield
+        %nav
+          %ul.nav
+            %li
+              %a.nav.Home{:class => "#{'active' if @current_page == 'home'}", :href => '/'} Home
+            %li
+              %a.nav.About{:class => "#{'active' if @current_page == 'about'}", :href => '/about'} About
+            %li
+              %a.nav.Download{:class => "#{'active' if @current_page == 'download'}", :href => '/download'} Download
+            %li
+              %a.nav.Contact{:class => "#{'active' if @current_page == 'contact'}", :href => '/contact'} Contact
+          %a#pull
+            .nav-button
+              %span.icon-bar 
+              %span.icon-bar 
+              %span.icon-bar 
+        .background  
+        
+      .wrapper  
+        = yield
     
-      %aside
-        %div.social-buttons
-          %div.facebook-button
-            %a.icon.icon-FB{:href => "http://www.facebook.com/share.php?u=www.kidsruby.com&title=[KidsRuby]"}
-            %span.fbcount.counts
-          %div.twitter-button    
-            %a.icon.icon-twitter{:href => "http://twitter.com/home?status=KidsRuby+www.kidsruby.com"}
-            %span.twittercount.counts
-              
-        %form{:method => 'post', :action => '/newsletter'}        
-          %fieldset.newsletter
-            %label
-              Subscribe to our newsletter to receive the latest news 
-              %span.newsletter about KIDSRUBY
-          %fieldset.fields
-            %input.email{:name => "email", :type => "email", :placeholder => "", :required => ""}
-            %input.fields{:type => "submit", :value => "►"}
-        %header.aside
-          <a href="http://www.twitter.com/kidsruby">KIDSRUBY</a> on Twitter
-        %div.small-logo
-          %a.icon-twitterbutton{:href => "http://www.twitter.com/kidsruby"}
-          %h3.aside Kids Ruby
-          <a class="twitter" href="http://www.twitter.com/kidsruby">@kidsruby</a> Planet Earth!Let's teach kids how to program using Ruby! Programming is fun, and good for you too. <a href="http://kidsruby.com">http://kidsruby.com</a>
-      
-
-      
+    
+        %aside
+          %div.social-buttons
+            %div.facebook-button
+              %a.icon.icon-FB{:href => "http://www.facebook.com/share.php?u=www.kidsruby.com&title=[KidsRuby]"}
+              %span.fbcount.counts
+            %div.twitter-button    
+              %a.icon.icon-twitter{:href => "http://twitter.com/home?status=KidsRuby+www.kidsruby.com"}
+              %span.twittercount.counts
+                
+          %form{:method => 'post', :action => '/newsletter'}        
+            %fieldset.newsletter
+              %label
+                Subscribe to our newsletter to receive the latest news 
+                %span.newsletter about KIDSRUBY
+            %fieldset.fields
+              %input.email{:name => "email", :type => "email", :placeholder => "", :required => ""}
+              %input.fields{:type => "submit", :value => "►"}
+          %header.aside
+            <a href="http://www.twitter.com/kidsruby">KIDSRUBY</a> on Twitter
+          %div.small-logo
+            %a.icon-twitterbutton{:href => "http://www.twitter.com/kidsruby"}
+            %h3.aside Kids Ruby
+            <a class="twitter" href="http://www.twitter.com/kidsruby">@kidsruby</a> Planet Earth!Let's teach kids how to program using Ruby! Programming is fun, and good for you too. <a href="http://kidsruby.com">http://kidsruby.com</a>
+        
+  
+        
         
   %footer
     © 2013 Hybrid Powered     
@@ -78,6 +88,33 @@
         $(document).ready(function() {
              blink();
         });
+        $(function() {
+          var pull    = $('#pull');
+            menu    = $('nav ul');
+            menuHeight  = menu.height();
     
+          $(pull).on('click', function(e) {
+            e.preventDefault();
+            menu.slideToggle();
+          });
+    
+          $(window).resize(function(){
+                var w = $(window).width();
+                if(w > 641 && menu.is(':hidden')) {
+                  menu.removeAttr('style');
+                }
+            });
+        });
+        
+        //safari margin % fix for mobile
+        var width = $('body').width();    
+        var topMargin = width * -0.13;     // calculate -0.26% of .outer's width
+
+        // check if the browser is Safari
+        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {                  
+            $('.nav-button').css('margin-top', topMargin+'px');  // apply the calculated margin to .image
+            }
+        else {
+        };
       
 = partial :_analytics

@@ -1,23 +1,25 @@
- section.main{
+@media only screen
+and (max-width : 641px) 
+and (min-width : 1px){
+  
+  a.red-button{
     display: block;
-    float: left;
-    background-color: white; 
-    min-height: 1200px;
-    padding: 0 40px 0 100px;
-    position: relative;
-    z-index: 1;
-    width: 470px;
-  }  
-
-aside{
-    display: block;
-    width: 270px;
-    min-height: 1200px;
-    float: left;
-    position: relative;
-    padding: 0 45px 0 15px;
-    background: white;
-  }
-
-
+    height: 135px;
+    width: 524px;
+    background: lighten(rgb(190,30,45), 4%);
+    overflow: visible;
+    font-family: helvetica, arial;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 130px;
+    box-shadow: 5px 10px 0 rgb(186,214,226); 
+    margin: 0 0 0 45px;
     
+    &:hover{
+      color: white;
+      box-shadow: 5px 10px 2px darken(rgb(186,214,226), 20%);
+    }
+  }
+}

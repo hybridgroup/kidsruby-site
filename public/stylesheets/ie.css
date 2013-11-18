@@ -1,20 +1,21 @@
-section.main {
-  display: block;
-  float: left;
-  background-color: white;
-  min-height: 1200px;
-  padding: 0 40px 0 100px;
-  position: relative;
-  z-index: 1;
-  width: 470px;
-}
-
-aside {
-  display: block;
-  width: 270px;
-  min-height: 1200px;
-  float: left;
-  position: relative;
-  padding: 0 45px 0 15px;
-  background: white;
+@media only screen and (max-width: 641px) and (min-width: 1px) {
+  a.red-button {
+    display: block;
+    height: 135px;
+    width: 524px;
+    background: #d02131;
+    overflow: visible;
+    font-family: helvetica, arial;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 130px;
+    box-shadow: 5px 10px 0 #bad6e2;
+    margin: 0 0 0 45px;
+  }
+  a.red-button:hover {
+    color: white;
+    box-shadow: 5px 10px 2px #72abc4;
+  }
 }

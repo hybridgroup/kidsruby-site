@@ -9,7 +9,7 @@ and (min-width : 1px){
   
   .background{
     width: 100%;
-    min-height: 130%;;
+    min-height: 130%;
     background: url("/images/640res.png") no-repeat center top;
     background-size: 100% auto;
     font-family: helvetica;
@@ -22,14 +22,24 @@ and (min-width : 1px){
   a.kidsruby{ 
     background: url("/images/weblogomobile.png") no-repeat top;
     background-size: 16%;
-    height: 100%;
+    height: 45%;
     width: 100%;
-    float: left;
+    float: left; 
     display: block;
     position: absolute;
     z-index: 1;
     right: 35%;
-    top: 1%;
+    top: 2%;
+    margin-bottom: 5px;
+  }
+  
+  div.glow{
+    background: url("/images/background_mobile.png") no-repeat center top;
+    background-size: 100% auto;
+    width: 110%;
+    min-height: 200%;
+    padding-left: 35%;
+    margin-top: -7%;
   }
   
   nav{
@@ -37,36 +47,38 @@ and (min-width : 1px){
     display: block;
     position: relative;
     z-index: 9;
-    margin-top: 18%;
+    margin-top: 23%;
   }
   
-    ul.nav{
-      list-style-type: none;
-      display: none;  
-      height: auto
-    }
-      
-    a.nav{
-      display: block;
-      padding-left: 40px;
-      height: 50px;
-      text-decoration: none;
-      color: $red;
-      font-size: 38px;
-      font-family: 'bender';
-      border-bottom: 2px solid rgba(0,0,0,.15);
-      @include text-shadow(lighten(gray, 15%) -1px 2px 0);
+  ul.nav{
+    list-style-type: none;
+    display: none;  
+    height: auto
+  }
     
-      &:hover{
-        color: lighten($red, 5%);
-        text-decoration: none;
-      }
-      &:active{
-        @include text-shadow(lighten(black, 50%) 0 1px 0);
-      }
+  a.nav{
+    display: block;
+    padding-left: 40px;
+    padding-top: 4px;
+    height: 46px;
+    text-decoration: none;
+    color: $red;
+    font-size: 38px;
+    font-family: 'bender';
+    border-bottom: 2px solid rgba(0,0,0,.15);
+    @include text-shadow(lighten(gray, 15%) -1px 2px 0);
+  
+    &:hover{
+      color: lighten($red, 5%);
+      text-decoration: none;
+    }
+    &:active{
+      @include text-shadow(lighten(black, 50%) 0 1px 0);
+    }
   }
   
   a.active{ 
+    background: url("/images/active.png") repeat;
     color: $red;
     background-color: lighten($gray,5%);  
     } 
@@ -75,13 +87,13 @@ and (min-width : 1px){
     height: 20px;
     width: 6%;
     min-width: 30px;
-    margin:  -13% 20px 0 20px;
-    padding: 2px 0;
+    margin:  -16.7% 20px 0 20px;
+    padding: 4px;
     display: block;
     float: left;
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 4%;
      z-index: 9;
     
     &:hover{
@@ -137,11 +149,12 @@ and (min-width : 1px){
   }
   
   h2.title {
-    font-size: 32px;
+    font-size: 25px;
+    font-weight: bold;
     color: $red;
     font-family: helvetica, arial;
-    line-height: 41px;
-    margin: 32px ;
+    line-height: 31px;
+    margin: 32px;
   }
 
   section.main{
@@ -158,53 +171,45 @@ and (min-width : 1px){
     
   p.button-top{
     font-family: helvetica, arial;
-    font-size: 32px;
+    font-size: 28px;
     color: darken($DarkText, 15%);
     font-weight: bold;
-    margin: 32px 41px 16px;
+    margin: 0 41px 16px;
   }
    
   a.red-button{
+    @include border-radius(15px);
+    background: $red;
+    @include background-image(linear-gradient(left top,darken($red, 3%), lighten($red, 2%), darken($red, 8%))); 
     text-decoration: none;
     display: block;
-    width: 80%;
+    width: 65%;
     height: 15%;
-    background: $red;
     overflow: visible;
     font-family: helvetica, arial;
     color: $white;
     text-align: center;
-    font-size: 29px;
+    font-size: 33px;
     font-weight: bold;
-    box-shadow: 8px 14px 0 $ButtonShadow;
+    box-shadow: 8px 8px 0 $ButtonShadow;
     margin: 0 auto;
-    padding: 70px 0;
+    padding: 40px 5%;
+    line-height: 50px;
     
     &:hover{
       color: $white;
-      box-shadow: 8px 14px 2px darken($ButtonShadow, 20%);
+      @include background-image(linear-gradient(left top,darken($red, 3%), lighten($red, 4%), darken($red, 6%)));
+      box-shadow: 8px 8px 4px darken($ButtonShadow, 20%);
+      text-decoration: none;
     }
   }
          
-  article.hide{
+  article.hide, aside, .subscribe, div.twitter{
     display: none;
   }
-    
-  aside{
-    display: none;
-  }
-   
-  .subscribe {
-    display: none;
-  }
-  
-  div.twitter{
-    display: none;
-  }
-  
+ 
 //for about, download and contact pages
   article.title{
-    min-width: 240px;
     padding: 0 40px  0;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -213,13 +218,14 @@ and (min-width : 1px){
   h1.heading{
     font-size: 40px;
     line-height: 30px;
+    text-align: center;
     padding: 20px 0 30px 0;
     color: $Button;
   }
     
   h2{
-    font-size: 28px;
-    line-height: 42px;
+    font-size: 25px;
+    line-height: 31px;
     color: $paragraph;
     padding: 0 0 10px 0;
   }
@@ -230,11 +236,23 @@ and (min-width : 1px){
     margin-left: -2px;
   }
       
+  h4{
+    font-size: 24px;
+    color: $paragraph;
+  } 
+      
   h5{
     font-size: 18px;
     color: $DarkBlue;
     margin-left: -2px;
   } 
+    
+  h6{
+    font-size: 18px;
+    color: $paragraph;
+    margin: 0 0 20px 0;
+    clear: left;
+  }   
   
   a{
     text-decoration: underline;
@@ -250,6 +268,14 @@ and (min-width : 1px){
   .collapse{
     width: 100%;
     height: 100%;
+    margin: 0 auto;
+  }
+
+  .dl-sprites{
+    overflow: auto;
+    margin: 0 auto;
+    height: auto;
+    max-width: 500px;
   }
 
   a.dl{
@@ -257,7 +283,36 @@ and (min-width : 1px){
     float: left;
     width: 183px;
     height: 175px;
-    margin: 0 0 20px 40px;
+    margin: 0 0 10px 45px;
+    overflow: hidden;
+    
+    &:hover{
+        text-decoration: none;
+      }
+  }
+  span.windows-version, span.mac-version, span.pi-version, span.de-version {
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 94px;
+    left: 94px;
+    position: relative;
+  }
+  
+  span.mac-version{
+    top: 92px;
+    left: 107px;
+  }
+  
+  span.pi-version{
+    top: 88px;
+    left: 87px;
+  }
+  
+  span.de-version{
+    top: 88px;
+    left: 88px;
   }
   
   a.dl:last-child{
@@ -265,23 +320,10 @@ and (min-width : 1px){
   }
   
   article.page{
-    min-width: 240px;
-    padding: 30px 40px 0;
+    padding: 30px 40px 0 40px;
     font-family: 'Open Sans', sans-serif;
   }
   
-  h4{
-    font-size: 24px;
-    color: $paragraph;
-  }
-    
-  h6{
-    font-size: 18px;
-    color: $paragraph;
-    margin: 0 0 20px 0;
-    clear: left;
-  }
-    
   p{
     color:$GrayText; 
   }
@@ -438,7 +480,7 @@ and (min-width : 1px){
     right: 1px;
     position: absolute;
     z-index: .9;
-    bottom: 10px;
+    bottom: 15px;
     display: block;
   }
   

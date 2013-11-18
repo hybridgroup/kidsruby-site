@@ -52,28 +52,28 @@ and (min-width : 642px){
     height: 154px;
   }
       
-    a.nav{
-      width: 237px;
-      display: block;
-      float: left;
-      padding: 15px 0  0 70px;
-      margin: 10px -1px -22px 0;
-      height: 70px;
-      text-decoration: none;
+  a.nav{
+    width: 237px;
+    display: block;
+    float: left;
+    padding: 15px 0  0 70px;
+    margin: 10px -1px -22px 0;
+    height: 70px;
+    text-decoration: none;
+    color: lighten($background, 15%);
+    font-size: 38px;
+    font-family: 'bender';
+    @include text-shadow(darken($DarkerBrown, 5%) -2px 2px 1px);
+  
+    &:hover{
+      @include text-shadow(darken($DarkerBrown, 15%) -2px 2px 1px);
       color: lighten($background, 15%);
-      font-size: 38px;
-      font-family: 'bender';
-      @include text-shadow(darken($DarkerBrown, 5%) -2px 2px 1px);
-    
-      &:hover{
-        @include text-shadow(darken($DarkerBrown, 15%) -2px 2px 1px);
-        color: lighten($background, 15%);
-        text-decoration: none;
-      }
-      &:active{
-        @include text-shadow(lighten(black, 50%) 0 1px 0);
-      }
+      text-decoration: none;
     }
+    &:active{
+      @include text-shadow(lighten(black, 50%) 0 1px 0);
+    }
+  }
   
   a.active{ 
     color: lighten($paragraph, 25%);
@@ -139,8 +139,18 @@ and (min-width : 642px){
     float: left;
     background-color: $gb;
     width: 614px;
-    margin: -63px 0 63px 0;
+    margin: 0 0 63px 0;
   } 
+  
+  .wrapper{
+    @include border-bottom-radius(15px);
+    box-shadow: 0 0 0 5px darken($gb, 8%);
+    float: left;
+    margin: -58px auto 10px;
+    background-color: $gb;
+    width: 614px;
+    position: relative;
+  }
   
   h2.title {
     font-size: 30px;
@@ -151,8 +161,6 @@ and (min-width : 642px){
   }
  
   section.main{
-    @include border-bottom-radius(15px);
-    
     margin-top: -63px;
     display: inline-block;
     float: left;
@@ -235,6 +243,7 @@ and (min-width : 642px){
     font-size: 40px;
     line-height: 30px;
     padding: 50px 0 30px 0;
+    text-align: center;
     color: $Button;
   }
     
@@ -268,16 +277,49 @@ and (min-width : 642px){
     float: left;
     width: 183px;
     height: 175px;
-    margin: 0 40px 20px 40px;
- }
+    margin: 0 30px 20px 45px;
+    
+    &:hover{
+       text-decoration: none;
+     }
+  }
+  
+  a.dl.first, a.dl.third{
+    margin-left: 87px;
+  }
  
-  a.dl:last-child{
+  a.dl.fourth{
     margin-bottom: 37px;
+  }
+  
+  span.windows-version, span.mac-version, span.pi-version, span.de-version {
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 94px;
+    left: 94px;
+    position: relative;
+  }
+  
+  span.mac-version{
+    top: 92px;
+    left: 107px;
+  }
+  
+  span.pi-version{
+    top: 88px;
+    left: 87px;
+  }
+  
+  span.de-version{
+    top: 88px;
+    left: 88px;
   }
   
   article.page{
     width: 470px;
-    padding: 30px 40px 0;
+    padding: 10px 40px 0;
     font-family: 'Open Sans', sans-serif;
   }
   
@@ -298,7 +340,7 @@ and (min-width : 642px){
   
   p.dl{
     color: #6e7d86;
-    margin: -15px 0 15px 0;
+    margin: -15px 0 10px 0;
   }
   
   ul.download{
@@ -314,7 +356,7 @@ and (min-width : 642px){
 //contact
   form.sign-up {
     font-family: 'Open Sans', sans-serif;
-    margin: 5px  92px 0px;
+    margin: 0  92px 0px;
     padding: none;
   }
   
@@ -324,13 +366,13 @@ and (min-width : 642px){
     float: left;
     display: block;
     position: relative;
-    margin: 30px 0 5px 0;
+    margin: 30px 0 5px -25px;
     clear: both;
   }
   
   input.contact{
     background-color: white;
-    width: 425px;
+    width: 440px;
     height: 35px;
     border: 1px solid $GrayText;
     margin: 0 auto;
@@ -342,7 +384,7 @@ and (min-width : 642px){
     
   textarea{
     background-color: white;
-    width: 425px;
+    width: 440px;
     height: 100px;
     border: 1px solid $GrayText;
     
@@ -399,7 +441,6 @@ and (min-width : 642px){
     padding: 132px 0 0 65px;
     display: block;
     float: left;
-    
   }
   
   input.submit{
@@ -415,6 +456,7 @@ and (min-width : 642px){
     font-weight: normal;
     line-height: 25px;
     border: none;
+    margin-left:18px;
       
     &:hover{
       box-shadow: 2px 2px 2px darken($ButtonShadow, 20%);

@@ -2,7 +2,7 @@
 %html.no-js{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
   %head
     %title= @title || "Kidsruby.com"
-    %meta{content: "initial-scale=1", name: "viewport"}
+    %meta{content: "width=device-width, initial-scale=1.0, minimum-scale=1.0", name: "viewport"}
     %link{:href=>'stylesheets/print.css', :rel => 'stylesheet', :media => "print", :type => "text/css"}
     %link{:href=>'stylesheets/screen.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
     <!--[if lt IE 9]>
@@ -10,14 +10,11 @@
     <![endif]-->
   
     %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
-    %script{:type => "text/javascript", :src => "javascripts/system.js"}
     %script{:type => "text/javascript", :src => "javascripts/modernizr.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.form.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.lettering.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
     %script{:type => "text/javascript", :src => "javascripts/respond.js"}
-    /[if lt IE 9]
-    %script{:src => "//html5shim.googlecode.com/svn/trunk/html5.js"}
     
   %body
     %div.ruby
@@ -106,15 +103,18 @@
             });
         });
         
-        //safari margin % fix for mobile
+        //safari margin nav fix for mobile
+        $(window).on("resize", function () {  
         var width = $('body').width();    
-        var topMargin = width * -0.13;     // calculate -0.26% of .outer's width
+        var topMargin = width * -0.17;     
 
-        // check if the browser is Safari
-        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {                  
-            $('.nav-button').css('margin-top', topMargin+'px');  // apply the calculated margin to .image
-            }
-        else {
-        };
-      
+          if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {  
+          
+             if ($(window).width() < 642) {                 
+                $('.nav-button').css('margin-top', topMargin+'px');  
+                }
+              }
+              else {
+              };
+       }).resize();
 = partial :_analytics

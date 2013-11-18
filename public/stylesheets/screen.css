@@ -55,7 +55,7 @@ a img {
 }
 
 .icon-sprite, .icon-FB, .icon-linux_de, .icon-linux_pi, .icon-mac_osx, .icon-twitter, .icon-twitterbutton, .icon-windows {
-  background: url('../images/icon-s11c9255f5f.png') no-repeat;
+  background: url('../images/icon-s6b627c66f3.png') no-repeat;
 }
 
 .icon-FB {
@@ -67,7 +67,7 @@ a img {
 }
 
 .icon-linux_pi {
-  background-position: 0 -175px;
+  background-position: 0 0;
 }
 
 .icon-mac_osx {
@@ -83,7 +83,7 @@ a img {
 }
 
 .icon-windows {
-  background-position: 0 0;
+  background-position: 0 -175px;
 }
 
 @viewport {
@@ -246,7 +246,22 @@ a img {
     float: left;
     background-color: #e2f4f7;
     width: 614px;
-    margin: -63px 0 63px 0;
+    margin: 0 0 63px 0;
+  }
+
+  .wrapper {
+    -moz-border-radius-bottomleft: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 0 0 5px #c2e8ee;
+    float: left;
+    margin: -58px auto 10px;
+    background-color: #e2f4f7;
+    width: 614px;
+    position: relative;
   }
 
   h2.title {
@@ -258,12 +273,6 @@ a img {
   }
 
   section.main {
-    -moz-border-radius-bottomleft: 15px;
-    -webkit-border-bottom-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    -moz-border-radius-bottomright: 15px;
-    -webkit-border-bottom-right-radius: 15px;
-    border-bottom-right-radius: 15px;
     margin-top: -63px;
     display: inline-block;
     float: left;
@@ -344,6 +353,7 @@ a img {
     font-size: 40px;
     line-height: 30px;
     padding: 50px 0 30px 0;
+    text-align: center;
     color: #ba1d2c;
   }
 
@@ -376,16 +386,48 @@ a img {
     float: left;
     width: 183px;
     height: 175px;
-    margin: 0 40px 20px 40px;
+    margin: 0 30px 20px 45px;
+  }
+  a.dl:hover {
+    text-decoration: none;
   }
 
-  a.dl:last-child {
+  a.dl.first, a.dl.third {
+    margin-left: 87px;
+  }
+
+  a.dl.fourth {
     margin-bottom: 37px;
+  }
+
+  span.windows-version, span.mac-version, span.pi-version, span.de-version {
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 94px;
+    left: 94px;
+    position: relative;
+  }
+
+  span.mac-version {
+    top: 92px;
+    left: 107px;
+  }
+
+  span.pi-version {
+    top: 88px;
+    left: 87px;
+  }
+
+  span.de-version {
+    top: 88px;
+    left: 88px;
   }
 
   article.page {
     width: 470px;
-    padding: 30px 40px 0;
+    padding: 10px 40px 0;
     font-family: 'Open Sans', sans-serif;
   }
 
@@ -406,7 +448,7 @@ a img {
 
   p.dl {
     color: #6e7d86;
-    margin: -15px 0 15px 0;
+    margin: -15px 0 10px 0;
   }
 
   ul.download {
@@ -421,7 +463,7 @@ a img {
 
   form.sign-up {
     font-family: 'Open Sans', sans-serif;
-    margin: 5px  92px 0px;
+    margin: 0  92px 0px;
     padding: none;
   }
 
@@ -431,13 +473,13 @@ a img {
     float: left;
     display: block;
     position: relative;
-    margin: 30px 0 5px 0;
+    margin: 30px 0 5px -25px;
     clear: both;
   }
 
   input.contact {
     background-color: white;
-    width: 425px;
+    width: 440px;
     height: 35px;
     border: 1px solid #737373;
     margin: 0 auto;
@@ -448,7 +490,7 @@ a img {
 
   textarea {
     background-color: white;
-    width: 425px;
+    width: 440px;
     height: 100px;
     border: 1px solid #737373;
   }
@@ -523,6 +565,7 @@ a img {
     font-weight: normal;
     line-height: 25px;
     border: none;
+    margin-left: 18px;
   }
   input.submit:hover {
     box-shadow: 2px 2px 2px #72abc4;
@@ -565,14 +608,24 @@ a img {
   a.kidsruby {
     background: url("/images/weblogomobile.png") no-repeat top;
     background-size: 16%;
-    height: 100%;
+    height: 45%;
     width: 100%;
     float: left;
     display: block;
     position: absolute;
     z-index: 1;
     right: 35%;
-    top: 1%;
+    top: 2%;
+    margin-bottom: 5px;
+  }
+
+  div.glow {
+    background: url("/images/background_mobile.png") no-repeat center top;
+    background-size: 100% auto;
+    width: 110%;
+    min-height: 200%;
+    padding-left: 35%;
+    margin-top: -7%;
   }
 
   nav {
@@ -580,7 +633,7 @@ a img {
     display: block;
     position: relative;
     z-index: 9;
-    margin-top: 18%;
+    margin-top: 23%;
   }
 
   ul.nav {
@@ -592,7 +645,8 @@ a img {
   a.nav {
     display: block;
     padding-left: 40px;
-    height: 50px;
+    padding-top: 4px;
+    height: 46px;
     text-decoration: none;
     color: #d02131;
     font-size: 38px;
@@ -609,6 +663,7 @@ a img {
   }
 
   a.active {
+    background: url("/images/active.png") repeat;
     color: #d02131;
     background-color: #f2f2f2;
   }
@@ -617,13 +672,13 @@ a img {
     height: 20px;
     width: 6%;
     min-width: 30px;
-    margin: -13% 20px 0 20px;
-    padding: 2px 0;
+    margin: -16.7% 20px 0 20px;
+    padding: 4px;
     display: block;
     float: left;
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 4%;
     z-index: 9;
   }
   .nav-button:hover {
@@ -677,10 +732,11 @@ a img {
   }
 
   h2.title {
-    font-size: 32px;
+    font-size: 25px;
+    font-weight: bold;
     color: #d02131;
     font-family: helvetica, arial;
-    line-height: 41px;
+    line-height: 31px;
     margin: 32px;
   }
 
@@ -703,51 +759,55 @@ a img {
 
   p.button-top {
     font-family: helvetica, arial;
-    font-size: 32px;
+    font-size: 28px;
     color: #2e596a;
     font-weight: bold;
-    margin: 32px 41px 16px;
+    margin: 0 41px 16px;
   }
 
   a.red-button {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background: #d02131;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #c21f2e), color-stop(50%, #d82233), color-stop(100%, #ac1b29));
+    background-image: -webkit-linear-gradient(left top, #c21f2e, #d82233, #ac1b29);
+    background-image: -moz-linear-gradient(left top, #c21f2e, #d82233, #ac1b29);
+    background-image: -o-linear-gradient(left top, #c21f2e, #d82233, #ac1b29);
+    background-image: linear-gradient(left top, #c21f2e, #d82233, #ac1b29);
     text-decoration: none;
     display: block;
-    width: 80%;
+    width: 65%;
     height: 15%;
-    background: #d02131;
     overflow: visible;
     font-family: helvetica, arial;
     color: white;
     text-align: center;
-    font-size: 29px;
+    font-size: 33px;
     font-weight: bold;
-    box-shadow: 8px 14px 0 #bad6e2;
+    box-shadow: 8px 8px 0 #bad6e2;
     margin: 0 auto;
-    padding: 70px 0;
+    padding: 40px 5%;
+    line-height: 50px;
   }
   a.red-button:hover {
     color: white;
-    box-shadow: 8px 14px 2px #72abc4;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #c21f2e), color-stop(50%, #dd2839), color-stop(100%, #b51d2b));
+    background-image: -webkit-linear-gradient(left top, #c21f2e, #dd2839, #b51d2b);
+    background-image: -moz-linear-gradient(left top, #c21f2e, #dd2839, #b51d2b);
+    background-image: -o-linear-gradient(left top, #c21f2e, #dd2839, #b51d2b);
+    background-image: linear-gradient(left top, #c21f2e, #dd2839, #b51d2b);
+    box-shadow: 8px 8px 4px #72abc4;
+    text-decoration: none;
   }
 
-  article.hide {
-    display: none;
-  }
-
-  aside {
-    display: none;
-  }
-
-  .subscribe {
-    display: none;
-  }
-
-  div.twitter {
+  article.hide, aside, .subscribe, div.twitter {
     display: none;
   }
 
   article.title {
-    min-width: 240px;
     padding: 0 40px  0;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -756,13 +816,14 @@ a img {
   h1.heading {
     font-size: 40px;
     line-height: 30px;
+    text-align: center;
     padding: 20px 0 30px 0;
     color: #ba1d2c;
   }
 
   h2 {
-    font-size: 28px;
-    line-height: 42px;
+    font-size: 25px;
+    line-height: 31px;
     color: #2290c6;
     padding: 0 0 10px 0;
   }
@@ -773,10 +834,22 @@ a img {
     margin-left: -2px;
   }
 
+  h4 {
+    font-size: 24px;
+    color: #2290c6;
+  }
+
   h5 {
     font-size: 18px;
     color: #5173a9;
     margin-left: -2px;
+  }
+
+  h6 {
+    font-size: 18px;
+    color: #2290c6;
+    margin: 0 0 20px 0;
+    clear: left;
   }
 
   a {
@@ -792,6 +865,14 @@ a img {
   .collapse {
     width: 100%;
     height: 100%;
+    margin: 0 auto;
+  }
+
+  .dl-sprites {
+    overflow: auto;
+    margin: 0 auto;
+    height: auto;
+    max-width: 500px;
   }
 
   a.dl {
@@ -799,7 +880,36 @@ a img {
     float: left;
     width: 183px;
     height: 175px;
-    margin: 0 0 20px 40px;
+    margin: 0 0 10px 45px;
+    overflow: hidden;
+  }
+  a.dl:hover {
+    text-decoration: none;
+  }
+
+  span.windows-version, span.mac-version, span.pi-version, span.de-version {
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 94px;
+    left: 94px;
+    position: relative;
+  }
+
+  span.mac-version {
+    top: 92px;
+    left: 107px;
+  }
+
+  span.pi-version {
+    top: 88px;
+    left: 87px;
+  }
+
+  span.de-version {
+    top: 88px;
+    left: 88px;
   }
 
   a.dl:last-child {
@@ -807,21 +917,8 @@ a img {
   }
 
   article.page {
-    min-width: 240px;
-    padding: 30px 40px 0;
+    padding: 30px 40px 0 40px;
     font-family: 'Open Sans', sans-serif;
-  }
-
-  h4 {
-    font-size: 24px;
-    color: #2290c6;
-  }
-
-  h6 {
-    font-size: 18px;
-    color: #2290c6;
-    margin: 0 0 20px 0;
-    clear: left;
   }
 
   p {
@@ -978,7 +1075,7 @@ a img {
     right: 1px;
     position: absolute;
     z-index: .9;
-    bottom: 10px;
+    bottom: 15px;
     display: block;
   }
 
@@ -1505,14 +1602,43 @@ button:hover {
     height: 175px;
     margin: 0 40px 20px 0;
   }
+  a.dl:hover {
+    text-decoration: none;
+  }
 
-  a.dl:last-child {
+  a.dl.fourth {
     margin-bottom: 37px;
+  }
+
+  span.windows-version, span.mac-version, span.pi-version, span.de-version {
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 92px;
+    left: 94px;
+    position: relative;
+  }
+
+  span.mac-version {
+    top: 90px;
+    left: 107px;
+  }
+
+  span.pi-version {
+    top: 86px;
+    left: 87px;
+  }
+
+  span.de-version {
+    top: 86px;
+    left: 88px;
   }
 
   article.page {
     width: 470px;
     padding: 30px 40px 0 0;
+    font-family: 'Open Sans', sans-serif;
   }
 
   p {

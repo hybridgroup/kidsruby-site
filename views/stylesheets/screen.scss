@@ -109,51 +109,50 @@ button:hover {
     z-index: 0;
   }
   
-    ul.nav{
-      list-style-type: none;
+  ul.nav{
+    list-style-type: none;
+  }
+
+  %a{
+    @include transition-property(margin-top);
+    @include transition-duration(0.4s);
+    background: url("/images/signpost.png") no-repeat center;
+    height: 45px;
+    font-family: 'bender', helvetica;
+    font-weight: bold;
+    color: $gb;
+    float: left;
+    position: relative;
+    display: block;
+    font-size: 22px;
+    line-height: 18px;
+    text-align: center;
+    width: 51px;
+    text-decoration: none;
+    padding: 15px 45px 18px 55px;
+    margin: 0 106px 0 0;
+    top:0;
     }
-  
-    
-    %a{
-      @include transition-property(margin-top);
-      @include transition-duration(0.4s);
-      background: url("/images/signpost.png") no-repeat center;
-      height: 45px;
-      font-family: 'bender', helvetica;
-      font-weight: bold;
-      color: $gb;
-      float: left;
-      position: relative;
-      display: block;
-      font-size: 22px;
-      line-height: 18px;
-      text-align: center;
-      width: 51px;
-      text-decoration: none;
-      padding: 15px 45px 18px 55px;
-      margin: 0 106px 0 0;
-      top:0;
-      }
-      a.active{ 
-         margin-top: -7px;
-      }   
-      a:hover{
-        margin-top: -7px;
-      }
-  
-    a.Home{
-      @extend %a;
-      background: url("/images/Signpost-Home.png") no-repeat center;
-      line-height: 15px;
-      width: 54px;
-      margin: 0 20px 0 110px;
-      }
-      a.active{ 
-         margin-top: -7px;
-      }   
-      a:hover{
-        margin-top: -7px;
-      }
+    a.active{ 
+       margin-top: -7px;
+    }   
+    a:hover{
+      margin-top: -7px;
+    }
+
+  a.Home{
+    @extend %a;
+    background: url("/images/Signpost-Home.png") no-repeat center;
+    line-height: 15px;
+    width: 54px;
+    margin: 0 20px 0 110px;
+    }
+    a.active{ 
+       margin-top: -7px;
+    }   
+    a:hover{
+      margin-top: -7px;
+    }
   
   a.About{
     @extend %a;
@@ -162,18 +161,18 @@ button:hover {
       margin-left:-1px;
   } 
    
-    a.Download{
-      @extend %a;
-      padding: 15px 63px 18px 24px;
-      margin-right: 20px; 
-      margin-left:-1px;
-    }
-  
-    a.Contact{
-      @extend %a;
-      padding: 15px 56px 18px 30px;
-      margin-left:  -1px;
-    }
+  a.Download{
+    @extend %a;
+    padding: 15px 63px 18px 24px;
+    margin-right: 20px; 
+    margin-left:-1px;
+  }
+
+  a.Contact{
+    @extend %a;
+    padding: 15px 56px 18px 30px;
+    margin-left:  -1px;
+  }
    
   .container {
     margin: 0 auto;
@@ -182,9 +181,9 @@ button:hover {
     min-height: 100%;
   }
   
-   header.top{
-     height: 0;
-   }
+  header.top{
+    height: 0;
+  }
  
   //home
   header.section-top{
@@ -426,11 +425,11 @@ button:hover {
     height: 50px;
     clear:both;
     text-align: center;
-   z-index: 10;
-   height: 37px;
-   width: 100%;
-   color: black;
-   font-size: 14px;
+    z-index: 10;
+    height: 37px;
+    width: 100%;
+    color: black;
+    font-size: 14px;
   }
   
   //footer image
@@ -507,15 +506,44 @@ button:hover {
     width: 183px;
     height: 175px;
     margin: 0 40px 20px 0;
+    &:hover{
+       text-decoration: none;
+     }
   }
   
-  a.dl:last-child{
+  a.dl.fourth{
     margin-bottom: 37px;
+  }
+  
+  span.windows-version, span.mac-version, span.pi-version, span.de-version {
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 92px;
+    left: 94px;
+    position: relative;
+  }
+  
+  span.mac-version{
+    top: 90px;
+    left: 107px;
+  }
+  
+  span.pi-version{
+    top: 86px;
+    left: 87px;
+  }
+  
+  span.de-version{
+    top: 86px;
+    left: 88px;
   }
   
   article.page{
     width: 470px;
     padding: 30px 40px 0 0;
+    font-family: 'Open Sans', sans-serif;
   }
   
   p{
@@ -646,6 +674,7 @@ button:hover {
       box-shadow: 2px 2px 2px darken($ButtonShadow, 20%);
       cursor: pointer;
     }
+    
     &:active{
       box-shadow: 2px 2px 4px darken($ButtonShadow, 50%);
     }

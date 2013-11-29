@@ -61,11 +61,11 @@
         if (input.val() === input.attr('placeholder')) return input.val('');
       });
     }
-    $('#sign-up').ajaxForm(function() {
-      $('form#sign-up fieldset.top').fadeOut('slow');
-      $('form#sign-up fieldset.bottom').fadeOut('slow');
-      $('form#sign-up fieldset.submit').slideUp('slow');
-      return $("#thankyou").fadeIn("slow");
+    $('.sign-up').ajaxForm(function() {
+      $('form.sign-up fieldset.top').fadeOut('slow');
+      $('form.sign-up fieldset.bottom').fadeOut('slow');
+      $('form.sign-up fieldset.submit').slideUp('slow');
+      return $(".thankyou").fadeIn("slow");
     });
     $('fieldset.subscribe').parent().ajaxForm(function() {
       $("fieldset.subscribe input").slideUp("fast");

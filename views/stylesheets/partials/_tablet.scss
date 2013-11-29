@@ -17,6 +17,17 @@ and (min-width : 642px){
     height: 350px;
   }
   
+  .ruby-tablet{
+    background: url("/images/rubyglow_tablet.png") no-repeat ;
+    position: relative;
+    width: 114px;
+    height: 131px;
+    left: 12px;
+    top: 33px;
+    margin: 0 auto;
+    z-index:999;
+  }
+  
   .logo{
     height: 122px;
     width: 120px;
@@ -201,11 +212,7 @@ and (min-width : 642px){
     }
   }
        
-  article.hide{
-    display: none;
-  }
-  
-  aside{
+  article.hide, aside{
     display: none;
   }
   
@@ -371,11 +378,13 @@ and (min-width : 642px){
   }
   
   input.contact{
+    font-family: helvetica, arial, sans-serif;
     background-color: white;
     width: 440px;
     height: 35px;
     border: 1px solid $GrayText;
     margin: 0 auto;
+    padding: 1px 0 1px 16px;
     
     &:hover{
     box-shadow: 0 0 2px black;
@@ -383,10 +392,12 @@ and (min-width : 642px){
   }
     
   textarea{
+    font-family: helvetica, arial, sans-serif;
     background-color: white;
     width: 440px;
     height: 100px;
     border: 1px solid $GrayText;
+    padding: 5px 0 1px 16px;
     
     &:hover{
     box-shadow: 0 0 2px black;
@@ -414,9 +425,7 @@ and (min-width : 642px){
   
   label.css-label {
     background-image: url("/images/checkbox.png");
-    float: left;
     height: 12px;
-    width: 15px;
     display: inline-block;
     line-height: 14px;
     background-repeat: no-repeat;
@@ -424,7 +433,8 @@ and (min-width : 642px){
     font-size: 14px;
     vertical-align: middle;
     cursor: pointer;
-    margin: 4px 10px 0 0;
+    margin-top: -3px;
+    padding-left: 20px;
   }
   
   input[type=checkbox].css-checkbox:checked + label.css-label {

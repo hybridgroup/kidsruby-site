@@ -127,7 +127,7 @@ button:hover {
     font-size: 22px;
     line-height: 18px;
     text-align: center;
-    width: 51px;
+    width: 61px;
     text-decoration: none;
     padding: 15px 45px 18px 55px;
     margin: 0 106px 0 0;
@@ -144,7 +144,7 @@ button:hover {
     @extend %a;
     background: url("/images/Signpost-Home.png") no-repeat center;
     line-height: 15px;
-    width: 54px;
+    width: 61px;
     margin: 0 20px 0 110px;
     }
     a.active{ 
@@ -166,12 +166,14 @@ button:hover {
     padding: 15px 63px 18px 24px;
     margin-right: 20px; 
     margin-left:-1px;
+    width: 58px;
   }
 
   a.Contact{
     @extend %a;
     padding: 15px 56px 18px 30px;
     margin-left:  -1px;
+    width: 56px;
   }
    
   .container {
@@ -347,6 +349,7 @@ button:hover {
     padding:0;
     height: 25px;
     margin: 0 -75px 0 2px;
+    padding: 0 0 0 10px;
     width: 213px;
     border: none;
     float: left;
@@ -506,6 +509,7 @@ button:hover {
     width: 183px;
     height: 175px;
     margin: 0 40px 20px 0;
+    
     &:hover{
        text-decoration: none;
      }
@@ -580,11 +584,12 @@ button:hover {
   }
   
   input.contact{
+    font-family: helvetica, arial, sans-serif;
     background-color: white;
     width: 425px;
     height: 35px;
     border: 1px solid $GrayText;
-    margin: 0 0 0 0 ;
+    padding: 1px 0 1px 16px;
     
     &:hover{
     box-shadow: 0 0 2px black;
@@ -592,12 +597,15 @@ button:hover {
   }
       
   textarea{
+    font-family: helvetica, arial, sans-serif;
     position: relative;
+    z-index: 99;
     background-color: white;
     width: 425px;
     height: 100px;
     border: 1px solid $GrayText;
     clear: both;
+    padding: 5px 0 1px 16px;
     
     &:hover{
     box-shadow: 0 0 2px black;
@@ -632,8 +640,7 @@ button:hover {
     display: inline-block;
     line-height: 14px;
     background-repeat: no-repeat;
-    font-size: 14px;
-    vertical-align: middle;
+    font-size: 16px;
     cursor: pointer;
   }
       

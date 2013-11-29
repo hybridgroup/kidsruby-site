@@ -39,17 +39,5 @@
         %li
           %a.download{:href => "https://github.com/hybridgroup/kidsruby-os"} DEPRECATED - KidsRuby OS
           
-        :javascript  
-          $(window).on("resize", function () {  
-            var width = $('body').width();    
-            var leftMargin = width * 0.205;     
-            
-          if ($(window).width() < 463) {               
-              $('a.dl').css('margin-left', leftMargin+'px');  
-              }
-              else {
-              $('a.dl').css({"margin": ""});  
-              };
-          }).resize();
-  
+        
         

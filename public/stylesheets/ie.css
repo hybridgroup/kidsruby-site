@@ -1,21 +1,27 @@
-@media only screen and (max-width: 641px) and (min-width: 1px) {
-  a.red-button {
-    display: block;
-    height: 135px;
-    width: 524px;
-    background: #d02131;
-    overflow: visible;
-    font-family: helvetica, arial;
-    color: white;
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 130px;
-    box-shadow: 5px 10px 0 #bad6e2;
-    margin: 0 0 0 45px;
-  }
-  a.red-button:hover {
-    color: white;
-    box-shadow: 5px 10px 2px #72abc4;
-  }
+a.About {
+  text-align: center;
+  margin-right: 199px;
+}
+
+input[type=checkbox].css-checkbox {
+  position: relative;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 15px;
+  width: 15px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+label.css-label {
+  background-image: none;
+  margin-top: -3px;
+  padding-left: 0;
+  height: 12px;
+  display: inline-block;
+  line-height: 14px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  cursor: pointer;
 }

@@ -183,7 +183,7 @@ a img {
     text-decoration: none;
     color: #c3e2f5;
     font-size: 38px;
-    font-family: 'bender';
+    font-family: 'bender', sans-serif;
     text-shadow: #75441f -2px 2px 1px;
   }
   a.nav:hover {
@@ -320,14 +320,11 @@ a img {
   }
   a.red-button:hover {
     color: white;
+    text-decoration: none;
     box-shadow: 5px 10px 2px #72abc4;
   }
 
-  article.hide {
-    display: none;
-  }
-
-  aside {
+  article.hide, aside {
     display: none;
   }
 
@@ -605,6 +602,7 @@ a img {
   body {
     background-color: #81c2ea;
     max-height: 1000px;
+    font-family: helvetica, arial, sans-serif;
   }
 
   .background {
@@ -612,7 +610,7 @@ a img {
     min-height: 130%;
     background: url("/images/640res.png") no-repeat center top;
     background-size: 100% auto;
-    font-family: helvetica;
+    font-family: helvetica, arial, sans-serif;
     font-size: 100%;
     display: block;
     position: absolute;
@@ -638,7 +636,7 @@ a img {
     background-size: 100% auto;
     width: 110%;
     min-height: 200%;
-    padding-left: 35%;
+    padding-left: 25%;
     margin-top: -7%;
   }
 
@@ -664,7 +662,7 @@ a img {
     text-decoration: none;
     color: #d02131;
     font-size: 38px;
-    font-family: 'bender';
+    font-family: 'bender', sans-serif;
     border-bottom: 2px solid rgba(0, 0, 0, 0.15);
     text-shadow: #a6a6a6 -1px 2px 0;
   }
@@ -889,13 +887,14 @@ a img {
     height: auto;
     max-width: 500px;
     text-align: center;
+    padding-left: 20px;
   }
 
   a.dl {
     display: inline-block;
     width: 183px;
     height: 175px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 0 10px;
     overflow: hidden;
   }
@@ -1166,6 +1165,7 @@ button:hover {
     -ms-transform: rotate(-360deg);
     -o-transform: rotate(-360deg);
     transform: rotate(-360deg);
+    top: 46px;
   }
 
   .glow {
@@ -1173,7 +1173,7 @@ button:hover {
     -moz-transition-duration: 1s;
     -o-transition-duration: 1s;
     transition-duration: 1s;
-    background: url("/images/glow2.png") no-repeat top;
+    background: url("/images/glow.png") no-repeat top;
     position: relative;
     height: 238px;
     width: 239px;
@@ -1426,7 +1426,7 @@ button:hover {
   }
 
   .counts {
-    margin: 0 0 0 28px;
+    margin: 0 0 0 27px;
     font-size: 21px;
     font-weight: bold;
   }

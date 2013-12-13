@@ -5,6 +5,7 @@ and (min-width : 1px){
   body {
     background-color: $background;
     max-height: 1000px;
+    font-family: helvetica, arial, sans-serif;
   }
   
   .background{
@@ -12,7 +13,7 @@ and (min-width : 1px){
     min-height: 130%;
     background: url("/images/640res.png") no-repeat center top;
     background-size: 100% auto;
-    font-family: helvetica;
+    font-family: helvetica, arial, sans-serif;
     font-size: 100%;
     display: block;
     position: absolute;
@@ -38,7 +39,7 @@ and (min-width : 1px){
     background-size: 100% auto;
     width: 110%;
     min-height: 200%;
-    padding-left: 35%;
+    padding-left: 25%;
     margin-top: -7%;
   }
   
@@ -64,7 +65,7 @@ and (min-width : 1px){
     text-decoration: none;
     color: $red;
     font-size: 38px;
-    font-family: 'bender';
+    font-family: 'bender', sans-serif;
     border-bottom: 2px solid rgba(0,0,0,.15);
     @include text-shadow(lighten(gray, 15%) -1px 2px 0);
   
@@ -278,13 +279,14 @@ and (min-width : 1px){
     height: auto;
     max-width: 500px;
     text-align: center;
+    padding-left: 20px;
   }
 
   a.dl{
     display: inline-block;
     width: 183px;
     height: 175px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding:0 10px;
     overflow: hidden;
     
@@ -491,4 +493,5 @@ and (min-width : 1px){
     clear: both;
     text-align: center;
   }
+  
 }

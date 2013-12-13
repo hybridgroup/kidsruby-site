@@ -80,12 +80,13 @@ button:hover {
     
     &:hover {
       @include rotate(-360deg);
+      top: 46px;
     }
   }
    
   .glow{
     @include transition-duration(1s);
-    background: url("/images/glow2.png") no-repeat top;
+    background: url("/images/glow.png") no-repeat top;
     position: relative;
     height: 238px;
     width: 239px;
@@ -318,7 +319,7 @@ button:hover {
   }
   
   .counts{
-    margin: 0 0 0 28px;
+    margin: 0 0 0 27px;
     font-size: 21px;
     font-weight: bold;
   }

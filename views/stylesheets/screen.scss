@@ -80,12 +80,13 @@ button:hover {
     
     &:hover {
       @include rotate(-360deg);
+      top: 46px;
     }
   }
    
   .glow{
     @include transition-duration(1s);
-    background: url("/images/glow2.png") no-repeat top;
+    background: url("/images/glow.png") no-repeat top;
     position: relative;
     height: 238px;
     width: 239px;
@@ -307,7 +308,7 @@ button:hover {
     display: block;
     float: left;
     width: 50%;
-  }
+  } 
     
   a.icon{
     display: block;
@@ -318,7 +319,7 @@ button:hover {
   }
   
   .counts{
-    margin: 0 0 0 28px;
+    margin: 0 0 0 27px;
     font-size: 21px;
     font-weight: bold;
   }
@@ -476,6 +477,13 @@ button:hover {
   h2, h3, h4, h6{
     color: $paragraph;
   }  
+  
+  h2.osxwarn{ 
+    color:$paragraph; 
+    font-size: 20px;
+    line-height: 25px;
+    padding-bottom: 10px;
+  }
     
   h2{
     font-size: 28px;
@@ -503,6 +511,12 @@ button:hover {
   }
      
 //for download page sprites
+  a.warning{
+     color:$paragraph; 
+    font-size: 20px;
+    text-decoration: underline;
+  }
+
   a.dl{
     display: block;
     float: left;
@@ -690,3 +704,4 @@ button:hover {
 
 //section ends<<<<<<<<<<
  
+

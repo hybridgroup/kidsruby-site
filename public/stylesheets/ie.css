@@ -1,6 +1,9 @@
-a.About {
-  text-align: center;
-  margin-right: 199px;
+ul.nav li {
+  list-style: none;
+}
+
+div.glow {
+  display: none;
 }
 
 input[type=checkbox].css-checkbox {
@@ -24,4 +27,14 @@ label.css-label {
   background-repeat: no-repeat;
   font-size: 16px;
   cursor: pointer;
+}
+
+.dl-sprites a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 641px) and (min-width: 1px) {
+  header.section-top {
+    margin-top: 320px;
+  }
 }

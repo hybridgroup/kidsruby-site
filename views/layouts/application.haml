@@ -72,7 +72,7 @@
             %a{:href => "http://kidsruby.com"} http://kidsruby.com
 
   %footer
-    © 2013 Hybrid Powered
+    &copy; 2013 Hybrid Powered
     .bottom-border
     %div.bottom
       %img{:src => "/images/kidsRubyBottom.png", :class => "bottom-image"}
@@ -89,16 +89,16 @@
         $.webshims.polyfill();
 
         function blink(){
-            $('.ruby, .ruby-tablet').delay(100).fadeTo(500,0.1).delay(100).fadeTo(500,1, blink);
+          $('.ruby, .ruby-tablet').delay(100).fadeTo(500,0.1).delay(100).fadeTo(500,1, blink);
         }
         $(document).ready(function() {
-             blink();
+          blink();
         });
 
         $(function() {
           var pull    = $('#pull');
-            menu    = $('nav ul');
-            menuHeight  = menu.height();
+          menu    = $('nav ul');
+          menuHeight  = menu.height();
 
           $(pull).on('click', function(e) {
             e.preventDefault();
@@ -106,26 +106,22 @@
           });
 
           $(window).resize(function(){
-                var w = $(window).width();
-                if(w > 641 && menu.is(':hidden')) {
-                  menu.removeAttr('style');
-                }
-            });
+            var w = $(window).width();
+            if(w > 641 && menu.is(':hidden')) {
+              menu.removeAttr('style');
+            }
+          });
         });
 
         //safari margin nav fix for mobile
         $(window).on("resize", function () {
-        var width = $('body').width();
-        var topMargin = width * -0.17;
-
-
+          var width = $('body').width();
+          var topMargin = width * -0.17;
           if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-
-             if ($(window).width() < 642) {
-                $('.nav-button').css('margin-top', topMargin+'px');
-                }
-              }
-              else {
-              };
+            if ($(window).width() < 642) {
+              $('.nav-button').css('margin-top', topMargin+'px');
+            }
+          }
        }).resize();
-= partial :_analytics
+
+  = partial :_analytics

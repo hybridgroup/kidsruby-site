@@ -79,49 +79,49 @@
     %div.mobile
       %img{:src => "/images/640bottom.png", :class => "mobile-image"}
     :javascript
-        $.webshims.setOptions('forms', {
-          overrideMessages: true,
-          replaceValidationUI: true
-        });
-        $.webshims.setOptions({
-          waitReady: false
-        });
-        $.webshims.polyfill();
+      $.webshims.setOptions('forms', {
+        overrideMessages: true,
+        replaceValidationUI: true
+      });
+      $.webshims.setOptions({
+        waitReady: false
+      });
+      $.webshims.polyfill();
 
-        function blink(){
-          $('.ruby, .ruby-tablet').delay(100).fadeTo(500,0.1).delay(100).fadeTo(500,1, blink);
-        }
-        $(document).ready(function() {
-          blink();
-        });
+      function blink(){
+        $('.ruby, .ruby-tablet').delay(100).fadeTo(500,0.1).delay(100).fadeTo(500,1, blink);
+      }
+      $(document).ready(function() {
+        blink();
+      });
 
-        $(function() {
-          var pull    = $('#pull');
-          menu    = $('nav ul');
-          menuHeight  = menu.height();
+      $(function() {
+        var pull    = $('#pull');
+        menu    = $('nav ul');
+        menuHeight  = menu.height();
 
-          $(pull).on('click', function(e) {
-            e.preventDefault();
-            menu.slideToggle();
-          });
-
-          $(window).resize(function(){
-            var w = $(window).width();
-            if(w > 641 && menu.is(':hidden')) {
-              menu.removeAttr('style');
-            }
-          });
+        $(pull).on('click', function(e) {
+          e.preventDefault();
+          menu.slideToggle();
         });
 
-        //safari margin nav fix for mobile
-        $(window).on("resize", function () {
-          var width = $('body').width();
-          var topMargin = width * -0.17;
-          if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-            if ($(window).width() < 642) {
-              $('.nav-button').css('margin-top', topMargin+'px');
-            }
+        $(window).resize(function(){
+          var w = $(window).width();
+          if(w > 641 && menu.is(':hidden')) {
+            menu.removeAttr('style');
           }
-       }).resize();
+        });
+      });
+
+      //safari margin nav fix for mobile
+      $(window).on("resize", function () {
+        var width = $('body').width();
+        var topMargin = width * -0.17;
+        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+          if ($(window).width() < 642) {
+            $('.nav-button').css('margin-top', topMargin+'px');
+          }
+        }
+      }).resize();
 
   = partial :_analytics

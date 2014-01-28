@@ -8,7 +8,7 @@
     <!--[if lt IE 9]>
     %link{:href=>'stylesheets/ie.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
     <![endif]-->
-  
+
     %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"}
     %script{:type => "text/javascript", :src => "javascripts/modernizr-custom.js"}
     %script{:type => "text/javascript", :src => "javascripts/respond.js"}
@@ -16,7 +16,7 @@
     %script{:type => "text/javascript", :src => "javascripts/jquery.lettering.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
     %script{:type => "text/javascript", :src => "javascripts/polyfiller.js"}
-    
+
   %body
     %div.ruby
     .container
@@ -37,28 +37,28 @@
           %a#pull
             %div.ruby-tablet
             .nav-button
-              %span.icon-bar 
-              %span.icon-bar 
-              %span.icon-bar 
-        .background  
-        
-      .wrapper  
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+        .background
+
+      .wrapper
         = yield
-    
-    
+
+
         %aside
           %div.social-buttons
             %div.facebook-button
               %a.icon.icon-FB{:href => "http://www.facebook.com/share.php?u=www.kidsruby.com&title=[KidsRuby]"}
               %span.fbcount.counts
-            %div.twitter-button    
+            %div.twitter-button
               %a.icon.icon-twitter{:href => "http://twitter.com/home?status=KidsRuby+www.kidsruby.com"}
               %span.twittercount.counts
-                
-          %form{:method => 'post', :action => '/newsletter'}        
+
+          %form{:method => 'post', :action => '/newsletter'}
             %fieldset.newsletter
               %label
-                Subscribe to our newsletter to receive the latest news 
+                Subscribe to our newsletter to receive the latest news
                 %span.newsletter about KIDSRUBY
             %fieldset.fields
               %input.email{:name => "email", :type => "email", :placeholder => "", :required => ""}
@@ -69,17 +69,17 @@
             %a.icon-twitterbutton{:href => "http://www.twitter.com/kidsruby"}
             %h3.aside Kids Ruby
             <a class="twitter" href="http://www.twitter.com/kidsruby">@kidsruby</a> Planet Earth!Let's teach kids how to program using Ruby! Programming is fun, and good for you too. <a href="http://kidsruby.com">http://kidsruby.com</a>
-        
-  
-        
-        
+
+
+
+
   %footer
-    © 2013 Hybrid Powered     
+    © 2013 Hybrid Powered
     .bottom-border
     %div.bottom
       %img{:src => "/images/kidsRubyBottom.png", :class => "bottom-image"}
     %div.mobile
-      %img{:src => "/images/640bottom.png", :class => "mobile-image"} 
+      %img{:src => "/images/640bottom.png", :class => "mobile-image"}
     :javascript
         $.webshims.setOptions('forms', {
           overrideMessages: true,
@@ -89,24 +89,24 @@
           waitReady: false
         });
         $.webshims.polyfill();
-        
+
         function blink(){
             $('.ruby, .ruby-tablet').delay(100).fadeTo(500,0.1).delay(100).fadeTo(500,1, blink);
         }
         $(document).ready(function() {
              blink();
         });
-        
+
         $(function() {
           var pull    = $('#pull');
             menu    = $('nav ul');
             menuHeight  = menu.height();
-    
+
           $(pull).on('click', function(e) {
             e.preventDefault();
             menu.slideToggle();
           });
-    
+
           $(window).resize(function(){
                 var w = $(window).width();
                 if(w > 641 && menu.is(':hidden')) {
@@ -114,17 +114,17 @@
                 }
             });
         });
-        
+
         //safari margin nav fix for mobile
-        $(window).on("resize", function () {  
-        var width = $('body').width();    
-        var topMargin = width * -0.17;     
+        $(window).on("resize", function () {
+        var width = $('body').width();
+        var topMargin = width * -0.17;
 
 
-          if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {  
-          
-             if ($(window).width() < 642) {                 
-                $('.nav-button').css('margin-top', topMargin+'px');  
+          if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+
+             if ($(window).width() < 642) {
+                $('.nav-button').css('margin-top', topMargin+'px');
                 }
               }
               else {

@@ -1544,15 +1544,6 @@ button:hover {
     font-size: 14px;
   }
 
-  div.twitter {
-    display: block;
-    position: absolute;
-    width: 278px;
-    top: 650px;
-    left: 620px;
-    z-index: 99;
-  }
-
   footer {
     position: relative;
     margin-top: -50px;

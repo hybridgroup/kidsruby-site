@@ -3,10 +3,10 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "compass";
- 
+
 // This import applies a global reset to any page that imports this stylesheet.
 @import "blueprint/reset";
- 
+
 // To configure blueprint, edit the partials/_base.sass file.
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
 @import "partials/variables";
@@ -15,10 +15,10 @@
 @import "partials/tablet";
 @import "partials/mobile";
 
- 
+
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
- 
+
 // Import the non-default scaffolding module.
 @import "blueprint/scaffolding";
 @import "compass/reset/utilities";
@@ -39,13 +39,13 @@ button:hover {
   cursor: pointer;
 }
 @media only screen and (min-width: 769px) {
- 
+
   body {
     background: url("/images/kidsRubyTop.png") no-repeat center top;
     background-color: $background;
     font-family: 'Open Sans', helvetica, arial, sans-serif;
   }
-  
+
   .ruby{
     background: url("/images/rubyglow.png") no-repeat ;
     position: relative;
@@ -56,8 +56,8 @@ button:hover {
     margin: 0 auto;
     z-index:999;
   }
-  
-  .logo{ 
+
+  .logo{
     height: 238px;
     width: 239px;
     float: left;
@@ -65,8 +65,8 @@ button:hover {
     right: 10px;
     top:-173px;
   }
-   
-  a.kidsruby{ 
+
+  a.kidsruby{
     @include transition-duration(1s);
     background: url("/images/weblogo.png") no-repeat top;
     height: 165px;
@@ -77,29 +77,29 @@ button:hover {
     z-index: 10;
     left: 34px;
     top: 40px;
-    
+
     &:hover {
       @include rotate(-360deg);
       top: 46px;
     }
   }
-   
+
   .glow{
     @include transition-duration(1s);
     background: url("/images/glow.png") no-repeat top;
     position: relative;
     height: 238px;
     width: 239px;
-    top: -42px; 
+    top: -42px;
     right: 35px;
     opacity: 0;
     z-index: -9;
-  
+
     &:hover{
       opacity:1;
     }
   }
-  
+
   nav{
     float: left;
     width: 100%;
@@ -109,7 +109,7 @@ button:hover {
     top: -30px;
     z-index: 0;
   }
-  
+
   ul.nav{
     list-style-type: none;
   }
@@ -134,9 +134,9 @@ button:hover {
     margin: 0 106px 0 0;
     top:0;
     }
-    a.active{ 
+    a.active{
        margin-top: -7px;
-    }   
+    }
     a:hover{
       margin-top: -7px;
     }
@@ -148,24 +148,24 @@ button:hover {
     width: 61px;
     margin: 0 20px 0 110px;
     }
-    a.active{ 
+    a.active{
        margin-top: -7px;
-    }   
+    }
     a:hover{
       margin-top: -7px;
     }
-  
+
   a.About{
     @extend %a;
       padding: 15px 43px 18px 43px;
-      margin-right:20px ;  
+      margin-right:20px ;
       margin-left:-1px;
-  } 
-   
+  }
+
   a.Download{
     @extend %a;
     padding: 15px 63px 18px 24px;
-    margin-right: 20px; 
+    margin-right: 20px;
     margin-left:-1px;
     width: 58px;
   }
@@ -176,18 +176,18 @@ button:hover {
     margin-left:  -1px;
     width: 56px;
   }
-   
+
   .container {
     margin: 0 auto;
     width: 940px;
     position: relative;
     min-height: 100%;
   }
-  
+
   header.top{
     height: 0;
   }
- 
+
   //home
   header.section-top{
     @include border-top-radius(15px);
@@ -202,7 +202,7 @@ button:hover {
     position: relative;
     z-index: 1;
   }
-  
+
   .wrapper{
     @include border-radius(15px);
     float: left;
@@ -213,34 +213,34 @@ button:hover {
     margin: -45px 0 280px 0;
     position: relative;
   }
-  
+
   section.main{
-    @include border-bottom-left-radius(15px); 
+    @include border-bottom-left-radius(15px);
     display: block;
     float: left;
-    background-color: $white; 
+    background-color: $white;
     min-height: 100%;
     padding: 0 40px 150px 100px;
     position: relative;
     z-index: 1;
     width: 470px;
-  }  
+  }
 
   .button{
     height: 165px;
     background-color: $FormBlue;
   }
-  
+
   p.button-top{
     font-family: helvetica, arial, sans-serif;
     font-size: 24px;
     color: $ParagraphDark;
     font-weight: bold;
-    padding: 24px 40px 25px; 
+    padding: 24px 40px 25px;
   }
-        
+
   a.red-button{
-    @include border-radius(10px); 
+    @include border-radius(10px);
     text-decoration:none;
     margin: 0 auto;
     display: block;
@@ -254,7 +254,7 @@ button:hover {
     font-size: 18px;
     font-weight: normal;
     line-height: 50px;
-    
+
     &:hover{
       box-shadow: 4px 4px 2px darken($ButtonShadow, 20%);
     }
@@ -262,34 +262,34 @@ button:hover {
       box-shadow: 4px 4px 8px darken($ButtonShadow, 50%);
     }
   }
-  
+
   h1.article-head{
     color: $paragraph;
     font-family: helvetica, arial, sans-serif;
     font-weight: bold;
     font-size: 17px;
     line-height: 28px;
-    padding-top: 40px;  
+    padding-top: 40px;
   }
-        
+
   time{
     font: 14px/28px bold 'Open Sans', sans-serif;
     color: $red;
   }
-        
+
   p.article{
     font-family: helvetica, arial;
     font-size: 17px;
     line-height: 28px;
     color: $GrayText;
     font-weight: normal;
-    padding-top: 10px;  
+    padding-top: 10px;
     z-index: 1;
     text-align: justify;
-  }   
-    
+  }
+
   aside{
-    @include border-bottom-right-radius(15px); 
+    @include border-bottom-right-radius(15px);
     display: inline-block;
     width: 270px;
     float:right;
@@ -298,18 +298,18 @@ button:hover {
     background: $white;
     top: 0;
   }
-  
+
   .social-buttons{
     width: 269px;
     height:110px;
-  }  
-    
+  }
+
   .facebook-button, .twitter-button{
     display: block;
     float: left;
     width: 50%;
-  } 
-    
+  }
+
   a.icon{
     display: block;
     float: left;
@@ -317,19 +317,19 @@ button:hover {
     width: 91px;
     margin: 0 30px 10px 0;
   }
-  
+
   fieldset.newsletter{
     font-size: 16px;
     line-height: 23px;
     color: $paragraph;
     margin: 0 0 10px 0;
   }
-  
+
   span.newsletter{
     font-size: 20px;
     color:$red;
   }
-      
+
   fieldset.fields{
     height: 25px;
     width: 250px;
@@ -339,7 +339,7 @@ button:hover {
     margin: 0 0 20px -3px ;
     border: solid 6px $FormBlue;
   }
-  
+
   input.email{
     padding:0;
     height: 25px;
@@ -349,7 +349,7 @@ button:hover {
     border: none;
     float: left;
    }
-        
+
   input.fields{
     position: absolute;
     display: block;
@@ -363,7 +363,7 @@ button:hover {
     width: 34px;
     top: 0;
     right: 0;
-    
+
     &:hover{
       cursor: pointer;
       box-shadow: 0 0 5px $InputShadow
@@ -373,41 +373,41 @@ button:hover {
       box-shadow: 0 0 10px lighten($InputShadow, 10%);
     }
   }
-      
+
   header.aside{
     font-weight: bold;
     color: $ParagraphDark;
   }
-     
+
   .icon-twitterbutton{
     @include transition-duration(1s);
     float: left;
     height: 59px;
     margin: 6px 10px 75px 0;
     width: 62px;
-    
+
     &:hover {
       @include rotate(-10deg);
     }
   }
-  
+
   .small-logo{
     margin: 20px 0 0 0;
     font-size: 13px;
     line-height: 20px;
-    font-weight: bold; 
+    font-weight: bold;
     color: $GrayText;
   }
-  
+
   a.twitter{
     color: $paragraph;
   }
-    
+
   h3.aside{
     color: $red;
     font-size:14px;
   }
-  
+
   div.twitter{
     display: block;
     position: absolute;
@@ -416,10 +416,10 @@ button:hover {
     left: 620px;
     z-index: 99;
   }
-  
+
   footer{
     position: relative;
-    margin-top: -50px; 
+    margin-top: -50px;
     height: 50px;
     clear:both;
     text-align: center;
@@ -429,84 +429,84 @@ button:hover {
     color: black;
     font-size: 14px;
   }
-  
+
   //footer image
   .bottom{
     display: inline-block;
     margin: 0 auto;
     position: relative;
-    z-index: 9;  
+    z-index: 9;
     min-width: 940px;
    }
-   
+
   img.bottom-image {
     margin: 0 auto;
     position: absolute;
     float: left;
     z-index: 9;
     bottom: 18px;
-    left: -31px;  
+    left: -31px;
     min-width: 940px;
   }
-  
+
   //footer image for mobile layout
   .mobile{
     display: none;
-  }  
-  
+  }
+
   //About, Download, Contact
   article.title{
     width: 470px;
     padding: 0 40px 0 0;
     font-weight: bold;
   }
-  
+
   h1.heading{
     font-size: 40px;
     line-height: 30px;
     padding: 0 0 20px 0;
     color: $Button;
   }
-    
+
   h2, h3, h4, h6{
     color: $paragraph;
-  }  
-  
-  h2.osxwarn{ 
-    color:$paragraph; 
+  }
+
+  h2.osxwarn{
+    color:$paragraph;
     font-size: 20px;
     line-height: 25px;
     padding-bottom: 10px;
   }
-    
+
   h2{
     font-size: 28px;
     line-height: 42px;
     padding: 0 0 5px 0;
   }
-  
+
   h3{
     font-size: 24px;
   }
-  
+
   h4{
     font-size: 18px;
   }
- 
+
   h5{
     font-size: 18px;
     color: $DarkBlue;
     margin-left: -2px;
-  } 
- 
+  }
+
   h6{
     font-size: 18px;
     margin: 0 0 20px 0;
   }
-     
+
 //for download page sprites
   a.warning{
-     color:$paragraph; 
+     color:$paragraph;
     font-size: 20px;
     text-decoration: underline;
   }
@@ -517,16 +517,16 @@ button:hover {
     width: 183px;
     height: 175px;
     margin: 0 40px 20px 0;
-    
+
     &:hover{
        text-decoration: none;
      }
   }
-  
+
   a.dl.fourth{
     margin-bottom: 37px;
   }
-  
+
   span.windows-version, span.mac-version, span.pi-version, span.de-version {
     color: white;
     font-size: 12px;
@@ -536,52 +536,52 @@ button:hover {
     left: 94px;
     position: relative;
   }
-  
+
   span.mac-version{
     top: 90px;
     left: 107px;
   }
-  
+
   span.pi-version{
     top: 86px;
     left: 87px;
   }
-  
+
   span.de-version{
     top: 86px;
     left: 88px;
   }
-  
+
   article.page{
     width: 470px;
     padding: 30px 40px 0 0;
     font-family: 'Open Sans', sans-serif;
   }
-  
+
   p{
     color: $GrayText;
   }
-  
+
   p.dl{
     color: #6e7d86;
     margin: -15px 0 15px 0;
   }
-  
+
   ul.download{
     list-style: none;
   }
-  
+
   a.download{
     line-height: 30px;
     text-decoration: underline;
     color: $Button;
   }
-  
+
   //contact
   form.sign-up {
     margin: 5px 15px 0px;
   }
-  
+
   fieldset.top {
     height: 41px;
     width: 425px;
@@ -590,7 +590,7 @@ button:hover {
     position: relative;
     margin: 30px 0 5px 0;
   }
-  
+
   input.contact{
     font-family: helvetica, arial, sans-serif;
     background-color: white;
@@ -598,12 +598,12 @@ button:hover {
     height: 35px;
     border: 1px solid $GrayText;
     padding: 1px 0 1px 16px;
-    
+
     &:hover{
     box-shadow: 0 0 2px black;
     }
   }
-      
+
   textarea{
     font-family: helvetica, arial, sans-serif;
     position: relative;
@@ -614,12 +614,12 @@ button:hover {
     border: 1px solid $GrayText;
     clear: both;
     padding: 5px 0 1px 16px;
-    
+
     &:hover{
     box-shadow: 0 0 2px black;
     }
   }
-      
+
   fieldset.send{
     color: $paragraph;
     top: 535px;
@@ -628,7 +628,7 @@ button:hover {
     display:block;
     float: right;
   }
-    
+
   input[type=checkbox].css-checkbox {
     position: absolute;
     overflow: hidden;
@@ -639,7 +639,7 @@ button:hover {
     padding: 0;
     border: 0;
   }
-      
+
   label.css-label {
     background-image: url("/images/checkbox.png");
     margin-top: -3px;
@@ -651,17 +651,17 @@ button:hover {
     font-size: 16px;
     cursor: pointer;
   }
-      
+
   input[type=checkbox].css-checkbox:checked + label.css-label {
     background-position: 0 -12px;
   }
-    
+
   fieldset.thankyou{
     display: none;
     float: left;
     font-size: 24px;
   }
-  
+
   fieldset.submit{
     padding: 0 0 0 65px;
     position: relative;
@@ -671,9 +671,9 @@ button:hover {
     z-index: 10;
     margin-bottom: 100px;
   }
-  
+
   input.submit{
-    @include border-radius(10px); 
+    @include border-radius(10px);
     height: 43px;
     width: 265px;
     background: $Button;
@@ -684,12 +684,12 @@ button:hover {
     font-weight: normal;
     line-height: 25px;
     border: none;
-      
+
     &:hover{
       box-shadow: 2px 2px 2px darken($ButtonShadow, 20%);
       cursor: pointer;
     }
-    
+
     &:active{
       box-shadow: 2px 2px 4px darken($ButtonShadow, 50%);
     }
@@ -697,4 +697,4 @@ button:hover {
 }
 
 //section ends<<<<<<<<<<
- 
+

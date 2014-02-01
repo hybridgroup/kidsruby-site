@@ -1143,7 +1143,7 @@ button:hover {
 
 @media only screen and (min-width: 769px) {
   body {
-    background: url("/images/kidsRubyTop.png") no-repeat center top;
+    background: url("/images/background.png") no-repeat center top;
     background-color: #81c2ea;
     font-family: 'Open Sans', helvetica, arial, sans-serif;
   }

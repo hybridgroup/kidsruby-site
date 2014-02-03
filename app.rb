@@ -17,10 +17,18 @@ set :root, File.dirname(__FILE__)
 set :views, 'views'
 set :public, 'public'
 set :haml, {:format => :html5 } # Get with the program. Start using HTML5. Comment out if you're not ready.
+# enable :sessions
 
 # Configure Compass
 configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config.rb'))
+end
+
+# Helpers
+helpers do
+  def kids_rotation
+    "hello world!"
+  end
 end
 
 # At a minimum the main sass file must reside within the views directory

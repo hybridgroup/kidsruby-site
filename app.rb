@@ -17,7 +17,12 @@ set :root, File.dirname(__FILE__)
 set :views, 'views'
 set :public, 'public'
 set :haml, {:format => :html5 } # Get with the program. Start using HTML5. Comment out if you're not ready.
-# enable :sessions
+
+enable :sessions
+use Rack::Session::Cookie,  :key  => 's3cr3tk3y',
+                            :path => '/',
+                            :expire_after => 14400, # In seconds
+                            :secret => '53cr3t_5tuff'
 
 # Configure Compass
 configure do
@@ -27,7 +32,29 @@ end
 # Helpers
 helpers do
   def kids_rotation
-    "hello world!"
+    race   = [1, 2, 3, 4]
+    gender = [0, 1]
+
+    if session["small_gender"] == nil
+      session["big_gender"] = gender.sample
+      session["big_race"]   = race.sample
+    else
+      session["big_gender"] = session["small_gender"]
+      session["big_race"]   = session["small_race"]
+    end
+
+    race.delete_at(session["big_race"] - 1)
+    session["small_race"]   = race.sample
+    
+    if session["big_gender"] == 1
+      session["small_gender"] = 0
+    else
+      session["small_gender"] = 1
+    end
+
+     '  <div class="kid-small"><img src="/images/kids/small-' + session["small_gender"].to_s() + '-' + session["small_race"].to_s() + '.png" alt=""></div>
+        <div class="kid-big"><img src="/images/kids/big-' + session["big_gender"].to_s() + '-' + session["big_race"].to_s() + '.png" alt=""></div>
+     '
   end
 end
 

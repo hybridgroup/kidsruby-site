@@ -1168,6 +1168,24 @@ button:hover {
     top: -173px;
   }
 
+  .kid-small {
+    height: 220px;
+    width: 125px;
+    background: url("/images/kids/small-1-3.png") no-repeat;
+    position: absolute;
+    left: 230px;
+    top: -65px;
+  }
+
+  .kid-big {
+    height: 275px;
+    width: 208px;
+    background: url("/images/kids/big-0-1.png") no-repeat;
+    position: absolute;
+    left: 393px;
+    top: -119px;
+  }
+
   a.kidsruby {
     -webkit-transition-duration: 1s;
     -moz-transition-duration: 1s;

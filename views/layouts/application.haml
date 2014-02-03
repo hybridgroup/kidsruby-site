@@ -18,13 +18,14 @@
     %script{:type => "text/javascript", :src => "javascripts/polyfiller.js"}
 
   %body
-    %div.ruby
     .container
       %header.top
-        = kids_rotation
         %div.logo
           %a.kidsruby{:href => '/'}
             %div.glow
+        %div.kids-container
+          %div.ruby
+          = kids_rotation
         %nav
           %ul.nav
             %li

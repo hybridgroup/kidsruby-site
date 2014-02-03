@@ -1149,14 +1149,14 @@ button:hover {
   }
 
   .ruby {
-    background: url("/images/rubyglow.png") no-repeat;
+    background: url("/images/rubyglow-complete.png") no-repeat center center;
     position: relative;
-    width: 129px;
+    width: 153px;
     height: 153px;
-    left: 111px;
-    top: 52px;
+    left: 126px;
+    top: 170px;
     margin: 0 auto;
-    z-index: 999;
+    z-index: 998;
   }
 
   .logo {
@@ -1165,23 +1165,36 @@ button:hover {
     float: left;
     position: relative;
     right: 10px;
-    top: -173px;
+    top: -20px;
+  }
+
+  .kids-container {
+    margin: 0 auto;
+    width: 418px;
+    height: 391px;
+    position: relative;
+    z-index: 990;
+    top: -111px;
+    left: 0px;
+    float: left;
   }
 
   .kid-small {
     height: 220px;
     width: 125px;
-    position: absolute;
-    left: 230px;
-    top: -65px;
+    position: relative;
+    z-index: 999;
+    top: 50px;
+    float: left;
+    margin-right: 30px;
   }
 
   .kid-big {
     height: 275px;
     width: 208px;
-    position: absolute;
-    left: 393px;
-    top: -119px;
+    position: relative;
+    z-index: 999;
+    float: left;
   }
 
   a.kidsruby {

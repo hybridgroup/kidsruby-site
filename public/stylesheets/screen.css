@@ -113,8 +113,12 @@ a img {
     overflow-x: hidden;
   }
 
+  .desktop {
+    display: none;
+  }
+
   .background {
-    background: url("/images/768res.png") no-repeat center top;
+    background: url("/images/bg768.png") no-repeat center top;
     position: relative;
     width: 768px;
     left: -75px;
@@ -135,6 +139,35 @@ a img {
   .logo {
     height: 122px;
     width: 120px;
+  }
+
+  .kids-container {
+    margin: 0 auto;
+    width: 336px;
+    height: 350px;
+    position: relative;
+    z-index: 990;
+    top: 2px;
+    left: 78px;
+    float: left;
+  }
+
+  .kid-small {
+    height: 220px;
+    width: 125px;
+    position: relative;
+    z-index: 999;
+    top: 50px;
+    float: left;
+    margin-right: 3px;
+  }
+
+  .kid-big {
+    height: 275px;
+    width: 208px;
+    position: relative;
+    z-index: 999;
+    float: left;
   }
 
   a.kidsruby {
@@ -615,6 +648,10 @@ a img {
     background-color: #81c2ea;
     max-height: 1000px;
     font-family: helvetica, arial, sans-serif;
+  }
+
+  .desktop {
+    display: none;
   }
 
   .background {
@@ -1146,6 +1183,10 @@ button:hover {
     background: url("/images/background.png") no-repeat center top;
     background-color: #81c2ea;
     font-family: 'Open Sans', helvetica, arial, sans-serif;
+  }
+
+  .tablet-mobile {
+    display: none;
   }
 
   .ruby {

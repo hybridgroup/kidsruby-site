@@ -45,7 +45,7 @@ helpers do
 
     race.delete_at(session["big_race"] - 1)
     session["small_race"]   = race.sample
-    
+
     if session["big_gender"] == 1
       session["small_gender"] = 0
     else
@@ -69,24 +69,28 @@ end
 
 get '/about' do
   @current_page = "about"
+  @kids = kids_rotation
   haml :about, :layout => :'layouts/application'
 end
 
 
 get '/' do
   @current_page = "home"
+  @kids = kids_rotation
   haml :home, :layout => :'layouts/application'
 end
 
 
 get '/download' do
   @current_page = "download"
+  @kids = kids_rotation
   haml :download, :layout => :'layouts/application'
 end
 
 
 get '/contact' do
   @current_page = "contact"
+  @kids = kids_rotation
   haml :contact, :layout => :'layouts/application'
 end
 

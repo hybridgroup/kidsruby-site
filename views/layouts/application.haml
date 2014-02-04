@@ -23,9 +23,9 @@
         %div.logo
           %a.kidsruby{:href => '/'}
             %div.glow
-        %div.kids-container
+        %div.kids-container.desktop
           %div.ruby
-          = kids_rotation
+          = @kids
         %nav
           %ul.nav
             %li
@@ -43,6 +43,8 @@
               %span.icon-bar
               %span.icon-bar
         .background
+          %div.kids-container.tablet-mobile
+            = @kids
 
       .wrapper
         = yield

@@ -126,11 +126,11 @@ a img {
   }
 
   .ruby-tablet {
-    background: url("/images/rubyglow_tablet.png") no-repeat;
+    background: url("/images/rubyglow-tablet.png") no-repeat center center;
     position: relative;
-    width: 114px;
+    width: 131px;
     height: 131px;
-    left: 12px;
+    left: 2px;
     top: 33px;
     margin: 0 auto;
     z-index: 999;
@@ -147,7 +147,7 @@ a img {
     height: 350px;
     position: relative;
     z-index: 990;
-    top: 2px;
+    top: 4px;
     left: 78px;
     float: left;
   }

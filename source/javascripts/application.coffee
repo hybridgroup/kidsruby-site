@@ -1,4 +1,30 @@
 $(document).ready ->
+  # // kids rotation 
+  race   = new Array(1, 2 ,3, 4)
+  render = new Array(0, 1)
+  
+  if !$.cookie('small_gender')
+    big_gender = Math.floor(Math.random() * 2)
+    big_race   = Math.floor(Math.random() * 4) + 1
+  else
+    big_gender = $.cookie('small_gender')
+    big_race   = $.cookie('small_race')
+  
+  loop
+    small_race = Math.floor(Math.random() * 4) + 1
+    break if (small_race != big_race)
+
+  loop
+    small_gender = Math.floor(Math.random() * 2)
+    break if (small_gender != big_gender)
+
+  $('.kid-small > img').attr src: 'images/kids/small-' + small_gender + '-' + small_race + '.png'
+  $('.kid-big > img').attr src: 'images/kids/big-' + big_gender + '-' + big_race + '.png'
+
+  $.cookie('small_gender', small_gender)
+  $.cookie('small_race', small_race)
+  
+
   # // Open external links in a new window
   hostname = window.location.hostname
   $("a[href^=http]")

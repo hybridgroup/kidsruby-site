@@ -14,6 +14,7 @@
     %script{:type => "text/javascript", :src => "javascripts/respond.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.form.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.lettering.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.cookie.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
     %script{:type => "text/javascript", :src => "javascripts/polyfiller.js"}
 
@@ -25,7 +26,10 @@
             %div.glow
         %div.kids-container.desktop
           %div.ruby
-          = @kids
+          %div.kid-small
+            %img{:src => "images/kids/small-0-1.png"}
+          %div.kid-big
+            %img{:src => "images/kids/big-1-4.png"}
         %nav
           %ul.nav
             %li
@@ -44,7 +48,10 @@
               %span.icon-bar
         .background
           %div.kids-container.tablet-mobile
-            = @kids
+            %div.kid-small
+              %img{:src => "images/kids/small-0-1.png"}
+            %div.kid-big
+              %img{:src => "images/kids/big-1-4.png"}
 
       .wrapper
         = yield

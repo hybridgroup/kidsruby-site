@@ -1,14 +1,13 @@
 $(document).ready ->
   # // kids rotation 
-  race   = new Array(1, 2 ,3, 4)
-  render = new Array(0, 1)
+  small_gender = $.cookie('small_gender')
   
-  if !$.cookie('small_gender')
+  if small_gender is '' 
     big_gender = Math.floor(Math.random() * 2)
     big_race   = Math.floor(Math.random() * 4) + 1
   else
-    big_gender = $.cookie('small_gender')
-    big_race   = $.cookie('small_race')
+    big_gender = parseInt( $.cookie('small_gender') )
+    big_race   = parseInt( $.cookie('small_race') )
   
   loop
     small_race = Math.floor(Math.random() * 4) + 1

@@ -41,33 +41,8 @@
 # activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
-helpers do
-  def kids_rotation
-    race   = [1, 2, 3, 4]
-    gender = [0, 1]
-
-    if session["small_gender"] == nil
-      session["big_gender"] = gender.sample
-      session["big_race"]   = race.sample
-    else
-      session["big_gender"] = session["small_gender"]
-      session["big_race"]   = session["small_race"]
-    end
-
-    race.delete_at(session["big_race"] - 1)
-    session["small_race"]   = race.sample
-
-    if session["big_gender"] == 1
-      session["small_gender"] = 0
-    else
-      session["small_gender"] = 1
-    end
-
-     '  <div class="kid-small"><img src="/images/kids/small-' + session["small_gender"].to_s() + '-' + session["small_race"].to_s() + '.png" alt=""></div>
-        <div class="kid-big"><img src="/images/kids/big-' + session["big_gender"].to_s() + '-' + session["big_race"].to_s() + '.png" alt=""></div>
-     '
-  end
-end
+# helpers do
+# end
 
 set :css_dir, 'stylesheets'
 
@@ -102,4 +77,7 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+
+  # Enable blog
+  activate :blog
 end

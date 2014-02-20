@@ -1,6 +1,6 @@
 ---
 title: The Kids Programming Class at BarcampLA Was Excellent
-date: 2011-05-16
+date: 2011-05-01
 tags: conferences
 ---
 

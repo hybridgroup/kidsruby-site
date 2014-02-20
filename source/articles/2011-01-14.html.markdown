@@ -1,6 +1,6 @@
 ---
 title: A little more detail?
-date: 2011-01-15
+date: 2011-01-14
 tags: kidsruby
 ---
 

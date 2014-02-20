@@ -2,7 +2,7 @@ $(document).ready ->
   # // kids rotation 
   small_gender = $.cookie('small_gender')
   
-  if small_gender is '' 
+  if isNaN parseInt(small_gender)
     big_gender = Math.floor(Math.random() * 2)
     big_race   = Math.floor(Math.random() * 4) + 1
   else

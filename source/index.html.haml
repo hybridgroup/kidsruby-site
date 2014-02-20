@@ -8,6 +8,13 @@
     %p.button-top
       Free and works on any computer.
     %a.red-button{:href => "/download"} Click here to Download
+
+  %section
+    - page_articles.each_with_index do |article, i|
+      %article
+        %h1.article-head= article.title
+        %time= article.date.strftime('%A, %b. %e %Y')
+        = article.body
   
   %section.firstPage
     %article.hide

@@ -1,4 +1,7 @@
-
+---
+pageable: true
+per_page: 5
+---
 %header.section-top
   %h2.title Have fun and make games, or hack your homework using Ruby!  Just tell your parents or teachers you're learning Ruby programming... ;)
 
@@ -13,6 +16,13 @@
     - page_articles.each_with_index do |article, i|
       %article
         %h1.article-head= article.title
-        %time= article.date.strftime('%A, %b. %e %Y')
+        %time{:datetime => article.date}= article.date.strftime('%A, %b. %e %Y')
         = article.body
-
+  
+  %div.pagination
+    %div.left
+      - if prev_page
+        = link_to 'Recent posts', prev_page
+    %div.right
+      - if next_page
+        = link_to 'Previous posts', next_page

@@ -1206,6 +1206,25 @@ button:hover {
   cursor: pointer;
 }
 
+.pagination {
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.pagination .left {
+  width: 50%;
+  float: left;
+}
+
+.pagination .right {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+
+
+
 @media only screen and (min-width: 769px) {
   body {
     background: url("/images/background.png") no-repeat center top;

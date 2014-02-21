@@ -17,8 +17,8 @@ $(document).ready ->
     small_gender = Math.floor(Math.random() * 2)
     break if (small_gender != big_gender)
 
-  $('.kid-small > img').attr src: 'images/kids/small-' + small_gender + '-' + small_race + '.png'
-  $('.kid-big > img').attr src: 'images/kids/big-' + big_gender + '-' + big_race + '.png'
+  $('.kid-small > img').attr src: '/images/kids/small-' + small_gender + '-' + small_race + '.png'
+  $('.kid-big > img').attr src: '/images/kids/big-' + big_gender + '-' + big_race + '.png'
 
   $.cookie('small_gender', small_gender)
   $.cookie('small_race', small_race)

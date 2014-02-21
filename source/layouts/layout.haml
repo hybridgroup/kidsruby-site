@@ -2,21 +2,22 @@
 %html.no-js{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
   %head
     %title= @title || "Kidsruby.com"
+    = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     %meta{content: "width=device-width, initial-scale=1.0, minimum-scale=1.0", name: "viewport"}
-    %link{:href=>'stylesheets/print.css', :rel => 'stylesheet', :media => "print", :type => "text/css"}
-    %link{:href=>'stylesheets/screen.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
+    %link{:href=>'/stylesheets/print.css', :rel => 'stylesheet', :media => "print", :type => "text/css"}
+    %link{:href=>'/stylesheets/screen.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
     <!--[if lt IE 9]>
-    %link{:href=>'stylesheets/ie.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
+    %link{:href=>'/stylesheets/ie.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
     <![endif]-->
 
     %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"}
-    %script{:type => "text/javascript", :src => "javascripts/modernizr-custom.js"}
-    %script{:type => "text/javascript", :src => "javascripts/respond.js"}
-    %script{:type => "text/javascript", :src => "javascripts/jquery.form.js"}
-    %script{:type => "text/javascript", :src => "javascripts/jquery.lettering.js"}
-    %script{:type => "text/javascript", :src => "javascripts/jquery.cookie.js"}
-    %script{:type => "text/javascript", :src => "javascripts/application.js"}
-    %script{:type => "text/javascript", :src => "javascripts/polyfiller.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/modernizr-custom.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/respond.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/jquery.form.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/jquery.lettering.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/jquery.cookie.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/application.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/polyfiller.js"}
 
   %body
     .container

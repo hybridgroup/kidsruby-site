@@ -12,14 +12,14 @@ per_page: 5
       Free and works on any computer.
     %a.red-button{:href => "/download"} Click here to Download
 
-  %section
+  %section.firstPage
     - page_articles.each_with_index do |article, i|
-      %article
+      %article.hide
         %h1.article-head= article.title
         %time{:datetime => article.date}= article.date.strftime('%A, %b. %e %Y')
         = article.body
-  
-  %div.pagination
+
+  %section.pagination
     %div.left
       - if prev_page
         = link_to 'Recent posts', prev_page

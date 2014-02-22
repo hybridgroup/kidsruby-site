@@ -1207,20 +1207,7 @@ button:hover {
 }
 
 .pagination {
-  margin-top: 20px;
-  width: 100%;
-  position: relative;
-}
-
-.pagination .left {
-  width: 50%;
-  float: left;
-}
-
-.pagination .right {
-  width: 50%;
-  float: right;
-  text-align: right;
+  display: none;
 }
 
 
@@ -1931,6 +1918,24 @@ button:hover {
   }
   input.submit:active {
     box-shadow: 2px 2px 4px #2e5b6f;
+  }
+
+  .pagination {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+  }
+
+  .pagination .left {
+    width: 50%;
+    float: left;
+  }
+
+  .pagination .right {
+    width: 50%;
+    float: right;
+    text-align: right;
   }
 }
 

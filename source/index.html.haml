@@ -16,9 +16,9 @@ layout: layout
   %section.firstPage
     - page_articles.each_with_index do |article, i|
       %article.hide
-        %h1.article-head= article.title
+        %h1.article-head= link_to article.title, article.title
         %time{:datetime => article.date}= article.date.strftime('%A, %b. %e %Y')
-        = article.body
+        = article.summary(250)
 
   %section.pagination
     %div.left

@@ -1,6 +1,7 @@
 ---
 pageable: true
 per_page: 5
+layout: layout
 ---
 %header.section-top
   %h2.title Have fun and make games, or hack your homework using Ruby!  Just tell your parents or teachers you're learning Ruby programming... ;)
@@ -17,7 +18,7 @@ per_page: 5
       %article.hide
         %h1.article-head= article.title
         %time{:datetime => article.date}= article.date.strftime('%A, %b. %e %Y')
-        = article.body
+        = %article.body
 
   %section.pagination
     %div.left

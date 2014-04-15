@@ -8,9 +8,8 @@ activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
-  blog.permalink = "{year}/{month}/{day}.html"
   # Matcher for blog source files
-    blog.sources = "articles/{year}-{month}-{day}.html"
+    blog.sources = "articles/{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
     blog.layout = "layouts/layout"
   # blog.summary_separator = /(READMORE)/
@@ -101,3 +100,5 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+

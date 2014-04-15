@@ -18,7 +18,7 @@ layout: layout
       %article.hide
         %h1.article-head= article.title
         %time{:datetime => article.date}= article.date.strftime('%A, %b. %e %Y')
-        = %article.body
+        = article.body
 
   %section.pagination
     %div.left

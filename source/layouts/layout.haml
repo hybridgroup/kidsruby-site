@@ -55,7 +55,13 @@
               %img{:src => ""}
 
       .wrapper
-        = yield
+        - if is_blog_article?
+          %header.section-top
+            %h2.title= current_article.title
+          %section.main
+            = yield
+        - else
+          = yield
 
 
         %aside

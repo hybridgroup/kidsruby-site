@@ -1,4 +1,3 @@
-
 footer{
   position: relative;
   margin-top: -50px; 
@@ -11,7 +10,10 @@ footer{
     z-index: 10;
     height: 37px;
     width: 100%; 
-  } 
+  }
+  @media #{$mq-mobile} { 
+    margin-top: -108px; 
+  }  
 }
 
 //footer image
@@ -23,7 +25,7 @@ footer{
     z-index: 9;
     min-width: 940px;
   }
- }
+}
 
 img.bottom-image {
   @media #{$mq-desktop} {   
@@ -37,28 +39,72 @@ img.bottom-image {
   } 
 }
 
-//footer image for mobile layout
-.mobile{
-   @media #{$mq-desktop} {  
-    display: none;
-   } 
+/*footer image for mobile layout*/
+.mobile{ 
+  display: none;
+
+  @media #{$mq-mobile} {
+    display:block; 
+    position: relative; 
+    clear: both;
+    z-index: 11;
+  } 
 }
 
-@media only screen
-and (max-width : 768px) 
-and (min-width : 642px){
-
-
-  //footer image desktop
-  .bottom{
+ 
+/*footer image desktop */
+@media #{$mq-tablet-mobile} { 
+  .bottom, .pagination{
     display:none;
+  } 
+} 
+
+@media #{$mq-mobile} {  
+  img.mobile-image {
+    width:100%;
+    float: left;
+    right: 1px;
+    position: absolute;
+    z-index: 11;
+    bottom: 15px;
+    display: block;
   }
-  //footer image mobile
-  .mobile{
-    display: none;
-  }
-  .pagination{
-    display: none;
+} 
+
+/* mobile fixes */
+
+@media only screen and (max-width: 560px) and (min-width: 320px) {
+  .kids-container.tablet-mobile {
+    margin: 0 auto;
+    width: 60%;
+    position: relative;
+    z-index: 990;
+    display: block;
+    float: none;
+    clear: both;
   }
 
+  .tablet-mobile .kid-small {
+    max-width: 35%;
+    position: relative;
+    z-index: 999;
+    float: left;
+    display: block;
+    bottom: 0px;
+  }
+
+  .tablet-mobile .kid-big {
+    max-width: 60%;
+    position: relative;
+    z-index: 999;
+    float: left;
+    display: block;
+    bottom: 0px;
+  }
+}
+
+.kid-small img, .kid-big img {
+  max-width: 100% !important;
+  height: auto;
+  display: block;
 }

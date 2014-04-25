@@ -1,42 +1,63 @@
 form.sign-up {
+  font-family: 'Open Sans', sans-serif;
+
   @media #{$mq-desktop} { 
     margin: 5px 15px 0px;
   }
 
   @media #{$mq-tablet} { 
-    font-family: 'Open Sans', sans-serif;
     margin: 0  92px 0px;
     padding: none; 
+  } 
+
+  @media #{$mq-mobile} { 
+    margin: 5px  40px 0px;
   } 
 }
 
 fieldset.top {
   float: left; 
-  height: 41px;
   position: relative;
-  @media #{$mq-desktop} { 
+
+  @media #{$mq-desktop} {
+    height: 41px; 
     width: 425px;
     margin: 30px 0 5px 0;
   } 
+  
   @media #{$mq-tablet} {  
+    height: 41px;
     width: 220px; 
     margin: 30px 0 5px -25px;
     clear: both;
+  }
+
+  @media #{$mq-mobile} { 
+    height: 5%;
+    min-width: 100%; 
+    margin: 30px 0 5px 0;
   } 
 }
 
 input.contact{    
   font-family: helvetica, arial, sans-serif;
   background-color: white;
-  width: 425px;
   height: 35px;
   border: 1px solid $GrayText;
   padding: 1px 0 1px 16px; 
 
-  @media #{$mq-tablet} { 
-    width: 440px;
+  @media #{$mq-desktop} { 
+    width: 425px;
   } 
 
+  @media #{$mq-tablet} { 
+    width: 440px;
+  }
+  @media #{$mq-mobile} { 
+    min-width: 100%;  
+    margin: 0 auto;
+    clear: both;
+  }   
   
   &:hover{
   box-shadow: 0 0 2px black;
@@ -48,34 +69,48 @@ textarea{
   position: relative;
   z-index: 99;
   background-color: white;
-  width: 425px;
   height: 100px;
   border: 1px solid $GrayText;
   clear: both;
-  padding: 5px 0 1px 16px; 
+  padding: 10px 0 1px 15px; 
+
+  @media #{$mq-desktop} { 
+    width: 425px;
+  } 
 
   @media #{$mq-tablet} { 
     width: 440px;
-  }  
+  }
 
+  @media #{$mq-mobile} { 
+    width: 100%;
+  } 
+   
   &:hover{
-  box-shadow: 0 0 2px black;
+    box-shadow: 0 0 2px black;
   }
 }
 
 fieldset.send{
   color: $paragraph;
-  position: absolute;
-
-  @media #{$mq-desktop} {     
+   
+  @media #{$mq-desktop} {    
+    position: absolute; 
     top: 535px;
     left: 116px; 
     float: right;
   } 
-   
+    
   @media #{$mq-tablet} { 
+    position: absolute;
     float: left;
     margin-top: 320px;
+  } 
+
+  @media #{$mq-mobile} { 
+    position: relative; 
+    float: left;
+    margin: 10px 0 0 0;
   } 
 }
 
@@ -88,6 +123,10 @@ input[type=checkbox].css-checkbox {
   margin: -1px;
   padding: 0;
   border: 0;
+
+  @media #{$mq-mobile} { 
+    overflow: show;
+  } 
 }
 
 label.css-label {
@@ -100,9 +139,7 @@ label.css-label {
   background-repeat: no-repeat;
   font-size: 16px;
   cursor: pointer;
-}
-
-
+} 
 
 input[type=checkbox].css-checkbox:checked + label.css-label {
   background-position: 0 -12px;
@@ -115,11 +152,11 @@ fieldset.thankyou{
 }
 
 fieldset.submit{ 
-  float: left;
+  float: left; 
+  position:relative;
 
   @media #{$mq-desktop} { 
-    padding: 0 0 0 65px;
-    position: relative; 
+    padding: 0 0 0 65px; 
     top: 130px;
     z-index: 10;
     margin-bottom: 100px;
@@ -128,10 +165,14 @@ fieldset.submit{
   @media #{$mq-tablet} { 
     padding: 132px 0 0 65px; 
   } 
+
+  @media #{$mq-mobile} { 
+    padding: 32px 0 0 5px; 
+    width: 100%
+  } 
 }
 
-input.submit{ 
-  
+input.submit{  
     @include border-radius(10px);
     height: 43px;
     width: 265px;
@@ -146,7 +187,11 @@ input.submit{
  
   @media #{$mq-tablet} { 
     margin-left:18px;
-  } 
+  }
+
+  @media #{$mq-mobile} { 
+    width: 100%;
+  }   
 
   &:hover{
     box-shadow: 2px 2px 2px darken($ButtonShadow, 20%);

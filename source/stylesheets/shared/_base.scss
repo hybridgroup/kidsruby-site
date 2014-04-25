@@ -1,13 +1,16 @@
 a, a:active, a:visited {
   text-decoration: none;
 }
+
 a {
   color: #ff1941;
 }
+
 a:hover {
   color: red;
   text-decoration: underline;
 }
+
 button:hover {
   cursor: pointer;
 }
@@ -17,7 +20,7 @@ body {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
 
   @media #{$mq-desktop} {
-    background: url("/images/background.png") no-repeat center top;
+    background: url("/images/background.png") no-repeat center top;    
     background-color: $background;
   }
   @media #{$mq-tablet-mobile} {  
@@ -32,40 +35,37 @@ body {
   } 
 }
 
- .background {
-    @media #{$mq-tablet} { 
-      background: url("/images/bg768.png") no-repeat center top;
-      position: relative;
-      width: 768px;
-      left: -75px;
-      height: 350px;
-    } 
-
-    @media #{$mq-mobile} { 
-      width: 100%;
-      min-height: 130%;
-      background: url("/images/bg640.png") no-repeat center top;
-      background-size: 100% auto;
-      display: block;
-      position: absolute;
-      z-index: 0;
-    } 
-  }
-
-
+.background {
+  @media #{$mq-tablet} { 
+    background: url("/images/bg768.png") no-repeat center top;
+    position: relative;
+    width: 768px;
+    left: -75px;
+    height: 350px;
+  }  
+  @media #{$mq-mobile} { 
+    width: 100%;
+    min-height: 130%;
+    background: url("/images/bg640.png") no-repeat center top;
+    background-size: 100% auto;
+    display: block;
+    position: absolute;
+    z-index: 0;
+  } 
+}
+ 
 .container {
   margin: 0 auto;
   min-height: 100%;
-  position: relative;
 
   @media #{$mq-desktop} { 
-    width: 940px; 
-  }
-
-  @media #{$mq-tablet} { 
-    width: 614px;
+    width: 940px;  
+    position: relative;
   } 
-
+  @media #{$mq-tablet} { 
+    width: 614px; 
+    position: relative;
+  }  
   @media #{$mq-mobile} { 
     width: 100%;
     min-height: auto;
@@ -85,14 +85,12 @@ header.section-top{
     padding: 35px 100px 30px;
     position: relative;
     z-index: 1;
-  }
-
+  } 
   @media #{$mq-tablet} { 
     background-color: $gb;
     width: 614px;
     margin: 0 0 63px 0;
-  } 
-
+  }
   @media #{$mq-mobile} { 
     width: 100%;
     position: relative;
@@ -117,7 +115,6 @@ header.section-top{
     margin: -45px 0 280px 0;
     min-height: 1300px; 
   }
-
   @media #{$mq-tablet} { 
     box-shadow: 0 0 0 5px darken($gb, 8%);
     margin: -58px auto 10px;
@@ -167,14 +164,32 @@ section.main{
   } 
 }
 
-//About, Download, Contact
 article.title{
   width: 470px;
   padding: 0 40px 0 0;
   font-weight: bold; 
 
-  @media #{$mq-tablet} { 
+  @media #{$mq-tablet-mobile} { 
     padding: 0 40px 0; 
+  } 
+
+  @media #{$mq-mobile} { 
+    width:auto;
+  } 
+}
+
+article.page{ 
+  width: 470px;
+  padding: 30px 40px 0 0;
+  font-family: 'Open Sans', sans-serif; 
+
+  @media #{$mq-tablet} {  
+    padding: 30px 40px 0;
+  } 
+
+  @media #{$mq-mobile} { 
+    padding: 30px 40px 0 40px;
+    width: auto;
   } 
 }
 
@@ -189,6 +204,11 @@ h1.heading{
   @media #{$mq-tablet} { 
     padding: 50px 0 30px 0;
   }  
+
+  @media #{$mq-mobile} { 
+    text-align: center;
+    padding: 20px 0 30px 0;
+  } 
 }
 
 h2, h3, h4, h6{
@@ -202,49 +222,52 @@ h2{
   @media #{$mq-desktop} {
     padding: 0 0 5px 0;
   } 
-  @media #{$mq-tablet} { 
+  @media #{$mq-tablet-mobile} { 
     padding: 0 0 10px 0;
   } 
+
+  @media #{$mq-mobile} { 
+    font-size: 25px;
+    line-height: 31px;
+  }  
 }
+
 h2.title {
+  font-family: 'OpenSans', sans-serif;
+
   @media #{$mq-tablet} { 
     font-size: 30px;
     color: $red;
-    font-family: 'OpenSans', sans-serif;
     line-height: 40px;
     margin: 40px 45px 40px;
   } 
   @media #{$mq-mobile} { 
     font-size: 25px;
     font-weight: bold;
-    color: $red;
-    font-family: helvetica, arial;
+    color: $red; 
     line-height: 31px;
     margin: 32px;
   } 
 }
 
-h3{
-  
+h3{ 
   @media #{$mq-desktop} {
     font-size: 24px;
   }
-  @media #{$mq-tablet} { 
+  @media #{$mq-tablet-mobile} { 
     margin: 0 15px 20px; 
     font-size: 18px;
     margin-left: -2px;
   } 
 }
 
-h4{
-  
+h4{ 
   @media #{$mq-desktop} {
     font-size: 18px;
   }
 
-  @media #{$mq-tablet} { 
-    font-size: 24px;
-    color: $paragraph;
+  @media #{$mq-tablet-mobile} { 
+    font-size: 24px; 
   } 
 }
 
@@ -257,6 +280,18 @@ h5{
 h6{ 
   font-size: 18px;
   margin: 0 0 20px 0; 
+
+  @media #{$mq-mobile} {  
+    clear: left;
+  } 
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
 }
 
 @media #{$mq-tablet-mobile} { 
@@ -264,6 +299,7 @@ h6{
   .desktop {
     display: none;
   }
+
   article.hide, aside{
     display: none;
   }
@@ -271,4 +307,10 @@ h6{
   div.twitter{
     display: none;
   }
+ 
+  img.code{
+    max-width: 100%;
+    height: auto;
+  } 
 } 
+

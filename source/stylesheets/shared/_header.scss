@@ -102,7 +102,8 @@ a.kidsruby{
     left: 34px;
     top: 40px;
    
-    &:hover {
+    &:hover { 
+      @include rotate(-360deg);
        top: 46px;
     }
   } 
@@ -117,21 +118,17 @@ a.kidsruby{
     top: 20px;
     left: 10%;
   }
-    @media #{$mq-mobile} { 
-      background: url("/images/weblogomobile.png") no-repeat top;
-      background-size: 16%;
-      height: 45%;
-      width: 100%;
-      float: left;  
-      position: absolute;
-      z-index: 1;
-      right: 35%;
-      top: 2%;
-      margin-bottom: 5px;
-    } 
-
-  &:hover {
-    @include rotate(-360deg);
+  @media #{$mq-mobile} { 
+    background: url("/images/weblogomobile.png") no-repeat top;
+    background-size: 16%;
+    height: 45%;
+    width: 100%;
+    float: left;  
+    position: absolute;
+    z-index: 1;
+    right: 35%;
+    top: 2%;
+    margin-bottom: 5px;
   } 
 }
 
@@ -152,12 +149,12 @@ a.kidsruby{
       }
     }
     @media #{$mq-mobile} { 
-       background: url("/images/background_mobile.png") no-repeat center top;
-       background-size: 100% auto;
-       width: 110%;
-       min-height: 200%;
-       padding-left: 25%;
-       margin-top: -7%;
+      background: url("/images/background_mobile.png") no-repeat center top;
+      background-size: 100% auto;
+      width: 110%;
+      min-height: 200%;
+      padding-left: 25%;
+      margin-top: -7%;
      }  
 }
 
@@ -235,12 +232,6 @@ a.active{
     background: url("/images/active.png") repeat;
     color: $red;
     background-color: lighten($gray,5%); 
-  } 
-}
-
-a:hover{
-  @media #{$mq-desktop} { 
-    margin-top: -7px;
   } 
 }
 
@@ -325,6 +316,12 @@ a.Contact{
     } 
 }
 
+a.nav:hover{
+  @media #{$mq-desktop} { 
+    margin-top: -7px;
+  } 
+}
+
 
 header.top{
   @media #{$mq-desktop} { 
@@ -389,3 +386,9 @@ header.top{
      }  
   }  
 } 
+
+.kid-small img, .kid-big img {
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+}

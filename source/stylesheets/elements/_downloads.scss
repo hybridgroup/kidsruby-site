@@ -1,17 +1,34 @@
-  a.warning{
-    color:$paragraph;
-    font-size: 20px;
-    text-decoration: underline;
+@media #{$mq-mobile} { 
+
+  .collapse{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
   }
 
+  .dl-sprites{
+    overflow: auto;
+    margin: 0 auto;
+    height: auto;
+    max-width: 500px;
+    text-align: center;
+    padding-left: 20px;
+  }
+} 
+ 
+a.warning{
+  color:$paragraph;
+  font-size: 20px;
+  text-decoration: underline;
+}
 
-  h2.osxwarn{
-    color:$paragraph;
-    font-size: 20px;
-    line-height: 25px;
-    padding-bottom: 10px;
+h2.osxwarn{
+  color:$paragraph;
+  font-size: 20px;
+  line-height: 25px;
+  padding-bottom: 10px;
 
-  @media #{$mq-tablet} { 
+  @media #{$mq-tablet-mobile} { 
     font-size: 22px;
     line-height: 26px;
     padding: 0 40px 10px;
@@ -19,16 +36,24 @@
 }
 
 a.dl{
-  float: left;
   width: 183px;
   height: 175px; 
   text-decoration: none;
 
   @media #{$mq-desktop} { 
     margin: 0 40px 20px 0;
+    float: left;
   }   
   @media #{$mq-tablet} { 
     margin: 0 30px 20px 45px;
+    float: left;
+  }
+
+  @media #{$mq-mobile} { 
+    display: inline-block; 
+    margin: 10px auto;
+    padding:0 10px;
+    overflow: hidden; 
   } 
 
   &:hover{
@@ -37,12 +62,16 @@ a.dl{
 }
 
 @media #{$mq-tablet} { 
+
   a.dl.first, a.dl.third{
     margin-left: 87px;
   }
 }  
+
 a.dl.fourth{
-  margin-bottom: 37px;
+  @media #{$mq-desktop} { 
+    margin-bottom: 37px;
+  } 
 }
 
 span.windows-version, span.mac-version, span.pi-version, span.de-version {
@@ -53,41 +82,54 @@ span.windows-version, span.mac-version, span.pi-version, span.de-version {
    left: 94px;
    position: relative;
    top: 92px;
+
+  @media #{$mq-mobile} { 
+    left: 1px;
+  } 
 }
 
 span.mac-version{ 
-    top: 90px;
-    left: 107px; 
+  top: 90px;
+  left: 107px;
+
+  @media #{$mq-mobile} { 
+    left: 14px; 
+  } 
 }
 
 span.pi-version{ 
-    top: 86px;
-    left: 87px; 
+  top: 86px;
+  left: 87px;
+
+  @media #{$mq-mobile} { 
+     left: -5px;
+   }  
 }
 
 span.de-version{ 
-    top: 86px;
-    left: 88px; 
+  top: 86px;
+  left: 88px;
+
+  @media #{$mq-mobile} { 
+    left: -4px; 
+  } 
 } 
-
-
-article.page{ 
-    width: 470px;
-    padding: 30px 40px 0 0;
-    font-family: 'Open Sans', sans-serif; 
-     
-    @media #{$mq-tablet} {  
-      padding: 30px 40px 0;
-    } 
-}
 
 p{
   color: $GrayText;
 }
 
 p.dl{ 
+  color: #6e7d86;
+  margin: -15px 0 15px 0; 
+
+  @media #{$mq-mobile} { 
+    float: left;
     color: #6e7d86;
-    margin: -15px 0 15px 0; 
+    padding: 0;
+    margin: 0 ;
+    clear: left;
+  } 
 }
 
 ul.download{

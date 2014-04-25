@@ -99,6 +99,18 @@
     %div.mobile
       %img{:src => "/images/640bottom.png", :class => "mobile-image"}
     :javascript
+
+      $(function() {
+           var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/"));
+           $("ul.nav li a.nav").each(function(){
+              if($(this).attr("href") == pgurl || $(this).attr("href") == '') {
+                $(this).addClass("active"); 
+              }
+              if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {
+                $(this).addClass("active");
+              }
+           })
+      });
       $.webshims.setOptions('forms', {
         overrideMessages: true,
         replaceValidationUI: true

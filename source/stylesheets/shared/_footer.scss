@@ -16,7 +16,8 @@ footer{
   }  
 }
 
-//footer image
+/*footer image */
+
 .bottom{
   @media #{$mq-desktop} {
     display: inline-block;
@@ -40,6 +41,7 @@ img.bottom-image {
 }
 
 /*footer image for mobile layout*/
+
 .mobile{ 
   display: none;
 
@@ -51,8 +53,6 @@ img.bottom-image {
   } 
 }
 
- 
-/*footer image desktop */
 @media #{$mq-tablet-mobile} { 
   .bottom, .pagination{
     display:none;
@@ -103,8 +103,3 @@ img.bottom-image {
   }
 }
 
-.kid-small img, .kid-big img {
-  max-width: 100% !important;
-  height: auto;
-  display: block;
-}

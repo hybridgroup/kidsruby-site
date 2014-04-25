@@ -75,13 +75,13 @@ a.dl.fourth{
 }
 
 span.windows-version, span.mac-version, span.pi-version, span.de-version {
-   color: white;
-   font-size: 12px;
-   font-family: sans-serif;
-   font-weight: bold;
-   left: 94px;
-   position: relative;
-   top: 92px;
+  color: white;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
+  left: 94px;
+  position: relative;
+  top: 92px;
 
   @media #{$mq-mobile} { 
     left: 1px;

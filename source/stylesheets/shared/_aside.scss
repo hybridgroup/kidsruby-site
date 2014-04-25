@@ -1,6 +1,6 @@
 @media #{$mq-desktop} { 
 
-   aside{  
+  aside{  
     @include border-bottom-right-radius(15px);
     display: inline-block;
     width: 270px;

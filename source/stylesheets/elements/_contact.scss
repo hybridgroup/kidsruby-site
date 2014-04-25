@@ -1,0 +1,163 @@
+form.sign-up {
+  @media #{$mq-desktop} { 
+    margin: 5px 15px 0px;
+  }
+
+  @media #{$mq-tablet} { 
+    font-family: 'Open Sans', sans-serif;
+    margin: 0  92px 0px;
+    padding: none; 
+  } 
+}
+
+fieldset.top {
+  float: left; 
+  height: 41px;
+  position: relative;
+  @media #{$mq-desktop} { 
+    width: 425px;
+    margin: 30px 0 5px 0;
+  } 
+  @media #{$mq-tablet} {  
+    width: 220px; 
+    margin: 30px 0 5px -25px;
+    clear: both;
+  } 
+}
+
+input.contact{    
+  font-family: helvetica, arial, sans-serif;
+  background-color: white;
+  width: 425px;
+  height: 35px;
+  border: 1px solid $GrayText;
+  padding: 1px 0 1px 16px; 
+
+  @media #{$mq-tablet} { 
+    width: 440px;
+  } 
+
+  
+  &:hover{
+  box-shadow: 0 0 2px black;
+  }
+}
+
+textarea{ 
+  font-family: helvetica, arial, sans-serif;
+  position: relative;
+  z-index: 99;
+  background-color: white;
+  width: 425px;
+  height: 100px;
+  border: 1px solid $GrayText;
+  clear: both;
+  padding: 5px 0 1px 16px; 
+
+  @media #{$mq-tablet} { 
+    width: 440px;
+  }  
+
+  &:hover{
+  box-shadow: 0 0 2px black;
+  }
+}
+
+fieldset.send{
+  color: $paragraph;
+  position: absolute;
+
+  @media #{$mq-desktop} {     
+    top: 535px;
+    left: 116px; 
+    float: right;
+  } 
+   
+  @media #{$mq-tablet} { 
+    float: left;
+    margin-top: 320px;
+  } 
+}
+
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+label.css-label {
+  background-image: url("/images/checkbox.png");
+  margin-top: -3px;
+  padding-left: 20px;
+  height: 12px;
+  display: inline-block;
+  line-height: 14px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -12px;
+}
+
+fieldset.thankyou{
+  display: none;
+  float: left;
+  font-size: 24px;
+}
+
+fieldset.submit{ 
+  float: left;
+
+  @media #{$mq-desktop} { 
+    padding: 0 0 0 65px;
+    position: relative; 
+    top: 130px;
+    z-index: 10;
+    margin-bottom: 100px;
+  } 
+
+  @media #{$mq-tablet} { 
+    padding: 132px 0 0 65px; 
+  } 
+}
+
+input.submit{ 
+  
+    @include border-radius(10px);
+    height: 43px;
+    width: 265px;
+    background: $Button;
+    overflow: visible;
+    color: $white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25px;
+    border: none;
+ 
+  @media #{$mq-tablet} { 
+    margin-left:18px;
+  } 
+
+  &:hover{
+    box-shadow: 2px 2px 2px darken($ButtonShadow, 20%);
+    cursor: pointer;
+  }
+
+  &:active{
+    box-shadow: 2px 2px 4px darken($ButtonShadow, 50%);
+  }
+}
+
+
+//section ends<<<<<<<<<<
+

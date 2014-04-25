@@ -20,3 +20,16 @@ $BorderBrown: #663300;
 $gray: lighten(#CCCCCC, 10%);
 $BorderGray: lighten(#CCCCCC, 3%);
 $GrayText: lighten(black, 45%);
+
+
+$small-screen: 479px;
+$medium-screen: 767px;
+$big-screen: 964px;
+
+ 
+$mq-desktop: "only screen and (min-width: 769px)"; 
+$mq-tablet-mobile: "only screen and (max-width: 768px) and (min-width: 1px)";
+$mq-tablet: "only screen and (max-width: 768px) and (min-width: 642px)";
+$mq-mobile: "only screen and (max-width : 641px) and (min-width : 1px)";
+
+ 

@@ -1,0 +1,138 @@
+.button{
+    @media #{$mq-desktop} { 
+        height: 165px;
+        background-color: $FormBlue;
+      } 
+  }
+
+p.button-top{
+  font-family: helvetica, arial, sans-serif;
+  font-weight: bold;
+  color: darken($DarkText,15%);
+
+  @media #{$mq-desktop} { 
+    font-size: 24px;
+    color: $ParagraphDark;
+    padding: 24px 40px 25px;
+  } 
+  @media #{$mq-tablet} { 
+    font-size: 30px;
+    margin: 0 45px 15px 55px;
+  } 
+  @media #{$mq-mobile} { 
+    font-size: 28px;  
+    margin: 0 41px 16px;
+  } 
+}
+
+  a.red-button{ 
+      color: $white;
+      display: block;
+      font-family: 'Open Sans', sans-serif;
+      overflow: visible;
+
+    @media #{$mq-desktop} { 
+      @include border-radius(10px);
+      text-decoration:none;
+      margin: 0 auto;
+      height: 50px;
+      width: 375px;
+      background: $Button; 
+      color: $white;
+      text-align: center;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 50px;
+  
+      &:hover{
+        box-shadow: 4px 4px 2px darken($ButtonShadow, 20%);
+      }
+      &:active{
+        box-shadow: 4px 4px 8px darken($ButtonShadow, 50%);
+      }
+    }
+    @media #{$mq-tablet} { 
+       height: 135px;
+       width: 524px;
+       background: $red;
+       text-align: center;
+       font-size: 28px;
+       font-weight: bold;
+       line-height: 130px;
+       box-shadow: 5px 10px 0 $ButtonShadow; 
+       margin: 0 0 0 45px;
+       
+       &:hover{
+         color: $white;
+         text-decoration: none;
+         box-shadow: 5px 10px 2px darken($ButtonShadow, 20%);
+       }
+    }
+
+  @media #{$mq-mobile} { 
+     @include border-radius(15px);
+     background: $red;
+     @include background-image(linear-gradient(left top,darken($red, 3%), lighten($red, 2%), darken($red, 8%))); 
+     text-decoration: none;
+     display: block;
+     width: 65%;
+     height: 15%;
+     overflow: visible;
+     font-family: helvetica, arial;
+     color: $white;
+     text-align: center;
+     font-size: 33px;
+     font-weight: bold;
+     box-shadow: 8px 8px 0 $ButtonShadow;
+     margin: 0 auto;
+     padding: 40px 5%;
+     line-height: 50px;
+     
+     &:hover{
+       color: $white;
+       @include background-image(linear-gradient(left top,darken($red, 3%), lighten($red, 4%), darken($red, 6%)));
+       box-shadow: 8px 8px 4px darken($ButtonShadow, 20%);
+       text-decoration: none;
+     } 
+  }  
+}
+
+  h1.article-head, .article-head>a{
+    @media #{$mq-desktop} { 
+      color: $paragraph;
+      font-family: helvetica, arial, sans-serif;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 28px;
+      padding-top: 40px;
+    } 
+  }
+
+  time{
+    font: 14px/28px bold 'Open Sans', sans-serif;
+    color: $red;
+  }
+
+  p.article{
+    @media #{$mq-desktop} { 
+      font-family: helvetica, arial;
+      font-size: 17px;
+      line-height: 28px;
+      color: $GrayText;
+      font-weight: normal;
+      padding-top: 10px;
+      z-index: 1;
+      text-align: justify;
+    } 
+  }
+
+@media #{$mq-tablet} { 
+  .lettering{
+    font-size: 40px;
+    font-family: 'OpenSans', sans-serif;
+    line-height: 30px;
+    margin: 20px 15px 20px;
+    color: transparentize($red, .05);
+    text-align: center;
+  }
+} 

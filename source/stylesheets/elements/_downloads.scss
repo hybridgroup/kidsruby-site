@@ -1,0 +1,101 @@
+  a.warning{
+    color:$paragraph;
+    font-size: 20px;
+    text-decoration: underline;
+  }
+
+
+  h2.osxwarn{
+    color:$paragraph;
+    font-size: 20px;
+    line-height: 25px;
+    padding-bottom: 10px;
+
+  @media #{$mq-tablet} { 
+    font-size: 22px;
+    line-height: 26px;
+    padding: 0 40px 10px;
+  } 
+}
+
+a.dl{
+  float: left;
+  width: 183px;
+  height: 175px; 
+  text-decoration: none;
+
+  @media #{$mq-desktop} { 
+    margin: 0 40px 20px 0;
+  }   
+  @media #{$mq-tablet} { 
+    margin: 0 30px 20px 45px;
+  } 
+
+  &:hover{
+     text-decoration: none;
+   }
+}
+
+@media #{$mq-tablet} { 
+  a.dl.first, a.dl.third{
+    margin-left: 87px;
+  }
+}  
+a.dl.fourth{
+  margin-bottom: 37px;
+}
+
+span.windows-version, span.mac-version, span.pi-version, span.de-version {
+   color: white;
+   font-size: 12px;
+   font-family: sans-serif;
+   font-weight: bold;
+   left: 94px;
+   position: relative;
+   top: 92px;
+}
+
+span.mac-version{ 
+    top: 90px;
+    left: 107px; 
+}
+
+span.pi-version{ 
+    top: 86px;
+    left: 87px; 
+}
+
+span.de-version{ 
+    top: 86px;
+    left: 88px; 
+} 
+
+
+article.page{ 
+    width: 470px;
+    padding: 30px 40px 0 0;
+    font-family: 'Open Sans', sans-serif; 
+     
+    @media #{$mq-tablet} {  
+      padding: 30px 40px 0;
+    } 
+}
+
+p{
+  color: $GrayText;
+}
+
+p.dl{ 
+    color: #6e7d86;
+    margin: -15px 0 15px 0; 
+}
+
+ul.download{
+  list-style: none;
+}
+
+a.download{
+  line-height: 30px;
+  text-decoration: underline;
+  color: $Button; 
+}

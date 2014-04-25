@@ -1,0 +1,64 @@
+
+footer{
+  position: relative;
+  margin-top: -50px; 
+  height: 50px;
+  clear:both;
+  text-align: center; 
+  font-size: 14px;
+
+  @media #{$mq-desktop} {    
+    z-index: 10;
+    height: 37px;
+    width: 100%; 
+  } 
+}
+
+//footer image
+.bottom{
+  @media #{$mq-desktop} {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+    min-width: 940px;
+  }
+ }
+
+img.bottom-image {
+  @media #{$mq-desktop} {   
+    margin: 0 auto;
+    position: absolute;
+    float: left;
+    z-index: 9;
+    bottom: 18px;
+    left: -31px;
+    min-width: 940px;
+  } 
+}
+
+//footer image for mobile layout
+.mobile{
+   @media #{$mq-desktop} {  
+    display: none;
+   } 
+}
+
+@media only screen
+and (max-width : 768px) 
+and (min-width : 642px){
+
+
+  //footer image desktop
+  .bottom{
+    display:none;
+  }
+  //footer image mobile
+  .mobile{
+    display: none;
+  }
+  .pagination{
+    display: none;
+  }
+
+}

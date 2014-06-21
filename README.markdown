@@ -1,6 +1,6 @@
 # Quickstart
 
-Clone, run 'bundle install', and fire up `bunndle exec middleman` and you should be good to go!
+Clone, run 'bundle install', and fire up `bundle exec middleman` and you should be good to go!
 
 # Contributors
 Daniel Fischer

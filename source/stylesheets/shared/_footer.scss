@@ -14,6 +14,10 @@ footer{
   @media #{$mq-mobile} { 
     margin-top: -108px; 
   }  
+  a{
+    color: black;
+    text-decoration: underline;
+  }
 }
 
 /*footer image */

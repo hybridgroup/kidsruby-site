@@ -47,6 +47,10 @@ ul.nav{
     display: none;  
     background: url("/images/board.png") no-repeat top;
     height: 154px;
+
+    li:last-child{
+      display: none;
+    }
   } 
 
   @media #{$mq-mobile} { 

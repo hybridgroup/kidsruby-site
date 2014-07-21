@@ -3,7 +3,7 @@ a, a:active, a:visited {
 }
 
 a {
-  color: #ff1941;
+  color: $red;
 }
 
 a:hover {
@@ -178,13 +178,14 @@ article.title{
   } 
 }
 
-article.page{ 
+.page{ 
   width: 470px;
   padding: 30px 40px 0 0;
   font-family: 'Open Sans', sans-serif; 
 
   @media #{$mq-tablet} {  
     padding: 30px 40px 0;
+    width: auto;
   } 
 
   @media #{$mq-mobile} { 
@@ -232,7 +233,7 @@ h2{
   }  
 }
 
-h2.title {
+h2.title, h2.title > a{
   font-family: 'OpenSans', sans-serif;
 
   @media #{$mq-tablet} { 
@@ -256,7 +257,7 @@ h3{
   }
   @media #{$mq-tablet-mobile} { 
     margin: 0 15px 20px; 
-    font-size: 18px;
+    font-size: 20px;
     margin-left: -2px;
   } 
 }
@@ -300,7 +301,7 @@ h6{
     display: none;
   }
 
-  article.hide, aside{
+  .hide, aside{
     display: none;
   }
 

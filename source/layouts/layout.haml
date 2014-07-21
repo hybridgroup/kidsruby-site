@@ -40,6 +40,8 @@
             %li
               %a.nav.Download{:class => "#{'active' if @current_page == 'download'}", :href => '/download.html'} Download
             %li
+              %a.nav.About{:class => "#{'active' if @current_page == 'about'}", :href => '/blog.html'} Blog
+            %li
               %a.nav.Download{:class => "#{'active' if @current_page == 'contact'}", :href => '/contribute.html'} Contribute
             %li
               %a.nav.Contact{:class => "#{'active' if @current_page == 'contact'}", :href => '/contact.html'} Contact
@@ -61,10 +63,10 @@
           %header.section-top
             %h2.title= current_article.title
           %section.main
-            = yield
+            %article.blog
+              = yield
         - else
           = yield
-
 
         %aside
           %div.social-buttons
@@ -95,8 +97,6 @@
 
   %footer
     &copy; 2011-2014 The Hybrid Group 
-    |    
-    %a{:href => '/contact.html'} Contact
     .bottom-border
     %div.bottom
       %img{:src => "/images/kidsRubyBottom.png", :class => "bottom-image"}

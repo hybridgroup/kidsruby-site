@@ -1,0 +1,42 @@
+time{
+  font: 14px/28px bold 'Open Sans', sans-serif;
+  color: $red;
+}
+
+.pagination{
+  height: 25px;
+
+  @media #{$mq-tablet-mobile} {
+    padding: 30px 40px 0;
+  }
+
+  a{
+    color: $paragraph;
+    font-weight: bold;
+  }
+}
+
+h1.article-head, .article-head>a{
+    color: $paragraph;
+    font-family: helvetica, arial, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 28px;
+    padding-top: 20px;
+}
+
+article.blog{
+  @extend .page;
+  padding-top: 0;
+}
+
+p.article{
+    font-family: helvetica, arial;
+    font-size: 17px;
+    line-height: 28px;
+    color: $GrayText;
+    font-weight: normal;
+    padding-top: 10px;
+    z-index: 1;
+    text-align: justify;
+}

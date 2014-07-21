@@ -58,7 +58,7 @@ img.bottom-image {
 }
 
 @media #{$mq-tablet-mobile} { 
-  .bottom, .pagination{
+  .bottom{
     display:none;
   } 
 } 

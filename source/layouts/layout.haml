@@ -1,0 +1,163 @@
+!!! Strict
+%html.no-js{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
+  %head
+    %title= @title || "Kidsruby.com"
+    = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
+    %meta{content: "width=device-width, initial-scale=1.0, minimum-scale=1.0", name: "viewport"}
+    %link{:href=>'/stylesheets/print.css', :rel => 'stylesheet', :media => "print", :type => "text/css"}
+    %link{:href=>'/stylesheets/style.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
+    <!--[if lt IE 9]>
+    %link{:href=>'/stylesheets/ie.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
+    <![endif]-->
+
+    %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/modernizr-custom.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/respond.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/jquery.form.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/jquery.lettering.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/jquery.cookie.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/application.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/polyfiller.js"}
+
+  %body
+    .container
+      %header.top
+        %div.logo
+          %a.kidsruby{:href => '/'}
+            %div.glow
+        %div.kids-container.desktop
+          %div.ruby
+          %div.kid-small
+            %img{:src => ""}
+          %div.kid-big
+            %img{:src => ""}
+        %nav
+          %ul.nav
+            %li
+              %a.nav.Home{:class => "#{'active' if @current_page == 'home'}", :href => '/'} Home
+            %li
+              %a.nav.About{:class => "#{'active' if @current_page == 'about'}", :href => '/about.html'} About
+            %li
+              %a.nav.Download{:class => "#{'active' if @current_page == 'download'}", :href => '/download.html'} Download
+            %li
+              %a.nav.About{:class => "#{'active' if @current_page == 'about'}", :href => '/blog.html'} Blog
+            %li
+              %a.nav.Download{:class => "#{'active' if @current_page == 'contact'}", :href => '/contribute.html'} Contribute
+            %li
+              %a.nav.Contact{:class => "#{'active' if @current_page == 'contact'}", :href => '/contact.html'} Contact
+          %a#pull
+            %div.ruby-tablet
+            .nav-button
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+        .background
+          %div.kids-container.tablet-mobile
+            %div.kid-small
+              %img{:src => ""}
+            %div.kid-big
+              %img{:src => ""}
+
+      .wrapper
+        - if is_blog_article?
+          %header.section-top
+            %h2.title= current_article.title
+          %section.main
+            %article.blog
+              = yield
+        - else
+          = yield
+
+        %aside
+          %div.social-buttons
+            %div.facebook-button
+              %a.icon.icon-fb{:href => "http://www.facebook.com/share.php?u=www.kidsruby.com&title=[KidsRuby]"}
+            %div.twitter-button
+              %a.icon.icon-twitter{:href => "http://twitter.com/home?status=KidsRuby+www.kidsruby.com"}
+
+          %form{:method => 'post', :action => '/newsletter'}
+            %fieldset.newsletter
+              %label
+                Subscribe to our newsletter to receive the latest news
+                %span.newsletter about KIDSRUBY
+            %fieldset.fields
+              %input.email{:name => "email", :type => "email", :placeholder => "", :required => ""}
+              %input.fields{:type => "submit", :value => "►"}
+          %header.aside
+            %a{:href => "http://www.twitter.com/kidsruby"} KIDSRUBY on Twitter
+          %div.small-logo
+            %a.icon-twitterbutton{:href => "http://www.twitter.com/kidsruby"}
+            %h3.aside Kids Ruby
+            %a.twitter{:href => "http://www.twitter.com/kidsruby"} @kidsruby Planet Earth!Let's teach kids how to program using Ruby! Programming is fun, and good for you too.
+            %a{:href => "http://kidsruby.com"} http://kidsruby.com
+          %div.twitter 
+            %a.twitter-timeline{"data-widget-id" => "350752890094227457", :href => "https://twitter.com/KidsRuby"} Tweets by @KidsRuby
+            :javascript
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+  %footer
+    &copy; 2011-2014 The Hybrid Group 
+    .bottom-border
+    %div.bottom
+      %img{:src => "/images/kidsRubyBottom.png", :class => "bottom-image"}
+    %div.mobile
+      %img{:src => "/images/640bottom.png", :class => "mobile-image"}
+    :javascript
+
+      $(function() {
+           var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/"));
+           $("ul.nav li a.nav").each(function(){
+              if($(this).attr("href") == pgurl || $(this).attr("href") == '') {
+                $(this).addClass("active"); 
+              }
+              if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {
+                $(this).addClass("active");
+              }
+           })
+      });
+      $.webshims.setOptions('forms', {
+        overrideMessages: true,
+        replaceValidationUI: true
+      });
+      $.webshims.setOptions({
+        waitReady: false
+      });
+      $.webshims.polyfill();
+
+      function blink(){
+        $('.ruby, .ruby-tablet').delay(100).fadeTo(500,0.1).delay(100).fadeTo(500,1, blink);
+      }
+      $(document).ready(function() {
+        blink();
+      });
+
+      $(function() {
+        var pull    = $('#pull');
+        menu    = $('nav ul');
+        menuHeight  = menu.height();
+
+        $(pull).on('click', function(e) {
+          e.preventDefault();
+          menu.slideToggle();
+        });
+
+        $(window).resize(function(){
+          var w = $(window).width();
+          if(w > 641 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+          }
+        });
+      });
+
+      //safari margin nav fix for mobile
+      $(window).on("resize", function () {
+        var width = $('body').width();
+        var topMargin = width * -0.17;
+        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+          if ($(window).width() < 642) {
+            $('.nav-button').css('margin-top', topMargin+'px');
+          }
+        }
+      }).resize();
+
+  = partial :_analytics

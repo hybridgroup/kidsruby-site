@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kids Ruby</title>
+  <subtitle>Blog</subtitle>
+  <id>http://kidsruby.com/</id>
+  <link href="http://kidsruby.com/"/>
+  <link href="http://kidsruby.com/feed.xml" rel="self"/>
+  <updated>2013-01-15T00:00:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>KidsRuby Robot Edition&amp;#58; New Release With Support For Sphero Robots, Ubuntu, and Raspberry Pi</title>
+    <link rel="alternate" href="http://kidsruby.com/2013-01-15-kidskuby-robot-edition-new-release-with-support-for-sphero-robots-ubuntu-and-raspberry-pi.html"/>
+    <id>http://kidsruby.com/2013-01-15-kidskuby-robot-edition-new-release-with-support-for-sphero-robots-ubuntu-and-raspberry-pi.html</id>
+    <published>2013-01-15T00:00:00Z</published>
+    <updated>2014-07-28T15:13:55-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p class="article"&gt;
+	We've just released the latest KidsRuby version 1.3, and we're very excited to announce built-in support for the Sphero robotic ball from Orbotix (&lt;a href="http://gosphero.com/" target="blank"&gt;http://gosphero.com/&lt;/a&gt;). If you were at RubyConf in Denver you might have seen the preview, and now we've got everything you need to get started learning about the wonderful world of robotics! Support for more robots coming soon...
+&lt;/p&gt;
+
+&lt;p class="article"&gt;
+	In addition, we now have the standalone KidsRuby Installer for Raspberry Pi (Raspbian), and KidsRuby Installer for Debian, including Ubuntu and other Debian-based Linux versions. Get them while they're hot from our download page at &lt;a href="http://kidsruby.com/download.html"&gt;http://kidsruby.com/download.html&lt;/a&gt;.
+&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>KidsRuby Studies Abroad&amp;#58; Now Available In Japanese, French, and Spanish!</title>
+    <link rel="alternate" href="http://kidsruby.com/2012-09-06-kidsruby-studies-abroad-now-available-in-japanese-french-and-spanish.html"/>
+    <id>http://kidsruby.com/2012-09-06-kidsruby-studies-abroad-now-available-in-japanese-french-and-spanish.html</id>
+    <published>2012-09-06T00:00:00Z</published>
+    <updated>2014-07-28T15:13:55-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p class="article"&gt;
+	Our brand new 1.2 release of KidsRuby has gone international, now with full Japanese, French, and Spanish translations. That means our unique and fun way to learn programming has been localized so even more kids all over the world can have fun coding in in Ruby. Thank you to the translators and dev team who helped make this new release possible!
+&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>The Twin Cities Hosts KidsRuby In Minneapolis, MN At KidsCodeCamp Before JRubyConf Conference 2012</title>
+    <link rel="alternate" href="http://kidsruby.com/2012-05-20-the-twin-cities-hosts-kidsruby-in-minneapolis-mn-at-kidscodecamp-before-jrubyconf-conference-2012.html"/>
+    <id>http://kidsruby.com/2012-05-20-the-twin-cities-hosts-kidsruby-in-minneapolis-mn-at-kidscodecamp-before-jrubyconf-conference-2012.html</id>
+    <published>2012-05-20T00:00:00Z</published>
+    <updated>2014-07-28T15:13:55-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p class="article"&gt;
+	Our kids programming class on May 20 in Minneapolis at &lt;a href="http://kidscodecamp.com/"&gt;KidsCodeCamp&lt;/a&gt; in cooperation with JRubyConf 2012 (&lt;a href="http://jrubyconf.com/"&gt;http://jrubyconf.com/&lt;/a&gt;) was incredibly fun. Special thanks to the fantastic local organizers, as well as the awesome kids in attendence!
+&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>KidsRuby and Robots at KidsCodeCamp At STEM Expo 2012 in Pasadena, CA</title>
+    <link rel="alternate" href="http://kidsruby.com/2012-05-19-kidsruby-and-robots-at-kidscodecamp-at-stem-expo-2012-in-pasadena-ca.html"/>
+    <id>http://kidsruby.com/2012-05-19-kidsruby-and-robots-at-kidscodecamp-at-stem-expo-2012-in-pasadena-ca.html</id>
+    <published>2012-05-19T00:00:00Z</published>
+    <updated>2014-07-28T15:13:55-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p class="article"&gt;
+	We had a fantastic KidsRuby class at the &lt;a href="http://kidscodecamp.com/"&gt;KidsCodeCamp&lt;/a&gt; that took place on May 19 in Pasadena, CA in participation with the massive Pasadena STEM Expo 2012 event! Hundreds of kids were in attendance, between our packed classes, the robotics competitions, and the separate exibition hall. Robots everywhere!
+&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>KidsRuby In Austin, TX, At The First KidsCodeCamp Before RailsConf 2012 Conference</title>
+    <link rel="alternate" href="http://kidsruby.com/2012-04-22-kidsruby-in-austin-tx-at-the-first-kidscodecamp-before-railsconf-2012-conference.html"/>
+    <id>http://kidsruby.com/2012-04-22-kidsruby-in-austin-tx-at-the-first-kidscodecamp-before-railsconf-2012-conference.html</id>
+    <published>2012-04-22T00:00:00Z</published>
+    <updated>2014-07-28T15:13:55-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p class="article"&gt;
+	A great time was had by all on April 22, 2012 in Austin, TX. in cooperation with the first KidsCodeCamp (&lt;a href="http://kidscodecamp.com/"&gt;http://kidscodecamp.com/&lt;/a&gt;) event taking place in participation with RailsConf 2012 (&lt;a href="http://railsconf2012.com/"&gt;http://railsconf2012.com/&lt;/a&gt;). Thank you so much to all of the great volunteers and kids!
+&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Fun Times At KidsRuby In Bend, OR After Ruby On Ales Conference</title>
+    <link rel="alternate" href="http://kidsruby.com/2012-03-03-fun-times-at-kidsruby-in-bend-or-after-ruby-on-ales-conference.html"/>
+    <id>http://kidsruby.com/2012-03-03-fun-times-at-kidsruby-in-bend-or-after-ruby-on-ales-conference.html</id>
+    <published>2012-03-03T00:00:00Z</published>
+    <updated>2014-07-28T15:13:55-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p class="article"&gt;
+	We had a fun and well-attended KidsRuby class on Mar. 3, 2012 in Bend, OR. in cooperation with the Ruby On Ales Conference 2012 (&lt;a href="http://ruby.onales.com/"&gt;http://ruby.onales.com/&lt;/a&gt;). Despite the snow on the ground, it was warm inside, and we had some of the most creative turtle graphics art yet. Great job from all the young programmers!
+&lt;/p&gt;
+</content>
+  </entry>
+</feed>

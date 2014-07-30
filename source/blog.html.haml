@@ -1,0 +1,25 @@
+---
+pageable: true
+per_page: 5
+layout: layout
+---
+%header.section-top.main
+%section.main
+  %article.title
+    %h1.heading
+      Blog
+
+  %article.blog
+    - page_articles.each_with_index do |article, i|
+      %div
+        %h1.article-head= link_to article.title, article
+        %time{:datetime => article.date}= article.date.strftime('%A, %b. %e %Y')
+        = article.summary(250)
+
+  .pagination
+    %div.left
+      - if prev_page
+        = link_to 'Recent posts', prev_page
+    %div.right
+      - if next_page
+        = link_to 'Previous posts', next_page

@@ -1,0 +1,121 @@
+@media #{$mq-desktop} { 
+
+  aside{  
+    @include border-bottom-right-radius(15px);
+    display: inline-block;
+    width: 270px;
+    float:right;
+    position: relative;
+    padding: 0 45px 0 15px;
+    background: $white;
+    top: 0;   
+  }
+
+  .social-buttons{ 
+    width: 269px;
+    height:110px;  
+  }
+
+  .facebook-button, .twitter-button{ 
+    float: left;
+    width: 50%; 
+  }
+
+  a.icon{ 
+    display: block;
+    float: left;
+    height: 59px;
+    width: 91px;
+    margin: 0 30px 10px 0; 
+  }
+
+  fieldset.newsletter{ 
+    font-size: 16px;
+    line-height: 23px;
+    color: $paragraph;
+    margin: 0 0 10px 0; 
+  } 
+
+  span.newsletter{ 
+    font-size: 20px;
+    color:$red; 
+  }
+
+  fieldset.fields{ 
+    height: 25px;
+    width: 250px;
+    top: 5px;
+    position: relative;
+    z-index: 2;
+    margin: 0 0 20px -3px ;
+    border: solid 6px $FormBlue; 
+  }
+
+  input.email{ 
+    padding:0;
+    height: 25px;
+    margin: 0 -75px 0 2px;
+    padding: 0 0 0 10px;
+    width: 213px;
+    border: none;
+    float: left; 
+  }
+
+  input.fields{ 
+    position: absolute;
+    display: block;
+    background-color: $Button;
+    border: none;
+    font-size: 16px;
+    color: $white;
+    line-height: 21px;
+    margin: 0 0 0 62px;
+    height: 25px;
+    width: 34px;
+    top: 0;
+    right: 0;
+
+    &:hover{
+      cursor: pointer;
+      box-shadow: 0 0 5px $InputShadow
+    }
+    &:active{
+      background-color: darken($DarkBlue,2%);
+      box-shadow: 0 0 10px lighten($InputShadow, 10%);
+    }
+  }
+
+  header.aside{ 
+    font-weight: bold;
+    color: $ParagraphDark; 
+  }
+
+  .icon-twitterbutton{ 
+    @include transition-duration(1s);
+    float: left;
+    height: 59px;
+    margin: 6px 10px 75px 0;
+    width: 62px;
+
+    &:hover {
+      @include rotate(-10deg);
+    } 
+  }
+
+  .small-logo{ 
+    margin: 20px 0 0 0;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: bold;
+    color: $GrayText; 
+  }
+
+  a.twitter{
+    color: $paragraph;
+  }
+
+  h3.aside{
+    color: $red;
+    font-size:14px;
+  }
+} 

@@ -1,0 +1,165 @@
+.ruby{
+  @media #{$mq-desktop} {
+    background: url("/images/rubyglow-complete.png") no-repeat center center;
+    position: relative;
+    width: 153px;
+    height: 153px;
+    left: 126px;
+    top: 170px;
+    margin: 0 auto;
+    z-index:998;
+  } 
+}
+.ruby-tablet {
+  @media #{$mq-tablet} { 
+    background: url("/images/rubyglow-tablet.png") no-repeat center center;
+    position: relative;
+    width: 131px;
+    height: 131px;
+    left: 2px;
+    top: 33px;
+    margin: 0 auto;
+    z-index: 999;
+  } 
+}
+
+.logo{ 
+  @media #{$mq-desktop} { 
+    height: 238px;
+    width: 239px;
+    float: left;
+    position: relative;
+    right: 10px;
+    top: -20px;
+  } 
+  @media #{$mq-tablet} { 
+    height: 122px;
+    width: 120px;
+  }
+}
+
+.kids-container {
+  float: left;
+  margin: 0 auto;
+  position: relative;
+  z-index: 990;
+
+  @media #{$mq-desktop} { 
+    width: 418px;
+    height: 391px;
+    top: -111px;
+    left: 0px;
+  } 
+
+  @media #{$mq-tablet}{ 
+    width: 336px;
+    height: 350px;
+    top: 4px;
+    left: 78px;  
+  } 
+
+  @media #{$mq-mobile} { 
+    width: 336px;
+    height: 350px;  
+    float: none;
+  } 
+}
+
+.kid-small {
+  height: auto;
+  width: 125px;
+  position: relative;
+  z-index: 999;
+  top: 50px;
+  float: left;
+
+  @media #{$mq-desktop} { 
+    margin-right: 30px;
+  } 
+
+  @media #{$mq-tablet-mobile} {
+    margin-right: 3px;
+  }  
+}
+
+.kid-big {
+  height: auto;
+  width: 208px;
+  position: relative;
+  z-index: 999;
+  float: left; 
+}
+
+.kid-small img, .kid-big img {
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+}
+
+a.kidsruby{
+  @include transition-duration(1s);
+  @media #{$mq-desktop} { 
+    background: url("/images/weblogo.png") no-repeat top;
+    height: 165px;
+    width: 172px;
+    float: left;
+    position: absolute;
+    z-index: 10;
+    left: 34px;
+    top: 40px;
+   
+    &:hover { 
+      @include rotate(-360deg);
+       top: 46px;
+    }
+  } 
+
+  @media #{$mq-tablet} {  
+    background: url("/images/weblogoTablet.png") no-repeat top;
+    height: 122px;
+    width: 120px;
+    display:block;
+    position: relative;
+    z-index: 1;
+    top: 20px;
+    left: 10%;
+  }
+  @media #{$mq-mobile} { 
+    background: url("/images/weblogomobile.png") no-repeat top;
+    background-size: 16%;
+    height: 45%;
+    width: 100%;
+    float: left;  
+    position: absolute;
+    z-index: 1;
+    right: 35%;
+    top: 2%;
+    margin-bottom: 5px;
+  } 
+}
+
+.glow{
+  @media #{$mq-desktop} { 
+    @include transition-duration(1s);
+    background: url("/images/glow.png") no-repeat top;
+    position: relative;
+    height: 238px;
+    width: 239px;
+    top: -42px;
+    right: 35px;
+    opacity: 0;
+    z-index: -9;
+
+    &:hover{
+      opacity:1;
+    }
+  }
+  @media #{$mq-mobile} { 
+    background: url("/images/background_mobile.png") no-repeat center top;
+    background-size: 100% auto;
+    width: 110%;
+    min-height: 200%;
+    padding-left: 25%;
+    margin-top: -7%;
+  }  
+}

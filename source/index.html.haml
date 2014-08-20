@@ -20,7 +20,7 @@ layout: layout
       .hide
         %h1.article-head= link_to article.title, article
         %time{:datetime => article.date}= article.date.strftime('%A, %b. %e %Y')
-        = article.summary(1000)
+        = article.summary(500)
   %h4.hide.read-more
     %a{:href => "/blog.html"}More posts
   

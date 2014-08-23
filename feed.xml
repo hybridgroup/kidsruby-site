@@ -5,10 +5,34 @@
   <id>http://kidsruby.com/</id>
   <link href="http://kidsruby.com/"/>
   <link href="http://kidsruby.com/feed.xml" rel="self"/>
-  <updated>2013-01-15T00:00:00Z</updated>
+  <updated>2014-07-30T00:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>KidsRuby Site has a New Look</title>
+    <link rel="alternate" href="http://kidsruby.com/2014-07-30-kidskuby-site-has-a-new-look.html"/>
+    <id>http://kidsruby.com/2014-07-30-kidskuby-site-has-a-new-look.html</id>
+    <published>2014-07-30T00:00:00Z</published>
+    <updated>2014-08-23T12:35:30-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p class="article"&gt;
+	It's been a while since our last post and sorry we have not been on top of keeping all of you in the loop, but we are returning better than ever! We've just finished reworking our entire site and gave it a new look. Now if you are interested in contributing to KidsRuby you can visit the &lt;a href="contribute.html"&gt;Contribute&lt;/a&gt; page to create lessons of your own or submit new tranlations to help teach Ruby to those regardless of their country or language!  Become a KidsRuby contributor and join us in helping teach programming all around the world!
+&lt;/p&gt;
+
+&lt;p class="article"&gt; 
+	 A lot has been going on for the past year that we have not had a chance to properly share. Perhaps the most exciting news to come out this past year was when we won the &lt;a href="http://www.myfukuoka.com/uncategorized/2013-fukuoka-ruby-award-winners.html"&gt;2013 Fukuoma Award&lt;/a&gt;! The Fukuoka Award was created in collaboration with Ruby founder "Matz" to recognize those who have done great things with Ruby. It feels great to get the vindication that KidsRuby is doing something special!
+&lt;/p&gt;
+&lt;p class="article"&gt; 
+	Earlier this year we were given the opportunity to do a class at &lt;a href="http://www.socallinuxexpo.org/scale12x"&gt;SCaLE 12x&lt;/a&gt;, and it was the first time we were able to test out an early alpha version of KidsRuby 2! Everyone in the class had a great time and it was amazing to see how quickly the kids picked up and excelled with Ruby. It was all a lot of fun and many thanks to the organizers and volunteers who helped us ensure that the class went smoothly.
+&lt;/p&gt;
+&lt;p class="article"&gt; 
+	We are pushing forward with development of KidsRuby version 2.0. It will be full of many awesome new features and some much needed fixes to the program's core. This means KidsRuby will be even more robust with greater accessibility to a bigger audience, opening up many new and exciting possibilities! The future is looking bright for KidsRuby so keep your eye on us. In the meantime, get coding! 
+&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>KidsRuby Robot Edition&amp;#58; New Release With Support For Sphero Robots, Ubuntu, and Raspberry Pi</title>
     <link rel="alternate" href="http://kidsruby.com/2013-01-15-kidskuby-robot-edition-new-release-with-support-for-sphero-robots-ubuntu-and-raspberry-pi.html"/>
@@ -80,20 +104,6 @@
     </author>
     <content type="html">&lt;p class="article"&gt;
 	A great time was had by all on April 22, 2012 in Austin, TX. in cooperation with the first KidsCodeCamp (&lt;a href="http://kidscodecamp.com/"&gt;http://kidscodecamp.com/&lt;/a&gt;) event taking place in participation with RailsConf 2012 (&lt;a href="http://railsconf2012.com/"&gt;http://railsconf2012.com/&lt;/a&gt;). Thank you so much to all of the great volunteers and kids!
-&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Fun Times At KidsRuby In Bend, OR After Ruby On Ales Conference</title>
-    <link rel="alternate" href="http://kidsruby.com/2012-03-03-fun-times-at-kidsruby-in-bend-or-after-ruby-on-ales-conference.html"/>
-    <id>http://kidsruby.com/2012-03-03-fun-times-at-kidsruby-in-bend-or-after-ruby-on-ales-conference.html</id>
-    <published>2012-03-03T00:00:00Z</published>
-    <updated>2014-07-28T15:13:55-07:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p class="article"&gt;
-	We had a fun and well-attended KidsRuby class on Mar. 3, 2012 in Bend, OR. in cooperation with the Ruby On Ales Conference 2012 (&lt;a href="http://ruby.onales.com/"&gt;http://ruby.onales.com/&lt;/a&gt;). Despite the snow on the ground, it was warm inside, and we had some of the most creative turtle graphics art yet. Great job from all the young programmers!
 &lt;/p&gt;
 </content>
   </entry>
